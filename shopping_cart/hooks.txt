@@ -7,3 +7,16 @@ app_color = #B7E090
 app_email = info@erpnext.com
 app_url = https://erpnext.com
 app_version = 0.0.1
+
+web_include_js = assets/js/shopping-cart-web.min.js
+
+on_session_creation = shopping_cart.utils.set_cart_count
+on_logout = shopping_cart.utils.clear_cart_count
+update_website_context = shopping_cart.utils.update_website_context
+
+# Bean Events
+bean_event = Sales Taxes and Charges Master:on_update:shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.validate_cart_settings
+bean_event = Price List:on_update:shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.validate_cart_settings
+bean_event = Item Group:get_context:shopping_cart.templates.generators.item_group.get_context
+bean_event = Item:get_context:shopping_cart.templates.generators.item.get_context
+bean_event = Sales Partner:get_context:shopping_cart.templates.generators.partner.get_context
