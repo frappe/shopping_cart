@@ -20,3 +20,13 @@ bean_event = Price List:on_update:shopping_cart.shopping_cart.doctype.shopping_c
 bean_event = Item Group:get_context:shopping_cart.templates.generators.item_group.get_context
 bean_event = Item:get_context:shopping_cart.templates.generators.item.get_context
 bean_event = Sales Partner:get_context:shopping_cart.templates.generators.partner.get_context
+
+bean_event = Item Group:on_update:shopping_cart.shopping_cart.product.invalidate_cache_for
+bean_event = Item Group:on_update:webnotes.webutils.call_website_generator
+bean_event = Item Group:on_trash:webnotes.webutils.call_website_generator
+bean_event = Item:on_update:shopping_cart.shopping_cart.product.invalidate_cache_for_item
+bean_event = Item:on_update:webnotes.webutils.call_website_generator
+bean_event = Item:on_trash:webnotes.webutils.call_website_generator
+bean_event = Item:after_rename:shopping_cart.shopping_cart.product.update_website_page_name
+bean_event = Sales Partner:on_update:webnotes.webutils.call_website_generator
+bean_event = Sales Partner:on_update:shopping_cart.templates.pages.partners.clear_cache

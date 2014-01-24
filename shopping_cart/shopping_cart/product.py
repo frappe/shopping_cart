@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 
 import webnotes
 from webnotes.utils import cstr, cint, fmt_money
+from webnotes.webutils import delete_page_cache, clear_cache
 from shopping_cart.shopping_cart.cart import _get_cart_quotation
 
 @webnotes.whitelist(allow_guest=True)
@@ -104,3 +105,36 @@ def scrub_item_for_list(r):
 		r.website_description = "No description given"
 	if len(r.website_description.split(" ")) > 24:
 		r.website_description = " ".join(r.website_description.split(" ")[:24]) + "..."
+
+def get_group_item_count(item_group):
+	child_groups = ", ".join(['"' + i[0] + '"' for i in get_child_groups(item_group)])
+	return webnotes.conn.sql("""select count(*) from `tabItem` 
+		where docstatus = 0 and show_in_website = 1
+		and (item_group in (%s)
+			or name in (select parent from `tabWebsite Item Group` 
+				where item_group in (%s))) """ % (child_groups, child_groups))[0][0]
+
+def get_parent_item_groups(item_group_name):
+	item_group = webnotes.doc("Item Group", item_group_name)
+	return webnotes.conn.sql("""select name, page_name from `tabItem Group`
+		where lft <= %s and rgt >= %s 
+		and ifnull(show_in_website,0)=1
+		order by lft asc""", (item_group.lft, item_group.rgt), as_dict=True)
+		
+def invalidate_cache_for(bean, trigger, item_group=None):
+	if not item_group:
+		item_group = bean.doc.name
+	
+	for i in get_parent_item_groups(item_group):
+		if i.page_name:
+			delete_page_cache(i.page_name)
+
+def invalidate_cache_for_item(bean, trigger):
+	invalidate_cache_for(bean, trigger, bean.doc.item_group)
+	for d in bean.doclist.get({"doctype":"Website Item Group"}):
+		invalidate_cache_for(bean, trigger, d.item_group)
+		
+def update_website_page_name(bean, trigger):
+	if bean.doc.page_name:
+		invalidate_cache_for_item(bean, trigger)
+		clear_cache(bean.doc.page_name)
