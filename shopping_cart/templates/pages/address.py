@@ -9,7 +9,8 @@ from webnotes.utils import cint
 
 from shopping_cart.shopping_cart.cart import get_lead_or_customer
 
-no_cache = True
+no_cache = 1
+no_sitemap = 1
 
 def get_context():
 	def _get_fields(fieldnames):

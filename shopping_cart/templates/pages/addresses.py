@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 import webnotes
 from shopping_cart.shopping_cart.cart import get_address_docs
 
-no_cache = True
+no_cache = 1
+no_sitemap = 1
 
 @webnotes.whitelist()
 def get_addresses():
