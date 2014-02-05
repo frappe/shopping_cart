@@ -7,7 +7,7 @@ from webnotes import msgprint, _
 import webnotes.defaults
 from webnotes.utils import flt, get_fullname, fmt_money, cstr
 from webnotes.model.doclist import objectify
-from erpnext.utilities.transaction_base import get_address_display
+from erpnext.utilities.doctype.address.address import get_address_display
 
 class WebsitePriceListMissingError(webnotes.ValidationError): pass
 
@@ -94,7 +94,7 @@ def update_cart(item_code, qty, with_doclist=0):
 		
 @webnotes.whitelist()
 def update_cart_address(address_fieldname, address_name):
-	from erpnext.utilities.transaction_base import get_address_display
+	from erpnext.utilities.doctype.address.address import get_address_display
 	
 	quotation = _get_cart_quotation()
 	address_display = get_address_display(webnotes.doc("Address", address_name).fields)
@@ -254,7 +254,7 @@ def set_taxes(quotation, cart_settings, billing_territory):
 	
 	# append taxes
 	controller = quotation.make_controller()
-	controller.append_taxes_from_master("other_charges", "charge")
+	controller.append_taxes_from_master("other_charges", "taxes_and_charges")
 	quotation.set_doclist(controller.doclist)
 	
 def get_lead_or_customer():
