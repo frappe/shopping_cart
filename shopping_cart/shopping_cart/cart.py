@@ -2,7 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes, json
+import webnotes
 from webnotes import msgprint, _
 import webnotes.defaults
 from webnotes.utils import flt, get_fullname, fmt_money, cstr
@@ -94,8 +94,6 @@ def update_cart(item_code, qty, with_doclist=0):
 		
 @webnotes.whitelist()
 def update_cart_address(address_fieldname, address_name):
-	from erpnext.utilities.doctype.address.address import get_address_display
-	
 	quotation = _get_cart_quotation()
 	address_display = get_address_display(webnotes.doc("Address", address_name).fields)
 	
