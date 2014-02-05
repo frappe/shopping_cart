@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals
 import webnotes
-from webnotes import msgprint, _
+from webnotes import msgprint, throw, _
 import webnotes.defaults
 from webnotes.utils import flt, get_fullname, fmt_money, cstr
 from webnotes.model.doclist import objectify
@@ -39,7 +39,7 @@ def place_order():
 	controller = quotation.make_controller()
 	for fieldname in ["customer_address", "shipping_address_name"]:
 		if not quotation.doc.fields.get(fieldname):
-			msgprint(_("Please select a") + " " + _(controller.meta.get_label(fieldname)), raise_exception=True)
+			throw(_("Please select a") + " " + _(controller.meta.get_label(fieldname)))
 	
 	quotation.ignore_permissions = True
 	quotation.submit()
