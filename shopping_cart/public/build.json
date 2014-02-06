@@ -1,5 +1,8 @@
 {
 	"js/shopping-cart-web.min.js": [
 		"public/js/shopping_cart.js"
+	],
+	"css/shopping-cart-web.css":  [
+		"public/css/shopping_cart.css"
 	]
 }

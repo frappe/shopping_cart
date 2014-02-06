@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 import webnotes
 from webnotes.utils import cstr, cint, fmt_money
-from webnotes.webutils import delete_page_cache, clear_cache
+from webnotes.webutils import clear_cache
 from shopping_cart.shopping_cart.cart import _get_cart_quotation
 
 @webnotes.whitelist(allow_guest=True)
@@ -127,7 +127,7 @@ def invalidate_cache_for(bean, trigger, item_group=None):
 	
 	for i in get_parent_item_groups(item_group):
 		if i.page_name:
-			delete_page_cache(i.page_name)
+			clear_cache(i.page_name)
 
 def invalidate_cache_for_item(bean, trigger):
 	invalidate_cache_for(bean, trigger, bean.doc.item_group)

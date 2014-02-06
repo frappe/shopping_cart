@@ -3,21 +3,31 @@
 
 from __future__ import unicode_literals
 import webnotes
+from webnotes.webutils import render_blocks
+from webnotes.utils import filter_strip_join
 
 doctype = "Sales Partner"
 condition_field = "show_in_website"
 
-def get_context(controller, method):
+def get_context(context):
+	bean = webnotes.bean(context.ref_doctype, context.docname)
+	partner_context = bean.doc.fields
+	partner_context["title"] = bean.doc.partner_name
+	
 	address = webnotes.conn.get_value("Address", 
-		{"sales_partner": controller.doc.name, "is_primary_address": 1}, 
+		{"sales_partner": bean.doc.name, "is_primary_address": 1}, 
 		"*", as_dict=True)
 	if address:
 		city_state = ", ".join(filter(None, [address.city, address.state]))
 		address_rows = [address.address_line1, address.address_line2,
 			city_state, address.pincode, address.country]
 			
-		controller.doc.fields.update({
+		partner_context.update({
 			"email": address.email_id,
 			"partner_address": filter_strip_join(address_rows, "\n<br>"),
 			"phone": filter_strip_join(cstr(address.phone).split(","), "\n<br>")
 		})
+	
+	partner_context.update(context)
+	
+	return render_blocks(partner_context)
