@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals
 import webnotes
-from webnotes import msgprint, _
+from webnotes import msgprint, throw, _
 import webnotes.defaults
 from webnotes.utils import flt, get_fullname, fmt_money, cstr
 from webnotes.model.doclist import objectify
@@ -39,7 +39,7 @@ def place_order():
 	controller = quotation.make_controller()
 	for fieldname in ["customer_address", "shipping_address_name"]:
 		if not quotation.doc.fields.get(fieldname):
-			msgprint(_("Please select a") + " " + _(controller.meta.get_label(fieldname)), raise_exception=True)
+			throw(_("Please select a") + " " + _(controller.meta.get_label(fieldname)))
 	
 	quotation.ignore_permissions = True
 	quotation.submit()
@@ -93,7 +93,7 @@ def update_cart(item_code, qty, with_doclist=0):
 		return quotation.doc.name
 		
 @webnotes.whitelist()
-def update_cart_address(address_fieldname, address_name):	
+def update_cart_address(address_fieldname, address_name):
 	quotation = _get_cart_quotation()
 	address_display = get_address_display(webnotes.doc("Address", address_name).fields)
 	
@@ -252,7 +252,7 @@ def set_taxes(quotation, cart_settings, billing_territory):
 	
 	# append taxes
 	controller = quotation.make_controller()
-	controller.append_taxes_from_master("other_charges", "charge")
+	controller.append_taxes_from_master("other_charges", "taxes_and_charges")
 	quotation.set_doclist(controller.doclist)
 	
 def get_lead_or_customer():
