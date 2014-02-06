@@ -6,7 +6,8 @@ import webnotes
 from webnotes import _
 from shopping_cart.templates.utils import get_transaction_context
 
-no_cache = True
+no_cache = 1
+no_sitemap = 1
 
 def get_context():
 	context = get_transaction_context("Sales Order", webnotes.form_dict.name)

@@ -1,30 +1,12 @@
-{% extends base_template %}
+{% block title %} {{ title }} {% endblock %}
 
-{% block javascript %}
-<script>
-	{% include "templates/includes/product_page.js" %}
-	
-	$(function() {
-		if(window.logged_in && getCookie("system_user")==="yes") {
-			wn.has_permission("Item", "{{ name }}", "write", function(r) {
-				wn.require("assets/webnotes/js/wn/website/editable.js");
-				wn.make_editable($('[itemprop="description"]'), "Item", "{{ name }}", "web_long_description");
-			});
-		}
-	});
-</script>
-{% endblock %}
-
-{% block css %}
-<style>
-	{% include "templates/includes/product_page.css" %}
-</style>
-{% endblock %}
+{% block header %}<h2>{{ title }}</h2>{% endblock %}
 
 {% block content %}
+<div class="item-content">
 	{% include 'templates/includes/product_search_box.html' %}
 	{% include 'templates/includes/product_breadcrumbs.html' %}
-	<div class="container content product-page-content" itemscope itemtype="http://schema.org/Product">
+	<div class="product-page-content" itemscope itemtype="http://schema.org/Product">
 		<div class="row">
 			<div class="col-md-6">
 				{% if slideshow %}
@@ -84,4 +66,19 @@
 		</div>
 		{%- endif %}
 	</div>
+</div>
+<script>
+	{% include "templates/includes/product_page.js" %}
+
+	$(function() {
+		if(window.logged_in && getCookie("system_user")==="yes") {
+			wn.has_permission("Item", "{{ name }}", "write", function(r) {
+				wn.require("assets/webnotes/js/wn/website/editable.js");
+				wn.make_editable($('[itemprop="description"]'), "Item", "{{ name }}", "web_long_description");
+			});
+		}
+	});
+</script>
 {% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

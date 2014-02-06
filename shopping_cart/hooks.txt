@@ -9,6 +9,7 @@ app_url = https://erpnext.com
 app_version = 0.0.1
 
 web_include_js = assets/js/shopping-cart-web.min.js
+web_include_css = assets/css/shopping-cart-web.css
 
 on_session_creation = shopping_cart.utils.set_cart_count
 on_logout = shopping_cart.utils.clear_cart_count
@@ -23,10 +24,13 @@ bean_event = Sales Partner:get_context:shopping_cart.templates.generators.partne
 
 bean_event = Item Group:on_update:shopping_cart.shopping_cart.product.invalidate_cache_for
 bean_event = Item Group:on_update:webnotes.webutils.call_website_generator
+bean_event = Item Group:after_rename:webnotes.webutils.call_website_generator
 bean_event = Item Group:on_trash:webnotes.webutils.call_website_generator
 bean_event = Item:on_update:shopping_cart.shopping_cart.product.invalidate_cache_for_item
 bean_event = Item:on_update:webnotes.webutils.call_website_generator
 bean_event = Item:on_trash:webnotes.webutils.call_website_generator
 bean_event = Item:after_rename:shopping_cart.shopping_cart.product.update_website_page_name
+bean_event = Item:after_rename:webnotes.webutils.call_website_generator
 bean_event = Sales Partner:on_update:webnotes.webutils.call_website_generator
 bean_event = Sales Partner:on_update:shopping_cart.templates.pages.partners.clear_cache
+bean_event = Sales Partner:after_rename:webnotes.webutils.call_website_generator

@@ -4,7 +4,8 @@
 from __future__ import unicode_literals
 import webnotes
 
-no_cache = True
+no_cache = 1
+no_sitemap = 1
 
 def get_context():
 	from shopping_cart.templates.utils import get_transaction_context

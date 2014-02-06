@@ -6,7 +6,8 @@ import webnotes
 from shopping_cart.templates.utils import get_currency_context, get_transaction_list
 from shopping_cart.templates.pages.order import modify_status
 
-no_cache = True
+no_cache = 1
+no_sitemap = 1
 
 def get_context():
 	context = get_currency_context()

@@ -6,7 +6,8 @@ import webnotes
 from webnotes import _
 from webnotes.utils import today
 
-no_cache = True
+no_cache = 1
+no_sitemap = 1
 
 def get_context():
 	bean = webnotes.bean("Support Ticket", webnotes.form_dict.name)
