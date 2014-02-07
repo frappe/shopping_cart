@@ -153,5 +153,5 @@ class DocType(DocListController):
 
 		return self._territory_ancestry[territory]
 		
-def validate_cart_settings(controller, method):
+def validate_cart_settings(bean, method):
 	webnotes.bean("Shopping Cart Settings", "Shopping Cart Settings").run_method("validate")
