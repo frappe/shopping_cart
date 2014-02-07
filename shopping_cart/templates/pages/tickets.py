@@ -8,7 +8,7 @@ from webnotes.utils import cint, formatdate
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
+def get_context(context):
 	return {
 		"title": "My Tickets",
 		"method": "shopping_cart.templates.pages.tickets.get_tickets",

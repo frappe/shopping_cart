@@ -1,12 +1,10 @@
-{% extends base_template %}
+{% block title %} {{ "Product Search" }} {% endblock %}
 
-{% set title="Product Search" %}
-
-{% block javascript %}
-<script>{% include "templates/includes/product_list.js" %}</script>
-{% endblock %}
+{% block header %}<h2>Product Search</h2>{% endblock %}
 
 {% block content %}
+<script>{% include "templates/includes/product_list.js" %}</script>
+
 <script>
 $(document).ready(function() {
 	var txt = get_url_arg("q");
@@ -18,7 +16,7 @@ $(document).ready(function() {
 </script>
 
 {% include "templates/includes/product_search_box.html" %}
-<div class="container content">
+<div class="product-search-content">
 	<h3 class="search-results">Search Results</h3>
 	<div id="search-list" class="row">
 		
@@ -31,3 +29,5 @@ $(document).ready(function() {
 	</div>
 </div>
 {% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

@@ -9,19 +9,17 @@ from webnotes.utils import today
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
+def get_context(context):
 	bean = webnotes.bean("Support Ticket", webnotes.form_dict.name)
-	if bean.doc.raised_by != webnotes.session.user:
-		return {
-			"doc": {"name": "Not Allowed"}
+	if bean.doc.raised_by == webnotes.session.user:
+		ticket_context = {
+			"title": bean.doc.name,
+			"bean": bean
 		}
 	else:
-		return {
-			"doc": bean.doc,
-			"doclist": bean.doclist,
-			"webnotes": webnotes,
-			"utils": webnotes.utils
-		}
+		ticket_context = {"title": "Not Allowed"}
+		
+	return ticket_context
 
 @webnotes.whitelist()
 def add_reply(ticket, message):
@@ -32,7 +30,7 @@ def add_reply(ticket, message):
 	if bean.doc.raised_by != webnotes.session.user:
 		raise webnotes.throw(_("You are not allowed to reply to this ticket."), webnotes.PermissionError)
 	
-	from webnotes.core.doctype.communication.communication import make
-	make(content=message, sender=bean.doc.raised_by, subject = bean.doc.subject,
+	from webnotes.core.doctype.communication.communication import _make
+	_make(content=message, sender=bean.doc.raised_by, subject = bean.doc.subject,
 		doctype="Support Ticket", name=bean.doc.name,
 		date=today())

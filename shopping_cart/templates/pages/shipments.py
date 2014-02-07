@@ -3,21 +3,21 @@
 
 from __future__ import unicode_literals
 import webnotes
+from shopping_cart.templates.utils import get_currency_context
 
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
-	from shopping_cart.templates.utils import get_currency_context
-	context = get_currency_context()
-	context.update({
+def get_context(context):
+	shipments_context = get_currency_context()
+	shipments_context.update({
 		"title": "Shipments",
 		"method": "shopping_cart.templates.pages.shipments.get_shipments",
 		"icon": "icon-truck",
 		"empty_list_message": "No Shipments Found",
 		"page": "shipment"
 	})
-	return context
+	return shipments_context
 	
 @webnotes.whitelist()
 def get_shipments(start=0):

@@ -9,14 +9,16 @@ from shopping_cart.templates.utils import get_transaction_context
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
-	context = get_transaction_context("Sales Order", webnotes.form_dict.name)
-	modify_status(context.get("doc"))
-	context.update({
+def get_context(context):
+	print "in get context"
+	order_context = webnotes._dict({
 		"parent_link": "orders",
 		"parent_title": "My Orders"
 	})
-	return context
+	
+	order_context.update(get_transaction_context("Sales Order", webnotes.form_dict.name))
+	modify_status(order_context.bean.doc)
+	return order_context
 	
 def modify_status(doc):
 	doc.status = []

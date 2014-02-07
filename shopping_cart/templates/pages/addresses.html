@@ -1,13 +1,11 @@
-{% extends base_template %}
+{% block title %} {{ "My Addresses" }} {% endblock %}
 
-{% set title="My Addresses" %}
+{% block header %}<h2>My Addresses</h2>{% endblock %}
+
+{% block breadcrumbs %}{% include "templates/includes/breadcrumbs.html" %}{% endblock %}
 
 {% block content %}
-<div class="container content">
-    <ul class="breadcrumb">
-    	<li><a href="index">Home</a></li>
-    	<li class="active"><i class="icon-map-marker icon-fixed-width"></i> My Addresses</li>
-    </ul>
+<div class="addresses-content">
 	<p><a class="btn btn-default" href="address"><i class="icon-plus"> New Address</i></a></p>
 	<hr>
 	<div id="address-list">
@@ -19,10 +17,6 @@
 
 <script>
 ;(function() {
-	$(document).ready(function() {
-		fetch_addresses();
-	});
-	
 	var fetch_addresses = function() {
 		wn.call({
 			method: "shopping_cart.templates.pages.addresses.get_addresses",
@@ -46,6 +40,12 @@
 			}
 		});
 	};
+	
+	$(document).ready(function() {
+		fetch_addresses();
+	});
 })();
 </script>
 {% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

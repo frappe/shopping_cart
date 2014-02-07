@@ -1,7 +1,9 @@
-{% extends "templates/includes/transactions.html" %}
+{% block title %} {{ title }} {% endblock %}
 
-{% block javascript -%}
-{{ super() }}
+{% block header %}<h2>{{ title }}</h2>{% endblock %}
+
+{% block content %}
+{% include "templates/includes/transactions.html" %}
 
 <script>
 	var status_label = {
@@ -84,4 +86,7 @@
 		if(txt) $("#msgprint-alert").html(txt).toggle(true);
 	}
 </script>
-{%- endblock %}
+
+{% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

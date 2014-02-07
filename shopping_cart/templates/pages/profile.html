@@ -1,9 +1,9 @@
-{% extends base_template %}
+{% block title %} {{ "My Profile" }} {% endblock %}
 
-{% set title="My Profile" %}
+{% block header %}<h2>My Profile</h2>{% endblock %}
 
 {% block content %}
-<div class="container content">
+<div class="profile-content">
     <ul class="breadcrumb">
     	<li><a href="index">Home</a></li>
     	<li class="active"><i class="icon-user icon-fixed-width"></i> My Profile</li>
@@ -53,3 +53,5 @@ $(document).ready(function() {
 })
 </script>
 {% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

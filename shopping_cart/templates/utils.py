@@ -44,16 +44,9 @@ def get_currency_context():
 def get_transaction_context(doctype, name):
 	customer = webnotes.conn.get_value("Contact", {"email_id": webnotes.session.user}, 
 		"customer")
-		
+	
 	bean = webnotes.bean(doctype, name)
 	if bean.doc.customer != customer:
-		return {
-			"doc": {"name": "Not Allowed"}
-		}
+		return { "bean": webnotes._dict({ "doc": webnotes._dict({"name": _("Not Allowed")}) }) }
 	else:
-		return {
-			"doc": bean.doc,
-			"doclist": bean.doclist,
-			"webnotes": webnotes,
-			"utils": webnotes.utils
-		}
+		return { "bean": bean }

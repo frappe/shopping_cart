@@ -1,8 +1,8 @@
-{% extends base_template %}
+{% block title %} {{ title }} {% endblock %}
 
-{% set title=doc and doc.name or "New Address" %}
-{% set docname=(doc and doc.name or "") %}
+{% block header %}<h2>{{ title }}</h2>{% endblock %}
 
+{% block content %}
 {% macro render_fields(docfields) -%}
 {% for df in docfields -%}
 	{% if df.fieldtype in ["Data", "Link"] -%}
@@ -10,13 +10,13 @@
 		<label>{{ df.label }}</label>
 		<input class="form-control" type="text" placeholder="Type {{ df.label }}" 
 			data-fieldname="{{ df.fieldname }}" data-fieldtype="{{ df.fieldtype }}"
-			{% if doc and doc.fields.get(df.fieldname) -%} value="{{ doc.fields[df.fieldname] }}" {%- endif %}>
+			{% if doc and doc.get(df.fieldname) -%} value="{{ doc[df.fieldname] }}" {%- endif %}>
 	</fieldset>
 	{% elif df.fieldtype == "Check" -%}
 	<fieldset class="checkbox">
 		<label><input type="checkbox" data-fieldname="{{ df.fieldname }}" 
 			data-fieldtype="{{ df.fieldtype }}" 
-			{% if doc and cint(doc.fields.get(df.fieldname)) -%} checked="checked" {%- endif %}> 
+			{% if doc and webnotes.utils.cint(doc.get(df.fieldname)) -%} checked="checked" {%- endif %}> 
 			{{ df.label }}</label>
 	</fieldset>
 	{% elif df.fieldtype == "Select" -%}
@@ -24,7 +24,7 @@
 		<label>{{ df.label }}</label>
 		<select class="form-control" data-fieldname="{{ df.fieldname }}" data-fieldtype="{{ df.fieldtype }}">
 			{% for value in df.options.split("\n") -%}
-			{% if doc and doc.fields.get(df.fieldname) == value -%}
+			{% if doc and doc.get(df.fieldname) == value -%}
 			<option selected="selected">{{ value }}</option>
 			{% else -%}
 			<option>{{ value }}</option>
@@ -36,7 +36,6 @@
 {%- endfor %}
 {%- endmacro %}
 
-{% block content %}
 <div class="container content">
     <ul class="breadcrumb">
     	<li><a href="index">Home</a></li>
@@ -70,7 +69,7 @@
 	var bind_save = function() {
 		$("#address-save").on("click", function() {
 			var fields = {
-				name: "{{ docname }}"
+				name: "{{ docname or '' }}"
 			};
 
 			$("form").find("[data-fieldname]").each(function(i, input) {
@@ -112,3 +111,5 @@
 })();
 </script>
 {% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

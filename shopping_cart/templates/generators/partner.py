@@ -3,19 +3,16 @@
 
 from __future__ import unicode_literals
 import webnotes
-from webnotes.webutils import render_blocks
 from webnotes.utils import filter_strip_join
 
 doctype = "Sales Partner"
 condition_field = "show_in_website"
 
 def get_context(context):
-	bean = webnotes.bean(context.ref_doctype, context.docname)
-	partner_context = bean.doc.fields
-	partner_context["title"] = bean.doc.partner_name
+	partner_context = context.bean.doc.fields
 	
 	address = webnotes.conn.get_value("Address", 
-		{"sales_partner": bean.doc.name, "is_primary_address": 1}, 
+		{"sales_partner": context.bean.doc.name, "is_primary_address": 1}, 
 		"*", as_dict=True)
 	if address:
 		city_state = ", ".join(filter(None, [address.city, address.state]))
@@ -28,6 +25,4 @@ def get_context(context):
 			"phone": filter_strip_join(cstr(address.phone).split(","), "\n<br>")
 		})
 	
-	partner_context.update(context)
-	
-	return render_blocks(partner_context)
+	return partner_context

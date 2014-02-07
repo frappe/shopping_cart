@@ -1,7 +1,4 @@
-{% extends base_template %}
-
-{% block content -%}
-<div class="container content">
+<div class="transactions-content">
     <ul class="breadcrumb">
     	<li><a href="index">Home</a></li>
     	<li class="active"><i class="{{ icon }} icon-fixed-width"></i> {{ title }}</li>
@@ -17,18 +14,7 @@
 		<button class="btn btn-default btn-show-more hide">More</button>
 	</div>
 </div>
-{%- endblock %}
-
-{% block javascript -%}
 <script>
-$(document).ready(function() {
-	window.start = 0;
-	window.$list = $(".transaction-list");
-	window.$show_more = $(".btn-show-more").on("click", function() { get_transactions(this); })
-	
-	get_transactions();
-});
-
 var get_transactions = function(btn) {
 	wn.call({
 		method: "{{ method }}",
@@ -54,7 +40,12 @@ var get_transactions = function(btn) {
 		}
 	})
 };
-</script>
 
-<!-- // var render = function(doc) { }; -->
-{% endblock %}
+$(document).ready(function() {
+	window.start = 0;
+	window.$list = $(".transaction-list");
+	window.$show_more = $(".btn-show-more").on("click", function() { get_transactions(this); })
+	
+	get_transactions();
+});
+</script>

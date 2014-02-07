@@ -3,15 +3,15 @@
 
 from __future__ import unicode_literals
 import webnotes
+from shopping_cart.templates.utils import get_transaction_context
 
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
-	from shopping_cart.templates.utils import get_transaction_context
-	context = get_transaction_context("Delivery Note", webnotes.form_dict.name)
-	context.update({
+def get_context(context):
+	shipment_context = {
 		"parent_link": "shipments",
 		"parent_title": "Shipments"
-	})
+	}
+	shipment_context.update(get_transaction_context("Delivery Note", webnotes.form_dict.name))
 	return context

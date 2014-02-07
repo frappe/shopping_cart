@@ -1,14 +1,11 @@
-{% extends base_template %}
+{% block title %} {{ "Shopping Cart" }} {% endblock %}
 
-{% block javascript %}
-<script>{% include "templates/includes/cart.js" %}</script>
-{% endblock %}
+{% block header %}<h2><i class="icon-shopping-cart"></i> Shopping Cart</h2>{% endblock %}
 
-{% set title="Shopping Cart" %}
+{% block script %}{% include "templates/includes/cart.js" %}{% endblock %}
 
 {% block content %}
-<div class="container content">
-	<h2><i class="icon-shopping-cart"></i> {{ title }}</h2>
+<div class="cart-content">
 	<div class="progress progress-striped active">
 		<div class="progress-bar progress-bar-info" style="width: 100%;"></div>
 	</div>
@@ -55,3 +52,5 @@
 	</div>
 </div>
 {% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

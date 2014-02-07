@@ -5,12 +5,12 @@ from __future__ import unicode_literals
 import webnotes
 from webnotes import _
 from webnotes.utils import cstr
+from shopping_cart.shopping_cart.cart import get_lead_or_customer
 
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
-	from shopping_cart.shopping_cart.cart import get_lead_or_customer
+def get_context(context):
 	party = get_lead_or_customer()
 	if party.doctype == "Lead":
 		mobile_no = party.mobile_no

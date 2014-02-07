@@ -1,5 +1,7 @@
-{% extends "templates/sale.html" %}
+{% block title %} {{ bean.doc.name }} {% endblock %}
 
-{% block status -%}
-	{% if doc.status %}{{ doc.status }}{% endif %}
-{%- endblock %}
+{% block header %}<h2>{{ bean.doc.name }}</h2>{% endblock %}
+
+{% block content%}{% include "templates/includes/sale.html" %}{% endblock %}
+
+{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

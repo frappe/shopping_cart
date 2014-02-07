@@ -5,19 +5,19 @@ from __future__ import unicode_literals
 import webnotes
 from webnotes import _
 from webnotes.utils import flt, fmt_money
+from shopping_cart.templates.utils import get_transaction_context
 
 no_cache = 1
 no_sitemap = 1
 
-def get_context():
-	from shopping_cart.templates.utils import get_transaction_context
-	context = get_transaction_context("Sales Invoice", webnotes.form_dict.name)
-	modify_status(context.get("doc"))
-	context.update({
+def get_context(context):
+	invoice_context = webnotes._dict({
 		"parent_link": "invoices",
 		"parent_title": "Invoices"
 	})
-	return context
+	invoice_context.update(get_transaction_context("Sales Invoice", webnotes.form_dict.name))
+	modify_status(invoice_context.bean.doc)
+	return invoice_context
 	
 def modify_status(doc):
 	doc.status = ""
