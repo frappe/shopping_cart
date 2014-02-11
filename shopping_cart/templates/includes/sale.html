@@ -39,8 +39,8 @@
 					<td style="width: 37%;">{{ row.description }}</td>
 					<td style="width: 5%; text-align: right;">{{ row.qty }}</td>
 					<td style="width: 5%;">{{ row.stock_uom }}</td>
-					<td style="width: 15%; text-align: right;">{{ webnotes.utils.fmt_money(row.export_rate, currency=bean.doc.currency) }}</td>
-					<td style="width: 15%; text-align: right;">{{ webnotes.utils.fmt_money(row.export_amount, currency=bean.doc.currency) }}</td>
+					<td style="width: 15%; text-align: right;">{{ webnotes.utils.fmt_money(row.rate, currency=bean.doc.currency) }}</td>
+					<td style="width: 15%; text-align: right;">{{ webnotes.utils.fmt_money(row.amount, currency=bean.doc.currency) }}</td>
 				</tr>
 				{% endfor -%}
 			</tbody>

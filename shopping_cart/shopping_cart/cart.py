@@ -131,8 +131,8 @@ def decorate_quotation_doclist(doclist):
 		if d.item_code:
 			d.fields.update(webnotes.conn.get_value("Item", d.item_code, 
 				["website_image", "description", "page_name"], as_dict=True))
-			d.formatted_rate = fmt_money(d.export_rate, currency=doclist[0].currency)
-			d.formatted_amount = fmt_money(d.export_amount, currency=doclist[0].currency)
+			d.formatted_rate = fmt_money(d.rate, currency=doclist[0].currency)
+			d.formatted_amount = fmt_money(d.amount, currency=doclist[0].currency)
 		elif d.charge_type:
 			d.formatted_tax_amount = fmt_money(flt(d.tax_amount) / doclist[0].conversion_rate,
 				currency=doclist[0].currency)
@@ -235,7 +235,7 @@ def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	quotation.doc.price_list_currency = quotation.doc.currency = \
 		quotation.doc.plc_conversion_rate = quotation.doc.conversion_rate = None
 	for item in quotation.doclist.get({"parentfield": "quotation_details"}):
-		item.ref_rate = item.adj_rate = item.export_rate = item.export_amount = None
+		item.price_list_rate = item.discount_percentage = item.rate = item.amount = None
 	
 	# refetch values
 	quotation.run_method("set_price_list_and_item_details")
