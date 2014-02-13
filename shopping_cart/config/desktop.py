@@ -1,4 +1,4 @@
-{
+data = {
 	"Shopping Cart": {
 		"color": "#B7E090", 
 		"icon": "icon-shopping-cart", 
