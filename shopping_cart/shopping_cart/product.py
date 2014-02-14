@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 import webnotes
 from webnotes.utils import cstr, cint, fmt_money
-from webnotes.webutils import clear_cache
+from webnotes.website.render import clear_cache
 from shopping_cart.shopping_cart.cart import _get_cart_quotation
 
 @webnotes.whitelist(allow_guest=True)

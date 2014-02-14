@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals
 import webnotes
-import webnotes.webutils
+import webnotes.website.render
 
 def get_context(context):
 	return {
@@ -14,5 +14,5 @@ def get_context(context):
 
 def clear_cache(bean, trigger):
 	if bean.doc.page_name:
-		webnotes.webutils.clear_cache("partners")
+		webnotes.website.render.clear_cache("partners")
 	
