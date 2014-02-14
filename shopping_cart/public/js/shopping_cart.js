@@ -24,7 +24,7 @@ $.extend(shopping_cart, {
 			}
 			window.location.href = "login";
 		} else {
-			return wn.call({
+			return frappe.call({
 				type: "POST",
 				method: "shopping_cart.shopping_cart.cart.update_cart",
 				args: {

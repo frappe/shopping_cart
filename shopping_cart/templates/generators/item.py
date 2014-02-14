@@ -3,9 +3,9 @@
 
 from __future__ import unicode_literals
 
-import webnotes
+import frappe
 from shopping_cart.shopping_cart.product import get_parent_item_groups
-from webnotes.website.doctype.website_slideshow.website_slideshow import get_slideshow
+from frappe.website.doctype.website_slideshow.website_slideshow import get_slideshow
 
 doctype = "Item"
 condition_field = "show_in_website"

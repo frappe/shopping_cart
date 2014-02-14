@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var item_code = $('[itemscope] [itemprop="productID"]').text().trim();
 	var qty = 0;
 	
-	wn.call({
+	frappe.call({
 		type: "POST",
 		method: "shopping_cart.shopping_cart.product.get_product_info",
 		args: {

@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 import json
 
-import webnotes
+import frappe
 from shopping_cart.shopping_cart.cart import get_lead_or_customer
 
 no_cache = 1
@@ -12,21 +12,21 @@ no_sitemap = 1
 
 def get_context(context):
 	def _get_fields(fieldnames):
-		return [webnotes._dict(zip(["label", "fieldname", "fieldtype", "options"], 
+		return [frappe._dict(zip(["label", "fieldname", "fieldtype", "options"], 
 				[df.label, df.fieldname, df.fieldtype, df.options]))
-			for df in webnotes.get_doctype("Address", processed=True).get({"fieldname": ["in", fieldnames]})]
+			for df in frappe.get_doctype("Address", processed=True).get({"fieldname": ["in", fieldnames]})]
 	
 	docname = doc = None
 	title = "New Address"
-	if webnotes.form_dict.name:
-		bean = webnotes.bean("Address", webnotes.form_dict.name)
+	if frappe.form_dict.name:
+		bean = frappe.bean("Address", frappe.form_dict.name)
 		docname = bean.doc.name
 		doc = bean.doc.fields
 		title = bean.doc.name
 	
 	return {
 		"doc": doc,
-		"meta": webnotes._dict({
+		"meta": frappe._dict({
 			"left_fields": _get_fields(["address_title", "address_type", "address_line1", "address_line2",
 				"city", "state", "pincode", "country"]),
 			"right_fields": _get_fields(["email_id", "phone", "fax", "is_primary_address",
@@ -36,15 +36,15 @@ def get_context(context):
 		"title": title
 	}
 	
-@webnotes.whitelist()
+@frappe.whitelist()
 def save_address(fields, address_fieldname=None):
 	party = get_lead_or_customer()
 	fields = json.loads(fields)
 	
 	if fields.get("name"):
-		bean = webnotes.bean("Address", fields.get("name"))
+		bean = frappe.bean("Address", fields.get("name"))
 	else:
-		bean = webnotes.bean({"doctype": "Address", "__islocal": 1})
+		bean = frappe.bean({"doctype": "Address", "__islocal": 1})
 	
 	bean.doc.fields.update(fields)
 	

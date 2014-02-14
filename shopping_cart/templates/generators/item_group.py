@@ -3,10 +3,10 @@
 
 from __future__ import unicode_literals
 
-import webnotes
+import frappe
 from shopping_cart.shopping_cart.product import get_product_list_for_group, \
 	get_parent_item_groups, get_group_item_count
-from webnotes.website.doctype.website_slideshow.website_slideshow import get_slideshow
+from frappe.website.doctype.website_slideshow.website_slideshow import get_slideshow
 
 doctype = "Item Group"
 condition_field = "show_in_website"
@@ -14,7 +14,7 @@ condition_field = "show_in_website"
 def get_context(context):
 	item_group_context = context.bean.doc.fields
 	item_group_context.update({
-		"sub_groups": webnotes.conn.sql("""select name, page_name
+		"sub_groups": frappe.conn.sql("""select name, page_name
 			from `tabItem Group` where parent_item_group=%s
 			and ifnull(show_in_website,0)=1""", context.docname, as_dict=1),
 		"items": get_product_list_for_group(product_group = context.docname, limit=100),

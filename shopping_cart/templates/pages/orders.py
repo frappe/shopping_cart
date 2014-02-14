@@ -2,7 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
+import frappe
 from shopping_cart.templates.utils import get_currency_context, get_transaction_list
 from shopping_cart.templates.pages.order import modify_status
 
@@ -20,7 +20,7 @@ def get_context(context):
 	})
 	return orders_context
 	
-@webnotes.whitelist()
+@frappe.whitelist()
 def get_orders(start=0):
 	orders = get_transaction_list("Sales Order", start, ["per_billed", "per_delivered"])
 	for d in orders:

@@ -2,22 +2,22 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
-from webnotes import msgprint, throw, _
-import webnotes.defaults
-from webnotes.utils import flt, get_fullname, fmt_money, cstr
-from webnotes.model.doclist import objectify
+import frappe
+from frappe import msgprint, throw, _
+import frappe.defaults
+from frappe.utils import flt, get_fullname, fmt_money, cstr
+from frappe.model.doclist import objectify
 from erpnext.utilities.doctype.address.address import get_address_display
 
-class WebsitePriceListMissingError(webnotes.ValidationError): pass
+class WebsitePriceListMissingError(frappe.ValidationError): pass
 
 def set_cart_count(quotation=None):
 	if not quotation:
 		quotation = _get_cart_quotation()
 	cart_count = cstr(len(quotation.doclist.get({"parentfield": "quotation_details"})))
-	webnotes._response.set_cookie("cart_count", cart_count)
+	frappe._response.set_cookie("cart_count", cart_count)
 
-@webnotes.whitelist()
+@frappe.whitelist()
 def get_cart_quotation(doclist=None):
 	party = get_lead_or_customer()
 	
@@ -33,7 +33,7 @@ def get_cart_quotation(doclist=None):
 		"shipping_rules": get_applicable_shipping_rules(party)
 	}
 	
-@webnotes.whitelist()
+@frappe.whitelist()
 def place_order():
 	quotation = _get_cart_quotation()
 	controller = quotation.make_controller()
@@ -45,15 +45,15 @@ def place_order():
 	quotation.submit()
 	
 	from erpnext.selling.doctype.quotation.quotation import _make_sales_order
-	sales_order = webnotes.bean(_make_sales_order(quotation.doc.name, ignore_permissions=True))
+	sales_order = frappe.bean(_make_sales_order(quotation.doc.name, ignore_permissions=True))
 	sales_order.ignore_permissions = True
 	sales_order.insert()
 	sales_order.submit()
-	webnotes._response.set_cookie("cart_count", "")
+	frappe._response.set_cookie("cart_count", "")
 	
 	return sales_order.doc.name
 
-@webnotes.whitelist()
+@frappe.whitelist()
 def update_cart(item_code, qty, with_doclist=0):
 	quotation = _get_cart_quotation()
 	
@@ -79,7 +79,7 @@ def update_cart(item_code, qty, with_doclist=0):
 	apply_cart_settings(quotation=quotation)
 
 	if hasattr(quotation, "__delete"):
-		webnotes.delete_doc("Quotation", quotation.doc.name, ignore_permissions=True)
+		frappe.delete_doc("Quotation", quotation.doc.name, ignore_permissions=True)
 		quotation = _get_cart_quotation()
 	else:
 		quotation.ignore_permissions = True
@@ -92,10 +92,10 @@ def update_cart(item_code, qty, with_doclist=0):
 	else:
 		return quotation.doc.name
 		
-@webnotes.whitelist()
+@frappe.whitelist()
 def update_cart_address(address_fieldname, address_name):
 	quotation = _get_cart_quotation()
-	address_display = get_address_display(webnotes.doc("Address", address_name).fields)
+	address_display = get_address_display(frappe.doc("Address", address_name).fields)
 	
 	if address_fieldname == "shipping_address_name":
 		quotation.doc.shipping_address_name = address_name
@@ -118,18 +118,18 @@ def update_cart_address(address_fieldname, address_name):
 
 def guess_territory():
 	territory = None
-	geoip_country = webnotes.session.get("session_country")
+	geoip_country = frappe.session.get("session_country")
 	if geoip_country:
-		territory = webnotes.conn.get_value("Territory", geoip_country)
+		territory = frappe.conn.get_value("Territory", geoip_country)
 	
 	return territory or \
-		webnotes.conn.get_value("Shopping Cart Settings", None, "territory") or \
+		frappe.conn.get_value("Shopping Cart Settings", None, "territory") or \
 		"All Territories"
 
 def decorate_quotation_doclist(doclist):
 	for d in doclist:
 		if d.item_code:
-			d.fields.update(webnotes.conn.get_value("Item", d.item_code, 
+			d.fields.update(frappe.conn.get_value("Item", d.item_code, 
 				["website_image", "description", "page_name"], as_dict=True))
 			d.formatted_rate = fmt_money(d.rate, currency=doclist[0].currency)
 			d.formatted_amount = fmt_money(d.amount, currency=doclist[0].currency)
@@ -146,17 +146,17 @@ def _get_cart_quotation(party=None):
 	if not party:
 		party = get_lead_or_customer()
 		
-	quotation = webnotes.conn.get_value("Quotation", 
+	quotation = frappe.conn.get_value("Quotation", 
 		{party.doctype.lower(): party.name, "order_type": "Shopping Cart", "docstatus": 0})
 	
 	if quotation:
-		qbean = webnotes.bean("Quotation", quotation)
+		qbean = frappe.bean("Quotation", quotation)
 	else:
-		qbean = webnotes.bean({
+		qbean = frappe.bean({
 			"doctype": "Quotation",
-			"naming_series": webnotes.defaults.get_user_default("shopping_cart_quotation_series") or "QTN-CART-",
+			"naming_series": frappe.defaults.get_user_default("shopping_cart_quotation_series") or "QTN-CART-",
 			"quotation_to": party.doctype,
-			"company": webnotes.defaults.get_user_default("company"),
+			"company": frappe.defaults.get_user_default("company"),
 			"order_type": "Shopping Cart",
 			"status": "Draft",
 			"docstatus": 0,
@@ -165,7 +165,7 @@ def _get_cart_quotation(party=None):
 		})
 		
 		if party.doctype == "Customer":
-			qbean.doc.contact_person = webnotes.conn.get_value("Contact", {"email_id": webnotes.session.user,
+			qbean.doc.contact_person = frappe.conn.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
 			qbean.run_method("set_contact_fields")
 		
@@ -186,9 +186,9 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		party.customer_name = company_name or fullname
 		party.customer_type == "Company" if company_name else "Individual"
 		
-		contact_name = webnotes.conn.get_value("Contact", {"email_id": webnotes.session.user,
+		contact_name = frappe.conn.get_value("Contact", {"email_id": frappe.session.user,
 			"customer": party.name})
-		contact = webnotes.bean("Contact", contact_name)
+		contact = frappe.bean("Contact", contact_name)
 		contact.doc.first_name = fullname
 		contact.doc.last_name = None
 		contact.doc.customer_name = party.customer_name
@@ -197,7 +197,7 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		contact.ignore_permissions = True
 		contact.save()
 	
-	party_bean = webnotes.bean(party.fields)
+	party_bean = frappe.bean(party.fields)
 	party_bean.ignore_permissions = True
 	party_bean.save()
 	
@@ -214,7 +214,7 @@ def apply_cart_settings(party=None, quotation=None):
 	if not quotation:
 		quotation = _get_cart_quotation(party)
 	
-	cart_settings = webnotes.get_obj("Shopping Cart Settings")
+	cart_settings = frappe.get_obj("Shopping Cart Settings")
 	
 	billing_territory = get_address_territory(quotation.doc.customer_address) or \
 		party.territory or "All Territories"
@@ -241,7 +241,7 @@ def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	quotation.run_method("set_price_list_and_item_details")
 	
 	# set it in cookies for using in product page
-	webnotes.local._response.set_cookie("selling_price_list", quotation.doc.selling_price_list)
+	frappe.local._response.set_cookie("selling_price_list", quotation.doc.selling_price_list)
 	
 def set_taxes(quotation, cart_settings, billing_territory):
 	"""set taxes based on billing territory"""
@@ -256,23 +256,23 @@ def set_taxes(quotation, cart_settings, billing_territory):
 	quotation.set_doclist(controller.doclist)
 	
 def get_lead_or_customer():
-	customer = webnotes.conn.get_value("Contact", {"email_id": webnotes.session.user}, "customer")
+	customer = frappe.conn.get_value("Contact", {"email_id": frappe.session.user}, "customer")
 	if customer:
-		return webnotes.doc("Customer", customer)
+		return frappe.doc("Customer", customer)
 	
-	lead = webnotes.conn.get_value("Lead", {"email_id": webnotes.session.user})
+	lead = frappe.conn.get_value("Lead", {"email_id": frappe.session.user})
 	if lead:
-		return webnotes.doc("Lead", lead)
+		return frappe.doc("Lead", lead)
 	else:
-		lead_bean = webnotes.bean({
+		lead_bean = frappe.bean({
 			"doctype": "Lead",
-			"email_id": webnotes.session.user,
-			"lead_name": get_fullname(webnotes.session.user),
+			"email_id": frappe.session.user,
+			"lead_name": get_fullname(frappe.session.user),
 			"territory": guess_territory(),
 			"status": "Open" # TODO: set something better???
 		})
 		
-		if webnotes.session.user != "Guest":
+		if frappe.session.user != "Guest":
 			lead_bean.ignore_permissions = True
 			lead_bean.insert()
 			
@@ -282,7 +282,7 @@ def get_address_docs(party=None):
 	if not party:
 		party = get_lead_or_customer()
 		
-	address_docs = objectify(webnotes.conn.sql("""select * from `tabAddress`
+	address_docs = objectify(frappe.conn.sql("""select * from `tabAddress`
 		where `%s`=%s order by name""" % (party.doctype.lower(), "%s"), party.name, 
 		as_dict=True, update={"doctype": "Address"}))
 	
@@ -292,7 +292,7 @@ def get_address_docs(party=None):
 		
 	return address_docs
 
-@webnotes.whitelist()
+@frappe.whitelist()
 def apply_shipping_rule(shipping_rule):
 	quotation = _get_cart_quotation()
 	
@@ -321,7 +321,7 @@ def get_applicable_shipping_rules(party=None, quotation=None):
 	shipping_rules = get_shipping_rules(party, quotation)
 	
 	if shipping_rules:
-		rule_label_map = webnotes.conn.get_values("Shipping Rule", shipping_rules, "label")
+		rule_label_map = frappe.conn.get_values("Shipping Rule", shipping_rules, "label")
 		# we need this in sorted order as per the position of the rule in the settings page
 		return [[rule, rule_label_map.get(rule)] for rule in shipping_rules]
 		
@@ -331,7 +331,7 @@ def get_shipping_rules(party=None, quotation=None, cart_settings=None):
 	if not quotation:
 		quotation = _get_cart_quotation()
 	if not cart_settings:
-		cart_settings = webnotes.get_obj("Shopping Cart Settings")
+		cart_settings = frappe.get_obj("Shopping Cart Settings")
 		
 	# set shipping rule based on shipping territory	
 	shipping_territory = get_address_territory(quotation.doc.shipping_address_name) or \
@@ -346,10 +346,10 @@ def get_address_territory(address_name):
 	territory = None
 
 	if address_name:
-		address_fields = webnotes.conn.get_value("Address", address_name, 
+		address_fields = frappe.conn.get_value("Address", address_name, 
 			["city", "state", "country"])
 		for value in address_fields:
-			territory = webnotes.conn.get_value("Territory", value)
+			territory = frappe.conn.get_value("Territory", value)
 			if territory:
 				break
 	
@@ -362,33 +362,33 @@ class TestCart(unittest.TestCase):
 	def tearDown(self):
 		return
 		
-		cart_settings = webnotes.bean("Shopping Cart Settings")
+		cart_settings = frappe.bean("Shopping Cart Settings")
 		cart_settings.ignore_permissions = True
 		cart_settings.doc.enabled = 0
 		cart_settings.save()
 	
 	def enable_shopping_cart(self):
 		return
-		if not webnotes.conn.get_value("Shopping Cart Settings", None, "enabled"):
-			cart_settings = webnotes.bean("Shopping Cart Settings")
+		if not frappe.conn.get_value("Shopping Cart Settings", None, "enabled"):
+			cart_settings = frappe.bean("Shopping Cart Settings")
 			cart_settings.ignore_permissions = True
 			cart_settings.doc.enabled = 1
 			cart_settings.save()
 			
 	def test_get_lead_or_customer(self):
-		webnotes.session.user = "test@example.com"
+		frappe.session.user = "test@example.com"
 		party1 = get_lead_or_customer()
 		party2 = get_lead_or_customer()
 		self.assertEquals(party1.name, party2.name)
 		self.assertEquals(party1.doctype, "Lead")
 		
-		webnotes.session.user = "test_contact_customer@example.com"
+		frappe.session.user = "test_contact_customer@example.com"
 		party = get_lead_or_customer()
 		self.assertEquals(party.name, "_Test Customer")
 		
 	def test_add_to_cart(self):
 		self.enable_shopping_cart()
-		webnotes.session.user = "test@example.com"
+		frappe.session.user = "test@example.com"
 		
 		update_cart("_Test Item", 1)
 		
@@ -425,5 +425,5 @@ class TestCart(unittest.TestCase):
 	def test_place_order(self):
 		quotation = self.test_update_cart()
 		sales_order_name = place_order()
-		sales_order = webnotes.bean("Sales Order", sales_order_name)
+		sales_order = frappe.bean("Sales Order", sales_order_name)
 		self.assertEquals(sales_order.doclist.getone({"item_code": "_Test Item"}).prevdoc_docname, quotation.doc.name)

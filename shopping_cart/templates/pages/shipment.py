@@ -2,7 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
+import frappe
 from shopping_cart.templates.utils import get_transaction_context
 
 no_cache = 1
@@ -13,5 +13,5 @@ def get_context(context):
 		"parent_link": "shipments",
 		"parent_title": "Shipments"
 	}
-	shipment_context.update(get_transaction_context("Delivery Note", webnotes.form_dict.name))
+	shipment_context.update(get_transaction_context("Delivery Note", frappe.form_dict.name))
 	return context

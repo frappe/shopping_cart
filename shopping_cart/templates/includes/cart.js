@@ -8,7 +8,7 @@ if(!window.shopping_cart) window.shopping_cart = {};
 
 $(document).ready(function() {
 	shopping_cart.bind_events();
-	return wn.call({
+	return frappe.call({
 		type: "POST",
 		method: "shopping_cart.shopping_cart.cart.get_cart_quotation",
 		callback: function(r) {
@@ -16,11 +16,11 @@ $(document).ready(function() {
 			$(".progress").remove();
 			if(r.exc) {
 				if(r.exc.indexOf("WebsitePriceListMissingError")!==-1) {
-					shopping_cart.show_error("Oops!", wn._("Price List not configured."));
+					shopping_cart.show_error("Oops!", frappe._("Price List not configured."));
 				} else if(r["403"]) {
-					shopping_cart.show_error("Hey!", wn._("You need to be logged in to view your cart."));
+					shopping_cart.show_error("Hey!", frappe._("You need to be logged in to view your cart."));
 				} else {
-					shopping_cart.show_error("Oops!", wn._("Something went wrong."));
+					shopping_cart.show_error("Oops!", frappe._("Something went wrong."));
 				}
 			} else {
 				shopping_cart.set_cart_count();
@@ -79,7 +79,7 @@ $.extend(shopping_cart, {
 		
 		var no_items = $.map(doclist, function(d) { return d.item_code || null;}).length===0;
 		if(no_items) {
-			shopping_cart.show_error("Empty :-(", wn._("Go ahead and add something to your cart."));
+			shopping_cart.show_error("Empty :-(", frappe._("Go ahead and add something to your cart."));
 			$("#cart-addresses").toggle(false);
 			return;
 		}
@@ -118,7 +118,7 @@ $.extend(shopping_cart, {
 		});
 		
 		if(!(addresses && addresses.length)) {
-			$cart_shipping_address.html('<div class="well">'+wn._("Hey! Go ahead and add an address")+'</div>');
+			$cart_shipping_address.html('<div class="well">'+frappe._("Hey! Go ahead and add an address")+'</div>');
 		} else {
 			shopping_cart.render_address($cart_shipping_address, addresses, doclist[0].shipping_address_name);
 			shopping_cart.render_address($cart_billing_address, addresses, doclist[0].customer_address);
@@ -191,7 +191,7 @@ $.extend(shopping_cart, {
 	},
 	
 	apply_shipping_rule: function(rule, btn) {
-		return wn.call({
+		return frappe.call({
 			btn: btn,
 			type: "POST",
 			method: "shopping_cart.shopping_cart.cart.apply_shipping_rule",
@@ -240,7 +240,7 @@ $.extend(shopping_cart, {
 					}
 				});
 				
-				return wn.call({
+				return frappe.call({
 					type: "POST",
 					method: "shopping_cart.shopping_cart.cart.update_cart_address",
 					args: {
@@ -271,7 +271,7 @@ $.extend(shopping_cart, {
 	},
 	
 	place_order: function(btn) {
-		return wn.call({
+		return frappe.call({
 			type: "POST",
 			method: "shopping_cart.shopping_cart.cart.place_order",
 			btn: btn,
@@ -284,7 +284,7 @@ $.extend(shopping_cart, {
 					
 					$("#cart-error")
 						.empty()
-						.html(msg || wn._("Something went wrong!"))
+						.html(msg || frappe._("Something went wrong!"))
 						.toggle(true);
 				} else {
 					window.location.href = "order?name=" + encodeURIComponent(r.message);

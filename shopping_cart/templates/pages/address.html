@@ -16,7 +16,7 @@
 	<fieldset class="checkbox">
 		<label><input type="checkbox" data-fieldname="{{ df.fieldname }}" 
 			data-fieldtype="{{ df.fieldtype }}" 
-			{% if doc and webnotes.utils.cint(doc.get(df.fieldname)) -%} checked="checked" {%- endif %}> 
+			{% if doc and frappe.utils.cint(doc.get(df.fieldname)) -%} checked="checked" {%- endif %}> 
 			{{ df.label }}</label>
 	</fieldset>
 	{% elif df.fieldtype == "Select" -%}
@@ -84,7 +84,7 @@
 				}
 			});
 			
-			wn.call({
+			frappe.call({
 				btn: $(this),
 				type: "POST",
 				method: "shopping_cart.templates.pages.address.save_address",

@@ -2,8 +2,8 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
-from webnotes.utils import filter_strip_join
+import frappe
+from frappe.utils import filter_strip_join
 
 doctype = "Sales Partner"
 condition_field = "show_in_website"
@@ -11,7 +11,7 @@ condition_field = "show_in_website"
 def get_context(context):
 	partner_context = context.bean.doc.fields
 	
-	address = webnotes.conn.get_value("Address", 
+	address = frappe.conn.get_value("Address", 
 		{"sales_partner": context.bean.doc.name, "is_primary_address": 1}, 
 		"*", as_dict=True)
 	if address:

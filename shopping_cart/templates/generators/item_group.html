@@ -45,9 +45,9 @@
 <script>
 $(function() {
 	if(window.logged_in && getCookie("system_user")==="yes") {
-		wn.has_permission("Item Group", "{{ name }}", "write", function(r) {
-			wn.require("assets/webnotes/js/wn/website/editable.js");
-			wn.make_editable($('[itemprop="description"]'), "Item Group", "{{ name }}", "description");
+		frappe.has_permission("Item Group", "{{ name }}", "write", function(r) {
+			frappe.require("assets/frappe/js/frappe/website/editable.js");
+			frappe.make_editable($('[itemprop="description"]'), "Item Group", "{{ name }}", "description");
 		});
 	}
 });

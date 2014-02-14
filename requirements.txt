@@ -1,2 +1,2 @@
-webnotes
+frappe
 erpnext

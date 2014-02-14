@@ -2,9 +2,9 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
-from webnotes import _
-from webnotes.utils import cstr
+import frappe
+from frappe import _
+from frappe.utils import cstr
 from shopping_cart.shopping_cart.cart import get_lead_or_customer
 
 no_cache = 1
@@ -16,7 +16,7 @@ def get_context(context):
 		mobile_no = party.mobile_no
 		phone = party.phone
 	else:
-		mobile_no, phone = webnotes.conn.get_value("Contact", {"email_id": webnotes.session.user, 
+		mobile_no, phone = frappe.conn.get_value("Contact", {"email_id": frappe.session.user, 
 			"customer": party.name}, ["mobile_no", "phone"])
 		
 	return {
@@ -25,7 +25,7 @@ def get_context(context):
 		"phone": cstr(phone)
 	}
 	
-@webnotes.whitelist()
+@frappe.whitelist()
 def update_profile(fullname, password=None, company_name=None, mobile_no=None, phone=None):
 	from shopping_cart.shopping_cart.cart import update_party
 	update_party(fullname, company_name, mobile_no, phone)
@@ -33,8 +33,8 @@ def update_profile(fullname, password=None, company_name=None, mobile_no=None, p
 	if not fullname:
 		return _("Name is required")
 		
-	webnotes.conn.set_value("Profile", webnotes.session.user, "first_name", fullname)
-	webnotes._response.set_cookie("full_name", fullname)
+	frappe.conn.set_value("Profile", frappe.session.user, "first_name", fullname)
+	frappe._response.set_cookie("full_name", fullname)
 	
 	return _("Updated")
 	

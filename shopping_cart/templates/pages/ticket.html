@@ -33,7 +33,7 @@
 			<div class="row col-md-12">{{ bean.doc.subject }}</div>
 		</div>
 		<div class="col-md-2">
-			<span class="text-muted pull-right">{{ webnotes.utils.formatdate(bean.doc.creation) }}</span>
+			<span class="text-muted pull-right">{{ frappe.utils.formatdate(bean.doc.creation) }}</span>
 		</div>
 	</div>
 	<div class="row">
@@ -56,9 +56,9 @@
 				<tr>
 					<td>
 					<h5 style="text-transform: none">
-						{{ comm.sender }} on {{ webnotes.utils.formatdate(comm.creation) }}</h5>
+						{{ comm.sender }} on {{ frappe.utils.formatdate(comm.creation) }}</h5>
 					<hr>
-					<p>{{ webnotes.utils.is_html(comm.content) and comm.content or
+					<p>{{ frappe.utils.is_html(comm.content) and comm.content or
 						comm.content.replace("\n", "<br>")}}</p>
 					</td>
 				</tr>
@@ -92,7 +92,7 @@ $(document).ready(function() {
 		if(!reply) {
 			msgprint("Please write something in reply!");
 		} else {
-			wn.call({
+			frappe.call({
 				type: "POST",
 				method: "shopping_cart.templates.pages.ticket.add_reply",
 				btn: this,

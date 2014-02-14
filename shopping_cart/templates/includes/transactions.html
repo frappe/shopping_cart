@@ -16,7 +16,7 @@
 </div>
 <script>
 var get_transactions = function(btn) {
-	wn.call({
+	frappe.call({
 		method: "{{ method }}",
 		args: { start: start },
 		btn: btn,

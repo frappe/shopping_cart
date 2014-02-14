@@ -3,21 +3,21 @@
 
 from __future__ import unicode_literals
 
-import webnotes
-import webnotes.defaults
-from webnotes.utils import cint
+import frappe
+import frappe.defaults
+from frappe.utils import cint
 
 def set_cart_count(login_manager):
-	if webnotes.conn.get_value("Profile", webnotes.session.user, "user_type") == "Website User":
+	if frappe.conn.get_value("Profile", frappe.session.user, "user_type") == "Website User":
 		from shopping_cart.shopping_cart.cart import set_cart_count
 		set_cart_count()
 		
 def clear_cart_count(login_manager):
-	webnotes._response.set_cookie("cart_count", "")
+	frappe._response.set_cookie("cart_count", "")
 	
 def update_website_context(context):
 	post_login = []
-	cart_enabled = cint(webnotes.conn.get_default("shopping_cart_enabled"))
+	cart_enabled = cint(frappe.conn.get_default("shopping_cart_enabled"))
 	context["shopping_cart_enabled"] = cart_enabled
 	
 	if cart_enabled:

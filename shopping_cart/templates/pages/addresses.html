@@ -18,7 +18,7 @@
 <script>
 ;(function() {
 	var fetch_addresses = function() {
-		wn.call({
+		frappe.call({
 			method: "shopping_cart.templates.pages.addresses.get_addresses",
 			callback: function(r) {
 				$("#address-list .progress").remove();

@@ -2,8 +2,8 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
-from webnotes.utils import cint, formatdate
+import frappe
+from frappe.utils import cint, formatdate
 
 no_cache = 1
 no_sitemap = 1
@@ -17,23 +17,23 @@ def get_context(context):
 		"page": "ticket"
 	}
 
-@webnotes.whitelist()
+@frappe.whitelist()
 def get_tickets(start=0):
-	tickets = webnotes.conn.sql("""select name, subject, status, creation 
+	tickets = frappe.conn.sql("""select name, subject, status, creation 
 		from `tabSupport Ticket` where raised_by=%s 
 		order by modified desc
-		limit %s, 20""", (webnotes.session.user, cint(start)), as_dict=True)
+		limit %s, 20""", (frappe.session.user, cint(start)), as_dict=True)
 	for t in tickets:
 		t.creation = formatdate(t.creation)
 	
 	return tickets
 	
-@webnotes.whitelist()
+@frappe.whitelist()
 def make_new_ticket(subject, message):
 	if not (subject and message):
-		raise webnotes.throw(_("Please write something in subject and message!"))
+		raise frappe.throw(_("Please write something in subject and message!"))
 		
 	from erpnext.support.doctype.support_ticket.get_support_mails import add_support_communication
-	ticket = add_support_communication(subject, message, webnotes.session.user)
+	ticket = add_support_communication(subject, message, frappe.session.user)
 	
 	return ticket.doc.name

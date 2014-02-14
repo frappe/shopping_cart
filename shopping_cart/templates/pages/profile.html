@@ -33,7 +33,7 @@
 $(document).ready(function() {
 	$("#fullname").val(getCookie("full_name") || "");
 	$("#update_profile").click(function() {
-		wn.call({
+		frappe.call({
 			method: "shopping_cart.templates.pages.profile.update_profile",
 			type: "POST",
 			args: {

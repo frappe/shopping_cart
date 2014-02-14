@@ -4,19 +4,19 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-import webnotes
+import frappe
 import unittest
 from shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings import ShoppingCartSetupError
 
 class TestShoppingCartSettings(unittest.TestCase):
 	def setUp(self):
-		webnotes.conn.sql("""delete from `tabSingles` where doctype="Shipping Cart Settings" """)
-		webnotes.conn.sql("""delete from `tabShopping Cart Price List`""")
-		webnotes.conn.sql("""delete from `tabShopping Cart Taxes and Charges Master`""")
-		webnotes.conn.sql("""delete from `tabShopping Cart Shipping Rule`""")
+		frappe.conn.sql("""delete from `tabSingles` where doctype="Shipping Cart Settings" """)
+		frappe.conn.sql("""delete from `tabShopping Cart Price List`""")
+		frappe.conn.sql("""delete from `tabShopping Cart Taxes and Charges Master`""")
+		frappe.conn.sql("""delete from `tabShopping Cart Shipping Rule`""")
 		
 	def get_cart_settings(self):
-		return webnotes.bean({"doctype": "Shopping Cart Settings",
+		return frappe.bean({"doctype": "Shopping Cart Settings",
 			"company": "_Test Company"})
 		
 	def test_price_list_territory_overlap(self):
@@ -68,7 +68,7 @@ class TestShoppingCartSettings(unittest.TestCase):
 			"sales_taxes_and_charges_masters", "sales_taxes_and_charges_master")
 		
 	def test_exchange_rate_exists(self):
-		webnotes.conn.sql("""delete from `tabCurrency Exchange`""")
+		frappe.conn.sql("""delete from `tabCurrency Exchange`""")
 		
 		cart_settings = self.test_price_list_territory_overlap()
 		controller = cart_settings.make_controller()
@@ -76,6 +76,6 @@ class TestShoppingCartSettings(unittest.TestCase):
 		
 		from erpnext.setup.doctype.currency_exchange.test_currency_exchange import test_records as \
 			currency_exchange_records
-		webnotes.bean(currency_exchange_records[0]).insert()
+		frappe.bean(currency_exchange_records[0]).insert()
 		controller.validate_exchange_rates_exist()
 		

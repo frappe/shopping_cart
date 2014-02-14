@@ -2,8 +2,8 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
-from webnotes import _
+import frappe
+from frappe import _
 from shopping_cart.templates.utils import get_transaction_context
 
 no_cache = 1
@@ -11,12 +11,12 @@ no_sitemap = 1
 
 def get_context(context):
 	print "in get context"
-	order_context = webnotes._dict({
+	order_context = frappe._dict({
 		"parent_link": "orders",
 		"parent_title": "My Orders"
 	})
 	
-	order_context.update(get_transaction_context("Sales Order", webnotes.form_dict.name))
+	order_context.update(get_transaction_context("Sales Order", frappe.form_dict.name))
 	modify_status(order_context.bean.doc)
 	return order_context
 	

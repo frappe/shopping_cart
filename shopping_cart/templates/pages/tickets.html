@@ -63,7 +63,7 @@
 			if(!(subject && message)) {
 				msgprint("Please write something in subject and message!");
 			} else {
-				wn.call({
+				frappe.call({
 					type: "POST",
 					method: "shopping_cart.templates.pages.tickets.make_new_ticket",
 					btn: this,

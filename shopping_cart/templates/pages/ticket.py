@@ -2,16 +2,16 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
-from webnotes import _
-from webnotes.utils import today
+import frappe
+from frappe import _
+from frappe.utils import today
 
 no_cache = 1
 no_sitemap = 1
 
 def get_context(context):
-	bean = webnotes.bean("Support Ticket", webnotes.form_dict.name)
-	if bean.doc.raised_by == webnotes.session.user:
+	bean = frappe.bean("Support Ticket", frappe.form_dict.name)
+	if bean.doc.raised_by == frappe.session.user:
 		ticket_context = {
 			"title": bean.doc.name,
 			"bean": bean
@@ -21,16 +21,16 @@ def get_context(context):
 		
 	return ticket_context
 
-@webnotes.whitelist()
+@frappe.whitelist()
 def add_reply(ticket, message):
 	if not message:
-		raise webnotes.throw(_("Please write something"))
+		raise frappe.throw(_("Please write something"))
 	
-	bean = webnotes.bean("Support Ticket", ticket)
-	if bean.doc.raised_by != webnotes.session.user:
-		raise webnotes.throw(_("You are not allowed to reply to this ticket."), webnotes.PermissionError)
+	bean = frappe.bean("Support Ticket", ticket)
+	if bean.doc.raised_by != frappe.session.user:
+		raise frappe.throw(_("You are not allowed to reply to this ticket."), frappe.PermissionError)
 	
-	from webnotes.core.doctype.communication.communication import _make
+	from frappe.core.doctype.communication.communication import _make
 	_make(content=message, sender=bean.doc.raised_by, subject = bean.doc.subject,
 		doctype="Support Ticket", name=bean.doc.name,
 		date=today())

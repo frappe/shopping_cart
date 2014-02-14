@@ -2,7 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 from __future__ import unicode_literals
-import webnotes
+import frappe
 from shopping_cart.templates.utils import get_currency_context
 
 no_cache = 1
@@ -19,7 +19,7 @@ def get_context(context):
 	})
 	return shipments_context
 	
-@webnotes.whitelist()
+@frappe.whitelist()
 def get_shipments(start=0):
 	from shopping_cart.templates.utils import get_transaction_list
 	return get_transaction_list("Delivery Note", start)
