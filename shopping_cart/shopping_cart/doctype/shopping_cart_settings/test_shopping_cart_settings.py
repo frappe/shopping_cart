@@ -61,7 +61,7 @@ class TestShoppingCartSettings(unittest.TestCase):
 		controller.validate_overlapping_territories("sales_taxes_and_charges_masters",
 			"sales_taxes_and_charges_master")
 			
-		_add_tax_master("_Test Sales Taxes and Charges Master 2")
+		_add_tax_master("_Test Sales Taxes and Charges Master - Rest of the World")
 		
 		controller = cart_settings.make_controller()
 		self.assertRaises(ShoppingCartSetupError, controller.validate_overlapping_territories,

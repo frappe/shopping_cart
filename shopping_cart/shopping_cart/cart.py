@@ -167,7 +167,6 @@ def _get_cart_quotation(party=None):
 		if party.doctype == "Customer":
 			qbean.doc.contact_person = frappe.conn.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
-			qbean.run_method("set_contact_fields")
 		
 		qbean.run_method("onload_post_render")
 		apply_cart_settings(party, qbean)
@@ -204,7 +203,7 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 	qbean = _get_cart_quotation(party)
 	if not qbean.doc.fields.get("__islocal"):
 		qbean.doc.customer_name = company_name or fullname
-		qbean.run_method("set_contact_fields")
+		qbean.run_method("set_missing_lead_customer_details")
 		qbean.ignore_permissions = True
 		qbean.save()
 
