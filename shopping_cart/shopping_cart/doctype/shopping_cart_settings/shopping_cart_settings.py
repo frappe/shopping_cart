@@ -8,6 +8,7 @@ import frappe
 from frappe import _, msgprint
 from frappe.utils import comma_and
 from frappe.model.controller import DocListController
+from frappe.utils.nestedset import get_ancestors_of
 
 class ShoppingCartSetupError(frappe.ValidationError): pass
 
@@ -42,17 +43,15 @@ class DocType(DocListController):
 		return territory_name_map
 		
 	def validate_price_lists(self):
-		territory_name_map = self.validate_overlapping_territories("price_lists",
+		territory_name_map = self.validate_overlapping_territories("price_lists", "selling_price_list")
+		
+		# validate that a Shopping Cart Price List exists for the default territory as a catch all!
+		price_list_for_default_territory = self.get_name_from_territory(self.doc.default_territory, "price_lists",
 			"selling_price_list")
-		
-		# validate that a Shopping Cart Price List exists for the root territory
-		# as a catch all!
-		from frappe.utils.nestedset import get_root_of
-		root_territory = get_root_of("Territory")
-		
-		if root_territory not in territory_name_map.keys():
+
+		if not price_list_for_default_territory:
 			msgprint(_("Please specify a Price List which is valid for Territory") + 
-				": " + root_territory, raise_exception=ShoppingCartSetupError)
+				": " + self.doc.default_territory, raise_exception=ShoppingCartSetupError)
 		
 	def validate_tax_masters(self):
 		self.validate_overlapping_territories("sales_taxes_and_charges_masters", 

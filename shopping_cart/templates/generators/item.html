@@ -73,7 +73,7 @@
 	$(function() {
 		if(window.logged_in && getCookie("system_user")==="yes") {
 			frappe.has_permission("Item", "{{ name }}", "write", function(r) {
-				frappe.require("assets/frappe/js/frappe/website/editable.js");
+				frappe.require("/assets/frappe/js/frappe/website/editable.js");
 				frappe.make_editable($('[itemprop="description"]'), "Item", "{{ name }}", "web_long_description");
 			});
 		}
