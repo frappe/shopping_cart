@@ -2,7 +2,7 @@
 // License: GNU General Public License v3. See license.txt
 
 // shopping cart
-if(!window.shopping_cart) window.shopping_cart = {};
+frappe.provide("shopping_cart");
 
 $(function() {
 	// update profile

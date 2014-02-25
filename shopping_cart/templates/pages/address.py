@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 import json
 
 import frappe
-from shopping_cart.shopping_cart.cart import get_lead_or_customer
+from shopping_cart.shopping_cart.cart import get_lead_or_customer, update_cart_address
 
 no_cache = 1
 no_sitemap = 1

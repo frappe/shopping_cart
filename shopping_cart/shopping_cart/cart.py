@@ -244,7 +244,7 @@ def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	
 def set_taxes(quotation, cart_settings, billing_territory):
 	"""set taxes based on billing territory"""
-	quotation.doc.charge = cart_settings.get_tax_master(billing_territory)
+	quotation.doc.taxes_and_charges = cart_settings.get_tax_master(billing_territory)
 
 	# clear table
 	quotation.set_doclist(quotation.doclist.get({"parentfield": ["!=", "other_charges"]}))

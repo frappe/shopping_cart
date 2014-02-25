@@ -4,31 +4,7 @@
 // js inside blog page
 
 // shopping cart
-if(!window.shopping_cart) window.shopping_cart = {};
-
-$(document).ready(function() {
-	shopping_cart.bind_events();
-	return frappe.call({
-		type: "POST",
-		method: "shopping_cart.shopping_cart.cart.get_cart_quotation",
-		callback: function(r) {
-			$("#cart-container").removeClass("hide");
-			$(".progress").remove();
-			if(r.exc) {
-				if(r.exc.indexOf("WebsitePriceListMissingError")!==-1) {
-					shopping_cart.show_error("Oops!", frappe._("Price List not configured."));
-				} else if(r["403"]) {
-					shopping_cart.show_error("Hey!", frappe._("You need to be logged in to view your cart."));
-				} else {
-					shopping_cart.show_error("Oops!", frappe._("Something went wrong."));
-				}
-			} else {
-				shopping_cart.set_cart_count();
-				shopping_cart.render(r.message);
-			}
-		}
-	});
-});
+frappe.provide("shopping_cart");
 
 $.extend(shopping_cart, {
 	show_error: function(title, text) {
@@ -292,4 +268,28 @@ $.extend(shopping_cart, {
 			}
 		});
 	}
+});
+
+$(document).ready(function() {
+	shopping_cart.bind_events();
+	return frappe.call({
+		type: "POST",
+		method: "shopping_cart.shopping_cart.cart.get_cart_quotation",
+		callback: function(r) {
+			$("#cart-container").removeClass("hide");
+			$(".progress").remove();
+			if(r.exc) {
+				if(r.exc.indexOf("WebsitePriceListMissingError")!==-1) {
+					shopping_cart.show_error("Oops!", frappe._("Price List not configured."));
+				} else if(r["403"]) {
+					shopping_cart.show_error("Hey!", frappe._("You need to be logged in to view your cart."));
+				} else {
+					shopping_cart.show_error("Oops!", frappe._("Something went wrong."));
+				}
+			} else {
+				shopping_cart.set_cart_count();
+				shopping_cart.render(r.message);
+			}
+		}
+	});
 });
