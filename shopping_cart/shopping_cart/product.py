@@ -11,23 +11,23 @@ from shopping_cart.shopping_cart.cart import _get_cart_quotation
 @frappe.whitelist(allow_guest=True)
 def get_product_info(item_code):
 	"""get product price / stock info"""
-	if not cint(frappe.conn.get_default("shopping_cart_enabled")):
+	if not cint(frappe.db.get_default("shopping_cart_enabled")):
 		return {}
 	
 	cart_quotation = _get_cart_quotation()
 	
 	price_list = frappe.local.request.cookies.get("selling_price_list")
 
-	warehouse = frappe.conn.get_value("Item", item_code, "website_warehouse")
+	warehouse = frappe.db.get_value("Item", item_code, "website_warehouse")
 	if warehouse:
-		in_stock = frappe.conn.sql("""select actual_qty from tabBin where
+		in_stock = frappe.db.sql("""select actual_qty from tabBin where
 			item_code=%s and warehouse=%s""", (item_code, warehouse))
 		if in_stock:
 			in_stock = in_stock[0][0] > 0 and 1 or 0
 	else:
 		in_stock = -1
 		
-	price = price_list and frappe.conn.sql("""select price_list_rate, currency from
+	price = price_list and frappe.db.sql("""select price_list_rate, currency from
 		`tabItem Price` where item_code=%s and price_list=%s""", 
 		(item_code, price_list), as_dict=1) or []
 	
@@ -37,8 +37,8 @@ def get_product_info(item_code):
 	if price:
 		price["formatted_price"] = fmt_money(price["price_list_rate"], currency=price["currency"])
 		
-		price["currency"] = not cint(frappe.conn.get_default("hide_currency_symbol")) \
-			and (frappe.conn.get_value("Currency", price.currency, "symbol") or price.currency) \
+		price["currency"] = not cint(frappe.db.get_default("hide_currency_symbol")) \
+			and (frappe.db.get_value("Currency", price.currency, "symbol") or price.currency) \
 			or ""
 		
 		if frappe.session.user != "Guest":
@@ -49,7 +49,7 @@ def get_product_info(item_code):
 	return {
 		"price": price,
 		"stock": in_stock,
-		"uom": frappe.conn.get_value("Item", item_code, "stock_uom"),
+		"uom": frappe.db.get_value("Item", item_code, "stock_uom"),
 		"qty": qty
 	}
 
@@ -69,7 +69,7 @@ def get_product_list(search=None, start=0, limit=10):
 	# order by
 	query += """order by weightage desc, modified desc limit %s, %s""" % (start, limit)
 
-	data = frappe.conn.sql(query, {
+	data = frappe.db.sql(query, {
 		"search": search,
 	}, as_dict=1)
 	
@@ -90,13 +90,13 @@ def get_product_list_for_group(product_group=None, start=0, limit=10):
 	
 	query += """order by weightage desc, modified desc limit %s, %s""" % (start, limit)
 
-	data = frappe.conn.sql(query, {"product_group": product_group}, as_dict=1)
+	data = frappe.db.sql(query, {"product_group": product_group}, as_dict=1)
 
 	return [get_item_for_list_in_html(r) for r in data]
 
 def get_child_groups(item_group_name):
 	item_group = frappe.doc("Item Group", item_group_name)
-	return frappe.conn.sql("""select name 
+	return frappe.db.sql("""select name 
 		from `tabItem Group` where lft>=%(lft)s and rgt<=%(rgt)s
 			and show_in_website = 1""", item_group.fields)
 
@@ -108,7 +108,7 @@ def scrub_item_for_list(r):
 
 def get_group_item_count(item_group):
 	child_groups = ", ".join(['"' + i[0] + '"' for i in get_child_groups(item_group)])
-	return frappe.conn.sql("""select count(*) from `tabItem` 
+	return frappe.db.sql("""select count(*) from `tabItem` 
 		where docstatus = 0 and show_in_website = 1
 		and (item_group in (%s)
 			or name in (select parent from `tabWebsite Item Group` 
@@ -116,7 +116,7 @@ def get_group_item_count(item_group):
 
 def get_parent_item_groups(item_group_name):
 	item_group = frappe.doc("Item Group", item_group_name)
-	return frappe.conn.sql("""select name, page_name from `tabItem Group`
+	return frappe.db.sql("""select name, page_name from `tabItem Group`
 		where lft <= %s and rgt >= %s 
 		and ifnull(show_in_website,0)=1
 		order by lft asc""", (item_group.lft, item_group.rgt), as_dict=True)

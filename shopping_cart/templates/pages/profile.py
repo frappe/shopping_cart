@@ -16,7 +16,7 @@ def get_context(context):
 		mobile_no = party.mobile_no
 		phone = party.phone
 	else:
-		mobile_no, phone = frappe.conn.get_value("Contact", {"email_id": frappe.session.user, 
+		mobile_no, phone = frappe.db.get_value("Contact", {"email_id": frappe.session.user, 
 			"customer": party.name}, ["mobile_no", "phone"])
 		
 	return {
@@ -33,7 +33,7 @@ def update_profile(fullname, password=None, company_name=None, mobile_no=None, p
 	if not fullname:
 		return _("Name is required")
 		
-	frappe.conn.set_value("Profile", frappe.session.user, "first_name", fullname)
+	frappe.db.set_value("Profile", frappe.session.user, "first_name", fullname)
 	frappe._response.set_cookie("full_name", fullname)
 	
 	return _("Updated")

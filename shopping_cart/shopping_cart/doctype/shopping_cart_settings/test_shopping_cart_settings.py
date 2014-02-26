@@ -10,10 +10,10 @@ from shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_se
 
 class TestShoppingCartSettings(unittest.TestCase):
 	def setUp(self):
-		frappe.conn.sql("""delete from `tabSingles` where doctype="Shipping Cart Settings" """)
-		frappe.conn.sql("""delete from `tabShopping Cart Price List`""")
-		frappe.conn.sql("""delete from `tabShopping Cart Taxes and Charges Master`""")
-		frappe.conn.sql("""delete from `tabShopping Cart Shipping Rule`""")
+		frappe.db.sql("""delete from `tabSingles` where doctype="Shipping Cart Settings" """)
+		frappe.db.sql("""delete from `tabShopping Cart Price List`""")
+		frappe.db.sql("""delete from `tabShopping Cart Taxes and Charges Master`""")
+		frappe.db.sql("""delete from `tabShopping Cart Shipping Rule`""")
 		
 	def get_cart_settings(self):
 		return frappe.bean({"doctype": "Shopping Cart Settings",
@@ -68,7 +68,7 @@ class TestShoppingCartSettings(unittest.TestCase):
 			"sales_taxes_and_charges_masters", "sales_taxes_and_charges_master")
 		
 	def test_exchange_rate_exists(self):
-		frappe.conn.sql("""delete from `tabCurrency Exchange`""")
+		frappe.db.sql("""delete from `tabCurrency Exchange`""")
 		
 		cart_settings = self.test_price_list_territory_overlap()
 		controller = cart_settings.make_controller()

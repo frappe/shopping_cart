@@ -23,8 +23,8 @@ class DocType(DocListController):
 			self.validate_exchange_rates_exist()
 			
 	def on_update(self):
-		frappe.conn.set_default("shopping_cart_enabled", self.doc.fields.get("enabled") or 0)
-		frappe.conn.set_default("shopping_cart_quotation_series", self.doc.fields.get("quotation_series"))
+		frappe.db.set_default("shopping_cart_enabled", self.doc.fields.get("enabled") or 0)
+		frappe.db.set_default("shopping_cart_quotation_series", self.doc.fields.get("quotation_series"))
 			
 	def validate_overlapping_territories(self, parentfield, fieldname):
 		# for displaying message
@@ -70,7 +70,7 @@ class DocType(DocListController):
 			# to validate territory overlap
 			# make a map of territory: [list of names]
 			# if list against each territory has more than one element, raise exception
-			territory_name = frappe.conn.sql("""select `territory`, `parent` 
+			territory_name = frappe.db.sql("""select `territory`, `parent` 
 				from `tabApplicable Territory`
 				where `parenttype`=%s and `parent` in (%s)""" %
 				("%s", ", ".join(["%s"]*len(names))), tuple([parenttype] + names))
@@ -85,12 +85,12 @@ class DocType(DocListController):
 					
 	def validate_exchange_rates_exist(self):
 		"""check if exchange rates exist for all Price List currencies (to company's currency)"""
-		company_currency = frappe.conn.get_value("Company", self.doc.company, "default_currency")
+		company_currency = frappe.db.get_value("Company", self.doc.company, "default_currency")
 		if not company_currency:
 			msgprint(_("Please specify currency in Company") + ": " + self.doc.company,
 				raise_exception=ShoppingCartSetupError)
 		
-		price_list_currency_map = frappe.conn.get_values("Price List", 
+		price_list_currency_map = frappe.db.get_values("Price List", 
 			[d.selling_price_list for d in self.doclist.get({"parentfield": "price_lists"})],
 			"currency")
 		
@@ -104,7 +104,7 @@ class DocType(DocListController):
 			if currency != company_currency]
 			
 		if expected_to_exist:
-			exists = frappe.conn.sql_list("""select name from `tabCurrency Exchange`
+			exists = frappe.db.sql_list("""select name from `tabCurrency Exchange`
 				where name in (%s)""" % (", ".join(["%s"]*len(expected_to_exist)),),
 				tuple(expected_to_exist))
 		

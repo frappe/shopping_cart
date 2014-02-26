@@ -7,7 +7,7 @@ import frappe.website.render
 
 def get_context(context):
 	return {
-		"partners": frappe.conn.sql("""select * from `tabSales Partner`
+		"partners": frappe.db.sql("""select * from `tabSales Partner`
 			where show_in_website=1 order by name asc""", as_dict=True),
 		"title": "Partners"
 	}

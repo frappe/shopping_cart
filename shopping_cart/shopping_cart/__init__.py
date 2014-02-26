@@ -29,11 +29,11 @@ def get_quotation(user=None):
 	return quotation
 	
 def get_party(user):
-	customer = frappe.conn.get_value("Contact", {"email_id": user}, "customer")
+	customer = frappe.db.get_value("Contact", {"email_id": user}, "customer")
 	if customer:
 		return frappe.bean("Customer", customer)
 	
-	lead = frappe.conn.get_value("Lead", {"email_id": user})
+	lead = frappe.db.get_value("Lead", {"email_id": user})
 	if lead:
 		return frappe.bean("Lead", lead)
 	
@@ -50,24 +50,24 @@ def get_party(user):
 	
 def guess_territory():
 	if frappe.session.get("session_country"):
-		territory = frappe.conn.get_value("Territory", frappe.session.get("session_country"))
+		territory = frappe.db.get_value("Territory", frappe.session.get("session_country"))
 		return territory or get_default_territory()
 		
 	return get_default_territory()
 		
 def get_default_territory():
-	return frappe.conn.get_value("Shopping Cart Settings", "Shopping Cart Settings", "default_territory")
+	return frappe.db.get_value("Shopping Cart Settings", "Shopping Cart Settings", "default_territory")
 
 def guess_territory():
 	territory = None
 	geoip_country = frappe.session.get("session_country")
 	if geoip_country:
-		territory = frappe.conn.get_value("Territory", geoip_country)
+		territory = frappe.db.get_value("Territory", geoip_country)
 	
 	return territory or \
-		frappe.conn.get_value("Shopping Cart Settings", None, "territory") or \
+		frappe.db.get_value("Shopping Cart Settings", None, "territory") or \
 		"All Territories"
 
 def is_shopping_cart_enabled():
-	if not frappe.conn.get_value("Shopping Cart Settings", "Shopping Cart Settings", "enabled"):
+	if not frappe.db.get_value("Shopping Cart Settings", "Shopping Cart Settings", "enabled"):
 		frappe.throw(_("You need to enable Shopping Cart"), ShoppingCartSetupError)

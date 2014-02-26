@@ -31,7 +31,6 @@ class TestShoppingCart(unittest.TestCase):
 		pass
 		
 	def test_get_cart_customer(self):
-		print "test_get_cart_customer"
 		self.login_as_customer()
 		
 		# test if quotation with customer is fetched

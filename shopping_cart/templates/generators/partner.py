@@ -11,7 +11,7 @@ condition_field = "show_in_website"
 def get_context(context):
 	partner_context = context.bean.doc.fields
 	
-	address = frappe.conn.get_value("Address", 
+	address = frappe.db.get_value("Address", 
 		{"sales_partner": context.bean.doc.name, "is_primary_address": 1}, 
 		"*", as_dict=True)
 	if address:

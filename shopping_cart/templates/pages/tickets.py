@@ -19,7 +19,7 @@ def get_context(context):
 
 @frappe.whitelist()
 def get_tickets(start=0):
-	tickets = frappe.conn.sql("""select name, subject, status, creation 
+	tickets = frappe.db.sql("""select name, subject, status, creation 
 		from `tabSupport Ticket` where raised_by=%s 
 		order by modified desc
 		limit %s, 20""", (frappe.session.user, cint(start)), as_dict=True)

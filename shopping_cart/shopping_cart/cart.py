@@ -120,16 +120,16 @@ def guess_territory():
 	territory = None
 	geoip_country = frappe.session.get("session_country")
 	if geoip_country:
-		territory = frappe.conn.get_value("Territory", geoip_country)
+		territory = frappe.db.get_value("Territory", geoip_country)
 	
 	return territory or \
-		frappe.conn.get_value("Shopping Cart Settings", None, "territory") or \
+		frappe.db.get_value("Shopping Cart Settings", None, "territory") or \
 		"All Territories"
 
 def decorate_quotation_doclist(doclist):
 	for d in doclist:
 		if d.item_code:
-			d.fields.update(frappe.conn.get_value("Item", d.item_code, 
+			d.fields.update(frappe.db.get_value("Item", d.item_code, 
 				["website_image", "description", "page_name"], as_dict=True))
 			d.formatted_rate = fmt_money(d.rate, currency=doclist[0].currency)
 			d.formatted_amount = fmt_money(d.amount, currency=doclist[0].currency)
@@ -146,7 +146,7 @@ def _get_cart_quotation(party=None):
 	if not party:
 		party = get_lead_or_customer()
 		
-	quotation = frappe.conn.get_value("Quotation", 
+	quotation = frappe.db.get_value("Quotation", 
 		{party.doctype.lower(): party.name, "order_type": "Shopping Cart", "docstatus": 0})
 	
 	if quotation:
@@ -165,7 +165,7 @@ def _get_cart_quotation(party=None):
 		})
 		
 		if party.doctype == "Customer":
-			qbean.doc.contact_person = frappe.conn.get_value("Contact", {"email_id": frappe.session.user,
+			qbean.doc.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
 		
 		qbean.run_method("onload_post_render")
@@ -185,7 +185,7 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		party.customer_name = company_name or fullname
 		party.customer_type == "Company" if company_name else "Individual"
 		
-		contact_name = frappe.conn.get_value("Contact", {"email_id": frappe.session.user,
+		contact_name = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 			"customer": party.name})
 		contact = frappe.bean("Contact", contact_name)
 		contact.doc.first_name = fullname
@@ -255,11 +255,11 @@ def set_taxes(quotation, cart_settings, billing_territory):
 	quotation.set_doclist(controller.doclist)
 	
 def get_lead_or_customer():
-	customer = frappe.conn.get_value("Contact", {"email_id": frappe.session.user}, "customer")
+	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user}, "customer")
 	if customer:
 		return frappe.doc("Customer", customer)
 	
-	lead = frappe.conn.get_value("Lead", {"email_id": frappe.session.user})
+	lead = frappe.db.get_value("Lead", {"email_id": frappe.session.user})
 	if lead:
 		return frappe.doc("Lead", lead)
 	else:
@@ -281,7 +281,7 @@ def get_address_docs(party=None):
 	if not party:
 		party = get_lead_or_customer()
 		
-	address_docs = objectify(frappe.conn.sql("""select * from `tabAddress`
+	address_docs = objectify(frappe.db.sql("""select * from `tabAddress`
 		where `%s`=%s order by name""" % (party.doctype.lower(), "%s"), party.name, 
 		as_dict=True, update={"doctype": "Address"}))
 	
@@ -320,7 +320,7 @@ def get_applicable_shipping_rules(party=None, quotation=None):
 	shipping_rules = get_shipping_rules(party, quotation)
 	
 	if shipping_rules:
-		rule_label_map = frappe.conn.get_values("Shipping Rule", shipping_rules, "label")
+		rule_label_map = frappe.db.get_values("Shipping Rule", shipping_rules, "label")
 		# we need this in sorted order as per the position of the rule in the settings page
 		return [[rule, rule_label_map.get(rule)] for rule in shipping_rules]
 		
@@ -345,10 +345,10 @@ def get_address_territory(address_name):
 	territory = None
 
 	if address_name:
-		address_fields = frappe.conn.get_value("Address", address_name, 
+		address_fields = frappe.db.get_value("Address", address_name, 
 			["city", "state", "country"])
 		for value in address_fields:
-			territory = frappe.conn.get_value("Territory", value)
+			territory = frappe.db.get_value("Territory", value)
 			if territory:
 				break
 	
@@ -368,7 +368,7 @@ class TestCart(unittest.TestCase):
 	
 	def enable_shopping_cart(self):
 		return
-		if not frappe.conn.get_value("Shopping Cart Settings", None, "enabled"):
+		if not frappe.db.get_value("Shopping Cart Settings", None, "enabled"):
 			cart_settings = frappe.bean("Shopping Cart Settings")
 			cart_settings.ignore_permissions = True
 			cart_settings.doc.enabled = 1

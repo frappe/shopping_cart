@@ -8,7 +8,7 @@ import frappe.defaults
 from frappe.utils import cint
 
 def set_cart_count(login_manager):
-	if frappe.conn.get_value("Profile", frappe.session.user, "user_type") == "Website User":
+	if frappe.db.get_value("Profile", frappe.session.user, "user_type") == "Website User":
 		from shopping_cart.shopping_cart.cart import set_cart_count
 		set_cart_count()
 		
@@ -17,7 +17,7 @@ def clear_cart_count(login_manager):
 	
 def update_website_context(context):
 	post_login = []
-	cart_enabled = cint(frappe.conn.get_default("shopping_cart_enabled"))
+	cart_enabled = cint(frappe.db.get_default("shopping_cart_enabled"))
 	context["shopping_cart_enabled"] = cart_enabled
 	
 	if cart_enabled:
