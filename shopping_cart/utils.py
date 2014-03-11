@@ -8,7 +8,7 @@ import frappe.defaults
 from frappe.utils import cint
 
 def set_cart_count(login_manager):
-	if frappe.conn.get_value("User", frappe.session.user, "user_type") == "Website User":
+	if frappe.db.get_value("User", frappe.session.user, "user_type") == "Website User":
 		from shopping_cart.shopping_cart.cart import set_cart_count
 		set_cart_count()
 		

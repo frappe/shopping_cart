@@ -141,10 +141,10 @@ test_dependencies = ["Sales Taxes and Charges Master", "Price List", "Shipping R
 	"Customer Group", "Lead", "Customer", "Contact", "Address"]		
 		
 test_records = [
-	# profiles for cart
+	# users for cart
 	[
 		{
-			"doctype": "Profile",
+			"doctype": "User",
 			"email": "test_cart_user@example.com",
 			"user_type": "Website User",
 			"first_name": "Cart User",
@@ -153,7 +153,7 @@ test_records = [
 	],
 	[
 		{
-			"doctype": "Profile",
+			"doctype": "User",
 			"email": "test_lead@example.com",
 			"user_type": "Cart Lead",
 			"first_name": "Cart User",
@@ -162,7 +162,7 @@ test_records = [
 	],
 	[
 		{
-			"doctype": "Profile",
+			"doctype": "User",
 			"email": "test_contact_customer@example.com",
 			"user_type": "Website User",
 			"first_name": "Cart Contact Of Customer",

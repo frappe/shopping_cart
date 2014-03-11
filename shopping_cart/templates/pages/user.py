@@ -33,7 +33,7 @@ def update_user(fullname, password=None, company_name=None, mobile_no=None, phon
 	if not fullname:
 		return _("Name is required")
 		
-	frappe.conn.set_value("User", frappe.session.user, "first_name", fullname)
+	frappe.db.set_value("User", frappe.session.user, "first_name", fullname)
 	frappe._response.set_cookie("full_name", fullname)
 	
 	return _("Updated")
