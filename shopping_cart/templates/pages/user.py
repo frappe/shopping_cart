@@ -26,14 +26,14 @@ def get_context(context):
 	}
 	
 @frappe.whitelist()
-def update_profile(fullname, password=None, company_name=None, mobile_no=None, phone=None):
+def update_user(fullname, password=None, company_name=None, mobile_no=None, phone=None):
 	from shopping_cart.shopping_cart.cart import update_party
 	update_party(fullname, company_name, mobile_no, phone)
 	
 	if not fullname:
 		return _("Name is required")
 		
-	frappe.db.set_value("Profile", frappe.session.user, "first_name", fullname)
+	frappe.conn.set_value("User", frappe.session.user, "first_name", fullname)
 	frappe._response.set_cookie("full_name", fullname)
 	
 	return _("Updated")

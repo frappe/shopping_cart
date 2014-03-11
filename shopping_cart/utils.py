@@ -8,7 +8,7 @@ import frappe.defaults
 from frappe.utils import cint
 
 def set_cart_count(login_manager):
-	if frappe.db.get_value("Profile", frappe.session.user, "user_type") == "Website User":
+	if frappe.conn.get_value("User", frappe.session.user, "user_type") == "Website User":
 		from shopping_cart.shopping_cart.cart import set_cart_count
 		set_cart_count()
 		
@@ -27,7 +27,7 @@ def update_website_context(context):
 		]
 
 	post_login += [
-		{"label": "Profile", "url": "profile", "icon": "icon-user"},
+		{"label": "User", "url": "user", "icon": "icon-user"},
 		{"label": "Addresses", "url": "addresses", "icon": "icon-map-marker"},
 		{"label": "My Orders", "url": "orders", "icon": "icon-list"},
 		{"label": "My Tickets", "url": "tickets", "icon": "icon-tags"},

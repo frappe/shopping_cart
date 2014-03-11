@@ -5,9 +5,9 @@
 frappe.provide("shopping_cart");
 
 $(function() {
-	// update profile
+	// update user
 	if(full_name) {
-		$('.navbar li[data-label="Profile"] a')
+		$('.navbar li[data-label="User"] a')
 			.html('<i class="icon-fixed-width icon-user"></i> ' + full_name);
 	}
 	
