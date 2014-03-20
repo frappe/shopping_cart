@@ -13,7 +13,7 @@ def set_cart_count(login_manager):
 		set_cart_count()
 		
 def clear_cart_count(login_manager):
-	frappe._response.set_cookie("cart_count", "")
+	frappe.local.cookie_manager.delete_cookie("cart_count")
 	
 def update_website_context(context):
 	post_login = []

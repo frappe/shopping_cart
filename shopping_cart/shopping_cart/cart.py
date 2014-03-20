@@ -15,7 +15,7 @@ def set_cart_count(quotation=None):
 	if not quotation:
 		quotation = _get_cart_quotation()
 	cart_count = cstr(len(quotation.doclist.get({"parentfield": "quotation_details"})))
-	frappe._response.set_cookie("cart_count", cart_count)
+	frappe.local.cookie_manager.set_cookie("cart_count", cart_count)
 
 @frappe.whitelist()
 def get_cart_quotation(doclist=None):
@@ -49,7 +49,7 @@ def place_order():
 	sales_order.ignore_permissions = True
 	sales_order.insert()
 	sales_order.submit()
-	frappe._response.set_cookie("cart_count", "")
+	frappe.local.cookie_manager.delete_cookie("cart_count")
 	
 	return sales_order.doc.name
 
@@ -240,7 +240,7 @@ def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	quotation.run_method("set_price_list_and_item_details")
 	
 	# set it in cookies for using in product page
-	frappe.local._response.set_cookie("selling_price_list", quotation.doc.selling_price_list)
+	frappe.local.cookie_manager.set_cookie("selling_price_list", quotation.doc.selling_price_list)
 	
 def set_taxes(quotation, cart_settings, billing_territory):
 	"""set taxes based on billing territory"""
