@@ -12,9 +12,9 @@ from frappe.utils.nestedset import get_ancestors_of
 
 class ShoppingCartSetupError(frappe.ValidationError): pass
 
-class DocType(DocListController):
+class ShoppingCartSettings(DocListController):
 	def onload(self):
-		self.doc.fields["__quotation_series"] = frappe.get_doctype("Quotation").get_options("naming_series")
+		self.doc.fields["__quotation_series"] = frappe.get_meta("Quotation").get_options("naming_series")
 	
 	def validate(self):
 		if self.doc.enabled:
@@ -61,7 +61,7 @@ class DocType(DocListController):
 		territory_name_map = {}
 		
 		# entries in table
-		names = [doc.fields.get(fieldname) for doc in self.doclist.get({"parentfield": parentfield})]
+		names = [doc.fields.get(fieldname) for doc in self.get(parentfield)]
 		
 		if names:
 			# for condition in territory check
@@ -91,7 +91,7 @@ class DocType(DocListController):
 				raise_exception=ShoppingCartSetupError)
 		
 		price_list_currency_map = frappe.db.get_values("Price List", 
-			[d.selling_price_list for d in self.doclist.get({"parentfield": "price_lists"})],
+			[d.selling_price_list for d in self.get("price_lists")],
 			"currency")
 		
 		# check if all price lists have a currency

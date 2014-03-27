@@ -14,7 +14,7 @@ class WebsitePriceListMissingError(frappe.ValidationError): pass
 def set_cart_count(quotation=None):
 	if not quotation:
 		quotation = _get_cart_quotation()
-	cart_count = cstr(len(quotation.doclist.get({"parentfield": "quotation_details"})))
+	cart_count = cstr(len(quotation.get("quotation_details")))
 	frappe.local.cookie_manager.set_cookie("cart_count", cart_count)
 
 @frappe.whitelist()
@@ -60,16 +60,15 @@ def update_cart(item_code, qty, with_doclist=0):
 	qty = flt(qty)
 	if qty == 0:
 		quotation.set_doclist(quotation.doclist.get({"item_code": ["!=", item_code]}))
-		if not quotation.doclist.get({"parentfield": "quotation_details"}) and \
+		if not quotation.get("quotation_details") and \
 			not quotation.doc.fields.get("__islocal"):
 				quotation.__delete = True
 			
 	else:
 		quotation_items = quotation.doclist.get({"item_code": item_code})
 		if not quotation_items:
-			quotation.doclist.append({
+			quotation.append("quotation_details", {
 				"doctype": "Quotation Item",
-				"parentfield": "quotation_details",
 				"item_code": item_code,
 				"qty": qty
 			})
@@ -233,7 +232,7 @@ def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	# reset values
 	quotation.doc.price_list_currency = quotation.doc.currency = \
 		quotation.doc.plc_conversion_rate = quotation.doc.conversion_rate = None
-	for item in quotation.doclist.get({"parentfield": "quotation_details"}):
+	for item in quotation.get("quotation_details"):
 		item.price_list_rate = item.discount_percentage = item.rate = item.amount = None
 	
 	# refetch values

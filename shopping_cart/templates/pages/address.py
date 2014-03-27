@@ -6,6 +6,7 @@ import json
 
 import frappe
 from shopping_cart.shopping_cart.cart import get_lead_or_customer, update_cart_address
+from frappe.widgets.form.meta import get_meta
 
 no_cache = 1
 no_sitemap = 1
@@ -14,7 +15,7 @@ def get_context(context):
 	def _get_fields(fieldnames):
 		return [frappe._dict(zip(["label", "fieldname", "fieldtype", "options"], 
 				[df.label, df.fieldname, df.fieldtype, df.options]))
-			for df in frappe.get_doctype("Address", processed=True).get({"fieldname": ["in", fieldnames]})]
+			for df in get_meta("Address").get("fields", {"fieldname": ["in", fieldnames]})]
 	
 	docname = doc = None
 	title = "New Address"

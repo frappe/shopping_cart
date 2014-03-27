@@ -23,9 +23,8 @@ class TestShoppingCartSettings(unittest.TestCase):
 		cart_settings = self.get_cart_settings()
 		
 		def _add_price_list(price_list):
-			cart_settings.doclist.append({
+			cart_settings.append("price_lists", {
 				"doctype": "Shopping Cart Price List",
-				"parentfield": "price_lists",
 				"selling_price_list": price_list
 			})
 		
@@ -48,9 +47,8 @@ class TestShoppingCartSettings(unittest.TestCase):
 		cart_settings = self.get_cart_settings()
 		
 		def _add_tax_master(tax_master):
-			cart_settings.doclist.append({
+			cart_settings.append("sales_taxes_and_charges_masters", {
 				"doctype": "Shopping Cart Taxes and Charges Master",
-				"parentfield": "sales_taxes_and_charges_masters",
 				"sales_taxes_and_charges_master": tax_master
 			})
 		

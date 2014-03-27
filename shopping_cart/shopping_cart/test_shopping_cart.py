@@ -103,24 +103,23 @@ class TestShoppingCart(unittest.TestCase):
 				"default_customer_group": "_Test Customer Group",
 				"quotation_series": "_T-Quotation-"
 			})
-			settings.doclist.extend([
+			settings.extend("price_lists", [
 				# price lists
 				{"doctype": "Shopping Cart Price List", "parentfield": "price_lists", 
 					"selling_price_list": "_Test Price List India"},
 				{"doctype": "Shopping Cart Price List", "parentfield": "price_lists", 
-					"selling_price_list": "_Test Price List Rest of the World"},
-			
+					"selling_price_list": "_Test Price List Rest of the World"}
+			])
+			settings.extend("sales_taxes_and_charges_masters", [
 				# tax masters
 				{"doctype": "Shopping Cart Taxes and Charges Master", "parentfield": "sales_taxes_and_charges_masters",
 					"sales_taxes_and_charges_master": "_Test India Tax Master"},
 				{"doctype": "Shopping Cart Taxes and Charges Master", "parentfield": "sales_taxes_and_charges_masters",
 					"sales_taxes_and_charges_master": "_Test Sales Taxes and Charges Master - Rest of the World"},
-			
-				# shipping rules
-				{"doctype": "Shopping Cart Shipping Rule", "parentfield": "shipping_rules",
-					"shipping_rule": "_Test Shipping Rule - India"}
 			])
-		
+			settings.append("shipping_rules", {"doctype": "Shopping Cart Shipping Rule", "parentfield": "shipping_rules",
+					"shipping_rule": "_Test Shipping Rule - India"})
+
 		settings.save()
 		
 	def disable_shopping_cart(self):
