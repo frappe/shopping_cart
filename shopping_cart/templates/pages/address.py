@@ -21,9 +21,9 @@ def get_context(context):
 	title = "New Address"
 	if frappe.form_dict.name:
 		bean = frappe.bean("Address", frappe.form_dict.name)
-		docname = bean.doc.name
-		doc = bean.doc.fields
-		title = bean.doc.name
+		docname = bean.name
+		doc = bean.fields
+		title = bean.name
 	
 	return {
 		"doc": doc,
@@ -47,10 +47,10 @@ def save_address(fields, address_fieldname=None):
 	else:
 		bean = frappe.bean({"doctype": "Address", "__islocal": 1})
 	
-	bean.doc.fields.update(fields)
+	bean.update(fields)
 	
 	party_fieldname = party.doctype.lower()
-	bean.doc.fields.update({
+	bean.update({
 		party_fieldname: party.name,
 		(party_fieldname + "_name"): party.fields[party_fieldname + "_name"]
 	})
@@ -58,6 +58,6 @@ def save_address(fields, address_fieldname=None):
 	bean.save()
 	
 	if address_fieldname:
-		update_cart_address(address_fieldname, bean.doc.name)
+		update_cart_address(address_fieldname, bean.name)
 	
-	return bean.doc.name
+	return bean.name

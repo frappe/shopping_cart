@@ -35,8 +35,8 @@ class TestShoppingCart(unittest.TestCase):
 		
 		# test if quotation with customer is fetched
 		quotation = get_quotation()
-		self.assertEquals(quotation.doc.quotation_to, "Customer")
-		self.assertEquals(quotation.doc.customer, "_Test Customer")
+		self.assertEquals(quotation.quotation_to, "Customer")
+		self.assertEquals(quotation.customer, "_Test Customer")
 		
 	def test_add_to_cart(self):
 		# add first item
@@ -94,9 +94,9 @@ class TestShoppingCart(unittest.TestCase):
 		settings = frappe.bean("Shopping Cart Settings", "Shopping Cart Settings")
 
 		if len(settings.doclist) > 1:
-			settings.doc.enabled = 1
+			settings.enabled = 1
 		else:
-			settings.doc.fields.update({
+			settings.update({
 				"enabled": 1,
 				"company": "_Test Company",
 				"default_territory": "_Test Territory Rest Of The World",
@@ -124,7 +124,7 @@ class TestShoppingCart(unittest.TestCase):
 		
 	def disable_shopping_cart(self):
 		settings = frappe.bean("Shopping Cart Settings", "Shopping Cart Settings")
-		settings.doc.enabled = 0
+		settings.enabled = 0
 		settings.save()
 		
 	def login_as_new_user(self):

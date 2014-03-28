@@ -15,7 +15,7 @@ def get_quotation(user=None):
 	party = get_party(user)
 	values = {
 		"order_type": "Shopping Cart",
-		party.doc.doctype.lower(): party.doc.name,
+		party.doctype.lower(): party.name,
 		"docstatus": 0,
 	}
 
@@ -23,7 +23,7 @@ def get_quotation(user=None):
 		quotation = frappe.bean("Quotation", values)
 	except frappe.DoesNotExistError:
 		quotation = frappe.new_bean("Quotation")
-		quotation.doc.fields.update(values)
+		quotation.update(values)
 		quotation.insert(ignore_permissions=True)
 		
 	return quotation
@@ -39,7 +39,7 @@ def get_party(user):
 	
 	# create a lead
 	lead = frappe.new_bean("Lead")
-	lead.doc.fields.update({
+	lead.update({
 		"email_id": user,
 		"lead_name": get_fullname(user),
 		"territory": guess_territory()

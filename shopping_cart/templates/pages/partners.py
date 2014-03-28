@@ -13,6 +13,6 @@ def get_context(context):
 	}
 
 def clear_cache(bean, trigger):
-	if bean.doc.page_name:
+	if bean.page_name:
 		frappe.website.render.clear_cache("partners")
 	

@@ -14,17 +14,17 @@ class ShoppingCartSetupError(frappe.ValidationError): pass
 
 class ShoppingCartSettings(DocListController):
 	def onload(self):
-		self.doc.fields["__quotation_series"] = frappe.get_meta("Quotation").get_options("naming_series")
+		self.set("__quotation_series", frappe.get_meta("Quotation").get_options("naming_series"))
 	
 	def validate(self):
-		if self.doc.enabled:
+		if self.enabled:
 			self.validate_price_lists()
 			self.validate_tax_masters()
 			self.validate_exchange_rates_exist()
 			
 	def on_update(self):
-		frappe.db.set_default("shopping_cart_enabled", self.doc.fields.get("enabled") or 0)
-		frappe.db.set_default("shopping_cart_quotation_series", self.doc.fields.get("quotation_series"))
+		frappe.db.set_default("shopping_cart_enabled", self.get("enabled") or 0)
+		frappe.db.set_default("shopping_cart_quotation_series", self.get("quotation_series"))
 			
 	def validate_overlapping_territories(self, parentfield, fieldname):
 		# for displaying message
@@ -46,12 +46,12 @@ class ShoppingCartSettings(DocListController):
 		territory_name_map = self.validate_overlapping_territories("price_lists", "selling_price_list")
 		
 		# validate that a Shopping Cart Price List exists for the default territory as a catch all!
-		price_list_for_default_territory = self.get_name_from_territory(self.doc.default_territory, "price_lists",
+		price_list_for_default_territory = self.get_name_from_territory(self.default_territory, "price_lists",
 			"selling_price_list")
 
 		if not price_list_for_default_territory:
 			msgprint(_("Please specify a Price List which is valid for Territory") + 
-				": " + self.doc.default_territory, raise_exception=ShoppingCartSetupError)
+				": " + self.default_territory, raise_exception=ShoppingCartSetupError)
 		
 	def validate_tax_masters(self):
 		self.validate_overlapping_territories("sales_taxes_and_charges_masters", 
@@ -61,7 +61,7 @@ class ShoppingCartSettings(DocListController):
 		territory_name_map = {}
 		
 		# entries in table
-		names = [doc.fields.get(fieldname) for doc in self.get(parentfield)]
+		names = [doc.get(fieldname) for doc in self.get(parentfield)]
 		
 		if names:
 			# for condition in territory check
@@ -85,9 +85,9 @@ class ShoppingCartSettings(DocListController):
 					
 	def validate_exchange_rates_exist(self):
 		"""check if exchange rates exist for all Price List currencies (to company's currency)"""
-		company_currency = frappe.db.get_value("Company", self.doc.company, "default_currency")
+		company_currency = frappe.db.get_value("Company", self.company, "default_currency")
 		if not company_currency:
-			msgprint(_("Please specify currency in Company") + ": " + self.doc.company,
+			msgprint(_("Please specify currency in Company") + ": " + self.company,
 				raise_exception=ShoppingCartSetupError)
 		
 		price_list_currency_map = frappe.db.get_values("Price List", 

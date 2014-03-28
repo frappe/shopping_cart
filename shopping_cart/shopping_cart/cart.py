@@ -38,20 +38,20 @@ def place_order():
 	quotation = _get_cart_quotation()
 	controller = quotation.make_controller()
 	for fieldname in ["customer_address", "shipping_address_name"]:
-		if not quotation.doc.fields.get(fieldname):
+		if not quotation.get(fieldname):
 			throw(_("Please select a") + " " + _(controller.meta.get_label(fieldname)))
 	
 	quotation.ignore_permissions = True
 	quotation.submit()
 	
 	from erpnext.selling.doctype.quotation.quotation import _make_sales_order
-	sales_order = frappe.bean(_make_sales_order(quotation.doc.name, ignore_permissions=True))
+	sales_order = frappe.bean(_make_sales_order(quotation.name, ignore_permissions=True))
 	sales_order.ignore_permissions = True
 	sales_order.insert()
 	sales_order.submit()
 	frappe.local.cookie_manager.delete_cookie("cart_count")
 	
-	return sales_order.doc.name
+	return sales_order.name
 
 @frappe.whitelist()
 def update_cart(item_code, qty, with_doclist=0):
@@ -61,7 +61,7 @@ def update_cart(item_code, qty, with_doclist=0):
 	if qty == 0:
 		quotation.set_doclist(quotation.doclist.get({"item_code": ["!=", item_code]}))
 		if not quotation.get("quotation_details") and \
-			not quotation.doc.fields.get("__islocal"):
+			not quotation.get("__islocal"):
 				quotation.__delete = True
 			
 	else:
@@ -78,7 +78,7 @@ def update_cart(item_code, qty, with_doclist=0):
 	apply_cart_settings(quotation=quotation)
 
 	if hasattr(quotation, "__delete"):
-		frappe.delete_doc("Quotation", quotation.doc.name, ignore_permissions=True)
+		frappe.delete_doc("Quotation", quotation.name, ignore_permissions=True)
 		quotation = _get_cart_quotation()
 	else:
 		quotation.ignore_permissions = True
@@ -89,7 +89,7 @@ def update_cart(item_code, qty, with_doclist=0):
 	if with_doclist:
 		return get_cart_quotation(quotation.doclist)
 	else:
-		return quotation.doc.name
+		return quotation.name
 		
 @frappe.whitelist()
 def update_cart_address(address_fieldname, address_name):
@@ -97,15 +97,15 @@ def update_cart_address(address_fieldname, address_name):
 	address_display = get_address_display(frappe.doc("Address", address_name).fields)
 	
 	if address_fieldname == "shipping_address_name":
-		quotation.doc.shipping_address_name = address_name
-		quotation.doc.shipping_address = address_display
+		quotation.shipping_address_name = address_name
+		quotation.shipping_address = address_display
 		
-		if not quotation.doc.customer_address:
+		if not quotation.customer_address:
 			address_fieldname == "customer_address"
 	
 	if address_fieldname == "customer_address":
-		quotation.doc.customer_address = address_name
-		quotation.doc.address_display = address_display
+		quotation.customer_address = address_name
+		quotation.address_display = address_display
 		
 	
 	apply_cart_settings(quotation=quotation)
@@ -164,7 +164,7 @@ def _get_cart_quotation(party=None):
 		})
 		
 		if party.doctype == "Customer":
-			qbean.doc.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
+			qbean.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
 		
 		qbean.run_method("onload_post_render")
@@ -187,11 +187,11 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		contact_name = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 			"customer": party.name})
 		contact = frappe.bean("Contact", contact_name)
-		contact.doc.first_name = fullname
-		contact.doc.last_name = None
-		contact.doc.customer_name = party.customer_name
-		contact.doc.mobile_no = mobile_no
-		contact.doc.phone = phone
+		contact.first_name = fullname
+		contact.last_name = None
+		contact.customer_name = party.customer_name
+		contact.mobile_no = mobile_no
+		contact.phone = phone
 		contact.ignore_permissions = True
 		contact.save()
 	
@@ -200,8 +200,8 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 	party_bean.save()
 	
 	qbean = _get_cart_quotation(party)
-	if not qbean.doc.fields.get("__islocal"):
-		qbean.doc.customer_name = company_name or fullname
+	if not qbean.get("__islocal"):
+		qbean.customer_name = company_name or fullname
 		qbean.run_method("set_missing_lead_customer_details")
 		qbean.ignore_permissions = True
 		qbean.save()
@@ -214,7 +214,7 @@ def apply_cart_settings(party=None, quotation=None):
 	
 	cart_settings = frappe.get_obj("Shopping Cart Settings")
 	
-	billing_territory = get_address_territory(quotation.doc.customer_address) or \
+	billing_territory = get_address_territory(quotation.customer_address) or \
 		party.territory or "All Territories"
 		
 	set_price_list_and_rate(quotation, cart_settings, billing_territory)
@@ -227,11 +227,11 @@ def apply_cart_settings(party=None, quotation=None):
 	
 def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	"""set price list based on billing territory"""
-	quotation.doc.selling_price_list = cart_settings.get_price_list(billing_territory)
+	quotation.selling_price_list = cart_settings.get_price_list(billing_territory)
 	
 	# reset values
-	quotation.doc.price_list_currency = quotation.doc.currency = \
-		quotation.doc.plc_conversion_rate = quotation.doc.conversion_rate = None
+	quotation.price_list_currency = quotation.currency = \
+		quotation.plc_conversion_rate = quotation.conversion_rate = None
 	for item in quotation.get("quotation_details"):
 		item.price_list_rate = item.discount_percentage = item.rate = item.amount = None
 	
@@ -239,11 +239,11 @@ def set_price_list_and_rate(quotation, cart_settings, billing_territory):
 	quotation.run_method("set_price_list_and_item_details")
 	
 	# set it in cookies for using in product page
-	frappe.local.cookie_manager.set_cookie("selling_price_list", quotation.doc.selling_price_list)
+	frappe.local.cookie_manager.set_cookie("selling_price_list", quotation.selling_price_list)
 	
 def set_taxes(quotation, cart_settings, billing_territory):
 	"""set taxes based on billing territory"""
-	quotation.doc.taxes_and_charges = cart_settings.get_tax_master(billing_territory)
+	quotation.taxes_and_charges = cart_settings.get_tax_master(billing_territory)
 
 	# clear table
 	quotation.set_doclist(quotation.doclist.get({"parentfield": ["!=", "other_charges"]}))
@@ -294,7 +294,7 @@ def get_address_docs(party=None):
 def apply_shipping_rule(shipping_rule):
 	quotation = _get_cart_quotation()
 	
-	quotation.doc.shipping_rule = shipping_rule
+	quotation.shipping_rule = shipping_rule
 	
 	apply_cart_settings(quotation=quotation)
 	
@@ -309,8 +309,8 @@ def _apply_shipping_rule(party=None, quotation=None, cart_settings=None):
 	if not shipping_rules:
 		return
 		
-	elif quotation.doc.shipping_rule not in shipping_rules:
-		quotation.doc.shipping_rule = shipping_rules[0]
+	elif quotation.shipping_rule not in shipping_rules:
+		quotation.shipping_rule = shipping_rules[0]
 	
 	quotation.run_method("apply_shipping_rule")
 	quotation.run_method("calculate_taxes_and_totals")
@@ -332,7 +332,7 @@ def get_shipping_rules(party=None, quotation=None, cart_settings=None):
 		cart_settings = frappe.get_obj("Shopping Cart Settings")
 		
 	# set shipping rule based on shipping territory	
-	shipping_territory = get_address_territory(quotation.doc.shipping_address_name) or \
+	shipping_territory = get_address_territory(quotation.shipping_address_name) or \
 		party.territory
 	
 	shipping_rules = cart_settings.get_shipping_rules(shipping_territory)
@@ -362,7 +362,7 @@ class TestCart(unittest.TestCase):
 		
 		cart_settings = frappe.bean("Shopping Cart Settings")
 		cart_settings.ignore_permissions = True
-		cart_settings.doc.enabled = 0
+		cart_settings.enabled = 0
 		cart_settings.save()
 	
 	def enable_shopping_cart(self):
@@ -370,7 +370,7 @@ class TestCart(unittest.TestCase):
 		if not frappe.db.get_value("Shopping Cart Settings", None, "enabled"):
 			cart_settings = frappe.bean("Shopping Cart Settings")
 			cart_settings.ignore_permissions = True
-			cart_settings.doc.enabled = 1
+			cart_settings.enabled = 1
 			cart_settings.save()
 			
 	def test_get_lead_or_customer(self):
@@ -415,7 +415,7 @@ class TestCart(unittest.TestCase):
 		update_cart("_Test Item", 0)
 		
 		quotation = _get_cart_quotation()
-		self.assertEquals(quotation0.doc.name, quotation.doc.name)
+		self.assertEquals(quotation0.name, quotation.name)
 		
 		quotation_items = quotation.doclist.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
 		self.assertEquals(quotation_items, [])
@@ -424,4 +424,4 @@ class TestCart(unittest.TestCase):
 		quotation = self.test_update_cart()
 		sales_order_name = place_order()
 		sales_order = frappe.bean("Sales Order", sales_order_name)
-		self.assertEquals(sales_order.doclist.getone({"item_code": "_Test Item"}).prevdoc_docname, quotation.doc.name)
+		self.assertEquals(sales_order.doclist.getone({"item_code": "_Test Item"}).prevdoc_docname, quotation.name)

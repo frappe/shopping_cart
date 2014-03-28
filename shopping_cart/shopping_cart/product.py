@@ -123,18 +123,18 @@ def get_parent_item_groups(item_group_name):
 		
 def invalidate_cache_for(bean, trigger, item_group=None):
 	if not item_group:
-		item_group = bean.doc.name
+		item_group = bean.name
 	
 	for i in get_parent_item_groups(item_group):
 		if i.page_name:
 			clear_cache(i.page_name)
 
 def invalidate_cache_for_item(bean, trigger):
-	invalidate_cache_for(bean, trigger, bean.doc.item_group)
+	invalidate_cache_for(bean, trigger, bean.item_group)
 	for d in bean.doclist.get({"doctype":"Website Item Group"}):
 		invalidate_cache_for(bean, trigger, d.item_group)
 		
 def update_website_page_name(bean, trigger):
-	if bean.doc.page_name:
+	if bean.page_name:
 		invalidate_cache_for_item(bean, trigger)
-		clear_cache(bean.doc.page_name)
+		clear_cache(bean.page_name)

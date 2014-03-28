@@ -36,4 +36,4 @@ def make_new_ticket(subject, message):
 	from erpnext.support.doctype.support_ticket.get_support_mails import add_support_communication
 	ticket = add_support_communication(subject, message, frappe.session.user)
 	
-	return ticket.doc.name
+	return ticket.name
