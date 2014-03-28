@@ -95,7 +95,7 @@ def get_product_list_for_group(product_group=None, start=0, limit=10):
 	return [get_item_for_list_in_html(r) for r in data]
 
 def get_child_groups(item_group_name):
-	item_group = frappe.doc("Item Group", item_group_name)
+	item_group = frappe.get_doc("Item Group", item_group_name)
 	return frappe.db.sql("""select name 
 		from `tabItem Group` where lft>=%(lft)s and rgt<=%(rgt)s
 			and show_in_website = 1""", item_group.fields)
@@ -115,7 +115,7 @@ def get_group_item_count(item_group):
 				where item_group in (%s))) """ % (child_groups, child_groups))[0][0]
 
 def get_parent_item_groups(item_group_name):
-	item_group = frappe.doc("Item Group", item_group_name)
+	item_group = frappe.get_doc("Item Group", item_group_name)
 	return frappe.db.sql("""select name, page_name from `tabItem Group`
 		where lft <= %s and rgt >= %s 
 		and ifnull(show_in_website,0)=1

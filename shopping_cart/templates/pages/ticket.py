@@ -10,7 +10,7 @@ no_cache = 1
 no_sitemap = 1
 
 def get_context(context):
-	bean = frappe.bean("Support Ticket", frappe.form_dict.name)
+	bean = frappe.get_doc("Support Ticket", frappe.form_dict.name)
 	if bean.raised_by == frappe.session.user:
 		ticket_context = {
 			"title": bean.name,
@@ -26,7 +26,7 @@ def add_reply(ticket, message):
 	if not message:
 		raise frappe.throw(_("Please write something"))
 	
-	bean = frappe.bean("Support Ticket", ticket)
+	bean = frappe.get_doc("Support Ticket", ticket)
 	if bean.raised_by != frappe.session.user:
 		raise frappe.throw(_("You are not allowed to reply to this ticket."), frappe.PermissionError)
 	

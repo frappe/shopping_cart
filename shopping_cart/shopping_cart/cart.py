@@ -45,7 +45,7 @@ def place_order():
 	quotation.submit()
 	
 	from erpnext.selling.doctype.quotation.quotation import _make_sales_order
-	sales_order = frappe.bean(_make_sales_order(quotation.name, ignore_permissions=True))
+	sales_order = frappe.get_doc(_make_sales_order(quotation.name, ignore_permissions=True))
 	sales_order.ignore_permissions = True
 	sales_order.insert()
 	sales_order.submit()
@@ -94,7 +94,7 @@ def update_cart(item_code, qty, with_doclist=0):
 @frappe.whitelist()
 def update_cart_address(address_fieldname, address_name):
 	quotation = _get_cart_quotation()
-	address_display = get_address_display(frappe.doc("Address", address_name).fields)
+	address_display = get_address_display(frappe.get_doc("Address", address_name).fields)
 	
 	if address_fieldname == "shipping_address_name":
 		quotation.shipping_address_name = address_name
@@ -149,9 +149,9 @@ def _get_cart_quotation(party=None):
 		{party.doctype.lower(): party.name, "order_type": "Shopping Cart", "docstatus": 0})
 	
 	if quotation:
-		qbean = frappe.bean("Quotation", quotation)
+		qbean = frappe.get_doc("Quotation", quotation)
 	else:
-		qbean = frappe.bean({
+		qbean = frappe.get_doc({
 			"doctype": "Quotation",
 			"naming_series": frappe.defaults.get_user_default("shopping_cart_quotation_series") or "QTN-CART-",
 			"quotation_to": party.doctype,
@@ -186,7 +186,7 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		
 		contact_name = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 			"customer": party.name})
-		contact = frappe.bean("Contact", contact_name)
+		contact = frappe.get_doc("Contact", contact_name)
 		contact.first_name = fullname
 		contact.last_name = None
 		contact.customer_name = party.customer_name
@@ -195,7 +195,7 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		contact.ignore_permissions = True
 		contact.save()
 	
-	party_bean = frappe.bean(party.fields)
+	party_bean = frappe.get_doc(party.fields)
 	party_bean.ignore_permissions = True
 	party_bean.save()
 	
@@ -256,13 +256,13 @@ def set_taxes(quotation, cart_settings, billing_territory):
 def get_lead_or_customer():
 	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user}, "customer")
 	if customer:
-		return frappe.doc("Customer", customer)
+		return frappe.get_doc("Customer", customer)
 	
 	lead = frappe.db.get_value("Lead", {"email_id": frappe.session.user})
 	if lead:
-		return frappe.doc("Lead", lead)
+		return frappe.get_doc("Lead", lead)
 	else:
-		lead_bean = frappe.bean({
+		lead_bean = frappe.get_doc({
 			"doctype": "Lead",
 			"email_id": frappe.session.user,
 			"lead_name": get_fullname(frappe.session.user),
@@ -360,7 +360,7 @@ class TestCart(unittest.TestCase):
 	def tearDown(self):
 		return
 		
-		cart_settings = frappe.bean("Shopping Cart Settings")
+		cart_settings = frappe.get_doc("Shopping Cart Settings")
 		cart_settings.ignore_permissions = True
 		cart_settings.enabled = 0
 		cart_settings.save()
@@ -368,7 +368,7 @@ class TestCart(unittest.TestCase):
 	def enable_shopping_cart(self):
 		return
 		if not frappe.db.get_value("Shopping Cart Settings", None, "enabled"):
-			cart_settings = frappe.bean("Shopping Cart Settings")
+			cart_settings = frappe.get_doc("Shopping Cart Settings")
 			cart_settings.ignore_permissions = True
 			cart_settings.enabled = 1
 			cart_settings.save()
@@ -423,5 +423,5 @@ class TestCart(unittest.TestCase):
 	def test_place_order(self):
 		quotation = self.test_update_cart()
 		sales_order_name = place_order()
-		sales_order = frappe.bean("Sales Order", sales_order_name)
+		sales_order = frappe.get_doc("Sales Order", sales_order_name)
 		self.assertEquals(sales_order.doclist.getone({"item_code": "_Test Item"}).prevdoc_docname, quotation.name)

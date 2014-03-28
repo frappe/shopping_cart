@@ -45,7 +45,7 @@ def get_transaction_context(doctype, name):
 	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user}, 
 		"customer")
 	
-	bean = frappe.bean(doctype, name)
+	bean = frappe.get_doc(doctype, name)
 	if bean.customer != customer:
 		return { "bean": frappe._dict({ "doc": frappe._dict({"name": _("Not Allowed")}) }) }
 	else:

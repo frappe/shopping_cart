@@ -20,7 +20,7 @@ def get_quotation(user=None):
 	}
 
 	try:
-		quotation = frappe.bean("Quotation", values)
+		quotation = frappe.get_doc("Quotation", values)
 	except frappe.DoesNotExistError:
 		quotation = frappe.new_bean("Quotation")
 		quotation.update(values)
@@ -31,11 +31,11 @@ def get_quotation(user=None):
 def get_party(user):
 	customer = frappe.db.get_value("Contact", {"email_id": user}, "customer")
 	if customer:
-		return frappe.bean("Customer", customer)
+		return frappe.get_doc("Customer", customer)
 	
 	lead = frappe.db.get_value("Lead", {"email_id": user})
 	if lead:
-		return frappe.bean("Lead", lead)
+		return frappe.get_doc("Lead", lead)
 	
 	# create a lead
 	lead = frappe.new_bean("Lead")

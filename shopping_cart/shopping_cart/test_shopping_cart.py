@@ -91,7 +91,7 @@ class TestShoppingCart(unittest.TestCase):
 
 	# helper functions
 	def enable_shopping_cart(self):
-		settings = frappe.bean("Shopping Cart Settings", "Shopping Cart Settings")
+		settings = frappe.get_doc("Shopping Cart Settings", "Shopping Cart Settings")
 
 		if len(settings.doclist) > 1:
 			settings.enabled = 1
@@ -123,7 +123,7 @@ class TestShoppingCart(unittest.TestCase):
 		settings.save()
 		
 	def disable_shopping_cart(self):
-		settings = frappe.bean("Shopping Cart Settings", "Shopping Cart Settings")
+		settings = frappe.get_doc("Shopping Cart Settings", "Shopping Cart Settings")
 		settings.enabled = 0
 		settings.save()
 		

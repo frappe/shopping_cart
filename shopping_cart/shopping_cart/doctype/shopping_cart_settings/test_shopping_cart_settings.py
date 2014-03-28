@@ -16,7 +16,7 @@ class TestShoppingCartSettings(unittest.TestCase):
 		frappe.db.sql("""delete from `tabShopping Cart Shipping Rule`""")
 		
 	def get_cart_settings(self):
-		return frappe.bean({"doctype": "Shopping Cart Settings",
+		return frappe.get_doc({"doctype": "Shopping Cart Settings",
 			"company": "_Test Company"})
 		
 	def test_price_list_territory_overlap(self):
@@ -74,6 +74,6 @@ class TestShoppingCartSettings(unittest.TestCase):
 		
 		from erpnext.setup.doctype.currency_exchange.test_currency_exchange import test_records as \
 			currency_exchange_records
-		frappe.bean(currency_exchange_records[0]).insert()
+		frappe.get_doc(currency_exchange_records[0]).insert()
 		controller.validate_exchange_rates_exist()
 		
