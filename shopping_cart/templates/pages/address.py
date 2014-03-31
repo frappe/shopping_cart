@@ -52,7 +52,7 @@ def save_address(fields, address_fieldname=None):
 	party_fieldname = party.doctype.lower()
 	bean.update({
 		party_fieldname: party.name,
-		(party_fieldname + "_name"): party.fields[party_fieldname + "_name"]
+		(party_fieldname + "_name"): party.get(party_fieldname + "_name")
 	})
 	bean.ignore_permissions = True
 	bean.save()

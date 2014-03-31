@@ -94,7 +94,7 @@ def update_cart(item_code, qty, with_doclist=0):
 @frappe.whitelist()
 def update_cart_address(address_fieldname, address_name):
 	quotation = _get_cart_quotation()
-	address_display = get_address_display(frappe.get_doc("Address", address_name).fields)
+	address_display = get_address_display(frappe.get_doc("Address", address_name).as_dict())
 	
 	if address_fieldname == "shipping_address_name":
 		quotation.shipping_address_name = address_name
@@ -128,7 +128,7 @@ def guess_territory():
 def decorate_quotation_doclist(doclist):
 	for d in doclist:
 		if d.item_code:
-			d.fields.update(frappe.db.get_value("Item", d.item_code, 
+			d.update(frappe.db.get_value("Item", d.item_code, 
 				["website_image", "description", "page_name"], as_dict=True))
 			d.formatted_rate = fmt_money(d.rate, currency=doclist[0].currency)
 			d.formatted_amount = fmt_money(d.amount, currency=doclist[0].currency)
@@ -139,7 +139,7 @@ def decorate_quotation_doclist(doclist):
 	doclist[0].formatted_grand_total_export = fmt_money(doclist[0].grand_total_export,
 		currency=doclist[0].currency)
 	
-	return [d.fields for d in doclist]
+	return doclist.as_dict()
 
 def _get_cart_quotation(party=None):
 	if not party:
