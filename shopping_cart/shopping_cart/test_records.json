@@ -1,0 +1,23 @@
+[
+ {
+  "doctype": "User", 
+  "email": "test_cart_user@example.com", 
+  "first_name": "Cart User", 
+  "new_password": "password", 
+  "user_type": "Website User"
+ }, 
+ {
+  "doctype": "User", 
+  "email": "test_lead@example.com", 
+  "first_name": "Cart User", 
+  "new_password": "password", 
+  "user_type": "Cart Lead"
+ }, 
+ {
+  "doctype": "User", 
+  "email": "test_contact_customer@example.com", 
+  "first_name": "Cart Contact Of Customer", 
+  "new_password": "password", 
+  "user_type": "Website User"
+ }
+]
