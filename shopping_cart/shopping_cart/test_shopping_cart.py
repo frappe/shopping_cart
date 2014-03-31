@@ -139,33 +139,4 @@ class TestShoppingCart(unittest.TestCase):
 test_dependencies = ["Sales Taxes and Charges Master", "Price List", "Shipping Rule", "Currency Exchange",
 	"Customer Group", "Lead", "Customer", "Contact", "Address"]		
 		
-test_records = [
-	# users for cart
-	[
-		{
-			"doctype": "User",
-			"email": "test_cart_user@example.com",
-			"user_type": "Website User",
-			"first_name": "Cart User",
-			"new_password": "password",
-		}
-	],
-	[
-		{
-			"doctype": "User",
-			"email": "test_lead@example.com",
-			"user_type": "Cart Lead",
-			"first_name": "Cart User",
-			"new_password": "password",
-		}
-	],
-	[
-		{
-			"doctype": "User",
-			"email": "test_contact_customer@example.com",
-			"user_type": "Website User",
-			"first_name": "Cart Contact Of Customer",
-			"new_password": "password",
-		}
-	],
-]
+test_records = frappe.get_test_records('Shopping Cart')

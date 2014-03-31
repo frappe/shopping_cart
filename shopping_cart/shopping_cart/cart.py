@@ -212,7 +212,7 @@ def apply_cart_settings(party=None, quotation=None):
 	if not quotation:
 		quotation = _get_cart_quotation(party)
 	
-	cart_settings = frappe.get_obj("Shopping Cart Settings")
+	cart_settings = frappe.get_doc("Shopping Cart Settings")
 	
 	billing_territory = get_address_territory(quotation.customer_address) or \
 		party.territory or "All Territories"
@@ -329,7 +329,7 @@ def get_shipping_rules(party=None, quotation=None, cart_settings=None):
 	if not quotation:
 		quotation = _get_cart_quotation()
 	if not cart_settings:
-		cart_settings = frappe.get_obj("Shopping Cart Settings")
+		cart_settings = frappe.get_doc("Shopping Cart Settings")
 		
 	# set shipping rule based on shipping territory	
 	shipping_territory = get_address_territory(quotation.shipping_address_name) or \
