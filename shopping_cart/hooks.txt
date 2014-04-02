@@ -16,18 +16,18 @@ on_logout = shopping_cart.utils.clear_cart_count
 update_website_context = shopping_cart.utils.update_website_context
 
 # Bean Events
-bean_event:Sales Taxes and Charges Master:on_update = shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.validate_cart_settings
-bean_event:Price List:on_update = shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.validate_cart_settings
+doc_event:Sales Taxes and Charges Master:on_update = shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.validate_cart_settings
+doc_event:Price List:on_update = shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.validate_cart_settings
 
-bean_event:Item Group:on_update = shopping_cart.shopping_cart.product.invalidate_cache_for
-bean_event:Item Group:on_update = frappe.website.website_generator.call_website_generator
-bean_event:Item Group:after_rename = frappe.website.website_generator.call_website_generator
-bean_event:Item Group:on_trash = frappe.website.website_generator.call_website_generator
-bean_event:Item:on_update = shopping_cart.shopping_cart.product.invalidate_cache_for_item
-bean_event:Item:on_update = frappe.website.website_generator.call_website_generator
-bean_event:Item:on_trash = frappe.website.website_generator.call_website_generator
-bean_event:Item:after_rename = shopping_cart.shopping_cart.product.update_website_page_name
-bean_event:Item:after_rename = frappe.website.website_generator.call_website_generator
-bean_event:Sales Partner:on_update = frappe.website.website_generator.call_website_generator
-bean_event:Sales Partner:on_update = shopping_cart.templates.pages.partners.clear_cache
-bean_event:Sales Partner:after_rename = frappe.website.website_generator.call_website_generator
+doc_event:Item Group:on_update = shopping_cart.shopping_cart.product.invalidate_cache_for
+doc_event:Item Group:on_update = frappe.website.website_generator.call_website_generator
+doc_event:Item Group:after_rename = frappe.website.website_generator.call_website_generator
+doc_event:Item Group:on_trash = frappe.website.website_generator.call_website_generator
+doc_event:Item:on_update = shopping_cart.shopping_cart.product.invalidate_cache_for_item
+doc_event:Item:on_update = frappe.website.website_generator.call_website_generator
+doc_event:Item:on_trash = frappe.website.website_generator.call_website_generator
+doc_event:Item:after_rename = shopping_cart.shopping_cart.product.update_website_page_name
+doc_event:Item:after_rename = frappe.website.website_generator.call_website_generator
+doc_event:Sales Partner:on_update = frappe.website.website_generator.call_website_generator
+doc_event:Sales Partner:on_update = shopping_cart.templates.pages.partners.clear_cache
+doc_event:Sales Partner:after_rename = frappe.website.website_generator.call_website_generator
