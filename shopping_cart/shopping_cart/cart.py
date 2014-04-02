@@ -6,7 +6,6 @@ import frappe
 from frappe import msgprint, throw, _
 import frappe.defaults
 from frappe.utils import flt, get_fullname, fmt_money, cstr
-from frappe.model.doclist import objectify
 from erpnext.utilities.doctype.address.address import get_address_display
 
 class WebsitePriceListMissingError(frappe.ValidationError): pass
@@ -280,12 +279,12 @@ def get_address_docs(party=None):
 	if not party:
 		party = get_lead_or_customer()
 		
-	address_docs = objectify(frappe.db.sql("""select * from `tabAddress`
+	address_docs = frappe.db.sql("""select * from `tabAddress`
 		where `%s`=%s order by name""" % (party.doctype.lower(), "%s"), party.name, 
-		as_dict=True, update={"doctype": "Address"}))
+		as_dict=True, update={"doctype": "Address"})
 	
 	for address in address_docs:
-		address.display = get_address_display(address.fields)
+		address.display = get_address_display(address)
 		address.display = (address.display).replace("\n", "<br>\n")
 		
 	return address_docs
