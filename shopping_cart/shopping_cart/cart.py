@@ -147,9 +147,9 @@ def _get_cart_quotation(party=None):
 		{party.doctype.lower(): party.name, "order_type": "Shopping Cart", "docstatus": 0})
 	
 	if quotation:
-		qbean = frappe.get_doc("Quotation", quotation)
+		qdoc = frappe.get_doc("Quotation", quotation)
 	else:
-		qbean = frappe.get_doc({
+		qdoc = frappe.get_doc({
 			"doctype": "Quotation",
 			"naming_series": frappe.defaults.get_user_default("shopping_cart_quotation_series") or "QTN-CART-",
 			"quotation_to": party.doctype,
@@ -162,13 +162,13 @@ def _get_cart_quotation(party=None):
 		})
 		
 		if party.doctype == "Customer":
-			qbean.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
+			qdoc.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
 		
-		qbean.run_method("onload_post_render")
-		apply_cart_settings(party, qbean)
+		qdoc.run_method("onload_post_render")
+		apply_cart_settings(party, qdoc)
 	
-	return qbean
+	return qdoc
 
 def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 	party = get_lead_or_customer()
@@ -193,16 +193,16 @@ def update_party(fullname, company_name=None, mobile_no=None, phone=None):
 		contact.ignore_permissions = True
 		contact.save()
 	
-	party_bean = frappe.get_doc(party.fields)
-	party_bean.ignore_permissions = True
-	party_bean.save()
+	party_doc = frappe.get_doc(party.as_dict())
+	party_doc.ignore_permissions = True
+	party_doc.save()
 	
-	qbean = _get_cart_quotation(party)
-	if not qbean.get("__islocal"):
-		qbean.customer_name = company_name or fullname
-		qbean.run_method("set_missing_lead_customer_details")
-		qbean.ignore_permissions = True
-		qbean.save()
+	qdoc = _get_cart_quotation(party)
+	if not qdoc.get("__islocal"):
+		qdoc.customer_name = company_name or fullname
+		qdoc.run_method("set_missing_lead_customer_details")
+		qdoc.ignore_permissions = True
+		qdoc.save()
 
 def apply_cart_settings(party=None, quotation=None):
 	if not party:
@@ -258,7 +258,7 @@ def get_lead_or_customer():
 	if lead:
 		return frappe.get_doc("Lead", lead)
 	else:
-		lead_bean = frappe.get_doc({
+		lead_doc = frappe.get_doc({
 			"doctype": "Lead",
 			"email_id": frappe.session.user,
 			"lead_name": get_fullname(frappe.session.user),
@@ -267,10 +267,10 @@ def get_lead_or_customer():
 		})
 		
 		if frappe.session.user != "Guest":
-			lead_bean.ignore_permissions = True
-			lead_bean.insert()
+			lead_doc.ignore_permissions = True
+			lead_doc.insert()
 			
-		return lead_bean.doc
+		return lead_doc
 		
 def get_address_docs(party=None):
 	if not party:

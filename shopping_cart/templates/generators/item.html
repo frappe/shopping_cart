@@ -49,12 +49,12 @@
 				</div>
 			</div>
 		</div>
-		{% if bean.doclist.get({"doctype":"Item Website Specification"}) -%}
+		{% if doc.get({"doctype":"Item Website Specification"}) -%}
 		<div class="row" style="margin-top: 20px">
 			<div class="col-md-12">
 				<h4>Specifications</h4>
 				<table class="table table-bordered" style="width: 100%">
-				{% for d in bean.doclist.get(
+				{% for d in doc.get(
 					{"doctype":"Item Website Specification"}) -%}
 					<tr>
 						<td style="width: 30%;">{{ d.label }}</td>

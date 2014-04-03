@@ -17,7 +17,7 @@ def get_context(context):
 	})
 	
 	order_context.update(get_transaction_context("Sales Order", frappe.form_dict.name))
-	modify_status(order_context.bean.doc)
+	modify_status(order_context.doc)
 	return order_context
 	
 def modify_status(doc):

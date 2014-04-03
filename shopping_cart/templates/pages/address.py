@@ -20,10 +20,10 @@ def get_context(context):
 	docname = doc = None
 	title = "New Address"
 	if frappe.form_dict.name:
-		bean = frappe.get_doc("Address", frappe.form_dict.name)
-		docname = bean.name
-		doc = bean.fields
-		title = bean.name
+		doc = frappe.get_doc("Address", frappe.form_dict.name)
+		docname = doc.name
+		doc = doc.as_dict()
+		title = doc.name
 	
 	return {
 		"doc": doc,
@@ -43,21 +43,21 @@ def save_address(fields, address_fieldname=None):
 	fields = json.loads(fields)
 	
 	if fields.get("name"):
-		bean = frappe.get_doc("Address", fields.get("name"))
+		doc = frappe.get_doc("Address", fields.get("name"))
 	else:
-		bean = frappe.get_doc({"doctype": "Address", "__islocal": 1})
+		doc = frappe.get_doc({"doctype": "Address", "__islocal": 1})
 	
-	bean.update(fields)
+	doc.update(fields)
 	
 	party_fieldname = party.doctype.lower()
-	bean.update({
+	doc.update({
 		party_fieldname: party.name,
 		(party_fieldname + "_name"): party.get(party_fieldname + "_name")
 	})
-	bean.ignore_permissions = True
-	bean.save()
+	doc.ignore_permissions = True
+	doc.save()
 	
 	if address_fieldname:
-		update_cart_address(address_fieldname, bean.name)
+		update_cart_address(address_fieldname, doc.name)
 	
-	return bean.name
+	return doc.name

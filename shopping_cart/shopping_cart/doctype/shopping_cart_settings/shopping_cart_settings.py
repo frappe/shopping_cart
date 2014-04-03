@@ -152,5 +152,5 @@ class ShoppingCartSettings(DocListController):
 
 		return self._territory_ancestry[territory]
 		
-def validate_cart_settings(bean, method):
+def validate_cart_settings(doc, method):
 	frappe.get_doc("Shopping Cart Settings", "Shopping Cart Settings").run_method("validate")

@@ -16,7 +16,7 @@ def get_context(context):
 		"parent_title": "Invoices"
 	})
 	invoice_context.update(get_transaction_context("Sales Invoice", frappe.form_dict.name))
-	modify_status(invoice_context.bean.doc)
+	modify_status(invoice_context.doc)
 	return invoice_context
 	
 def modify_status(doc):

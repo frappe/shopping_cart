@@ -9,10 +9,10 @@ doctype = "Sales Partner"
 condition_field = "show_in_website"
 
 def get_context(context):
-	partner_context = context.bean.fields
+	partner_context = context.doc.as_dict()
 	
 	address = frappe.db.get_value("Address", 
-		{"sales_partner": context.bean.name, "is_primary_address": 1}, 
+		{"sales_partner": context.doc.name, "is_primary_address": 1}, 
 		"*", as_dict=True)
 	if address:
 		city_state = ", ".join(filter(None, [address.city, address.state]))

@@ -98,7 +98,7 @@ def get_child_groups(item_group_name):
 	item_group = frappe.get_doc("Item Group", item_group_name)
 	return frappe.db.sql("""select name 
 		from `tabItem Group` where lft>=%(lft)s and rgt<=%(rgt)s
-			and show_in_website = 1""", item_group.fields)
+			and show_in_website = 1""", item_group.as_dict())
 
 def scrub_item_for_list(r):
 	if not r.website_description:
@@ -121,20 +121,20 @@ def get_parent_item_groups(item_group_name):
 		and ifnull(show_in_website,0)=1
 		order by lft asc""", (item_group.lft, item_group.rgt), as_dict=True)
 		
-def invalidate_cache_for(bean, trigger, item_group=None):
+def invalidate_cache_for(doc, trigger, item_group=None):
 	if not item_group:
-		item_group = bean.name
+		item_group = doc.name
 	
 	for i in get_parent_item_groups(item_group):
 		if i.page_name:
 			clear_cache(i.page_name)
 
-def invalidate_cache_for_item(bean, trigger):
-	invalidate_cache_for(bean, trigger, bean.item_group)
-	for d in bean.get({"doctype":"Website Item Group"}):
-		invalidate_cache_for(bean, trigger, d.item_group)
+def invalidate_cache_for_item(doc, trigger):
+	invalidate_cache_for(doc, trigger, doc.item_group)
+	for d in doc.get({"doctype":"Website Item Group"}):
+		invalidate_cache_for(doc, trigger, d.item_group)
 		
-def update_website_page_name(bean, trigger):
-	if bean.page_name:
-		invalidate_cache_for_item(bean, trigger)
-		clear_cache(bean.page_name)
+def update_website_page_name(doc, trigger):
+	if doc.page_name:
+		invalidate_cache_for_item(doc, trigger)
+		clear_cache(doc.page_name)

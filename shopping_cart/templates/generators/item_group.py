@@ -12,7 +12,7 @@ doctype = "Item Group"
 condition_field = "show_in_website"
 
 def get_context(context):
-	item_group_context = context.bean.fields
+	item_group_context = context.doc.as_dict()
 	item_group_context.update({
 		"sub_groups": frappe.db.sql("""select name, page_name
 			from `tabItem Group` where parent_item_group=%s
@@ -22,8 +22,8 @@ def get_context(context):
 		"title": context.docname
 	})
 	
-	if context.bean.slideshow:
-		item_group_context.update(get_slideshow(context.bean))
+	if context.doc.slideshow:
+		item_group_context.update(get_slideshow(context.doc))
 	
 	for d in item_group_context.sub_groups:
 		d.count = get_group_item_count(d.name)
