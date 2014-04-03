@@ -42,7 +42,7 @@ def get_product_info(item_code):
 			or ""
 		
 		if frappe.session.user != "Guest":
-			item = cart_quotation.doclist.get({"item_code": item_code})
+			item = cart_quotation.get({"item_code": item_code})
 			if item:
 				qty = item[0].qty
 
@@ -131,7 +131,7 @@ def invalidate_cache_for(bean, trigger, item_group=None):
 
 def invalidate_cache_for_item(bean, trigger):
 	invalidate_cache_for(bean, trigger, bean.item_group)
-	for d in bean.doclist.get({"doctype":"Website Item Group"}):
+	for d in bean.get({"doctype":"Website Item Group"}):
 		invalidate_cache_for(bean, trigger, d.item_group)
 		
 def update_website_page_name(bean, trigger):

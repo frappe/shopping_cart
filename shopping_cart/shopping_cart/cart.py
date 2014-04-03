@@ -17,16 +17,16 @@ def set_cart_count(quotation=None):
 	frappe.local.cookie_manager.set_cookie("cart_count", cart_count)
 
 @frappe.whitelist()
-def get_cart_quotation(doclist=None):
+def get_cart_quotation(doc=None):
 	party = get_lead_or_customer()
 	
-	if not doclist:
+	if not doc:
 		quotation = _get_cart_quotation(party)
-		doclist = quotation.doclist
+		doc = quotation
 		set_cart_count(quotation)
 	
 	return {
-		"doclist": decorate_quotation_doclist(doclist),
+		"doc": decorate_quotation_doc(doc),
 		"addresses": [{"name": address.name, "display": address.display} 
 			for address in get_address_docs(party)],
 		"shipping_rules": get_applicable_shipping_rules(party)
@@ -35,10 +35,9 @@ def get_cart_quotation(doclist=None):
 @frappe.whitelist()
 def place_order():
 	quotation = _get_cart_quotation()
-	controller = quotation.make_controller()
 	for fieldname in ["customer_address", "shipping_address_name"]:
 		if not quotation.get(fieldname):
-			throw(_("Please select a") + " " + _(controller.meta.get_label(fieldname)))
+			throw(_("Please select a") + " " + _(quotation.meta.get_label(fieldname)))
 	
 	quotation.ignore_permissions = True
 	quotation.submit()
@@ -53,18 +52,18 @@ def place_order():
 	return sales_order.name
 
 @frappe.whitelist()
-def update_cart(item_code, qty, with_doclist=0):
+def update_cart(item_code, qty, with_doc):
 	quotation = _get_cart_quotation()
 	
 	qty = flt(qty)
 	if qty == 0:
-		quotation.set_doclist(quotation.doclist.get({"item_code": ["!=", item_code]}))
+		quotation.set("quotation_details", quotation.get({"item_code": ["!=", item_code]}))
 		if not quotation.get("quotation_details") and \
 			not quotation.get("__islocal"):
 				quotation.__delete = True
 			
 	else:
-		quotation_items = quotation.doclist.get({"item_code": item_code})
+		quotation_items = quotation.get({"item_code": item_code})
 		if not quotation_items:
 			quotation.append("quotation_details", {
 				"doctype": "Quotation Item",
@@ -85,8 +84,8 @@ def update_cart(item_code, qty, with_doclist=0):
 	
 	set_cart_count(quotation)
 	
-	if with_doclist:
-		return get_cart_quotation(quotation.doclist)
+	if with_doc:
+		return get_cart_quotation(quotation)
 	else:
 		return quotation.name
 		
@@ -112,7 +111,7 @@ def update_cart_address(address_fieldname, address_name):
 	quotation.ignore_permissions = True
 	quotation.save()
 		
-	return get_cart_quotation(quotation.doclist)
+	return get_cart_quotation(quotation)
 
 def guess_territory():
 	territory = None
@@ -124,21 +123,21 @@ def guess_territory():
 		frappe.db.get_value("Shopping Cart Settings", None, "territory") or \
 		"All Territories"
 
-def decorate_quotation_doclist(doclist):
-	for d in doclist:
+def decorate_quotation_doc(doc):
+	for d in doc.get_all_children():
 		if d.item_code:
 			d.update(frappe.db.get_value("Item", d.item_code, 
 				["website_image", "description", "page_name"], as_dict=True))
-			d.formatted_rate = fmt_money(d.rate, currency=doclist[0].currency)
-			d.formatted_amount = fmt_money(d.amount, currency=doclist[0].currency)
+			d.formatted_rate = fmt_money(d.rate, currency=doc.currency)
+			d.formatted_amount = fmt_money(d.amount, currency=doc.currency)
 		elif d.charge_type:
-			d.formatted_tax_amount = fmt_money(flt(d.tax_amount) / doclist[0].conversion_rate,
-				currency=doclist[0].currency)
+			d.formatted_tax_amount = fmt_money(flt(d.tax_amount) / doc.conversion_rate,
+				currency=doc.currency)
 
-	doclist[0].formatted_grand_total_export = fmt_money(doclist[0].grand_total_export,
-		currency=doclist[0].currency)
+	doc.formatted_grand_total_export = fmt_money(doc.grand_total_export,
+		currency=doc.currency)
 	
-	return doclist.as_dict()
+	return doc.as_dict()
 
 def _get_cart_quotation(party=None):
 	if not party:
@@ -245,12 +244,10 @@ def set_taxes(quotation, cart_settings, billing_territory):
 	quotation.taxes_and_charges = cart_settings.get_tax_master(billing_territory)
 
 	# clear table
-	quotation.set_doclist(quotation.doclist.get({"parentfield": ["!=", "other_charges"]}))
+	quotation.set("other_charges", [])
 	
 	# append taxes
-	controller = quotation.make_controller()
-	controller.append_taxes_from_master("other_charges", "taxes_and_charges")
-	quotation.set_doclist(controller.doclist)
+	quotation.append_taxes_from_master("other_charges", "taxes_and_charges")
 	
 def get_lead_or_customer():
 	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user}, "customer")
@@ -300,7 +297,7 @@ def apply_shipping_rule(shipping_rule):
 	quotation.ignore_permissions = True
 	quotation.save()
 	
-	return get_cart_quotation(quotation.doclist)
+	return get_cart_quotation(quotation)
 	
 def _apply_shipping_rule(party=None, quotation=None, cart_settings=None):
 	shipping_rules = get_shipping_rules(party, quotation, cart_settings)
@@ -390,7 +387,7 @@ class TestCart(unittest.TestCase):
 		update_cart("_Test Item", 1)
 		
 		quotation = _get_cart_quotation()
-		quotation_items = quotation.doclist.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
+		quotation_items = quotation.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
 		self.assertTrue(quotation_items)
 		self.assertEquals(quotation_items[0].qty, 1)
 		
@@ -402,7 +399,7 @@ class TestCart(unittest.TestCase):
 		update_cart("_Test Item", 5)
 		
 		quotation = _get_cart_quotation()
-		quotation_items = quotation.doclist.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
+		quotation_items = quotation.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
 		self.assertTrue(quotation_items)
 		self.assertEquals(quotation_items[0].qty, 5)
 		
@@ -416,11 +413,11 @@ class TestCart(unittest.TestCase):
 		quotation = _get_cart_quotation()
 		self.assertEquals(quotation0.name, quotation.name)
 		
-		quotation_items = quotation.doclist.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
+		quotation_items = quotation.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
 		self.assertEquals(quotation_items, [])
 		
 	def test_place_order(self):
 		quotation = self.test_update_cart()
 		sales_order_name = place_order()
 		sales_order = frappe.get_doc("Sales Order", sales_order_name)
-		self.assertEquals(sales_order.doclist.getone({"item_code": "_Test Item"}).prevdoc_docname, quotation.name)
+		self.assertEquals(sales_order.getone({"item_code": "_Test Item"}).prevdoc_docname, quotation.name)

@@ -93,7 +93,7 @@ class TestShoppingCart(unittest.TestCase):
 	def enable_shopping_cart(self):
 		settings = frappe.get_doc("Shopping Cart Settings", "Shopping Cart Settings")
 
-		if len(settings.doclist) > 1:
+		if len(settings.get_all_children()) > 1:
 			settings.enabled = 1
 		else:
 			settings.update({
