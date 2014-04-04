@@ -32,12 +32,12 @@ class TestShoppingCartSettings(unittest.TestCase):
 			"_Test Price List"):
 			_add_price_list(price_list)
 		
-		controller = cart_settings.make_controller()
+		controller = cart_settings
 		controller.validate_overlapping_territories("price_lists", "selling_price_list")
 		
 		_add_price_list("_Test Price List 2")
 		
-		controller = cart_settings.make_controller()
+		controller = cart_settings
 		self.assertRaises(ShoppingCartSetupError, controller.validate_overlapping_territories,
 			"price_lists", "selling_price_list")
 			
@@ -55,13 +55,13 @@ class TestShoppingCartSettings(unittest.TestCase):
 		for tax_master in ("_Test Sales Taxes and Charges Master", "_Test India Tax Master"):
 			_add_tax_master(tax_master)
 			
-		controller = cart_settings.make_controller()
+		controller = cart_settings
 		controller.validate_overlapping_territories("sales_taxes_and_charges_masters",
 			"sales_taxes_and_charges_master")
 			
 		_add_tax_master("_Test Sales Taxes and Charges Master - Rest of the World")
 		
-		controller = cart_settings.make_controller()
+		controller = cart_settings
 		self.assertRaises(ShoppingCartSetupError, controller.validate_overlapping_territories,
 			"sales_taxes_and_charges_masters", "sales_taxes_and_charges_master")
 		
@@ -69,7 +69,7 @@ class TestShoppingCartSettings(unittest.TestCase):
 		frappe.db.sql("""delete from `tabCurrency Exchange`""")
 		
 		cart_settings = self.test_price_list_territory_overlap()
-		controller = cart_settings.make_controller()
+		controller = cart_settings
 		self.assertRaises(ShoppingCartSetupError, controller.validate_exchange_rates_exist)
 		
 		from erpnext.setup.doctype.currency_exchange.test_currency_exchange import test_records as \
