@@ -36,9 +36,7 @@ class ShoppingCartSettings(DocListController):
 		territory_name_map = self.get_territory_name_map(parentfield, fieldname)
 		for territory, names in territory_name_map.items():
 			if len(names) > 1:
-				msgprint(_("Error for") + " " + _(doctype) + ": " + comma_and(names) +
-					" " + _("have a common territory") + ": " + territory,
-					raise_exception=ShoppingCartSetupError)
+				frappe.throw("{0} {1} has a common territory {2}".format(_(doctype), comma_and(names), territory), ShoppingCartSetupError)
 
 		return territory_name_map
 
@@ -111,7 +109,7 @@ class ShoppingCartSettings(DocListController):
 			missing = list(set(expected_to_exist).difference(exists))
 
 			if missing:
-				msgprint(_("Missing Currency Exchange Rates for" + ": " + comma_and(missing)),
+				msgprint(_("Missing Currency Exchange Rates for {0}").format(comma_and(missing)),
 					raise_exception=ShoppingCartSetupError)
 
 	def get_name_from_territory(self, territory, parentfield, fieldname):
