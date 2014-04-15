@@ -3,6 +3,8 @@ include requirements.txt
 include *.json
 include *.md
 include *.py
+include *.txt
+recursive-include shopping_cart *.txt
 recursive-include shopping_cart *.css
 recursive-include shopping_cart *.csv
 recursive-include shopping_cart *.html
