@@ -36,7 +36,7 @@ class ShoppingCartSettings(DocListController):
 		territory_name_map = self.get_territory_name_map(parentfield, fieldname)
 		for territory, names in territory_name_map.items():
 			if len(names) > 1:
-				frappe.throw("{0} {1} has a common territory {2}".format(_(doctype), comma_and(names), territory), ShoppingCartSetupError)
+				frappe.throw(_("{0} {1} has a common territory {2}").format(_(doctype), comma_and(names), territory), ShoppingCartSetupError)
 
 		return territory_name_map
 
@@ -95,7 +95,7 @@ class ShoppingCartSettings(DocListController):
 		# check if all price lists have a currency
 		for price_list, currency in price_list_currency_map.items():
 			if not currency:
-				frappe.throw("%s: %s" % (_("Currency is missing for Price List"), price_list))
+				frappe.throw(_("Currency is required for Price List {0}").format(price_list))
 
 		expected_to_exist = [currency + "-" + company_currency
 			for currency in price_list_currency_map.values()
