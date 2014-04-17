@@ -23,3 +23,5 @@ doc_event:Item Group:on_update = shopping_cart.shopping_cart.product.invalidate_
 doc_event:Item:on_update = shopping_cart.shopping_cart.product.invalidate_cache_for_item
 doc_event:Item:after_rename = shopping_cart.shopping_cart.product.update_website_page_name
 doc_event:Sales Partner:on_update = shopping_cart.templates.pages.partners.clear_cache
+
+# doc_event:Quotation:validate = shopping_cart.shopping_cart.doctype.shopping_cart_settings.shopping_cart_settings.apply_shopping_cart_settings
