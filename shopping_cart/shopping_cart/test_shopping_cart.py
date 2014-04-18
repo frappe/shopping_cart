@@ -37,7 +37,7 @@ class TestShoppingCart(unittest.TestCase):
 		# test if quotation with lead is fetched
 		quotation = get_quotation()
 		self.assertEquals(quotation.quotation_to, "Lead")
-		self.assertEquals(quotation.lead, "_T-Lead-00001")
+		self.assertEquals(quotation.lead, frappe.db.get_value("Lead", {"email_id": "test_cart_lead@example.com"}))
 		self.assertEquals(quotation.customer, None)
 		self.assertEquals(quotation.contact_email, frappe.session.user)
 
@@ -79,20 +79,32 @@ class TestShoppingCart(unittest.TestCase):
 		self.test_add_to_cart()
 
 		# update first item
-		pass
+		update_in_cart("_Test Item", 5)
+		quotation = self.test_get_cart_lead()
+		self.assertEquals(quotation.get("quotation_details")[0].item_code, "_Test Item")
+		self.assertEquals(quotation.get("quotation_details")[0].qty, 5)
+		self.assertEquals(quotation.get("quotation_details")[0].amount, 50)
+		self.assertEquals(quotation.net_total, 60)
+		self.assertEquals(len(quotation.get("quotation_details")), 2)
 
 	def test_remove_from_cart(self):
 		# first, add to cart
 		self.test_add_to_cart()
 
 		# remove first item
-		pass
+		update_in_cart("_Test Item", 0)
+		quotation = self.test_get_cart_lead()
+		self.assertEquals(quotation.get("quotation_details")[0].item_code, "_Test Item 2")
+		self.assertEquals(quotation.get("quotation_details")[0].qty, 1)
+		self.assertEquals(quotation.get("quotation_details")[0].amount, 20)
+		self.assertEquals(quotation.net_total, 20)
+		self.assertEquals(len(quotation.get("quotation_details")), 1)
 
 		# remove second item
-		pass
-
-		# NEED CLARIFICATION: should quotation exist after all items are removed?
-		pass
+		update_in_cart("_Test Item 2", 0)
+		quotation = self.test_get_cart_lead()
+		self.assertEquals(quotation.net_total, 0)
+		self.assertEquals(len(quotation.get("quotation_details")), 0)
 
 	def test_add_address(self):
 		pass
@@ -162,7 +174,7 @@ class TestShoppingCart(unittest.TestCase):
 		frappe.set_user("test_cart_user@example.com")
 
 	def login_as_lead(self):
-		frappe.set_user("test_lead@example.com")
+		frappe.set_user("test_cart_lead@example.com")
 
 	def login_as_customer(self):
 		frappe.set_user("test_contact_customer@example.com")

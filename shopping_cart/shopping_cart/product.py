@@ -4,8 +4,7 @@
 from __future__ import unicode_literals
 
 import frappe
-from frappe.utils import cstr, cint, fmt_money
-from frappe.website.render import clear_cache
+from frappe.utils import cint, fmt_money
 from shopping_cart.shopping_cart.cart import _get_cart_quotation
 
 @frappe.whitelist(allow_guest=True)
@@ -52,89 +51,3 @@ def get_product_info(item_code):
 		"uom": frappe.db.get_value("Item", item_code, "stock_uom"),
 		"qty": qty
 	}
-
-@frappe.whitelist(allow_guest=True)
-def get_product_list(search=None, start=0, limit=10):
-	# base query
-	query = """select name, item_name, page_name, website_image, item_group,
-			web_long_description as website_description
-		from `tabItem` where docstatus = 0 and show_in_website = 1 """
-
-	# search term condition
-	if search:
-		query += """and (web_long_description like %(search)s or
-				item_name like %(search)s or name like %(search)s)"""
-		search = "%" + cstr(search) + "%"
-
-	# order by
-	query += """order by weightage desc, modified desc limit %s, %s""" % (start, limit)
-
-	data = frappe.db.sql(query, {
-		"search": search,
-	}, as_dict=1)
-
-	return [get_item_for_list_in_html(r) for r in data]
-
-def get_item_for_list_in_html(context):
-	return frappe.get_template("templates/includes/product_in_grid.html").render(context)
-
-def get_product_list_for_group(product_group=None, start=0, limit=10):
-	child_groups = ", ".join(['"' + i[0] + '"' for i in get_child_groups(product_group)])
-
-	# base query
-	query = """select name, item_name, page_name, website_image, item_group,
-			web_long_description as website_description
-		from `tabItem` where docstatus = 0 and show_in_website = 1
-		and (item_group in (%s)
-			or name in (select parent from `tabWebsite Item Group` where item_group in (%s))) """ % (child_groups, child_groups)
-
-	query += """order by weightage desc, modified desc limit %s, %s""" % (start, limit)
-
-	data = frappe.db.sql(query, {"product_group": product_group}, as_dict=1)
-
-	return [get_item_for_list_in_html(r) for r in data]
-
-def get_child_groups(item_group_name):
-	item_group = frappe.get_doc("Item Group", item_group_name)
-	return frappe.db.sql("""select name
-		from `tabItem Group` where lft>=%(lft)s and rgt<=%(rgt)s
-			and show_in_website = 1""", item_group.as_dict())
-
-def scrub_item_for_list(r):
-	if not r.website_description:
-		r.website_description = "No description given"
-	if len(r.website_description.split(" ")) > 24:
-		r.website_description = " ".join(r.website_description.split(" ")[:24]) + "..."
-
-def get_group_item_count(item_group):
-	child_groups = ", ".join(['"' + i[0] + '"' for i in get_child_groups(item_group)])
-	return frappe.db.sql("""select count(*) from `tabItem`
-		where docstatus = 0 and show_in_website = 1
-		and (item_group in (%s)
-			or name in (select parent from `tabWebsite Item Group`
-				where item_group in (%s))) """ % (child_groups, child_groups))[0][0]
-
-def get_parent_item_groups(item_group_name):
-	item_group = frappe.get_doc("Item Group", item_group_name)
-	return frappe.db.sql("""select name, page_name from `tabItem Group`
-		where lft <= %s and rgt >= %s
-		and ifnull(show_in_website,0)=1
-		order by lft asc""", (item_group.lft, item_group.rgt), as_dict=True)
-
-def invalidate_cache_for(doc, trigger, item_group=None):
-	if not item_group:
-		item_group = doc.name
-
-	for i in get_parent_item_groups(item_group):
-		if i.page_name:
-			clear_cache(i.page_name)
-
-def invalidate_cache_for_item(doc, trigger):
-	invalidate_cache_for(doc, trigger, doc.item_group)
-	for d in doc.get({"doctype":"Website Item Group"}):
-		invalidate_cache_for(doc, trigger, d.item_group)
-
-def update_website_page_name(doc, trigger):
-	if doc.page_name:
-		invalidate_cache_for_item(doc, trigger)
-		clear_cache(doc.page_name)
