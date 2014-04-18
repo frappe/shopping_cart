@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 import unittest
 import frappe
-from shopping_cart.shopping_cart import get_quotation, update_in_cart
+from shopping_cart.shopping_cart import get_quotation, set_item_in_cart
 
 class TestShoppingCart(unittest.TestCase):
 	"""
@@ -59,14 +59,14 @@ class TestShoppingCart(unittest.TestCase):
 		self.login_as_lead()
 
 		# add first item
-		update_in_cart("_Test Item", 1)
+		set_item_in_cart("_Test Item", 1)
 		quotation = self.test_get_cart_lead()
 		self.assertEquals(quotation.get("quotation_details")[0].item_code, "_Test Item")
 		self.assertEquals(quotation.get("quotation_details")[0].qty, 1)
 		self.assertEquals(quotation.get("quotation_details")[0].amount, 10)
 
 		# add second item
-		update_in_cart("_Test Item 2", 1)
+		set_item_in_cart("_Test Item 2", 1)
 		quotation = self.test_get_cart_lead()
 		self.assertEquals(quotation.get("quotation_details")[1].item_code, "_Test Item 2")
 		self.assertEquals(quotation.get("quotation_details")[1].qty, 1)
@@ -79,12 +79,12 @@ class TestShoppingCart(unittest.TestCase):
 		self.test_add_to_cart()
 
 		# update first item
-		update_in_cart("_Test Item", 5)
+		set_item_in_cart("_Test Item", 5)
 		quotation = self.test_get_cart_lead()
 		self.assertEquals(quotation.get("quotation_details")[0].item_code, "_Test Item")
 		self.assertEquals(quotation.get("quotation_details")[0].qty, 5)
 		self.assertEquals(quotation.get("quotation_details")[0].amount, 50)
-		self.assertEquals(quotation.net_total, 60)
+		self.assertEquals(quotation.net_total, 70)
 		self.assertEquals(len(quotation.get("quotation_details")), 2)
 
 	def test_remove_from_cart(self):
@@ -92,7 +92,7 @@ class TestShoppingCart(unittest.TestCase):
 		self.test_add_to_cart()
 
 		# remove first item
-		update_in_cart("_Test Item", 0)
+		set_item_in_cart("_Test Item", 0)
 		quotation = self.test_get_cart_lead()
 		self.assertEquals(quotation.get("quotation_details")[0].item_code, "_Test Item 2")
 		self.assertEquals(quotation.get("quotation_details")[0].qty, 1)
@@ -101,19 +101,26 @@ class TestShoppingCart(unittest.TestCase):
 		self.assertEquals(len(quotation.get("quotation_details")), 1)
 
 		# remove second item
-		update_in_cart("_Test Item 2", 0)
+		set_item_in_cart("_Test Item 2", 0)
 		quotation = self.test_get_cart_lead()
 		self.assertEquals(quotation.net_total, 0)
 		self.assertEquals(len(quotation.get("quotation_details")), 0)
 
-	def test_add_address(self):
-		pass
-
 	def test_set_billing_address(self):
-		pass
+		return
+
+		# first, add to cart
+		self.test_add_to_cart()
+
+		quotation = self.test_get_cart_lead()
+		default_address = frappe.get_doc("Address", {"lead": quotation.lead, "is_primary_address": 1})
+		self.assertEquals("customer_address", default_address.name)
 
 	def test_set_shipping_address(self):
-		pass
+		# first, add to cart
+		self.test_add_to_cart()
+
+
 
 	def test_shipping_rule(self):
 		self.test_set_shipping_address()
@@ -174,12 +181,50 @@ class TestShoppingCart(unittest.TestCase):
 		frappe.set_user("test_cart_user@example.com")
 
 	def login_as_lead(self):
+		self.create_lead()
 		frappe.set_user("test_cart_lead@example.com")
 
 	def login_as_customer(self):
 		frappe.set_user("test_contact_customer@example.com")
 
+	def create_lead(self):
+		if frappe.db.get_value("Lead", {"email_id": "test_cart_lead@example.com"}):
+			return
+
+		lead = frappe.get_doc({
+			"doctype": "Lead",
+			"email_id": "test_cart_lead@example.com",
+			"lead_name": "_Test Website Lead",
+			"status": "Open",
+			"territory": "_Test Territory Rest Of The World"
+		})
+		lead.insert(ignore_permissions=True)
+
+		frappe.get_doc({
+			"doctype": "Address",
+			"address_line1": "_Test Address Line 1",
+			"address_title": "_Test Cart Lead Address",
+			"address_type": "Office",
+			"city": "_Test City",
+			"country": "United States",
+			"lead": lead.name,
+			"lead_name": "_Test Website Lead",
+			"is_primary_address": 1,
+			"phone": "+91 0000000000"
+		}).insert(ignore_permissions=True)
+
+		frappe.get_doc({
+			"doctype": "Address",
+			"address_line1": "_Test Address Line 1",
+			"address_title": "_Test Cart Lead Address",
+			"address_type": "Home",
+			"city": "_Test City",
+			"country": "India",
+			"lead": lead.name,
+			"lead_name": "_Test Website Lead",
+			"phone": "+91 0000000000"
+		}).insert(ignore_permissions=True)
+
+
 test_dependencies = ["Sales Taxes and Charges Master", "Price List", "Item Price", "Shipping Rule", "Currency Exchange",
 	"Customer Group", "Lead", "Customer", "Contact", "Address", "Item"]
-
-test_records = frappe.get_test_records('Shopping Cart')

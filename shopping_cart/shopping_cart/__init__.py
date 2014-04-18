@@ -36,10 +36,9 @@ def get_quotation(user=None):
 
 	return quotation
 
-@frappe.whitelist()
-def update_in_cart(item_code, qty):
+def set_item_in_cart(item_code, qty, user=None):
 	validate_item(item_code)
-	quotation = get_quotation()
+	quotation = get_quotation(user=user)
 	qty = flt(qty)
 	quotation_item = quotation.get("quotation_details", {"item_code": item_code})
 
@@ -59,11 +58,36 @@ def update_in_cart(item_code, qty):
 			})
 
 	quotation.save(ignore_permissions=True)
+	return quotation
+
+def set_address_in_cart(address_fieldname, address, user=None):
+	quotation = get_quotation(user=user)
+	validate_address(quotation, address_fieldname, address)
+
+	if quotation.get(address_fieldname) != address:
+		quotation.set(address_fieldname, address)
+		if address_fieldname=="customer_address":
+			quotation.set("address_display", None)
+		else:
+			quotation.set("shipping_address", None)
+
+		quotation.save(ignore_permissions=True)
+
+	return quotation
 
 def validate_item(item_code):
 	item = frappe.db.get_value("Item", item_code, ["item_name", "show_in_website"], as_dict=True)
 	if not item.show_in_website:
 		frappe.throw(_("{0} cannot be purchased using Shopping Cart").format(item.item_name))
+
+def validate_address(quotation, address_fieldname, address):
+	party = get_party(quotation.contact_email)
+	address_doc = frappe.get_doc(address)
+	if address_doc.get(party.doctype.lower()) != party.name:
+		if address_fieldname=="customer_address":
+			frappe.throw(_("Invalid Billing Address"))
+		else:
+			frappe.throw(_("Invalid Shipping Address"))
 
 def get_party(user):
 	def _get_party(user):
