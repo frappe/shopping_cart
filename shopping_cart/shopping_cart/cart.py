@@ -267,7 +267,7 @@ def get_lead_or_customer():
 			"status": "Open" # TODO: set something better???
 		})
 
-		if frappe.session.user != "Guest":
+		if frappe.session.user not in ("Guest", "Administrator"):
 			lead_doc.ignore_permissions = True
 			lead_doc.insert()
 

@@ -3,7 +3,7 @@
     	<li><a href="index">Home</a></li>
     	<li class="active"><i class="{{ icon }} icon-fixed-width"></i> {{ title }}</li>
     </ul>
-	<p id="msgprint-alert" class="alert alert-danger" 
+	<p id="msgprint-alert" class="alert alert-danger"
 		style="display: none;">&nbsp;</p>
 	<div class="list-group transaction-list">
 		<div class="progress progress-striped active">
@@ -26,14 +26,14 @@ var get_transactions = function(btn) {
 			if(!(r.message && r.message.length)) {
 				console.log("empty");
 				if(!$list.html().trim()) {
-					$list.html("<div class='alert alert-warning'>\
+					$list.html("<div class='text-muted'>\
 						{{ empty_list_message }}</div>");
 				}
 				return;
 			}
-		
+
 			start += r.message.length;
-		
+
 			$.each(r.message, function(i, doc) {
 				render(doc);
 			});
@@ -45,7 +45,7 @@ $(document).ready(function() {
 	window.start = 0;
 	window.$list = $(".transaction-list");
 	window.$show_more = $(".btn-show-more").on("click", function() { get_transactions(this); })
-	
+
 	get_transactions();
 });
 </script>
