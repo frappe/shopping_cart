@@ -7,13 +7,13 @@ from __future__ import unicode_literals
 import frappe
 from frappe import _, msgprint
 from frappe.utils import comma_and
-from frappe.model.controller import DocListController
+from frappe.model.document import Document
 from frappe.utils.nestedset import get_ancestors_of
 from erpnext.utilities.doctype.address.address import get_territory_from_address
 
 class ShoppingCartSetupError(frappe.ValidationError): pass
 
-class ShoppingCartSettings(DocListController):
+class ShoppingCartSettings(Document):
 	def onload(self):
 		self.set("__quotation_series", frappe.get_meta("Quotation").get_options("naming_series"))
 
