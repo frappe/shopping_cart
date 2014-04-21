@@ -7,6 +7,7 @@ from frappe import throw, _
 import frappe.defaults
 from frappe.utils import flt, get_fullname, fmt_money, cstr
 from erpnext.utilities.doctype.address.address import get_address_display
+from frappe.utils.nestedset import get_root_of
 
 class WebsitePriceListMissingError(frappe.ValidationError): pass
 
@@ -121,7 +122,7 @@ def guess_territory():
 
 	return territory or \
 		frappe.db.get_value("Shopping Cart Settings", None, "territory") or \
-			frappe.db.get_value("Territory", {"parent_territory":""})
+			get_root_of("Territory")
 
 def decorate_quotation_doc(doc):
 	for d in doc.get_all_children():
@@ -213,7 +214,7 @@ def apply_cart_settings(party=None, quotation=None):
 	cart_settings = frappe.get_doc("Shopping Cart Settings")
 
 	billing_territory = get_address_territory(quotation.customer_address) or \
-		party.territory or frappe.db.get_value("Territory", {"parent_territory":""})
+		party.territory or get_root_of("Territory")
 
 	set_price_list_and_rate(quotation, cart_settings, billing_territory)
 
