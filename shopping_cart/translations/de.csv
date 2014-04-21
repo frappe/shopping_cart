@@ -1,0 +1,267 @@
+ by Role ,von Rolle
+ is not set,nicht gesetzt
+""" does not exists",""" Existiert nicht"
+2 days ago,Vor 2 Tagen
+About,Über
+Actions,Aktionen
+Add,Hinzufügen
+Add Attachments,Anhänge hinzufügen
+Add Bookmark,Lesezeichen hinzufügen
+Add Column,Spalte hinzufügen
+Add Message,Nachricht hinzufügen
+Add Reply,Fügen Sie Antworten
+Add Serial No,In Seriennummer
+Add This To User's Restrictions,Fügen Sie diese auf Benutzer- Einschränkungen
+Add attachment,Anhang hinzufügen
+Add new row,In neue Zeile
+Add to To Do,In den To Do
+Add to To Do List of,In den To Do Liste der
+"Allowing DocType, DocType. Be careful!","Zulassen DocType , DocType . Seien Sie vorsichtig !"
+Alternative download link,Alternative Download- Link
+Amend,Ändern
+Are you sure you want to delete the attachment?,"Sind Sie sicher, dass Sie den Anhang löschen?"
+Ascending,Aufsteigend
+Assign To,zuweisen zu
+Assigned To,zugewiesen an
+Assignments,Zuordnungen
+Attach Document Print,Anhängen Dokument drucken
+Attach as web link,Bringen Sie als Web-Link
+Attachments,Zubehör
+Billed,Angekündigt
+Bookmarks,Bookmarks
+Built on,Erbaut auf
+Calendar,Kalender
+Cancel,Kündigen
+Cancelled,Abgesagt
+Cannot edit standard fields,Kann Standardfelder nicht bearbeiten
+Cannot open instance when its {0} is open,"Kann nicht geöffnet werden , wenn sein Beispiel {0} offen ist"
+Cannot open {0} when its instance is open,"Kann nicht öffnen {0}, wenn ihre Instanz geöffnet ist"
+Cannot print cancelled documents,Kann abgebrochen Dokumente nicht drucken
+Clear Cache,Cache löschen
+Click on row to view / edit.,Klicken Sie auf die Reihe zu bearbeiten / anzeigen.
+Click to Expand / Collapse,Klicken Sie auf Erweitern / Reduzieren
+Close,Schließen
+Close: {0},Schließen : {0}
+Collapse,Zusammenbruch
+Comment,Kommentar
+Comments,Kommentare
+Communication Medium,Communication Medium
+Complete By,Komplette Durch
+Copy,Kopieren
+Creation / Modified By,Creation / Geändert von
+Currency is required for Price List {0},Die Währung ist für Preisliste erforderlich {0}
+Current status,Aktueller Status
+Custom Reports,Benutzerdefinierte Berichte
+Customize,anpassen
+Date must be in format: {0},Datum muss im Format : {0}
+Dear,Liebe
+Delete,Löschen
+Delete Row,Zeile löschen
+Delivered,Lieferung
+Descending,Absteigend
+Document Status transition from ,Document Status Übergang von
+Document Status transition from {0} to {1} is not allowed,Dokumentstatus Übergang von {0} {1} ist nicht erlaubt
+Document is only editable by users of role,Dokument ist nur editierbar Nutzer Rolle
+Documentation,Dokumentation
+Download,Herunterladen
+Drafts,Dame
+Drag to sort columns,Ziehen Sie Spalten sortieren
+Edit,Bearbeiten
+Editable,Editable
+Email,E-Mail
+"Email addresses, separted by commas",E-Mail -Adressen durch Komma separted
+Email sent to {0},E-Mail an {0} gesendet
+Email...,E-Mail ...
+Enter Value,Wert eingeben
+Equals,Equals
+Expand,erweitern
+Export,Exportieren
+Export not allowed. You need {0} role to export.,Export nicht erlaubt. Sie müssen {0} Rolle zu exportieren.
+Field {0} is not selectable.,Feld {0} ist nicht wählbar.
+File,Datei
+Filter,Filtern
+"For comparative filters, start with","Für vergleichende Filter, mit zu beginnen"
+For ranges,Für Bereiche
+Form,Form
+Forums,Foren
+From Date must be before To Date,Von Datum muss vor dem Laufenden bleiben
+Gantt Chart,Gantt Chart
+Get,erhalten
+Get From ,Holen Sie sich ab
+Greater or equals,Größer oder equals
+Greater than,größer als
+"Grid ""","Grid """
+"Group Added, refreshing...","Gruppe hinzugefügt , erfrischend ..."
+Help,Hilfe
+History,Geschichte
+"Ignoring Item {0}, because a group exists with the same name!","Ignorieren Artikel {0} , weil eine Gruppe mit dem gleichen Namen existiert!"
+Import,Importieren
+In,in
+In response to,Als Antwort auf
+Insert Below,Darunter einfügen
+Insert Row,Zeile einfügen
+Invalid Email: {0},Ungültige E-Mail: {0}
+Invalid Filter: {0},Ungültige Filter: {0}
+Last updated by,Zuletzt aktualisiert von
+Less or equals,Weniger oder equals
+Less than,weniger als
+Like,wie
+Linked With,Verbunden mit
+List,Liste
+Loading,Laden
+Loading Report,Loading
+Logout,Ausloggen
+Make a new,Machen Sie einen neuen
+Mandatory fields required in {0},Pflichtfelder in erforderlich {0}
+Mandatory filters required:\n,Pflicht Filter erforderlich : \ n
+Message,Nachricht
+Missing Currency Exchange Rates for {0},Fehlende Wechselkurse für {0}
+Missing Values Required,Fehlende Werte Erforderlich
+Modified by,Geändert von
+More,Mehr
+Move Down: {0},Nach unten : {0}
+Move Up: {0},Nach oben : {0}
+My Settings,Meine Einstellungen
+Name is required,Name wird benötigt
+Name not permitted,Nennen nicht erlaubt
+New,neu
+New Record,Neuer Rekord
+Next Record,Nächster Datensatz
+Next actions,Nächste Veranstaltungen
+No,Auf
+No Communication tagged with this ,Keine Kommunikation mit diesem getaggt
+No Report Loaded. Please use query-report/[Report Name] to run a report.,"Nein geladen. Bitte benutzen Sie Abfrage - Report / [Bericht Name], um einen Bericht ausführen ."
+No Results,Keine Ergebnisse
+No document selected,Kein Dokument ausgewählt
+No one,Keiner
+No permission to edit,Keine Berechtigung zum Bearbeiten
+No records tagged.,In den Datensätzen markiert.
+None,Keine
+None: End of Workflow,Keine : Ende der Workflow-
+Not Allowed,Nicht erlaubt
+Not Found,Nicht gefunden
+Not Linked to any record.,Nicht zu jedem Datensatz verknüpft.
+Not Permitted,Nicht zulässig
+Not Submitted,advertisement
+Not allowed,Nicht erlaubt
+Not enough permission to see links.,"Nicht genug Erlaubnis, siehe Links ."
+Not equals,Nicht Gleichen
+Not found,Nicht gefunden
+Not permitted,Nicht zulässig
+Note: Other permission rules may also apply,Hinweis: Weitere Regeln können die Erlaubnis auch gelten
+Nothing to show,"Nichts zu zeigen,"
+Nothing to show for this selection,Nichts für diese Auswahl zeigen
+Notify By Email,Per E-Mail benachrichtigen
+Open source ERP built for the web,Open-Source- ERP für die Bahn gebaut
+Or Created By,Oder Erstellt von
+Original Message,Ursprüngliche Nachricht
+Page not found,Seite nicht gefunden
+Paid,bezahlt
+Partially Billed,teilweise Angekündigt
+Partially Delivered,teilweise Lieferung
+Permanently Cancel {0}?,Dauerhaft Abbrechen {0} ?
+Permanently Submit {0}?,Dauerhaft Absenden {0} ?
+Permanently delete {0}?,Dauerhaftes Löschen {0} ?
+Pick Columns,Wählen Sie Spalten
+Please attach a file first.,Bitte fügen Sie eine Datei zuerst.
+Please attach a file or set a URL,Bitte fügen Sie eine Datei oder stellen Sie eine URL
+Please enable pop-ups,Bitte aktivieren Sie Pop-ups
+Please enter Event's Date and Time!,Bitte geben Sie das Datum und Ereignis -Zeit!
+Please enter some text!,Bitte geben Sie einen Text!
+Please enter title!,Bitte Titel !
+Please login to Upvote!,"Bitte loggen Sie sich ein , um upvote !"
+Please specify,Bitte geben Sie
+Please specify a,Bitte geben Sie eine
+Please specify a Price List which is valid for Territory,"Bitte geben Sie eine Preisliste , die gültig für Territory ist"
+Please specify currency in Company,Bitte geben Sie die Währung in Unternehmen
+Please write something,Bitte schreiben Sie etwas
+Please write something in subject and message!,Bitte schreiben Sie etwas in Betreff und die Nachricht !
+Post already exists. Cannot add again!,Beitrag ist bereits vorhanden. Kann nicht mehr schreiben!
+Post does not exist. Please add post!,Beitrag existiert nicht. Bitte fügen Sie nach !
+Previous Record,Previous Record
+Print,drucken
+Print...,Drucken ...
+Priority,Priorität
+Query Report,Query Report
+Refresh,Erfrischen
+Reload Page,Seite neu laden
+Remove Bookmark,Lesezeichen entfernen
+Rename...,Benennen Sie ...
+Report,Bericht
+Report was not saved (there were errors),Bericht wurde nicht gespeichert (es gab Fehler)
+Save,Sparen
+Search,Suchen
+Select All,Alle auswählen
+Select Attachments,Wählen Sie Dateianhänge
+Select Print Format,Wählen Sie Druckformat
+Select Report Name,Wählen Bericht Name
+Select To Download:,Wählen Sie Zum Herunterladen:
+Select Type,Typ wählen
+Select dates to create a new ,
+Select or drag across time slots to create a new event.,Wählen oder ziehen in Zeitfenstern um ein neues Ereignis zu erstellen.
+Send,Senden
+Send As Email,Senden als E-Mail
+Send Me A Copy,Senden Sie mir eine Kopie
+Sent or Received,Gesendet oder empfangen
+Serial No,Serial In
+Session Expired. Logging you out,Session abgelaufen. Sie werden abgemeldet
+Set Link,Link- Set
+Shortcut,Abkürzung
+Show Details,Details anzeigen
+Show Tags,Tags anzeigen
+Show rows with zero values,Zeige Zeilen mit Nullwerten
+Showing only for (if not empty),Es werden nur für die (wenn nicht leer)
+Sorry we were unable to find what you were looking for.,"Leider waren wir nicht in der Lage zu finden, was Sie suchen ."
+Sorry you are not permitted to view this page.,"Leider sind Sie nicht berechtigt , diese Seite anzuzeigen ."
+Sort By,Sortieren nach
+Start Report For,Starten Bericht für
+Subject,Thema
+Submit,Einreichen
+Submitted,Eingereicht
+Switch to Website,Wechseln Sie zur Website
+Tags,Tags
+Test Runner,Test Runner
+Then By (optional),Dann nach (optional)
+There were errors,Es gab Fehler
+There were errors while sending email. Please try again.,Es gab Fehler beim Versenden der E-Mail. Bitte versuchen Sie es erneut .
+This is PERMANENT action and you cannot undo. Continue?,Dies ist PERMANENT Aktion und können nicht rückgängig gemacht werden. Weiter?
+This is permanent action and you cannot undo. Continue?,Dies ist ständige Aktion und können nicht rückgängig gemacht werden. Weiter?
+To,Auf
+To Pay,To Pay
+"To report an issue, go to ",
+"To run a test add the module name in the route after '{0}'. For example, {1}",So führen Sie eine Test hinzufügen den Namen des Moduls in der Route nach '{0}' . Beispiel: {1}
+Unable to load: {0},Kann nicht geladen werden: {0}
+Unknown Column: {0},Unknown Column: {0}
+Unknown Print Format: {0},Unbekannt Print Format: {0}
+Unread Messages,Ungelesene Nachrichten
+Update,Aktualisieren
+Updated,Aktualisiert
+Upload,laden
+Upload Attachment,Anhang hochladen
+Upload a file,Hochladen einer Datei
+Uploading...,Uploading ...
+User Permission Restrictions,Benutzerberechtigung Einschränkungen
+User Restrictions,Benutzereinschränkungen
+With Groups,mit Gruppen
+With Ledgers,mit Ledger
+Workflow will start after saving.,Workflow wird nach dem Speichern beginnen.
+Yesterday,Gestern
+You are not allowed to create / edit reports,"Sie sind nicht berechtigt, bearbeiten / Berichte erstellen"
+You are not allowed to create {0},"Sie sind nicht berechtigt, {0}"
+You are not allowed to export this report,"Sie sind nicht berechtigt , diesen Bericht zu exportieren"
+You are not allowed to print this document,"Sie sind nicht berechtigt , dieses Dokument zu drucken"
+You are not allowed to reply to this ticket.,"Sie sind nicht berechtigt, auf diesem Ticket antworten ."
+You are not allowed to send emails related to this document,"Es ist nicht erlaubt , E-Mails zu diesem Dokument im Zusammenhang senden"
+You need to enable Shopping Cart,Sie benötigen den Einkaufswagen zu ermöglichen
+"Your download is being built, this may take a few moments...","Ihr Download gebaut wird, kann dies einige Zeit dauern ..."
+and,und
+comment,Kommentar
+comments,Kommentare
+found,gefunden
+is not allowed.,ist nicht erlaubt.
+or,oder
+to,auf
+values and dates,Werte und Daten
+{0} cannot be purchased using Shopping Cart,{0} kann nicht mit Einkaufswagen erworben werden
+{0} is required,{0} ist erforderlich
+{0} {1} has a common territory {2},{0} {1} hat einen gemeinsamen Territorium {2}
