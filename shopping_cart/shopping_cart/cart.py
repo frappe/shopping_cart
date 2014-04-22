@@ -166,7 +166,7 @@ def _get_cart_quotation(party=None):
 			qdoc.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
 
-		qdoc.run_method("onload_post_render")
+		qdoc.run_method("set_missing_values")
 		apply_cart_settings(party, qdoc)
 
 	return qdoc
