@@ -10,7 +10,7 @@ $(function() {
 		$('.navbar li[data-label="User"] a')
 			.html('<i class="icon-fixed-width icon-user"></i> ' + full_name);
 	}
-	
+
 	// update login
 	shopping_cart.set_cart_count();
 });
@@ -22,7 +22,7 @@ $.extend(shopping_cart, {
 				localStorage.setItem("last_visited", window.location.href.split("/").slice(-1)[0]);
 				localStorage.setItem("pending_add_to_cart", opts.item_code);
 			}
-			window.location.href = "login";
+			window.location.href = "/login";
 		} else {
 			return frappe.call({
 				type: "POST",
@@ -36,13 +36,13 @@ $.extend(shopping_cart, {
 				callback: function(r) {
 					if(opts.callback)
 						opts.callback(r);
-					
+
 					shopping_cart.set_cart_count();
 				}
 			});
 		}
 	},
-	
+
 	set_cart_count: function() {
 		var cart_count = getCookie("cart_count");
 		var $cart = $("#website-post-login").find('[data-label="Cart"]');
