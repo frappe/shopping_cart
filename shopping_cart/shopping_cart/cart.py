@@ -36,6 +36,7 @@ def get_cart_quotation(doc=None):
 @frappe.whitelist()
 def place_order():
 	quotation = _get_cart_quotation()
+	quotation.company = frappe.db.get_value("Shopping Cart Settings", None, "company")
 	for fieldname in ["customer_address", "shipping_address_name"]:
 		if not quotation.get(fieldname):
 			throw(_("{0} is required").format(quotation.meta.get_label(fieldname)))
@@ -43,8 +44,15 @@ def place_order():
 	quotation.ignore_permissions = True
 	quotation.submit()
 
+	if quotation.lead:
+		# company used to create customer accounts
+		frappe.defaults.set_user_default("company", quotation.company)
+
 	from erpnext.selling.doctype.quotation.quotation import _make_sales_order
 	sales_order = frappe.get_doc(_make_sales_order(quotation.name, ignore_permissions=True))
+	for item in sales_order.get("sales_order_details"):
+		item.reserved_warehouse = frappe.db.get_value("Item", item.item_code, "website_warehouse") or None
+
 	sales_order.ignore_permissions = True
 	sales_order.insert()
 	sales_order.submit()
@@ -154,7 +162,7 @@ def _get_cart_quotation(party=None):
 			"doctype": "Quotation",
 			"naming_series": frappe.defaults.get_user_default("shopping_cart_quotation_series") or "QTN-CART-",
 			"quotation_to": party.doctype,
-			"company": frappe.defaults.get_user_default("company"),
+			"company": frappe.db.get_value("Shopping Cart Settings", None, "company"),
 			"order_type": "Shopping Cart",
 			"status": "Draft",
 			"docstatus": 0,
