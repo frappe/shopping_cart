@@ -1,0 +1,288 @@
+ by Role ,par rôle
+ is not set,n&#39;est pas réglé
+""" does not exists",""" N'existe pas"
+2 days ago,Il ya 2 jours
+"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> Ajouter / Modifier < / a>"
+"<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Ajouter / Modifier < / a>"
+About,Sur
+Actions,actes
+Add,Ajouter
+Add Attachments,Ajouter des pièces jointes
+Add Bookmark,Ajouter un signet
+Add Column,Ajouter une colonne
+Add Message,Ajouter un message
+Add Reply,Ajouter une réponse
+Add Serial No,Ajouter N ° de série
+Add This To User's Restrictions,télécharger
+Add attachment,Ajouter une pièce jointe
+Add new row,Ajouter une nouvelle ligne
+Add to To Do,Ajouter à To Do
+Add to To Do List of,Ajouter à To Do List des
+"Allowing DocType, DocType. Be careful!",Vous ne pouvez pas ouvrir {0} lorsque son instance est ouverte
+Alternative download link,Les champs obligatoires requises dans {0}
+Amend,Modifier
+Are you sure you want to delete the attachment?,Êtes-vous sûr de vouloir supprimer la pièce jointe?
+Ascending,Ascendant
+Assign To,Attribuer à
+Assigned To,assignée à
+Assignments,Envoyer permanence {0} ?
+Attach Document Print,Fixez Imprimer le document
+Attach as web link,Joindre lien web
+Attachments,Pièces jointes
+Billed,Facturé
+Bookmarks,Favoris
+Built on,Vous ne pouvez pas imprimer des documents annulés
+Calendar,Calendrier
+Cancel,Annuler
+Cancelled,Annulé
+Cannot edit standard fields,Vous ne pouvez pas modifier les champs standards
+Cannot open instance when its {0} is open,Création / modification par
+Cannot open {0} when its instance is open,pas trouvé
+Cannot print cancelled documents,Vous n'êtes pas autorisé à envoyer des e-mails relatifs à ce document
+Clear Cache,avec les groupes
+Click on row to view / edit.,non autorisé
+Click to Expand / Collapse,Cliquez ici pour afficher / masquer
+Close,Proche
+Close: {0},Exportation non autorisée. Vous devez {0} rôle à exporter .
+Collapse,ERP open source construit pour le web
+Comment,Commenter
+Comments,Commentaires
+Communication Medium,Moyen de communication
+Company,Entreprise
+Complete By,Compléter par
+Copy,Copiez
+Creation / Modified By,Vous n'êtes pas autorisé à créer / éditer des rapports
+Currency is required for Price List {0},{0} est obligatoire
+Current status,Situation actuelle
+Custom Reports,Rapports personnalisés
+Customize,Personnaliser
+Date must be in format: {0},Il y avait des erreurs
+Dear,Cher
+Default Customer Group,Groupe de clients par défaut
+Default Territory,Territoire défaut
+Delete,Effacer
+Delete Row,Supprimer la ligne
+Delivered,Livré
+Descending,Descendant
+Document Status transition from ,transition de l&#39;état du document de
+Document Status transition from {0} to {1} is not allowed,non autorisé
+Document is only editable by users of role,Document est modifiable uniquement par les utilisateurs de rôle
+Documentation,Documentation
+Download,Supprimer définitivement {0} ?
+Drafts,Brouillons
+Drag to sort columns,Faites glisser pour trier les colonnes
+Edit,Éditer
+Editable,Editable
+Email,Email
+"Email addresses, separted by commas","Adresses e-mail par des virgules, separted"
+Email sent to {0},entrer une valeur
+Email...,Adresse e-mail ...
+Enable Shopping Cart,Activer Panier
+Enter Value,Aucun résultat
+Equals,Equals
+Expand,S'il vous plaît entrer un texte !
+Export,Exporter
+Export not allowed. You need {0} role to export.,Vider le cache
+Field {0} is not selectable.,Monter : {0}
+File,Fichier
+Filter,Filtrez
+"For comparative filters, start with","Pour les filtres de comparaison, commencez par"
+For ranges,Pour les plages
+Form,Forme
+Forums,Fermer : {0}
+From Date must be before To Date,Partir de la date doit être antérieure à ce jour
+Gantt Chart,Diagramme de Gantt
+Get,Obtenez
+Get From ,Obtenez partir
+Greater or equals,Plus ou égaux
+Greater than,supérieur à
+"Grid ""","grille """
+"Group Added, refreshing...",non Soumis
+Help,Aider
+History,Histoire
+"Ignoring Item {0}, because a group exists with the same name!",Nom interdite
+Import,Importer
+In,dans
+In response to,En réponse à
+Insert Below,Insérer en dessous
+Insert Row,Insérer une ligne
+Invalid Billing Address,"Pour exécuter un test ajouter le nom du module dans la route après '{0}' . Par exemple, {1}"
+Invalid Email: {0},S'il vous plaît entrer le titre !
+Invalid Filter: {0},Descendre : {0}
+Invalid Shipping Address,effondrement
+Last updated by,Dernière mise à jour par
+Less or equals,Moins ou égal
+Less than,moins que
+Like,comme
+Linked With,Lié avec
+List,Liste
+Loading,Chargement
+Loading Report,Chargement rapport
+Logout,Déconnexion
+Make a new,Faire une nouvelle
+Mandatory fields required in {0},Courriel invalide : {0}
+Mandatory filters required:\n,Filtres obligatoires requises: \ n
+Message,Message
+Missing Currency Exchange Rates for {0},Vider le cache
+Missing Values Required,Valeurs manquantes obligatoires
+Modified by,Modifié par
+More,Plus
+Move Down: {0},"Ignorant article {0} , car un groupe ayant le même nom !"
+Move Up: {0},construit sur
+My Settings,Mes réglages
+Name is required,Le nom est obligatoire
+Name not permitted,Restrictions de l'utilisateur
+New,nouveau
+New Record,Nouveau record
+Next Record,S'il vous plaît vous connecter à Upvote !
+Next actions,Prochaines actions
+No,Aucun
+No Communication tagged with this ,Aucune communication étiqueté avec cette
+No Report Loaded. Please use query-report/[Report Name] to run a report.,Non Signaler chargés. S&#39;il vous plaît utilisez requête rapport / [Nom du rapport] pour exécuter un rapport.
+No Results,Vous ne pouvez pas ouvrir par exemple lorsque son {0} est ouvert
+No document selected,"Statut du document de transition {0} {1}, n'est pas autorisé"
+No one,Personne
+No permission to edit,Pas de permission pour modifier
+No records tagged.,Aucun dossier étiqueté.
+None,Aucun
+None: End of Workflow,Aucun: Fin de flux de travail
+Not Allowed,"Groupe ajoutée, rafraîchissant ..."
+Not Found,Introuvable
+Not Linked to any record.,Non lié à un enregistrement.
+Not Permitted,Non autorisé
+Not Submitted,"Permettre DocType , DocType . Soyez prudent !"
+Not allowed,Email envoyé à {0}
+Not enough permission to see links.,Pas l&#39;autorisation suffisante pour voir les liens.
+Not equals,pas égaux
+Not found,Alternative lien de téléchargement
+Not permitted,Sélectionnez à télécharger:
+Note: Other permission rules may also apply,Remarque: Les règles d&#39;autorisation peut également l&#39;appliquer
+Nothing to show,Rien à montrer
+Nothing to show for this selection,Rien à montrer pour cette sélection
+Notify By Email,Aviser par courriel
+Open source ERP built for the web,recharger la page
+Or Created By,Il y avait des erreurs lors de l'envoi de courriel . S'il vous plaît essayez de nouveau .
+Original Message,Message d&#39;origine
+Page not found,Page non trouvée
+Paid,payé
+Partially Billed,partiellement Facturé
+Partially Delivered,Livré partiellement
+Permanently Cancel {0}?,enregistrement suivant
+Permanently Submit {0}?,Forums
+Permanently delete {0}?,Champ {0} n'est pas sélectionnable.
+Pick Columns,Choisissez Colonnes
+Please attach a file first.,S&#39;il vous plaît joindre un fichier en premier.
+Please attach a file or set a URL,S&#39;il vous plaît joindre un fichier ou définir une URL
+Please enable pop-ups,S'il vous plaît autoriser les pop -ups
+Please enter Event's Date and Time!,Ou créés par
+Please enter some text!,missions
+Please enter title!,Vous n'êtes pas autorisé à créer {0}
+Please login to Upvote!,Affichage seulement pour ( si non vide )
+Please specify,S&#39;il vous plaît spécifier
+Please specify a,S&#39;il vous plaît spécifier une
+Please specify a Price List which is valid for Territory,S&#39;il vous plaît spécifier une liste de prix qui est valable pour le territoire
+Please specify currency in Company,S&#39;il vous plaît préciser la devise dans la société
+Please write something,S'il vous plaît écrire quelque chose
+Please write something in subject and message!,S'il vous plaît écrire quelque chose dans le thème et le message !
+Post already exists. Cannot add again!,"Pour exécuter un test ajouter le nom du module dans la route après '{0}' . Par exemple, {1}"
+Post does not exist. Please add post!,Cliquez sur suite pour voir / modifier .
+Previous Record,Vous ne pouvez pas réinitialiser le mot de passe de {0}
+Price List,Liste des Prix
+Print,Imprimer
+Print...,Imprimer ...
+Priority,Priorité
+Query Report,Rapport de requêtes
+Quotation Series,Série de devis
+Refresh,Rafraîchir
+Reload Page,Inconnu Format d'impression : {0}
+Remove Bookmark,Supprimer le signet
+Rename...,Renommer ...
+Report,Rapport
+Report was not saved (there were errors),Rapport n&#39;a pas été sauvé (il y avait des erreurs)
+Save,sauver
+Search,Rechercher
+Select All,Sélectionner tout
+Select Attachments,Sélectionnez Pièces jointes
+Select Print Format,Sélectionnez Format d&#39;impression
+Select Report Name,Sélectionner Nom du rapport
+Select To Download:,Impossible de charge : {0}
+Select Type,Sélectionnez le type de
+Select dates to create a new ,Choisissez la date pour créer une nouvelle
+Select or drag across time slots to create a new event.,Sélectionnez ou glisser sur des intervalles de temps pour créer un nouvel événement.
+Send,Envoyer
+Send As Email,Envoyer en tant que e-mail
+Send Me A Copy,Envoyez-moi une copie
+Sent or Received,Envoyés ou reçus
+Serial No,N ° de série
+Session Expired. Logging you out,Session a expiré. Vous déconnecter
+Set Link,Réglez Lien
+Shipping Rule,Livraison règle
+Shopping Cart,Panier
+Shopping Cart Price List,Panier Liste des prix
+Shopping Cart Price Lists,Panier Liste des prix
+Shopping Cart Settings,Panier Paramètres
+Shopping Cart Shipping Rule,Panier Livraison règle
+Shopping Cart Shipping Rules,Panier Règles d&#39;expédition
+Shopping Cart Taxes and Charges Master,Panier taxes et redevances Maître
+Shopping Cart Taxes and Charges Masters,Panier Taxes et frais de maîtrise
+Shortcut,Raccourci
+Show Details,Afficher les détails
+Show Tags,Afficher les tags
+Show rows with zero values,Afficher lignes avec des valeurs nulles
+Showing only for (if not empty),Poster n'existe pas . S'il vous plaît ajoutez poste !
+Sorry we were unable to find what you were looking for.,"Désolé, nous n&#39;avons pas pu trouver ce que vous recherchez."
+Sorry you are not permitted to view this page.,"Désolé, vous n&#39;êtes pas autorisé à afficher cette page."
+Sort By,Trier par
+Start Report For,Démarrer Rapport pour
+Subject,Sujet
+Submit,Soumettre
+Submitted,Soumis
+Switch to Website,effondrement
+Tags,Balises
+Tax Master,Maître d&#39;impôt
+Test Runner,Test Runner
+Then By (optional),Puis par (facultatif)
+There were errors,Poster existe déjà . Vous ne pouvez pas ajouter de nouveau !
+There were errors while sending email. Please try again.,Colonne inconnu : {0}
+This is PERMANENT action and you cannot undo. Continue?,Il s&#39;agit d&#39;une action permanente et vous ne pouvez pas annuler. Continuer?
+This is permanent action and you cannot undo. Continue?,Il s&#39;agit d&#39;une action permanente et vous ne pouvez pas annuler. Continuer?
+To,À
+To Pay,à payer
+"To report an issue, go to ",
+"To run a test add the module name in the route after '{0}'. For example, {1}",Filtre invalide : {0}
+Unable to load: {0},Vous n'êtes pas autorisé à imprimer ce document
+Unknown Column: {0},Ajoutez à cela les restrictions de l'utilisateur
+Unknown Print Format: {0},développer
+Unread Messages,Messages non lus
+Update,Mettre à jour
+Updated,Mise à jour
+Upload,Télécharger
+Upload Attachment,Téléchargez Attachment
+Upload a file,Télécharger un fichier
+Uploading...,Téléchargement ...
+User Permission Restrictions,"Groupe ajoutée, rafraîchissant ..."
+User Restrictions,avec des grands livres
+With Groups,Restrictions d'autorisation de l'utilisateur
+With Ledgers,Permanence Annuler {0} ?
+Workflow will start after saving.,Workflow démarre après la sauvegarde.
+Yes,Oui
+Yesterday,Hier
+You are not allowed to create / edit reports,enregistrement précédent
+You are not allowed to create {0},Aucun document sélectionné
+You are not allowed to export this report,S'il vous plaît entrez la date et l'heure de l'événement !
+You are not allowed to print this document,"Pour signaler un problème, passez à"
+You are not allowed to reply to this ticket.,Vous n'êtes pas autorisé à répondre à ce billet .
+You are not allowed to send emails related to this document,Mettez sur le site Web
+You need to enable Shopping Cart,Poster n'existe pas . S'il vous plaît ajoutez poste !
+"Your download is being built, this may take a few moments...","Votre téléchargement est en cours de construction, ce qui peut prendre quelques instants ..."
+and,et
+comment,commenter
+comments,commentaires
+found,trouvé
+is not allowed.,n&#39;est pas autorisée.
+or,ou
+to,à
+values and dates,valeurs et dates
+{0} cannot be purchased using Shopping Cart,Envoyer permanence {0} ?
+{0} is required,{0} ne peut pas être acheté en utilisant Panier
+{0} {1} has a common territory {2},Alternative lien de téléchargement

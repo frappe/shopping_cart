@@ -1,0 +1,288 @@
+ by Role ,по улози
+ is not set,није одређена
+""" does not exists",""" Не постоји"
+2 days ago,Пре 2 дана
+"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<а хреф=""#Салес Бровсер/Цустомер Гроуп""> Додај / Уреди < />"
+"<a href=""#Sales Browser/Territory"">Add / Edit</a>","<а хреф=""#Салес Бровсер/Территори""> Додај / Уреди < />"
+About,Око
+Actions,Акције
+Add,Додати
+Add Attachments,Додај Прилози
+Add Bookmark,Адд Боокмарк
+Add Column,Додај колону
+Add Message,Додај поруку
+Add Reply,Адд Репли
+Add Serial No,Додај сериал но
+Add This To User's Restrictions,Добавить этот ограничений для покупателя
+Add attachment,Додај прилог
+Add new row,Додавање новог реда
+Add to To Do,Адд то То До
+Add to To Do List of,Адд то То До листу
+"Allowing DocType, DocType. Be careful!","Разрешение DocType , DocType . Будьте осторожны !"
+Alternative download link,Альтернативная ссылка для скачивания
+Amend,Изменити
+Are you sure you want to delete the attachment?,Да ли сте сигурни да желите да избришете прилог?
+Ascending,Растући
+Assign To,Додели
+Assigned To,Додељено
+Assignments,Задания
+Attach Document Print,Приложите Принт документа
+Attach as web link,Причврстите као веб линк
+Attachments,Прилози
+Billed,Изграђена
+Bookmarks,Боокмаркс
+Built on,Построенный на
+Calendar,Календар
+Cancel,Отказати
+Cancelled,Отказан
+Cannot edit standard fields,Не можете да измените стандардне поља
+Cannot open instance when its {0} is open,"Не могу открыть экземпляр , когда его {0} открыто"
+Cannot open {0} when its instance is open,"Не могу открыть {0} , когда его экземпляр открыт"
+Cannot print cancelled documents,Невозможно печатать отмененные документы
+Clear Cache,Очистить кэш
+Click on row to view / edit.,"Нажмите на строке , чтобы просмотреть / редактировать ."
+Click to Expand / Collapse,Кликните на Прошири / скупи
+Close,Затворити
+Close: {0},Закрыть : {0}
+Collapse,коллапс
+Comment,Коментар
+Comments,Коментари
+Communication Medium,Комуникација средња
+Company,Компанија
+Complete By,Комплетан Би
+Copy,Копирајте
+Creation / Modified By,Создание / Изменено
+Currency is required for Price List {0},Валюта необходима для Прейскурантом {0}
+Current status,Тренутни статус
+Custom Reports,Прилагођени извештаји
+Customize,Прилагодите
+Date must be in format: {0},Дата должна быть в формате : {0}
+Dear,Драг
+Default Customer Group,Уобичајено групу потрошача
+Default Territory,Уобичајено Територија
+Delete,Избрисати
+Delete Row,Делете Ров
+Delivered,Испоручено
+Descending,Спуштање
+Document Status transition from ,Документ статус прелазак са
+Document Status transition from {0} to {1} is not allowed,Статус документа переход от {0} до {1} не допускается
+Document is only editable by users of role,Документ је само мењати од стране корисника о улози
+Documentation,Документација
+Download,скачать
+Drafts,Нацрти
+Drag to sort columns,Превуците за сортирање колоне
+Edit,Едит
+Editable,Едитабле
+Email,Е-маил
+"Email addresses, separted by commas","Емаил адресе, сепартед зарезима"
+Email sent to {0},E-mail отправлено на адрес {0}
+Email...,Е-маил ...
+Enable Shopping Cart,Омогући Корпа
+Enter Value,Введите значение
+Equals,Једнак
+Expand,расширять
+Export,Извоз
+Export not allowed. You need {0} role to export.,Экспорт не допускается. Вам нужно {0} роль для экспорта .
+Field {0} is not selectable.,Поле {0} не выбирается .
+File,Фајл
+Filter,Филтер
+"For comparative filters, start with","За компаративних филтера, почети са"
+For ranges,За опсеге
+Form,Образац
+Forums,Форумы
+From Date must be before To Date,Од датума мора да буде пре датума
+Gantt Chart,Гантт Цхарт
+Get,Добити
+Get From ,Од Гет
+Greater or equals,Већа или једнаки
+Greater than,Веће од
+"Grid ""","Мрежа """
+"Group Added, refreshing...","Группа Добавлено , освежающий ..."
+Help,Помоћ
+History,Историја
+"Ignoring Item {0}, because a group exists with the same name!","Игнорирование Пункт {0} , потому что группа существует с тем же именем !"
+Import,Увоз
+In,у
+In response to,У одговору на
+Insert Below,Убаците Испод
+Insert Row,Уметни ред
+Invalid Billing Address,Неверный Адрес для выставления счета
+Invalid Email: {0},Неверный e-mail: {0}
+Invalid Filter: {0},Неверный Фильтр: {0}
+Invalid Shipping Address,Неверный адрес пересылки
+Last updated by,Последње ажурирање
+Less or equals,Мање или једнако
+Less than,Мање од
+Like,као
+Linked With,Повезан са
+List,Списак
+Loading,Утовар
+Loading Report,Учитавање извештај
+Logout,Одјава
+Make a new,Направите нови
+Mandatory fields required in {0},"Обязательные поля , необходимые в {0}"
+Mandatory filters required:\n,Обавезни филтери потребни : \ н
+Message,Порука
+Missing Currency Exchange Rates for {0},Отсутствует валютный курс для {0}
+Missing Values Required,Вредности које недостају Обавезна
+Modified by,Изменио
+More,Више
+Move Down: {0},Вниз : {0}
+Move Up: {0},Вверх : {0}
+My Settings,Моја подешавања
+Name is required,Име је обавезно
+Name not permitted,Имя не допускается
+New,новый
+New Record,Нови Рекорд
+Next Record,Следующая запись
+Next actions,Следеће акције
+No,Не
+No Communication tagged with this ,Не Комуникација означена са овим
+No Report Loaded. Please use query-report/[Report Name] to run a report.,Не Извештај Лоадед. Молимо Вас да користите упит-извештај / [извештај Име] да покренете извештај.
+No Results,Нет результатов
+No document selected,Не выбрано ни одного документа
+No one,Нико
+No permission to edit,Немате дозволу да измените
+No records tagged.,Нема података означени.
+None,Ниједан
+None: End of Workflow,Ништа: Крај Воркфлов
+Not Allowed,Не разрешены
+Not Found,Није пронађено
+Not Linked to any record.,Није повезано са било запис.
+Not Permitted,Није дозвољено
+Not Submitted,Не Представленные
+Not allowed,Не допускается
+Not enough permission to see links.,Није довољно дозволу да виде линкове.
+Not equals,Нису једнаки
+Not found,Не найдено
+Not permitted,Не допускается
+Note: Other permission rules may also apply,Напомена: Остале дозвола правила могу да се примењују
+Nothing to show,Ништа да покаже
+Nothing to show for this selection,Ништа се покаже за овај избор
+Notify By Email,Обавестити путем емаила
+Open source ERP built for the web,Открытый исходный код ERP построен для веб
+Or Created By,Или Создано
+Original Message,Оригинал Мессаге
+Page not found,Страница није пронађена
+Paid,плаћен
+Partially Billed,Делимично Изграђена
+Partially Delivered,Делимично Испоручено
+Permanently Cancel {0}?,Постоянно Отменить {0} ?
+Permanently Submit {0}?,Постоянно Представьте {0} ?
+Permanently delete {0}?,Навсегда удалить {0} ?
+Pick Columns,Пицк колоне
+Please attach a file first.,Молимо приложите прво датотеку.
+Please attach a file or set a URL,Молимо вас да приложите датотеку или поставите УРЛ
+Please enable pop-ups,Молимо омогућите искачуће прозоре
+Please enter Event's Date and Time!,"Пожалуйста, введите мероприятия Дата и время !"
+Please enter some text!,"Пожалуйста, введите текст !"
+Please enter title!,"Пожалуйста, введите название !"
+Please login to Upvote!,"Пожалуйста, войдите , чтобы Upvote !"
+Please specify,Наведите
+Please specify a,Наведите
+Please specify a Price List which is valid for Territory,Наведите ценовник који важи за територију
+Please specify currency in Company,Наведите валуту у компанији
+Please write something,Молимо вас да напишете нешто
+Please write something in subject and message!,Молимо вас да напишете нешто у теми и поруци !
+Post already exists. Cannot add again!,Сообщение уже существует. Не можете добавить снова!
+Post does not exist. Please add post!,"Сообщение не существует. Пожалуйста, добавьте пост !"
+Previous Record,Предыдущая запись
+Price List,Ценовник
+Print,штампа
+Print...,Штампа ...
+Priority,Приоритет
+Query Report,Извештај упита
+Quotation Series,Цитат серија
+Refresh,Освежити
+Reload Page,Перезагрузка страницу
+Remove Bookmark,Уклоните Боокмарк
+Rename...,Преименуј ...
+Report,Извештај
+Report was not saved (there were errors),Извештај није сачуван (било грешака)
+Save,сачувати
+Search,Претрага
+Select All,Изабери све
+Select Attachments,Изаберите прилоге
+Select Print Format,Изаберите формат штампања
+Select Report Name,Изаберите име Репорт
+Select To Download:,Выберите на скачивание :
+Select Type,Изаберите Врста
+Select dates to create a new ,Изаберите датум да створи нову
+Select or drag across time slots to create a new event.,Изаберите или превуците преко терминима да креирате нови догађај.
+Send,Послати
+Send As Email,Пошаљи као емаил
+Send Me A Copy,Пошаљи ми копију
+Sent or Received,Послате или примљене
+Serial No,Серијски број
+Session Expired. Logging you out,Сесија је истекла. Логгинг те из
+Set Link,Сет линк
+Shipping Rule,Достава Правило
+Shopping Cart,Корпа
+Shopping Cart Price List,Корпа Ценовник
+Shopping Cart Price Lists,Корпа Ценовници
+Shopping Cart Settings,Корпа Подешавања
+Shopping Cart Shipping Rule,Корпа Достава Правило
+Shopping Cart Shipping Rules,Корпа испоруке Правила
+Shopping Cart Taxes and Charges Master,Корпа такси и накнада Мастер
+Shopping Cart Taxes and Charges Masters,Корпа такси и накнада Мастерс
+Shortcut,Пречица
+Show Details,Прикажи детаље
+Show Tags,Схов Ознаке
+Show rows with zero values,Покажи редове са нула вредностима
+Showing only for (if not empty),Показаны только (если не пусто)
+Sorry we were unable to find what you were looking for.,Жао ми је што нису могли да пронађу оно што сте тражили.
+Sorry you are not permitted to view this page.,Жао ми је што није дозвољено да видите ову страницу.
+Sort By,Сортирање
+Start Report For,Почетак ИЗВЕШТАЈ ЗА
+Subject,Предмет
+Submit,Поднети
+Submitted,Поднет
+Switch to Website,Перейти на сайт
+Tags,Тагс:
+Tax Master,Пореска Мастер
+Test Runner,Тест Руннер
+Then By (optional),Затим (опционо)
+There were errors,Были ошибки
+There were errors while sending email. Please try again.,"Были ошибки при отправке электронной почты . Пожалуйста, попробуйте еще раз ."
+This is PERMANENT action and you cannot undo. Continue?,То је стална акција и не можете да опозовете. Наставити?
+This is permanent action and you cannot undo. Continue?,То је стална акција и не можете да опозовете. Наставити?
+To,До
+To Pay,То Паи
+"To report an issue, go to ",
+"To run a test add the module name in the route after '{0}'. For example, {1}","Чтобы запустить тест добавить имя модуля в маршруте после ' {0}' . Например, {1}"
+Unable to load: {0},Невозможно нагрузки : {0}
+Unknown Column: {0},Неизвестный Колонка: {0}
+Unknown Print Format: {0},Неизвестно Формат печати : {0}
+Unread Messages,Непрочитаних порука
+Update,Ажурирање
+Updated,Ажурирано
+Upload,Уплоад
+Upload Attachment,Уплоад прилог
+Upload a file,Уплоад фајл
+Uploading...,Отпремање ...
+User Permission Restrictions,Пользователь Введено Ограничения
+User Restrictions,Ограничения пользователей
+With Groups,С группы
+With Ledgers,С Ledgers
+Workflow will start after saving.,Воркфлов ће почети након штедње.
+Yes,Да
+Yesterday,Јуче
+You are not allowed to create / edit reports,Вы не можете создавать / редактировать отчеты
+You are not allowed to create {0},Вы не можете создать {0}
+You are not allowed to export this report,Вам не разрешено экспортировать этот отчет
+You are not allowed to print this document,Вы не можете распечатать этот документ
+You are not allowed to reply to this ticket.,Нисте дозвољено да одговори на ову карту .
+You are not allowed to send emails related to this document,"Вы не можете отправлять письма , связанные с этим документом"
+You need to enable Shopping Cart,Вам необходимо включить Корзина
+"Your download is being built, this may take a few moments...","Преузимање се гради, ово може да потраје неколико тренутака ..."
+and,и
+comment,коментар
+comments,Коментари
+found,фоунд
+is not allowed.,није дозвољено.
+or,или
+to,до
+values and dates,вредности и датуми
+{0} cannot be purchased using Shopping Cart,{0} не может быть приобретен с помощью Корзина
+{0} is required,{0} требуется
+{0} {1} has a common territory {2},{0} {1} имеет общую территорию {2}
