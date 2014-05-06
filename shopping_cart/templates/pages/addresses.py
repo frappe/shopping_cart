@@ -10,4 +10,4 @@ no_sitemap = 1
 
 @frappe.whitelist()
 def get_addresses():
-	return get_address_docs().as_dict()
+	return get_address_docs()
