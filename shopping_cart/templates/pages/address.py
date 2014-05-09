@@ -13,18 +13,17 @@ no_sitemap = 1
 
 def get_context(context):
 	def _get_fields(fieldnames):
-		return [frappe._dict(zip(["label", "fieldname", "fieldtype", "options"], 
+		return [frappe._dict(zip(["label", "fieldname", "fieldtype", "options"],
 				[df.label, df.fieldname, df.fieldtype, df.options]))
 			for df in get_meta("Address").get("fields", {"fieldname": ["in", fieldnames]})]
-	
+
 	docname = doc = None
 	title = "New Address"
 	if frappe.form_dict.name:
 		doc = frappe.get_doc("Address", frappe.form_dict.name)
 		docname = doc.name
-		doc = doc.as_dict()
 		title = doc.name
-	
+
 	return {
 		"doc": doc,
 		"meta": frappe._dict({
@@ -36,19 +35,19 @@ def get_context(context):
 		"docname": docname,
 		"title": title
 	}
-	
+
 @frappe.whitelist()
 def save_address(fields, address_fieldname=None):
 	party = get_lead_or_customer()
 	fields = json.loads(fields)
-	
+
 	if fields.get("name"):
 		doc = frappe.get_doc("Address", fields.get("name"))
 	else:
 		doc = frappe.get_doc({"doctype": "Address", "__islocal": 1})
-	
+
 	doc.update(fields)
-	
+
 	party_fieldname = party.doctype.lower()
 	doc.update({
 		party_fieldname: party.name,
@@ -56,8 +55,8 @@ def save_address(fields, address_fieldname=None):
 	})
 	doc.ignore_permissions = True
 	doc.save()
-	
+
 	if address_fieldname:
 		update_cart_address(address_fieldname, doc.name)
-	
+
 	return doc.name
