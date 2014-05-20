@@ -1,5 +1,5 @@
 {
- "creation": "2013-06-19 15:57:32.000000", 
+ "creation": "2013-06-19 15:57:32", 
  "description": "Default settings for Shopping Cart", 
  "docstatus": 0, 
  "doctype": "DocType", 
@@ -7,6 +7,7 @@
   {
    "fieldname": "enabled", 
    "fieldtype": "Check", 
+   "in_list_view": 1, 
    "label": "Enable Shopping Cart", 
    "permlevel": 0
   }, 
@@ -18,6 +19,8 @@
   {
    "fieldname": "company", 
    "fieldtype": "Link", 
+   "ignore_restrictions": 0, 
+   "in_list_view": 1, 
    "label": "Company", 
    "options": "Company", 
    "permlevel": 0, 
@@ -27,6 +30,8 @@
    "description": "<a href=\"#Sales Browser/Territory\">Add / Edit</a>", 
    "fieldname": "default_territory", 
    "fieldtype": "Link", 
+   "ignore_restrictions": 1, 
+   "in_list_view": 1, 
    "label": "Default Territory", 
    "options": "Territory", 
    "permlevel": 0, 
@@ -41,6 +46,7 @@
    "description": "<a href=\"#Sales Browser/Customer Group\">Add / Edit</a>", 
    "fieldname": "default_customer_group", 
    "fieldtype": "Link", 
+   "ignore_restrictions": 1, 
    "label": "Default Customer Group", 
    "options": "Customer Group", 
    "permlevel": 0, 
@@ -91,7 +97,7 @@
  "icon": "icon-shopping-cart", 
  "idx": 1, 
  "issingle": 1, 
- "modified": "2013-12-20 19:30:47.000000", 
+ "modified": "2014-05-07 02:59:37.942130", 
  "modified_by": "Administrator", 
  "module": "Shopping Cart", 
  "name": "Shopping Cart Settings", 
