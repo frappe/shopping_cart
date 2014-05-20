@@ -20,11 +20,11 @@
 	{% else %}
 	<hr>
 	{%- if doc.status -%}
-		{% if doc.status == "Waiting for Customer" -%}
-			{% set status = "To Reply" %}
-		{% else %}
-			{% set status = doc.status %}
-		{%- endif -%}
+	{% if doc.status == "Waiting for Customer" -%}
+		{% set status = "To Reply" %}
+	{% else %}
+		{% set status = doc.status %}
+	{%- endif -%}
 	<div class="row">
 		<div class="col-md-2" style="margin-bottom: 7px;">
 			<span class="label {{ status_label.get(status) or 'label-default' }}">{{ status }}</span>
