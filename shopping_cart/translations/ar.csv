@@ -1,221 +1,26 @@
- by Role ,بالتخصص
- is not set,لم يتم تعيين
-""" does not exists",""" لا يوجد"
-2 days ago,2 منذ أيام
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> إضافة / تحرير < / A>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> إضافة / تحرير < / A>"
-About,حول
-Actions,الإجراءات
-Add,إضافة
-Add Attachments,إضافة مرفقات
-Add Bookmark,إضافة علامة
-Add Column,إضافة عمود
-Add Message,إضافة رسالة
-Add Reply,إضافة رد
-Add Serial No,إضافة رقم المسلسل
-Add This To User's Restrictions,هذا إضافة إلى تقييد المستخدم
-Add attachment,إضافة المرفقات
-Add new row,إضافة صف جديد
-Add to To Do,إضافة إلى المهام
-Add to To Do List of,إضافة إلى قائمة المهام من
-"Allowing DocType, DocType. Be careful!",السماح DOCTYPE ، DOCTYPE . كن حذرا!
-Alternative download link,رابط تحميل بديل
-Amend,تعديل
-Are you sure you want to delete the attachment?,هل أنت متأكد أنك تريد حذف المرفق؟
-Ascending,تصاعدي
-Assign To,تعيين إلى
-Assigned To,تعيين ل
-Assignments,تعيينات
-Attach Document Print,إرفاق طباعة المستند
-Attach as web link,كما نعلق رابط موقع
-Attachments,المرفقات
 Billed,توصف
-Bookmarks,الإشارات المرجعية
-Built on,مبنية على
-Calendar,تقويم
-Cancel,إلغاء
-Cancelled,إلغاء
-Cannot edit standard fields,لا تستطيع تعديل الحقول القياسية
-Cannot open instance when its {0} is open,لا يمكن فتح المثال عندما ه {0} مفتوح
-Cannot open {0} when its instance is open,لا يمكن فتح {0} عندما مثيل لها مفتوح
-Cannot print cancelled documents,لا يمكن طباعة المستندات إلغاء
-Clear Cache,مسح ذاكرة التخزين المؤقت
-Click on row to view / edit.,انقر على صف لعرض / تحرير .
-Click to Expand / Collapse,انقر لتوسيع / ​​طي
-Close,أغلق
-Close: {0},وثيقة : {0}
-Collapse,انهيار
-Comment,تعليق
-Comments,تعليقات
-Communication Medium,الاتصالات متوسطة
 Company,شركة
-Complete By,الكامل من جانب
-Copy,نسخ
-Creation / Modified By,إنشاء / تم التعديل بواسطة
 Currency is required for Price List {0},مطلوب العملة ل قائمة الأسعار {0}
-Current status,الوضع الحالي
-Custom Reports,تقارير مخصصة
-Customize,تخصيص
-Date must be in format: {0},يجب أن تكون الآن في شكل : {0}
-Dear,العزيز
 Default Customer Group,المجموعة الافتراضية العملاء
 Default Territory,الافتراضي الإقليم
-Delete,حذف
-Delete Row,حذف صف
 Delivered,تسليم
-Descending,تنازلي
-Document Status transition from ,وثيقة الانتقال من الحالة
-Document Status transition from {0} to {1} is not allowed,لا يسمح وضع وثيقة الانتقال من {0} إلى {1}
-Document is only editable by users of role,الوثيقة للتحرير فقط من قبل المستخدمين من دور
-Documentation,توثيق
-Download,تحميل
-Drafts,الداما
-Drag to sort columns,اسحب لفرز الأعمدة
-Edit,تحرير
-Editable,للتحرير
-Email,البريد الإلكتروني
-"Email addresses, separted by commas",عناوين البريد الإلكتروني، separted بفواصل
-Email sent to {0},أرسل بريد إلكتروني إلى {0}
-Email...,البريد الإلكتروني ...
 Enable Shopping Cart,تمكين سلة التسوق
-Enter Value,أدخل القيمة
-Equals,التساوي
-Expand,وسع
-Export,تصدير
-Export not allowed. You need {0} role to export.,الصادرات غير مسموح به. تحتاج {0} دور للتصدير.
-Field {0} is not selectable.,الحقل {0} ليس اختيار.
-File,ملف
-Filter,تحديد
-"For comparative filters, start with",للمرشحات النسبية، وتبدأ مع
-For ranges,للنطاقات
-Form,شكل
-Forums,المنتديات
-From Date must be before To Date,يجب أن تكون من تاريخ إلى تاريخ قبل
-Gantt Chart,مخطط جانت
-Get,الحصول على
-Get From ,عليه من
-Greater or equals,أكبر أو يساوي
-Greater than,أكبر من
-"Grid ""","الشبكة """
-"Group Added, refreshing...",مجموعة المضافة، منعش ...
-Help,مساعدة
-History,تاريخ
-"Ignoring Item {0}, because a group exists with the same name!",تجاهل البند {0} ، لأن مجموعة موجودة بنفس الاسم !
-Import,استيراد
-In,في
-In response to,ردا على
-Insert Below,إدراج بالأسفل
-Insert Row,إدراج صف
 Invalid Billing Address,عنوان الفواتير غير صالحة
-Invalid Email: {0},صالح البريد الإلكتروني: {0}
-Invalid Filter: {0},تصفية الباطلة: {0}
 Invalid Shipping Address,العنوان شحن غير صالحة
-Last updated by,اخر تحديث قام به
-Less or equals,أقل أو يساوي
-Less than,أقل من
-Like,مثل
-Linked With,ترتبط
-List,قائمة
-Loading,تحميل
-Loading Report,تحميل تقرير
-Logout,خروج
-Make a new,جعل جديدة
-Mandatory fields required in {0},الحقول الإلزامية المطلوبة في {0}
-Mandatory filters required:\n,مرشحات الإلزامية المطلوبة: \ ن
-Message,رسالة
 Missing Currency Exchange Rates for {0},أسعار صرف العملات في عداد المفقودين ل {0}
-Missing Values Required,في عداد المفقودين القيم المطلوبة
-Modified by,تعديلها من قبل
-More,أكثر
-Move Down: {0},تحريك لأسفل : {0}
-Move Up: {0},تحريك لأعلى : {0}
-My Settings,الإعدادات
 Name is required,مطلوب اسم
-Name not permitted,تسمية غير مسموح
-New,جديد
-New Record,رقم قياسي جديد
-Next Record,سجل المقبل
-Next actions,الإجراءات التالية
-No,لا
-No Communication tagged with this ,لا الاتصالات المفتاحية هذه
-No Report Loaded. Please use query-report/[Report Name] to run a report.,أي تقرير المحملة. الرجاء استخدام استعلام تقرير / [اسم التقرير] لتشغيل التقرير.
-No Results,لا نتائج
-No document selected,أي وثيقة مختارة
-No one,لا احد
-No permission to edit,لا توجد صلاحية ل تعديل
-No records tagged.,لا توجد سجلات المعلمة.
-None,لا شيء
-None: End of Workflow,لا شيء: نهاية سير العمل
 Not Allowed,غير مسموح
-Not Found,لم يتم العثور على
-Not Linked to any record.,لا يرتبط أي سجل.
-Not Permitted,لا يسمح
-Not Submitted,لم تقدم
-Not allowed,لا يسمح
-Not enough permission to see links.,لا إذن بما يكفي لرؤية الروابط.
-Not equals,لا يساوي
-Not found,لم يتم العثور على
-Not permitted,لا يسمح
-Note: Other permission rules may also apply,ملاحظة: قد قواعد أخرى إذن تنطبق أيضا
-Nothing to show,لا شيء لإظهار
-Nothing to show for this selection,شيء لاظهار هذا الاختيار
-Notify By Email,إبلاغ عن طريق البريد الإلكتروني
-Open source ERP built for the web,ERP مفتوحة المصدر بنيت لشبكة الإنترنت
-Or Created By,أو إنشاء بواسطة
-Original Message,رسالة الأصلي
-Page not found,لم يتم العثور على الصفحة
 Paid,مدفوع
 Partially Billed,وصفت جزئيا
 Partially Delivered,سلمت جزئيا
-Permanently Cancel {0}?,الغاء دائم {0} ؟
-Permanently Submit {0}?,إرسال دائم {0} ؟
-Permanently delete {0}?,حذف بشكل دائم {0} ؟
-Pick Columns,اختيار الأعمدة
-Please attach a file first.,يرجى إرفاق ملف الأول.
-Please attach a file or set a URL,يرجى إرفاق ملف أو تعيين URL
-Please enable pop-ups,يرجى تمكين النوافذ المنبثقة
-Please enter Event's Date and Time!,الرجاء إدخال حدث في التاريخ والوقت !
-Please enter some text!,الرجاء إدخال النص !
-Please enter title!,يرجى إدخال عنوان !
-Please login to Upvote!,يرجى الدخول إلى Upvote !
-Please specify,يرجى تحديد
-Please specify a,الرجاء تحديد
 Please specify a Price List which is valid for Territory,الرجاء تحديد قائمة الأسعار التي هي صالحة للأراضي
 Please specify currency in Company,يرجى تحديد العملة في شركة
 Please write something,يرجى كتابة شيء
 Please write something in subject and message!,يرجى كتابة شيء في الموضوع و رسالة !
-Post already exists. Cannot add again!,آخر موجود بالفعل. لا يمكن إضافة مرة أخرى!
-Post does not exist. Please add post!,آخر غير موجود. الرجاء إضافة آخر !
-Previous Record,سجل السابق
 Price List,قائمة الأسعار
-Print,طباعة
-Print...,طباعة ...
-Priority,أفضلية
-Query Report,الاستعلام عن
 Quotation Series,سلسلة الاقتباس
-Refresh,تحديث
-Reload Page,تحديث الصفحة
-Remove Bookmark,أضف إزالة
-Rename...,إعادة تسمية ...
-Report,تقرير
-Report was not saved (there were errors),لم يتم حفظ التقرير (كانت هناك أخطاء)
-Save,حفظ
-Search,البحث
-Select All,حدد كافة
-Select Attachments,حدد المرفقات
-Select Print Format,حدد تنسيق طباعة
-Select Report Name,حدد اسم التقرير
-Select To Download:,اختار ل تحميل :
-Select Type,حدد نوع
-Select dates to create a new ,قم بتحديد مواعيد لخلق جديد
-Select or drag across time slots to create a new event.,حدد أو اسحب عبر فتحات الوقت لإنشاء حدث جديد.
-Send,إرسال
-Send As Email,أرسل للبريد الالكتروني
-Send Me A Copy,أرسل لي نسخة
-Sent or Received,المرسلة أو المتلقاة
-Serial No,المسلسل لا
-Session Expired. Logging you out,انتهى الدورة. تسجيل خروجك
-Set Link,تعيين لينك
 Shipping Rule,الشحن القاعدة
 Shopping Cart,سلة التسوق
 Shopping Cart Price List,عربة التسوق قائمة الأسعار
@@ -225,64 +30,11 @@ Shopping Cart Shipping Rule,سلة التسوق الشحن القاعدة
 Shopping Cart Shipping Rules,سلة التسوق قواعد الشحن
 Shopping Cart Taxes and Charges Master,التسوق سلة الضرائب والرسوم ماجستير
 Shopping Cart Taxes and Charges Masters,التسوق سلة الضرائب والرسوم الماجستير
-Shortcut,الاختصار
-Show Details,عرض التفاصيل
-Show Tags,تظهر الكلمات
-Show rows with zero values,عرض الصفوف مع قيم الصفر
-Showing only for (if not empty),تظهر فقط ل (إن لم يكن فارغ)
-Sorry we were unable to find what you were looking for.,وآسف نتمكن من العثور على ما كنت تبحث عنه.
-Sorry you are not permitted to view this page.,عذرا غير مسموح لك بعرض هذه الصفحة.
-Sort By,فرز حسب
-Start Report For,تقرير عن بدء
-Subject,موضوع
-Submit,عرض
-Submitted,المقدمة
-Switch to Website,التبديل إلى موقع الويب
-Tags,به
 Tax Master,ماستر الضرائب
-Test Runner,اختبار عداء
-Then By (optional),ثم (اختياري)
-There were errors,كانت هناك أخطاء
-There were errors while sending email. Please try again.,كانت هناك أخطاء أثناء إرسال البريد الإلكتروني. يرجى المحاولة مرة أخرى.
-This is PERMANENT action and you cannot undo. Continue?,هذا هو العمل الدائم ويمكنك التراجع لا. المتابعة؟
-This is permanent action and you cannot undo. Continue?,هذا هو العمل الدائم ويمكنك التراجع لا. المتابعة؟
-To,إلى
 To Pay,على الدفع
-"To report an issue, go to ",
-"To run a test add the module name in the route after '{0}'. For example, {1}",لتشغيل اختبار إضافة اسم وحدة في الطريق بعد '{0}'. على سبيل المثال، {1}
-Unable to load: {0},غير قادر على تحميل: {0}
-Unknown Column: {0},غير معروف العمود: {0}
-Unknown Print Format: {0},تنسيق طباعة غير معروف: {0}
-Unread Messages,رسائل غير مقروءة
-Update,تحديث
 Updated,تحديث
-Upload,تحميل
-Upload Attachment,تحميل المرفقات
-Upload a file,تحميل ملف
-Uploading...,تحميل ...
-User Permission Restrictions,تقييد إذن المستخدم
-User Restrictions,تقييد المستخدم
-With Groups,مع المجموعات
-With Ledgers,مع سجلات الحسابات
-Workflow will start after saving.,سوف تبدأ العمل بعد الحفظ.
-Yes,نعم
-Yesterday,أمس
-You are not allowed to create / edit reports,لا يسمح لك لإنشاء تقارير / تحرير
-You are not allowed to create {0},لا يسمح لك لخلق {0}
-You are not allowed to export this report,لا يسمح لك لتصدير هذا التقرير
-You are not allowed to print this document,لا يسمح لك طباعة هذه الوثيقة
 You are not allowed to reply to this ticket.,لا يسمح لك للرد على هذه التذكرة .
-You are not allowed to send emails related to this document,لا يسمح لك بإرسال رسائل البريد الإلكتروني ذات الصلة لهذه الوثيقة
 You need to enable Shopping Cart,تحتاج إلى تمكين سلة التسوق
-"Your download is being built, this may take a few moments...",ويجري بناء التنزيل، وهذا قد يستغرق بضع لحظات ...
-and,و
-comment,تعليق
-comments,تعليقات
-found,أسس
-is not allowed.,غير مسموح به.
-or,أو
-to,إلى
-values and dates,القيم والتواريخ
 {0} cannot be purchased using Shopping Cart,{0} لا يمكن شراؤها باستخدام عربة التسوق
 {0} is required,{0} مطلوب
 {0} {1} has a common territory {2},{0} {1} لديه أراضي مشتركة {2}

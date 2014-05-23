@@ -1,221 +1,26 @@
- by Role ,por função
- is not set,não está definido
-""" does not exists",""" Bestaat niet"
-2 days ago,Há 2 dias
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> toevoegen / bewerken < / a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> toevoegen / bewerken < / a>"
-About,Sobre
-Actions,acties
-Add,Adicionar
-Add Attachments,Adicionar anexos
-Add Bookmark,Adicionar marcadores
-Add Column,Adicionar coluna
-Add Message,Adicionar mensagem
-Add Reply,Adicione Responder
-Add Serial No,Voeg Serienummer
-Add This To User's Restrictions,Adicione isto a Restrições do Usuário
-Add attachment,Adicionar anexo
-Add new row,Adicionar nova linha
-Add to To Do,Adicionar ao que fazer
-Add to To Do List of,Adicionar ao fazer a lista de
-"Allowing DocType, DocType. Be careful!","Permitindo DocType , DocType . Tenha cuidado !"
-Alternative download link,Link para download Alternativa
-Amend,Emendar
-Are you sure you want to delete the attachment?,Tem certeza de que deseja excluir o anexo?
-Ascending,Ascendente
-Assign To,Atribuir a
-Assigned To,toegewezen aan
-Assignments,Atribuições
-Attach Document Print,Anexar cópia do documento
-Attach as web link,Bevestig als weblink
-Attachments,Anexos
 Billed,Faturado
-Bookmarks,Marcadores
-Built on,construído sobre
-Calendar,Calendário
-Cancel,Cancelar
-Cancelled,Cancelado
-Cannot edit standard fields,Kan standaard velden niet bewerken
-Cannot open instance when its {0} is open,"Não é possível abrir instância , quando o seu {0} é aberto"
-Cannot open {0} when its instance is open,Não é possível abrir {0} quando sua instância está aberta
-Cannot print cancelled documents,Não é possível imprimir documentos cancelados
-Clear Cache,Limpar Cache
-Click on row to view / edit.,Clique na fila para ver / editar .
-Click to Expand / Collapse,Clique para Expandir / Recolher
-Close,Fechar
-Close: {0},Fechar: {0}
-Collapse,colapso
-Comment,Comentário
-Comments,Comentários
-Communication Medium,Meio de comunicação
 Company,Companhia
-Complete By,Ao completar
-Copy,Copie
-Creation / Modified By,Criação / Modificado por
 Currency is required for Price List {0},Moeda é necessário para Preço de {0}
-Current status,Estado atual
-Custom Reports,Relatórios Customizados
-Customize,Personalize
-Date must be in format: {0},A data deve estar no formato : {0}
-Dear,Caro
 Default Customer Group,Grupo de Clientes padrão
 Default Territory,Território padrão
-Delete,Excluir
-Delete Row,Apagar Linha
 Delivered,Entregue
-Descending,Descendente
-Document Status transition from ,Documento transição Estado de
-Document Status transition from {0} to {1} is not allowed,Transição Status do Documento de {0} para {1} não é permitido
-Document is only editable by users of role,Documento só é editável por usuários de papel
-Documentation,Documentação
-Download,baixar
-Drafts,Rascunhos
-Drag to sort columns,Arraste para classificar colunas
-Edit,Editar
-Editable,Editável
-Email,E-mail
-"Email addresses, separted by commas","Endereços de email, separted por vírgulas"
-Email sent to {0},E-mail enviado para {0}
-Email...,E-mail ...
 Enable Shopping Cart,Ativar Carrinho de Compras
-Enter Value,Digite o Valor
-Equals,equals
-Expand,expandir
-Export,Exportar
-Export not allowed. You need {0} role to export.,Exportação não é permitido . Você precisa de {0} papel para exportar .
-Field {0} is not selectable.,O campo {0} não é selecionável.
-File,Arquivo
-Filter,Filtre
-"For comparative filters, start with","Para filtros comparativos, comece com"
-For ranges,Para faixas
-Form,Forma
-Forums,Fóruns
-From Date must be before To Date,A partir da data deve ser anterior a Data
-Gantt Chart,Gantt
-Get,Obter
-Get From ,Obter do
-Greater or equals,Groter of gelijk
-Greater than,groter dan
-"Grid ""","Grid """
-"Group Added, refreshing...","Grupo Adicionado, refrescante ..."
-Help,Ajudar
-History,História
-"Ignoring Item {0}, because a group exists with the same name!","Ignorando item {0}, porque um grupo existe com o mesmo nome!"
-Import,Importar
-In,in
-In response to,Em resposta aos
-Insert Below,Inserir Abaixo
-Insert Row,Inserir Linha
 Invalid Billing Address,Inválido Endereço de Cobrança
-Invalid Email: {0},E-mail inválido : {0}
-Invalid Filter: {0},Filtro inválido: {0}
 Invalid Shipping Address,Inválido envio Endereço
-Last updated by,Laatst gewijzigd door
-Less or equals,Minder of gelijk
-Less than,minder dan
-Like,zoals
-Linked With,Com ligados
-List,Lista
-Loading,Carregamento
-Loading Report,Relatório de carregamento
-Logout,Sair
-Make a new,Faça um novo
-Mandatory fields required in {0},Os campos obrigatórios exigidos no {0}
-Mandatory filters required:\n,Verplichte filters nodig : \ n
-Message,Mensagem
 Missing Currency Exchange Rates for {0},Falta de câmbio de moeda para {0}
-Missing Values Required,Ontbrekende Vereiste waarden
-Modified by,Modificado por
-More,Mais
-Move Down: {0},Mover para baixo : {0}
-Move Up: {0},Mover para cima : {0}
-My Settings,Minhas Configurações
 Name is required,Nome é obrigatório
-Name not permitted,Nome não é permitida
-New,novo
-New Record,Novo Registro
-Next Record,Próximo Registro
-Next actions,Próximas ações
-No,Não
-No Communication tagged with this ,Nenhuma comunicação com etiquetas com esta
-No Report Loaded. Please use query-report/[Report Name] to run a report.,No Report Loaded. Utilize query-report / [Report Name] para executar um relatório.
-No Results,nenhum resultado
-No document selected,Nenhum documento selecionado
-No one,Ninguém
-No permission to edit,Geen toestemming te bewerken
-No records tagged.,Não há registros marcados.
-None,Nenhum
-None: End of Workflow,Nenhum: Fim do fluxo de trabalho
 Not Allowed,não Permitido
-Not Found,Não encontrado
-Not Linked to any record.,Não relacionado a qualquer registro.
-Not Permitted,Não Permitido
-Not Submitted,não enviado
-Not allowed,não permitido
-Not enough permission to see links.,Não permissão suficiente para ver os links.
-Not equals,niet gelijken
-Not found,não foi encontrado
-Not permitted,não é permitido
-Note: Other permission rules may also apply,Nota: As regras de permissão Outros também se podem aplicar
-Nothing to show,Nada para mostrar
-Nothing to show for this selection,Niets te tonen voor deze selectie
-Notify By Email,Notificar por e-mail
-Open source ERP built for the web,ERP de código aberto construído para a web
-Or Created By,Ou Criado por
-Original Message,Mensagem original
-Page not found,Página não encontrada
 Paid,betaald
 Partially Billed,gedeeltelijk gefactureerde
 Partially Delivered,gedeeltelijk Geleverd
-Permanently Cancel {0}?,Permanentemente Cancelar {0} ?
-Permanently Submit {0}?,Permanentemente Enviar {0} ?
-Permanently delete {0}?,Excluir permanentemente {0} ?
-Pick Columns,Escolha Colunas
-Please attach a file first.,"Por favor, anexar um arquivo pela primeira vez."
-Please attach a file or set a URL,"Por favor, anexar um arquivo ou definir uma URL"
-Please enable pop-ups,Schakel pop - ups
-Please enter Event's Date and Time!,"Por favor, indique a data ea hora do evento!"
-Please enter some text!,"Por favor, digite algum texto!"
-Please enter title!,"Por favor, indique título!"
-Please login to Upvote!,Por favor login para upvote !
-Please specify,"Por favor, especifique"
-Please specify a,"Por favor, especifique um"
 Please specify a Price List which is valid for Territory,"Por favor, especifique uma lista de preços que é válido para o território"
 Please specify currency in Company,"Por favor, especificar a moeda em Empresa"
 Please write something,Iets schrijven aub
 Please write something in subject and message!,Schrijf iets in het onderwerp en een bericht !
-Post already exists. Cannot add again!,Publicar já existe. Não é possível adicionar mais uma vez !
-Post does not exist. Please add post!,"O Post não existe. Por favor, adicione post!"
-Previous Record,Registro anterior
 Price List,Lista de Preços
-Print,afdrukken
-Print...,Imprimir ...
-Priority,Prioridade
-Query Report,Query Report
 Quotation Series,Série citação
-Refresh,Refrescar
-Reload Page,Atualizar Página
-Remove Bookmark,Remover Bookmark
-Rename...,Renomear ...
-Report,Relatório
-Report was not saved (there were errors),Relatório não foi salvo (houve erros)
-Save,salvar
-Search,Pesquisar
-Select All,Selecionar tudo
-Select Attachments,Selecione Anexos
-Select Print Format,Selecione Formato de Impressão
-Select Report Name,Selecione Nome do Relatório
-Select To Download:,Selecione Para Download:
-Select Type,Selecione o Tipo
-Select dates to create a new ,Selecione as datas para criar uma nova
-Select or drag across time slots to create a new event.,Selecione ou arraste intervalos de tempo para criar um novo evento.
-Send,Enviar
-Send As Email,Verstuur als e-mail
-Send Me A Copy,Envie-me uma cópia
-Sent or Received,Verzonden of ontvangen
-Serial No,N º de Série
-Session Expired. Logging you out,Sessão expirada. Deslogar você
-Set Link,Stel Link
 Shipping Rule,Regra de envio
 Shopping Cart,Carrinho de Compras
 Shopping Cart Price List,Carrinho de Compras Lista de Preços
@@ -225,64 +30,11 @@ Shopping Cart Shipping Rule,Carrinho de Compras Rule envio
 Shopping Cart Shipping Rules,Carrinho Regras frete
 Shopping Cart Taxes and Charges Master,Carrinho impostos e taxas Mestre
 Shopping Cart Taxes and Charges Masters,Carrinho Impostos e Taxas de mestrado
-Shortcut,Atalho
-Show Details,Ver detalhes
-Show Tags,Toon Tags
-Show rows with zero values,Mostrar as linhas com valores zero
-Showing only for (if not empty),Mostrando apenas para (se não está vazio )
-Sorry we were unable to find what you were looking for.,"Desculpe, não foram capazes de encontrar o que você estava procurando."
-Sorry you are not permitted to view this page.,"Desculpe, você não tem permissão para visualizar esta página."
-Sort By,Classificar por
-Start Report For,Para começar Relatório
-Subject,Assunto
-Submit,Submeter
-Submitted,Enviado
-Switch to Website,Mude para o site
-Tags,Etiquetas
 Tax Master,Imposto de Mestre
-Test Runner,Test Runner
-Then By (optional),"Em seguida, por (opcional)"
-There were errors,Ocorreram erros
-There were errors while sending email. Please try again.,"Ocorreram erros durante o envio de e-mail. Por favor, tente novamente."
-This is PERMANENT action and you cannot undo. Continue?,Esta é uma ação permanente e você não pode desfazer. Continuar?
-This is permanent action and you cannot undo. Continue?,Esta é uma ação permanente e você não pode desfazer. Continuar?
-To,Para
 To Pay,te betalen
-"To report an issue, go to ",
-"To run a test add the module name in the route after '{0}'. For example, {1}","Para executar um teste de adicionar o nome do módulo na rota depois de '{0}'. Por exemplo , {1}"
-Unable to load: {0},Incapaz de carga : {0}
-Unknown Column: {0},Coluna desconhecido: {0}
-Unknown Print Format: {0},Unknown Formato de Impressão : {0}
-Unread Messages,Mensagens não lidas
-Update,Atualizar
 Updated,Atualizado
-Upload,uploaden
-Upload Attachment,Envie anexos
-Upload a file,Enviar um arquivo
-Uploading...,Upload ...
-User Permission Restrictions,Restrições a permissão do usuário
-User Restrictions,Restrições de Usuário
-With Groups,com Grupos
-With Ledgers,com Ledgers
-Workflow will start after saving.,Fluxo de trabalho terá início após a poupança.
-Yes,Sim
-Yesterday,Ontem
-You are not allowed to create / edit reports,Você não tem permissão para criar / editar relatórios
-You are not allowed to create {0},Você não tem permissão para criar {0}
-You are not allowed to export this report,Você não tem permissão para exportar este relatório
-You are not allowed to print this document,Você não tem permissão para imprimir este documento
 You are not allowed to reply to this ticket.,Het is niet toegestaan ​​om te reageren op dit kaartje .
-You are not allowed to send emails related to this document,Você não tem permissão para enviar e-mails relacionados a este documento
 You need to enable Shopping Cart,Você precisa habilitar o Carrinho de Compras
-"Your download is being built, this may take a few moments...","O seu download está sendo construída, isso pode demorar alguns instantes ..."
-and,e
-comment,comentário
-comments,reacties
-found,gevonden
-is not allowed.,não é permitido.
-or,ou
-to,para
-values and dates,valores e as datas
 {0} cannot be purchased using Shopping Cart,{0} não pode ser comprado usando Carrinho de Compras
 {0} is required,{0} é necessária
 {0} {1} has a common territory {2},{0} {1} tem um território comum {2}
