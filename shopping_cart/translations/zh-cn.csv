@@ -1,221 +1,26 @@
- by Role ,按角色
- is not set,没有设置
-""" does not exists",“不存在
-2 days ago,3天前
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group"">添加/编辑</a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory"">添加/编辑</a>"
-About,关于
-Actions,操作
-Add,加
-Add Attachments,添加附件
-Add Bookmark,添加书签
-Add Column,添加列
-Add Message,发表留言
-Add Reply,添加回复
-Add Serial No,添加序列号
-Add This To User's Restrictions,将它添加到用户的限制
-Add attachment,添加附件
-Add new row,添加新行
-Add to To Do,添加到待办事项
-Add to To Do List of,添加到待办事项列表
-"Allowing DocType, DocType. Be careful!",允许的DOCTYPE，的DocType 。要小心！
-Alternative download link,另类下载链接
-Amend,修改
-Are you sure you want to delete the attachment?,您确定要删除的附件？
-Ascending,升序
-Assign To,分配给
-Assigned To,分配给
-Assignments,作业
-Attach Document Print,附加文档打印
-Attach as web link,附加为网站链接
-Attachments,附件
 Billed,计费
-Bookmarks,书签
-Built on,建
-Calendar,日历
-Cancel,取消
-Cancelled,注销
-Cannot edit standard fields,不能编辑标准字段
-Cannot open instance when its {0} is open,无法打开实例时，它的{0}是开放的
-Cannot open {0} when its instance is open,无法打开{0} ，当它的实例是开放的
-Cannot print cancelled documents,无法打印的文档取消
-Clear Cache,清除缓存
-Click on row to view / edit.,点击一行，查看/编辑。
-Click to Expand / Collapse,点击展开/折叠
-Close,关闭
-Close: {0},关闭： {0}
-Collapse,崩溃
-Comment,评论
-Comments,评论
-Communication Medium,通信介质
 Company,公司
-Complete By,完成
-Copy,复制
-Creation / Modified By,创建/修改者
 Currency is required for Price List {0},货币需要价格表{0}
-Current status,现状
-Custom Reports,自定义报告
-Customize,定制
-Date must be in format: {0},日期格式必须是： {0}
-Dear,亲爱
 Default Customer Group,默认用户组
 Default Territory,默认领地
-Delete,删除
-Delete Row,删除行
 Delivered,交付
-Descending,降
-Document Status transition from ,从文档状态过渡
-Document Status transition from {0} to {1} is not allowed,从{0}到{1}文件状态转换是不允许的
-Document is only editable by users of role,文件只有通过编辑角色的用户
-Documentation,文档
-Download,下载
-Drafts,草稿箱
-Drag to sort columns,拖动进行排序的列
-Edit,编辑
-Editable,编辑
-Email,电子邮件
-"Email addresses, separted by commas",电子邮件地址，以逗号separted
-Email sent to {0},电子邮件发送到{0}
-Email...,电子邮件...
 Enable Shopping Cart,启用的购物车
-Enter Value,输入值
-Equals,等号
-Expand,扩大
-Export,出口
-Export not allowed. You need {0} role to export.,导出不允许的。您需要{0}的角色出口。
-Field {0} is not selectable.,域{0}是不可选择的。
-File,文件
-Filter,过滤器
-"For comparative filters, start with",对于比较器，开始
-For ranges,对于范围
-Form,表格
-Forums,论坛
-From Date must be before To Date,从日期必须是之前日期
-Gantt Chart,甘特图
-Get,得到
-Get From ,得到
-Greater or equals,大于或等于
-Greater than,大于
-"Grid """,电网“
-"Group Added, refreshing...",集团已添加，清爽...
-Help,帮助
-History,历史
-"Ignoring Item {0}, because a group exists with the same name!",忽略项目{0} ，因为一组存在具有相同名字！
-Import,进口
-In,在
-In response to,响应于
-Insert Below,下面插入
-Insert Row,插入行
 Invalid Billing Address,无效的帐单地址
-Invalid Email: {0},无效的电子邮件： {0}
-Invalid Filter: {0},无效的过滤器： {0}
 Invalid Shipping Address,无效的送货地址
-Last updated by,最后更新由
-Less or equals,小于或等于
-Less than,小于
-Like,喜欢
-Linked With,挂具
-List,表
-Loading,载入中
-Loading Report,加载报表
-Logout,注销
-Make a new,创建一个新的
-Mandatory fields required in {0},在需要的必填字段{0}
-Mandatory filters required:\n,需要强制性的过滤器： \ ñ
-Message,信息
 Missing Currency Exchange Rates for {0},缺少货币汇率的{0}
-Missing Values Required,所需遗漏值
-Modified by,改性
-More,更多
-Move Down: {0},下移： {0}
-Move Up: {0},上移： {0}
-My Settings,我的设置
 Name is required,名称是必需的
-Name not permitted,名称不允许
-New,新
-New Record,新记录
-Next Record,下一纪录
-Next actions,下一步行动
-No,无
-No Communication tagged with this ,无标签的通信与此
-No Report Loaded. Please use query-report/[Report Name] to run a report.,无报告加载。请使用查询报告/ [报告名称]运行报告。
-No Results,没有结果
-No document selected,没有选择文件
-No one,没有人
-No permission to edit,无权限进行编辑
-No records tagged.,没有记录标记。
-None,无
-None: End of Workflow,无：结束的工作流程
 Not Allowed,不允许
-Not Found,未找到
-Not Linked to any record.,不链接到任何记录。
-Not Permitted,不允许
-Not Submitted,未提交
-Not allowed,不允许
-Not enough permission to see links.,没有足够的权限查看链接。
-Not equals,不等于
-Not found,未找到
-Not permitted,不允许
-Note: Other permission rules may also apply,注：其它权限规则也可申请
-Nothing to show,没有显示
-Nothing to show for this selection,没什么可显示该选择
-Notify By Email,通知通过电子邮件
-Open source ERP built for the web,内置的网络开源ERP
-Or Created By,或者创建人
-Original Message,原始消息
-Page not found,找不到网页
 Paid,支付
 Partially Billed,部分帐单
 Partially Delivered,部分交付
-Permanently Cancel {0}?,永久取消{0} ？
-Permanently Submit {0}?,永久提交{0} ？
-Permanently delete {0}?,永久删除{0} ？
-Pick Columns,摘列
-Please attach a file first.,请附上文件第一。
-Please attach a file or set a URL,请附上一个文件或设置一个URL
-Please enable pop-ups,请启用弹出窗口
-Please enter Event's Date and Time!,请输入事件的日期和时间！
-Please enter some text!,请输入一些文字！
-Please enter title!,请输入标题！
-Please login to Upvote!,请登录到的upvote ！
-Please specify,请注明
-Please specify a,请指定一个
 Please specify a Price List which is valid for Territory,请指定一个价格表，有效期为领地
 Please specify currency in Company,请公司指定的货币
 Please write something,请写东西
 Please write something in subject and message!,请写东西的主题和消息！
-Post already exists. Cannot add again!,帖子已经存在。不能再添加！
-Post does not exist. Please add post!,帖子不存在。请新增职位！
-Previous Record,上一记录
 Price List,价格表
-Print,打印
-Print...,打印...
-Priority,优先
-Query Report,查询报表
 Quotation Series,系列报价
-Refresh,刷新
-Reload Page,刷新页面
-Remove Bookmark,删除书签
-Rename...,重命名...
-Report,报告
-Report was not saved (there were errors),报告没有被保存（有错误）
-Save,节省
-Search,搜索
-Select All,全选
-Select Attachments,选择附件
-Select Print Format,选择打印格式
-Select Report Name,选择报告名称
-Select To Download:,选择要下载：
-Select Type,选择类型
-Select dates to create a new ,选择日期以创建一个新的
-Select or drag across time slots to create a new event.,选择或拖动整个时隙，以创建一个新的事件。
-Send,发送
-Send As Email,发送电​​子邮件
-Send Me A Copy,给我发一份
-Sent or Received,发送或接收
-Serial No,序列号
-Session Expired. Logging you out,会话过期。您的退出
-Set Link,设置链接
 Shipping Rule,送货规则
 Shopping Cart,购物车
 Shopping Cart Price List,购物车价格表
@@ -225,64 +30,11 @@ Shopping Cart Shipping Rule,购物车运费规则
 Shopping Cart Shipping Rules,购物车运费规则
 Shopping Cart Taxes and Charges Master,购物车税收和收费硕士
 Shopping Cart Taxes and Charges Masters,购物车税收和收费硕士
-Shortcut,捷径
-Show Details,显示详细信息
-Show Tags,显示标签
-Show rows with zero values,秀行与零值
-Showing only for (if not empty),仅显示为（如果不为空）
-Sorry we were unable to find what you were looking for.,对不起，我们无法找到您所期待的。
-Sorry you are not permitted to view this page.,对不起，您没有权限浏览这个页面。
-Sort By,排序
-Start Report For,启动年报
-Subject,主题
-Submit,提交
-Submitted,提交
-Switch to Website,切换到网站
-Tags,标签
 Tax Master,税务硕士
-Test Runner,测试运行
-Then By (optional),再由（可选）
-There were errors,有错误
-There were errors while sending email. Please try again.,还有在发送电子邮件是错误的。请再试一次。
-This is PERMANENT action and you cannot undo. Continue?,这是永久性的行动，你不能撤消。要继续吗？
-This is permanent action and you cannot undo. Continue?,这是永久的行动，你不能撤消。要继续吗？
-To,至
 To Pay,支付方式
-"To report an issue, go to ",要报告问题，请至
-"To run a test add the module name in the route after '{0}'. For example, {1}",运行测试后， “{0}”添加模块名称的路线。例如， {1}
-Unable to load: {0},无法加载： {0}
-Unknown Column: {0},未知专栏： {0}
-Unknown Print Format: {0},未知的打印格式： {0}
-Unread Messages,未读消息
-Update,更新
 Updated,更新
-Upload,上载
-Upload Attachment,上传附件
-Upload a file,上传文件
-Uploading...,上载...
-User Permission Restrictions,用户权限限制
-User Restrictions,用户限制
-With Groups,与团体
-With Ledgers,与总帐
-Workflow will start after saving.,保存后的工作流程将启动。
-Yes,是的
-Yesterday,昨天
-You are not allowed to create / edit reports,你不允许创建/编辑报道
-You are not allowed to create {0},你不允许创建{0}
-You are not allowed to export this report,你不准出口本报告
-You are not allowed to print this document,你不允许打印此文档
 You are not allowed to reply to this ticket.,你不允许回复此票。
-You are not allowed to send emails related to this document,你是不是允许发送与此相关的文档的电子邮件
 You need to enable Shopping Cart,您需要启用的购物车
-"Your download is being built, this may take a few moments...",您的下载正在修建，这可能需要一些时间......
-and,和
-comment,评论
-comments,评论
-found,发现
-is not allowed.,是不允许的。
-or,或
-to,至
-values and dates,值和日期
 {0} cannot be purchased using Shopping Cart,{0}不能使用购物车购买
 {0} is required,{0}是必需的
 {0} {1} has a common territory {2},{0} {1}有一个共同的领土{2}

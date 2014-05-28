@@ -45,13 +45,12 @@
 				  <i class="icon-arrow-right icon-fixed-width"></i> Send</button>
 		</div>
 	</div>
-	<p id="ticket-alert" class="alert alert-danger" 
+	<p id="ticket-alert" class="alert alert-danger"
 		style="display: none;">&nbsp;</p>
-	{%- if doc.get({"doctype":"Communication"}) -%}
 	<div>
 		<table class="table table-bordered table-striped" id="ticket-thread">
 			<tbody>
-				{%- for comm in 
+				{%- for comm in
 					(doc.get({"doctype":"Communication"})|sort(reverse=True, attribute="creation")) %}
 				<tr>
 					<td>
@@ -66,9 +65,6 @@
 			</tbody>
 		</table>
 	</div>
-	{%- else -%}
-	<div class="alert">No messages</div>
-	{%- endif -%}
 	{%- endif -%}
 	{% endif -%}
 </div>
@@ -86,7 +82,7 @@ $(document).ready(function() {
 			$("#ticket-reply-send").removeClass("hide");
 		}
 	});
-	
+
 	$("#ticket-reply-send").on("click", function() {
 		var reply = $("#ticket-reply-editor").find("textarea").val().trim();
 		if(!reply) {
@@ -99,7 +95,7 @@ $(document).ready(function() {
 				args: { ticket: "{{ doc.name }}", message: reply },
 				callback: function(r) {
 					if(r.exc) {
-						msgprint(r._server_messages 
+						msgprint(r._server_messages
 							? JSON.parse(r._server_messages).join("<br>")
 							: "Something went wrong!");
 					} else {
