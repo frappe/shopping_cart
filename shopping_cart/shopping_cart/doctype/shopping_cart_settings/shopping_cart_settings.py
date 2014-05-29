@@ -115,7 +115,6 @@ class ShoppingCartSettings(Document):
 
 	def get_name_from_territory(self, territory, parentfield, fieldname):
 		name = None
-		print territory
 		territory_name_map = self.get_territory_name_map(parentfield, fieldname)
 
 		if territory_name_map.get(territory):
