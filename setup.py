@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 import os
-from shopping_cart.__version__ import __version__ as version
+version = "0.2.0"
 
 setup(
     name='shopping_cart',
