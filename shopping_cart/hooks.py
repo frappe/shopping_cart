@@ -1,4 +1,3 @@
-from __version__ import __version__
 app_name = "shopping_cart"
 app_title = "Shopping Cart"
 app_publisher = "Web Notes Technologies"
@@ -7,7 +6,7 @@ app_icon = "icon-shopping-cart"
 app_color = "#B7E090"
 app_email = "info@erpnext.com"
 app_url = "https://erpnext.com"
-app_version = __version__
+app_version = "0.2.0"
 
 web_include_js = "assets/js/shopping-cart-web.min.js"
 web_include_css = "assets/css/shopping-cart-web.css"
