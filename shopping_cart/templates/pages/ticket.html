@@ -13,7 +13,7 @@
     <ul class="breadcrumb">
     	<li><a href="index">Home</a></li>
     	<li><a href="tickets">My Tickets</a></li>
-    	<li class="active"><i class="icon-ticket icon-fixed-width"></i> {{ doc.name }}</li>
+    	<li class="active"><i class="icon-ticket icon-fixed-width"></i> {{ doc.name or "" }}</li>
     </ul>
 	{% if not doc -%}
 		<script>ask_to_login();</script>
