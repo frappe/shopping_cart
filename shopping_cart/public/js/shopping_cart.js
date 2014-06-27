@@ -19,7 +19,7 @@ $.extend(shopping_cart, {
 	update_cart: function(opts) {
 		if(!full_name) {
 			if(localStorage) {
-				localStorage.setItem("last_visited", window.location.href.split("/").slice(-1)[0]);
+				localStorage.setItem("last_visited", window.location.pathname);
 				localStorage.setItem("pending_add_to_cart", opts.item_code);
 			}
 			window.location.href = "/login";
@@ -30,7 +30,7 @@ $.extend(shopping_cart, {
 				args: {
 					item_code: opts.item_code,
 					qty: opts.qty,
-					with_doclist: opts.with_doclist
+					with_doc: opts.with_doc || 0
 				},
 				btn: opts.btn,
 				callback: function(r) {
@@ -51,7 +51,7 @@ $.extend(shopping_cart, {
 		var $cog_count = $cog.find(".cart-count");
 		if(cart_count) {
 			if($badge.length === 0) {
-				var $badge = $('<span class="badge pull-right"></span>').appendTo($cart.find("a"));
+				var $badge = $('<span class="badge pull-right"></span>').prependTo($cart.find("a"));
 			}
 			$badge.html(cart_count);
 			if($cog_count.length === 0) {

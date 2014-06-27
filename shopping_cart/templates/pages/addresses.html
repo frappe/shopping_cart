@@ -23,12 +23,12 @@
 			callback: function(r) {
 				$("#address-list .progress").remove();
 				var $list = $("#address-list");
-			
+
 				if(!(r.message && r.message.length)) {
 					$list.html("<div class='alert'>No Addresses Found</div>");
 					return;
 				}
-			
+
 				$.each(r.message, function(i, address) {
 					address.url_name = encodeURIComponent(address.name);
 					$(repl('<div> \
@@ -40,12 +40,13 @@
 			}
 		});
 	};
-	
+
 	$(document).ready(function() {
 		fetch_addresses();
 	});
 })();
 </script>
+
+<!-- no-sidebar -->
 {% endblock %}
 
-{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

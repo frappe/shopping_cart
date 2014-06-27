@@ -24,7 +24,6 @@ var get_transactions = function(btn) {
 			$list.find(".progress").remove();
 			$show_more.toggleClass("hide", !(r.message && r.message.length===20));
 			if(!(r.message && r.message.length)) {
-				console.log("empty");
 				if(!$list.html().trim()) {
 					$list.html("<div class='text-muted'>\
 						{{ empty_list_message }}</div>");
@@ -44,8 +43,11 @@ var get_transactions = function(btn) {
 $(document).ready(function() {
 	window.start = 0;
 	window.$list = $(".transaction-list");
+	window.$list.find(".list-group-item").remove();
 	window.$show_more = $(".btn-show-more").on("click", function() { get_transactions(this); })
 
 	get_transactions();
 });
 </script>
+
+<!-- no-sidebar -->
