@@ -10,7 +10,7 @@ $.extend(shopping_cart, {
 	show_error: function(title, text) {
 		$("#cart-container").html('<div class="well"><h4>' + title + '</h4> ' + text + '</div>');
 	},
-	
+
 	bind_events: function() {
 		// bind update button
 		$(document).on("click", ".item-update-cart button", function() {
@@ -18,7 +18,7 @@ $.extend(shopping_cart, {
 			shopping_cart.update_cart({
 				item_code: item_code,
 				qty: $('input[data-item-code="'+item_code+'"]').val(),
-				with_doclist: 1,
+				with_doc: 1,
 				btn: this,
 				callback: function(r) {
 					if(!r.exc) {
@@ -29,85 +29,87 @@ $.extend(shopping_cart, {
 				},
 			});
 		});
-		
+
 		$("#cart-add-shipping-address").on("click", function() {
 			window.location.href = "address?address_fieldname=shipping_address_name";
 		});
-		
+
 		$("#cart-add-billing-address").on("click", function() {
 			window.location.href = "address?address_fieldname=customer_address";
 		});
-		
+
 		$(".btn-place-order").on("click", function() {
 			shopping_cart.place_order(this);
 		});
 	},
-	
+
 	render: function(out) {
-		var doclist = out.doclist;
+		var doc = out.doc;
 		var addresses = out.addresses;
-		
+
 		var $cart_items = $("#cart-items").empty();
 		var $cart_taxes = $("#cart-taxes").empty();
 		var $cart_totals = $("#cart-totals").empty();
 		var $cart_billing_address = $("#cart-billing-address").empty();
 		var $cart_shipping_address = $("#cart-shipping-address").empty();
-		
-		var no_items = $.map(doclist, function(d) { return d.item_code || null;}).length===0;
+
+		var no_items = $.map(doc.quotation_details || [],
+			function(d) { return d.item_code || null;}).length===0;
 		if(no_items) {
 			shopping_cart.show_error("Empty :-(", frappe._("Go ahead and add something to your cart."));
 			$("#cart-addresses").toggle(false);
 			return;
 		}
-		
+
 		var shipping_rule_added = false;
 		var taxes_exist = false;
 		var shipping_rule_labels = $.map(out.shipping_rules || [], function(rule) { return rule[1]; });
-		$.each(doclist, function(i, doc) {
-			if(doc.doctype === "Quotation Item") {
-				shopping_cart.render_item_row($cart_items, doc);
-			} else if (doc.doctype === "Sales Taxes and Charges") {
-				if(out.shipping_rules && out.shipping_rules.length && 
-					shipping_rule_labels.indexOf(doc.description)!==-1) {
-						shipping_rule_added = true;
-						shopping_cart.render_tax_row($cart_taxes, doc, out.shipping_rules);
-				} else {
-					shopping_cart.render_tax_row($cart_taxes, doc);
-				}
-				
-				taxes_exist = true;
-			}
+
+		$.each(doc.quotation_details || [], function(i, d) {
+			shopping_cart.render_item_row($cart_items, d);
 		});
-		
+
+		$.each(doc.other_charges || [], function(i, d) {
+			if(out.shipping_rules && out.shipping_rules.length &&
+				shipping_rule_labels.indexOf(d.description)!==-1) {
+					shipping_rule_added = true;
+					shopping_cart.render_tax_row($cart_taxes, d, out.shipping_rules);
+			} else {
+				shopping_cart.render_tax_row($cart_taxes, d);
+			}
+
+			taxes_exist = true;
+		});
+
 		if(out.shipping_rules && out.shipping_rules.length && !shipping_rule_added) {
 			shopping_cart.render_tax_row($cart_taxes, {description: "", formatted_tax_amount: ""},
 				out.shipping_rules);
 			taxes_exist = true;
 		}
-		
+
 		if(taxes_exist)
 			$('<hr>').appendTo($cart_taxes);
-			
+
 		shopping_cart.render_tax_row($cart_totals, {
-			description: "<strong>Total</strong>", 
-			formatted_tax_amount: "<strong>" + doclist[0].formatted_grand_total_export + "</strong>"
+			description: "<strong>Total</strong>",
+			formatted_tax_amount: "<strong>" + doc.formatted_grand_total_export + "</strong>"
 		});
-		
+
 		if(!(addresses && addresses.length)) {
 			$cart_shipping_address.html('<div class="well">'+frappe._("Hey! Go ahead and add an address")+'</div>');
 		} else {
-			shopping_cart.render_address($cart_shipping_address, addresses, doclist[0].shipping_address_name);
-			shopping_cart.render_address($cart_billing_address, addresses, doclist[0].customer_address);
+			shopping_cart.render_address($cart_shipping_address, addresses, doc.shipping_address_name);
+			shopping_cart.render_address($cart_billing_address, addresses, doc.customer_address);
 		}
 	},
-	
+
 	render_item_row: function($cart_items, doc) {
 		doc.image_html = doc.website_image ?
 			'<div style="height: 120px; overflow: hidden;"><img src="' + doc.website_image + '" /></div>' :
 			'{% include "templates/includes/product_missing_image.html" %}';
-			
+
 		if(doc.description === doc.item_name) doc.description = "";
-		
+
 		$(repl('<div class="row">\
 			<div class="col-md-9 col-sm-9">\
 				<div class="row">\
@@ -132,15 +134,15 @@ $.extend(shopping_cart, {
 			</div>\
 		</div><hr>', doc)).appendTo($cart_items);
 	},
-	
+
 	render_tax_row: function($cart_taxes, doc, shipping_rules) {
 		var shipping_selector;
 		if(shipping_rules) {
-			shipping_selector = '<select class="form-control">' + $.map(shipping_rules, function(rule) { 
-					return '<option value="' + rule[0] + '">' + rule[1] + '</option>' }).join("\n") + 
+			shipping_selector = '<select class="form-control">' + $.map(shipping_rules, function(rule) {
+					return '<option value="' + rule[0] + '">' + rule[1] + '</option>' }).join("\n") +
 				'</select>';
 		}
-		
+
 		var $tax_row = $(repl('<div class="row">\
 			<div class="col-md-9 col-sm-9">\
 				<div class="row">\
@@ -153,7 +155,7 @@ $.extend(shopping_cart, {
 				<p' + (shipping_selector ? ' style="margin-top: 5px;"' : "") + '>%(formatted_tax_amount)s</p>\
 			</div>\
 		</div>', doc)).appendTo($cart_taxes);
-		
+
 		if(shipping_selector) {
 			$tax_row.find('select option').each(function(i, opt) {
 				if($(opt).html() == doc.description) {
@@ -165,7 +167,7 @@ $.extend(shopping_cart, {
 			});
 		}
 	},
-	
+
 	apply_shipping_rule: function(rule, btn) {
 		return frappe.call({
 			btn: btn,
@@ -179,7 +181,7 @@ $.extend(shopping_cart, {
 			}
 		});
 	},
-	
+
 	render_address: function($address_wrapper, addresses, address_name) {
 		$.each(addresses, function(i, address) {
 			$(repl('<div class="panel panel-default"> \
@@ -198,7 +200,7 @@ $.extend(shopping_cart, {
 				.css({"margin": "10px auto"})
 				.appendTo($address_wrapper);
 		});
-		
+
 		$address_wrapper.find(".panel-heading")
 			.find(".address-title")
 				.css({"cursor": "pointer"})
@@ -206,7 +208,7 @@ $.extend(shopping_cart, {
 					$address_wrapper.find('.panel-collapse[data-address-name="'
 						+$(this).attr("data-address-name")+'"]').collapse("toggle");
 				});
-			
+
 		$address_wrapper.find('input[type="checkbox"]').on("click", function() {
 			if($(this).prop("checked")) {
 				var me = this;
@@ -215,7 +217,7 @@ $.extend(shopping_cart, {
 						$(chk).prop("checked", false);
 					}
 				});
-				
+
 				return frappe.call({
 					type: "POST",
 					method: "shopping_cart.shopping_cart.cart.update_cart_address",
@@ -233,19 +235,19 @@ $.extend(shopping_cart, {
 				return false;
 			}
 		});
-		
+
 		$address_wrapper.find('input[type="checkbox"][data-address-name="'+ address_name +'"]')
 			.prop("checked", true);
-			
+
 		$address_wrapper.find(".panel-collapse").collapse({
 			parent: $address_wrapper,
 			toggle: false
 		});
-		
+
 		$address_wrapper.find('.panel-collapse[data-address-name="'+ address_name +'"]')
 			.collapse("show");
 	},
-	
+
 	place_order: function(btn) {
 		return frappe.call({
 			type: "POST",
@@ -257,7 +259,7 @@ $.extend(shopping_cart, {
 					if(r._server_messages) {
 						msg = JSON.parse(r._server_messages || []).join("<br>");
 					}
-					
+
 					$("#cart-error")
 						.empty()
 						.html(msg || frappe._("Something went wrong!"))
