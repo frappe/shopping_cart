@@ -49,7 +49,7 @@
 		{{ doc and "Save" or "Insert" }}</button>
 	<div class="clearfix"></div>
 	<hr>
-	<div id="address-error" class="alert alert-danger" style="display: none;"></div>
+	<div id="address-error" class="alert alert-danger" style="display:none"></div>
 	<form autocomplete="on">
 		<div class="row">
 			<section class="col-md-6">
@@ -64,12 +64,15 @@
 
 <script>
 ;(function() {
-	$(document).ready(function() {
+	console.log("yoyo");
+	frappe.ready(function() {
 		bind_save();
 	});
 
 	var bind_save = function() {
 		$("#address-save").on("click", function() {
+			console.log("clicked!");
+
 			var fields = {
 				name: "{{ docname or '' }}"
 			};
@@ -91,17 +94,9 @@
 				type: "POST",
 				method: "shopping_cart.templates.pages.address.save_address",
 				args: { fields: fields, address_fieldname: get_url_arg("address_fieldname") },
+				error_msg: "#address-error",
 				callback: function(r) {
-					if(r.exc) {
-						var msg = "";
-						if(r._server_messages) {
-							msg = JSON.parse(r._server_messages || []).join("<br>");
-						}
-
-						$("#address-error")
-							.html(msg || "Something went wrong!")
-							.toggle(true);
-					} else if(get_url_arg("address_fieldname")) {
+					if(get_url_arg("address_fieldname")) {
 						window.location.href = "cart";
 					} else {
 						window.location.href = "address?name=" + encodeURIComponent(r.message);
@@ -112,6 +107,6 @@
 	};
 })();
 </script>
-{% endblock %}
 
-{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}
+<!-- no-sidebar -->
+{% endblock %}

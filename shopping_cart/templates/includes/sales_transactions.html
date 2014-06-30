@@ -12,7 +12,7 @@ $(document).ready(function() {
 	var render = function(doc) {
 		doc.grand_total_export = format_currency(doc.grand_total_export, doc.currency);
 		if(!doc.status) doc.status = "";
-		
+
 		$(repl('<a href="{{ page }}?name=%(name)s" class="list-group-item">\
 				<div class="row">\
 					<div class="col-md-6">\
@@ -26,3 +26,5 @@ $(document).ready(function() {
 			</a>', doc)).appendTo($list);
 	};
 </script>
+
+<!-- no-sidebar -->
