@@ -1,0 +1,40 @@
+"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>",{0} diperlukan
+"<a href=""#Sales Browser/Territory"">Add / Edit</a>",Mata Uang diperlukan untuk Daftar Harga {0}
+Billed,Anda tidak diizinkan untuk membalas tiket ini.
+Company,Daftar Belanja Daftar Harga
+Currency is required for Price List {0},Daftar Harga
+Default Customer Group,Silahkan menulis sesuatu dalam subjek dan pesan!
+Default Territory,Silakan tentukan mata uang di Perusahaan
+Delivered,"Jika ditentukan, mengirim newsletter menggunakan alamat email ini"
+Enable Shopping Cart,Quotation Series
+Invalid Billing Address,Guru Pajak
+Invalid Shipping Address,Untuk Bayar
+Missing Currency Exchange Rates for {0},Aturan Pengiriman
+Name is required,{0} tidak dapat dibeli dengan menggunakan Keranjang Belanja
+Not Allowed,Pajak Keranjang Belanja dan Biaya Guru
+Paid,Daftar Belanja Pengiriman Aturan
+Partially Billed,Anda harus mengaktifkan Keranjang Belanja
+Partially Delivered,Alamat Penagihan valid
+Please specify a Price List which is valid for Territory,Sebagian Ditagih
+Please specify currency in Company,Belanja Pengiriman Rule
+Please write something,Daftar Harga Daftar Belanja
+Please write something in subject and message!,Nama diperlukan
+Price List,"<a href=""#Sales Browser/Customer Group""> Add / Edit </ a>"
+Quotation Series,Daftar Belanja Pajak dan Biaya Masters
+Shipping Rule,Tentukan Daftar Harga yang berlaku untuk Wilayah
+Shopping Cart,"<a href=""#Sales Browser/Territory""> Add / Edit </ a>"
+Shopping Cart Price List,Diperbarui
+Shopping Cart Price Lists,Sebagian Disampaikan
+Shopping Cart Settings,Bawaan Pelanggan Grup
+Shopping Cart Shipping Rule,Daftar Belanja
+Shopping Cart Shipping Rules,Tidak Diizinkan
+Shopping Cart Taxes and Charges Master,Perusahaan
+Shopping Cart Taxes and Charges Masters,Alamat Pengiriman valid
+Tax Master,Disampaikan
+To Pay,Terbayar
+Updated,Silahkan menulis sesuatu
+You are not allowed to reply to this ticket.,{0} {1} memiliki wilayah umum {2}
+You need to enable Shopping Cart,Pengaturan Keranjang Belanja
+{0} cannot be purchased using Shopping Cart,Ditagih
+{0} is required,Aktifkan Keranjang Belanja
+{0} {1} has a common territory {2},Wilayah standar

@@ -1,0 +1,40 @@
+"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","もし、ごhref=""#Sales Browser/Customer Group"">追加/編集</ A>"
+"<a href=""#Sales Browser/Territory"">Add / Edit</a>","もし、ごhref=""#Sales Browser/Territory"">追加/編集</ A>"
+Billed,課金
+Company,会社
+Currency is required for Price List {0},通貨は価格表{0}に必要です
+Default Customer Group,デフォルトの顧客グループ
+Default Territory,デフォルトの地域
+Delivered,配送
+Enable Shopping Cart,ショッピングカートを使用可能に
+Invalid Billing Address,無効な請求先住所
+Invalid Shipping Address,無効な配送先住所
+Missing Currency Exchange Rates for {0},{0}のために為替レートが不足して
+Name is required,名前が必要です
+Not Allowed,許可されていない
+Paid,料金
+Partially Billed,部分的に銘打た
+Partially Delivered,部分的に配信
+Please specify a Price List which is valid for Territory,地域で有効な価格表を指定してください
+Please specify currency in Company,会社で通貨を指定してください
+Please write something,何かを書いてください
+Please write something in subject and message!,件名とメッセージで何かを書いてください！
+Price List,価格リスト
+Quotation Series,引用シリーズ
+Shipping Rule,出荷ルール
+Shopping Cart,カート
+Shopping Cart Price List,ショッピングカート価格表
+Shopping Cart Price Lists,ショッピングカート価格表
+Shopping Cart Settings,ショッピングカートの設定
+Shopping Cart Shipping Rule,ショッピングカート配送ルール
+Shopping Cart Shipping Rules,ショッピングカート配送ルール
+Shopping Cart Taxes and Charges Master,ショッピングカートの税金、料金マスター
+Shopping Cart Taxes and Charges Masters,ショッピングカートの税金、料金のマスターズ
+Tax Master,税金のマスター
+To Pay,支払わなければ
+Updated,更新しました。
+You are not allowed to reply to this ticket.,あなたは、このチケットに返信することはできません。
+You need to enable Shopping Cart,あなたはショッピングカートを有効にする必要があります
+{0} cannot be purchased using Shopping Cart,{0}ショッピングカートを使用して購入することはできません
+{0} is required,{0}が必要である
+{0} {1} has a common territory {2},{0} {1}は、共通の領土を持っている{​​2}
