@@ -5,24 +5,25 @@ from __future__ import unicode_literals
 import json
 
 import frappe
+from frappe import _
 from frappe.utils import cint, formatdate
 
 def get_transaction_list(doctype, start, additional_fields=None):
 	# find customer id
-	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user}, 
+	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user},
 		"customer")
-	
+
 	if customer:
 		if additional_fields:
 			additional_fields = ", " + ", ".join(("`%s`" % f for f in additional_fields))
 		else:
 			additional_fields = ""
-			
+
 		transactions = frappe.db.sql("""select name, creation, currency, grand_total_export
 			%s
 			from `tab%s` where customer=%s and docstatus=1
 			order by creation desc
-			limit %s, 20""" % (additional_fields, doctype, "%s", "%s"), 
+			limit %s, 20""" % (additional_fields, doctype, "%s", "%s"),
 			(customer, cint(start)), as_dict=True)
 		for doc in transactions:
 			items = frappe.db.sql_list("""select item_name
@@ -32,7 +33,7 @@ def get_transaction_list(doctype, start, additional_fields=None):
 		return transactions
 	else:
 		return []
-		
+
 def get_currency_context():
 	return {
 		"global_number_format": frappe.db.get_default("number_format") or "#,###.##",
@@ -42,11 +43,11 @@ def get_currency_context():
 	}
 
 def get_transaction_context(doctype, name):
-	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user}, 
+	customer = frappe.db.get_value("Contact", {"email_id": frappe.session.user},
 		"customer")
-	
+
 	doc = frappe.get_doc(doctype, name)
 	if doc.customer != customer:
-		return { "doc": frappe._dict({ "doc": frappe._dict({"name": _("Not Allowed")}) }) }
+		raise frappe.PermissionError
 	else:
-		return { "doc": doc }
+		return { "doc": doc.as_dict() }
