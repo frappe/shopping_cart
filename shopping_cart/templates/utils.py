@@ -6,6 +6,7 @@ import json
 
 import frappe
 from frappe.utils import cint, formatdate
+from frappe import _
 
 def get_transaction_list(doctype, start, additional_fields=None):
 	# find customer id
