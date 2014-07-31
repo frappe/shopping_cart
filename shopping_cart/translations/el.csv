@@ -7,6 +7,8 @@ Default Customer Group,Προεπιλογή Ομάδα πελατών
 Default Territory,Έδαφος Προεπιλογή
 Delivered,Δημοσιεύθηκε
 Enable Shopping Cart,Ενεργοποίηση Καλάθι Αγορών
+Go ahead and add something to your cart.,Προχωρήστε και να προσθέσω κάτι στο καλάθι σας.
+Hey! Go ahead and add an address,Γειά! Προχωρήστε και να προσθέσετε μια διεύθυνση
 Invalid Billing Address,Μη έγκυρη διεύθυνση χρέωσης
 Invalid Shipping Address,Μη έγκυρη διεύθυνση αποστολής
 Missing Currency Exchange Rates for {0},Λείπει Τιμές συναλλάγματος για {0}
@@ -20,6 +22,7 @@ Please specify currency in Company,Παρακαλείστε να προσδιο�
 Please write something,Παρακαλώ γράψτε κάτι
 Please write something in subject and message!,Παρακαλώ γράψτε κάτι στο θέμα και το μήνυμα !
 Price List,Τιμοκατάλογος
+Price List not configured.,Τιμοκατάλογος δεν έχει ρυθμιστεί.
 Quotation Series,Σειρά Προσφοράς
 Shipping Rule,Αποστολές Κανόνας
 Shopping Cart,Καλάθι Αγορών
@@ -30,10 +33,13 @@ Shopping Cart Shipping Rule,Καλάθι Αγορών αποστολή Κανό�
 Shopping Cart Shipping Rules,Κανόνες Shipping Καλάθι Αγορών
 Shopping Cart Taxes and Charges Master,Φόροι Καλάθι και Χρεώσεις Δάσκαλος
 Shopping Cart Taxes and Charges Masters,Φόροι Καλάθι και Χρεώσεις Masters
+Something went wrong!,Κάτι πήγε στραβά!
+Something went wrong.,Κάτι πήγε στραβά.
 Tax Master,Δάσκαλος φόρου
 To Pay,να πληρώσει
 Updated,Ενημέρωση
 You are not allowed to reply to this ticket.,Δεν επιτρέπεται να απαντήσετε σε αυτό το εισιτήριο .
+You need to be logged in to view your cart.,Θα πρέπει να είστε συνδεδεμένοι για να δείτε το καλάθι σας.
 You need to enable Shopping Cart,Χρειάζεται να ενεργοποιήσετε Καλάθι Αγορών
 {0} cannot be purchased using Shopping Cart,{0} δεν μπορούν να αγοραστούν χρησιμοποιώντας Καλάθι Αγορών
 {0} is required,{0} απαιτείται

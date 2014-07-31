@@ -7,6 +7,8 @@ Default Customer Group,デフォルトの顧客グループ
 Default Territory,デフォルトの地域
 Delivered,配送
 Enable Shopping Cart,ショッピングカートを使用可能に
+Go ahead and add something to your cart.,先に行くと、ショッピングカートに何かを追加。
+Hey! Go ahead and add an address,ハイ！先に行くとアドレスを追加
 Invalid Billing Address,無効な請求先住所
 Invalid Shipping Address,無効な配送先住所
 Missing Currency Exchange Rates for {0},{0}のために為替レートが不足して
@@ -20,6 +22,7 @@ Please specify currency in Company,会社で通貨を指定してください
 Please write something,何かを書いてください
 Please write something in subject and message!,件名とメッセージで何かを書いてください！
 Price List,価格リスト
+Price List not configured.,価格表が構成されていません。
 Quotation Series,引用シリーズ
 Shipping Rule,出荷ルール
 Shopping Cart,カート
@@ -30,11 +33,14 @@ Shopping Cart Shipping Rule,ショッピングカート配送ルール
 Shopping Cart Shipping Rules,ショッピングカート配送ルール
 Shopping Cart Taxes and Charges Master,ショッピングカートの税金、料金マスター
 Shopping Cart Taxes and Charges Masters,ショッピングカートの税金、料金のマスターズ
+Something went wrong!,何かが間違っていた！
+Something went wrong.,エラーが発生しました。
 Tax Master,税金のマスター
 To Pay,支払わなければ
-Updated,更新しました。
+Updated,更新日
 You are not allowed to reply to this ticket.,あなたは、このチケットに返信することはできません。
+You need to be logged in to view your cart.,あなたは買い物カゴを見るためにログインする必要があります。
 You need to enable Shopping Cart,あなたはショッピングカートを有効にする必要があります
 {0} cannot be purchased using Shopping Cart,{0}ショッピングカートを使用して購入することはできません
 {0} is required,{0}が必要である
-{0} {1} has a common territory {2},{0} {1}は、共通の領土を持っている{​​2}
+{0} {1} has a common territory {2},{0} {1}は、共通の領土を持っている{2}

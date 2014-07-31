@@ -7,6 +7,8 @@ Default Customer Group,Уобичајено групу потрошача
 Default Territory,Уобичајено Територија
 Delivered,Испоручено
 Enable Shopping Cart,Омогући Корпа
+Go ahead and add something to your cart.,Само напред и додати нешто у вашој корпи.
+Hey! Go ahead and add an address,Хеј! Само напред и додај адресу
 Invalid Billing Address,Неверный Адрес для выставления счета
 Invalid Shipping Address,Неверный адрес пересылки
 Missing Currency Exchange Rates for {0},Отсутствует валютный курс для {0}
@@ -20,6 +22,7 @@ Please specify currency in Company,Наведите валуту у компан
 Please write something,Молимо вас да напишете нешто
 Please write something in subject and message!,Молимо вас да напишете нешто у теми и поруци !
 Price List,Ценовник
+Price List not configured.,Ценовник није подесио.
 Quotation Series,Цитат серија
 Shipping Rule,Достава Правило
 Shopping Cart,Корпа
@@ -30,10 +33,13 @@ Shopping Cart Shipping Rule,Корпа Достава Правило
 Shopping Cart Shipping Rules,Корпа испоруке Правила
 Shopping Cart Taxes and Charges Master,Корпа такси и накнада Мастер
 Shopping Cart Taxes and Charges Masters,Корпа такси и накнада Мастерс
+Something went wrong!,Нешто је пошло наопако!
+Something went wrong.,Нешто је пошло наопако.
 Tax Master,Пореска Мастер
 To Pay,То Паи
 Updated,Ажурирано
 You are not allowed to reply to this ticket.,Нисте дозвољено да одговори на ову карту .
+You need to be logged in to view your cart.,Морате бити пријављени да бисте видели вашу корпу.
 You need to enable Shopping Cart,Вам необходимо включить Корзина
 {0} cannot be purchased using Shopping Cart,{0} не может быть приобретен с помощью Корзина
 {0} is required,{0} требуется

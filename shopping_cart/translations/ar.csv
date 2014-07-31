@@ -7,6 +7,8 @@ Default Customer Group,المجموعة الافتراضية العملاء
 Default Territory,الافتراضي الإقليم
 Delivered,تسليم
 Enable Shopping Cart,تمكين سلة التسوق
+Go ahead and add something to your cart.,المضي قدما وإضافة شيء إلى عربة التسوق.
+Hey! Go ahead and add an address,احترس المضي قدما وإضافة عنوان
 Invalid Billing Address,عنوان الفواتير غير صالحة
 Invalid Shipping Address,العنوان شحن غير صالحة
 Missing Currency Exchange Rates for {0},أسعار صرف العملات في عداد المفقودين ل {0}
@@ -20,6 +22,7 @@ Please specify currency in Company,يرجى تحديد العملة في شرك�
 Please write something,يرجى كتابة شيء
 Please write something in subject and message!,يرجى كتابة شيء في الموضوع و رسالة !
 Price List,قائمة الأسعار
+Price List not configured.,قائمة السعر لم يتم تكوين.
 Quotation Series,سلسلة الاقتباس
 Shipping Rule,الشحن القاعدة
 Shopping Cart,سلة التسوق
@@ -30,10 +33,13 @@ Shopping Cart Shipping Rule,سلة التسوق الشحن القاعدة
 Shopping Cart Shipping Rules,سلة التسوق قواعد الشحن
 Shopping Cart Taxes and Charges Master,التسوق سلة الضرائب والرسوم ماجستير
 Shopping Cart Taxes and Charges Masters,التسوق سلة الضرائب والرسوم الماجستير
+Something went wrong!,ذهب شيئا خاطئا!
+Something went wrong.,ذهب شيئا خاطئا.
 Tax Master,ماستر الضرائب
 To Pay,على الدفع
 Updated,تحديث
 You are not allowed to reply to this ticket.,لا يسمح لك للرد على هذه التذكرة .
+You need to be logged in to view your cart.,تحتاج إلى تسجيل الدخول لمشاهدة عربة التسوق.
 You need to enable Shopping Cart,تحتاج إلى تمكين سلة التسوق
 {0} cannot be purchased using Shopping Cart,{0} لا يمكن شراؤها باستخدام عربة التسوق
 {0} is required,{0} مطلوب

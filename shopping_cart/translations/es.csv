@@ -7,6 +7,8 @@ Default Customer Group,Grupo predeterminado Cliente
 Default Territory,Territorio predeterminado
 Delivered,liberado
 Enable Shopping Cart,Habilitar Compras
+Go ahead and add something to your cart.,Seguir adelante y añadir algo a su carrito.
+Hey! Go ahead and add an address,¡Hey! Seguir adelante y añadir una dirección
 Invalid Billing Address,No válida dirección de facturación
 Invalid Shipping Address,Dirección no válida de envío
 Missing Currency Exchange Rates for {0},Missing Tipo de Cambio para {0}
@@ -20,6 +22,7 @@ Please specify currency in Company,"Por favor, especifique la moneda en la empre
 Please write something,"Por favor, escribir algo"
 Please write something in subject and message!,"Por favor, escriba algo en asunto y el mensaje !"
 Price List,Lista de precios
+Price List not configured.,Lista de precios no está configurado.
 Quotation Series,Serie Cotización
 Shipping Rule,Regla de envío
 Shopping Cart,Cesta de la compra
@@ -30,10 +33,13 @@ Shopping Cart Shipping Rule,Compras Regla de envío
 Shopping Cart Shipping Rules,Compras Reglas de Envío
 Shopping Cart Taxes and Charges Master,Compras Impuestos y Cargos Maestro
 Shopping Cart Taxes and Charges Masters,Carrito impuestos y las cargas Masters
+Something went wrong!,¡Algo salió mal!
+Something went wrong.,Algo salió mal.
 Tax Master,Maestro de Impuestos
 To Pay,Pagar
 Updated,actualizado
 You are not allowed to reply to this ticket.,No se le permite responder a este boleto.
+You need to be logged in to view your cart.,Tienes que estar registrado para ver su carrito.
 You need to enable Shopping Cart,Necesita habilitar Compras
 {0} cannot be purchased using Shopping Cart,{0} no puede ser comprado usando Compras
 {0} is required,{0} es necesario

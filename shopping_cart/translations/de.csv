@@ -7,6 +7,8 @@ Default Customer Group,Standard Customer Group
 Default Territory,Standard Territory
 Delivered,Lieferung
 Enable Shopping Cart,Aktivieren Einkaufswagen
+Go ahead and add something to your cart.,Gehen Sie voran und fügen Sie etwas in Ihren Warenkorb.
+Hey! Go ahead and add an address,Hallo! Gehen Sie voran und fügen Sie eine Adresse
 Invalid Billing Address,Ungültige Rechnungsadresse
 Invalid Shipping Address,Falsche Lieferadresse
 Missing Currency Exchange Rates for {0},Fehlende Wechselkurse für {0}
@@ -20,6 +22,7 @@ Please specify currency in Company,Bitte geben Sie die Währung in Unternehmen
 Please write something,Bitte schreiben Sie etwas
 Please write something in subject and message!,Bitte schreiben Sie etwas in Betreff und die Nachricht !
 Price List,Preisliste
+Price List not configured.,Preisliste nicht konfiguriert.
 Quotation Series,Zitat Serie
 Shipping Rule,Liefer-Regel
 Shopping Cart,Einkaufswagen
@@ -30,10 +33,13 @@ Shopping Cart Shipping Rule,Warenkorb Versand Regel
 Shopping Cart Shipping Rules,Warenkorb Versand Regeln
 Shopping Cart Taxes and Charges Master,Einkaufswagen -Steuern und Gebühren Meister
 Shopping Cart Taxes and Charges Masters,Einkaufswagen -Steuern und Gebühren Masters
+Something went wrong!,Etwas ist schiefgelaufen!
+Something went wrong.,Es gab ein Problem.
 Tax Master,Tax -Master
 To Pay,To Pay
 Updated,Aktualisiert
 You are not allowed to reply to this ticket.,"Sie sind nicht berechtigt, auf diesem Ticket antworten ."
+You need to be logged in to view your cart.,"Sie müssen angemeldet sein, um Ihren Warenkorb zu sehen."
 You need to enable Shopping Cart,Sie benötigen den Einkaufswagen zu ermöglichen
 {0} cannot be purchased using Shopping Cart,{0} kann nicht mit Einkaufswagen erworben werden
 {0} is required,{0} ist erforderlich

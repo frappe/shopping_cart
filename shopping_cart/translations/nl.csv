@@ -7,6 +7,8 @@ Default Customer Group,Standaard Klant Groep
 Default Territory,Standaard Territory
 Delivered,Geleverd
 Enable Shopping Cart,Enable Winkelwagen
+Go ahead and add something to your cart.,Ga je gang en iets toe te voegen aan uw winkelwagen.
+Hey! Go ahead and add an address,Hé! Ga je gang en voeg een adres
 Invalid Billing Address,Ongeldig Factuuradres
 Invalid Shipping Address,Ongeldig verzendadres
 Missing Currency Exchange Rates for {0},Ontbrekende wisselkoersen gedurende {0}
@@ -20,6 +22,7 @@ Please specify currency in Company,Specificeer munt in Bedrijf
 Please write something,Iets schrijven aub
 Please write something in subject and message!,Schrijf iets in het onderwerp en een bericht !
 Price List,Prijslijst
+Price List not configured.,Prijslijst niet geconfigureerd.
 Quotation Series,Offerte Series
 Shipping Rule,Verzending Rule
 Shopping Cart,Winkelwagen
@@ -30,10 +33,13 @@ Shopping Cart Shipping Rule,Winkelwagen Scheepvaart Rule
 Shopping Cart Shipping Rules,Winkelwagen Scheepvaart Regels
 Shopping Cart Taxes and Charges Master,Winkelwagen en-heffingen Master
 Shopping Cart Taxes and Charges Masters,Winkelwagen en-heffingen Masters
+Something went wrong!,Er ging iets mis!
+Something went wrong.,Er is iets fout gegaan
 Tax Master,Fiscale Master
 To Pay,te betalen
 Updated,Bijgewerkt
 You are not allowed to reply to this ticket.,Het is niet toegestaan ​​om te reageren op dit kaartje .
+You need to be logged in to view your cart.,Je moet ingelogd zijn om uw winkelwagentje te bekijken.
 You need to enable Shopping Cart,U moet Winkelwagen stellen
 {0} cannot be purchased using Shopping Cart,{0} kan niet worden aangeschaft met Winkelwagen
 {0} is required,{0} is verplicht
