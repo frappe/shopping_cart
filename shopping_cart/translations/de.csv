@@ -1,43 +1,45 @@
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> Hinzufügen / Bearbeiten </ a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Hinzufügen / Bearbeiten </ a>"
-Billed,Angekündigt
-Company,Firma
+Billed,Abgerechnet
+Company,Unternehmen
 Currency is required for Price List {0},Die Währung ist für Preisliste erforderlich {0}
-Default Customer Group,Standard Customer Group
-Default Territory,Standard Territory
-Delivered,Lieferung
-Enable Shopping Cart,Aktivieren Einkaufswagen
+Default Customer Group,Standardkundengruppe
+Default Territory,Standardregion
+Default settings for Shopping Cart,Standardeinstellungen für Einkaufswagen
+Delivered,Geliefert
+Enable Shopping Cart,Einkaufswagen aktivieren
 Go ahead and add something to your cart.,Gehen Sie voran und fügen Sie etwas in Ihren Warenkorb.
 Hey! Go ahead and add an address,Hallo! Gehen Sie voran und fügen Sie eine Adresse
 Invalid Billing Address,Ungültige Rechnungsadresse
 Invalid Shipping Address,Falsche Lieferadresse
 Missing Currency Exchange Rates for {0},Fehlende Wechselkurse für {0}
-Name is required,Name wird benötigt
+Name is required,Name ist erforderlich
 Not Allowed,Nicht erlaubt
 Paid,bezahlt
 Partially Billed,teilweise Angekündigt
 Partially Delivered,teilweise Lieferung
-Please specify a Price List which is valid for Territory,"Bitte geben Sie eine Preisliste , die gültig für Territory ist"
-Please specify currency in Company,Bitte geben Sie die Währung in Unternehmen
+Please specify a Price List which is valid for Territory,"Legen Sie eine Preisliste fest, die für die Region gültig ist"
+Please specify currency in Company,Geben Sie die Währung im Unternehmen an
 Please write something,Bitte schreiben Sie etwas
 Please write something in subject and message!,Bitte schreiben Sie etwas in Betreff und die Nachricht !
 Price List,Preisliste
 Price List not configured.,Preisliste nicht konfiguriert.
-Quotation Series,Zitat Serie
-Shipping Rule,Liefer-Regel
+Quotation Series,Angebotsserie
+Shipping Rule,Versandregel
 Shopping Cart,Einkaufswagen
 Shopping Cart Price List,Einkaufswagen Preisliste
-Shopping Cart Price Lists,Warenkorb Preislisten
-Shopping Cart Settings,Warenkorb Einstellungen
-Shopping Cart Shipping Rule,Warenkorb Versand Regel
-Shopping Cart Shipping Rules,Warenkorb Versand Regeln
-Shopping Cart Taxes and Charges Master,Einkaufswagen -Steuern und Gebühren Meister
-Shopping Cart Taxes and Charges Masters,Einkaufswagen -Steuern und Gebühren Masters
+Shopping Cart Price Lists,Einkaufswagen Preislisten
+Shopping Cart Settings,Einkaufswageneinstellungen
+Shopping Cart Shipping Rule,Einkaufswagen-Versandregel
+Shopping Cart Shipping Rules,Einkaufswagen-Versandregeln
+Shopping Cart Taxes and Charges Master,Einkaufswagen-Steuern und Abgabenstamm
+Shopping Cart Taxes and Charges Masters,Einkaufswagen-Steuern und Abgabenstämme
 Something went wrong!,Etwas ist schiefgelaufen!
 Something went wrong.,Es gab ein Problem.
-Tax Master,Tax -Master
+Tax Master,Steuerstamm
 To Pay,To Pay
 Updated,Aktualisiert
+Website Manager,
 You are not allowed to reply to this ticket.,"Sie sind nicht berechtigt, auf diesem Ticket antworten ."
 You need to be logged in to view your cart.,"Sie müssen angemeldet sein, um Ihren Warenkorb zu sehen."
 You need to enable Shopping Cart,Sie benötigen den Einkaufswagen zu ermöglichen
