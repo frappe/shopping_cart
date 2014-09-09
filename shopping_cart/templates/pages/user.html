@@ -3,7 +3,7 @@
 {% block header %}<h2>My Profile</h2>{% endblock %}
 
 {% block content %}
-<div class="user-content">
+<div class="user-content" style="max-width: 500px;">
     <ul class="breadcrumb">
     	<li><a href="index">Home</a></li>
     	<li class="active"><i class="icon-user icon-fixed-width"></i> My Profile</li>
@@ -52,6 +52,6 @@ $(document).ready(function() {
 	})
 })
 </script>
+<!-- no-sidebar -->
 {% endblock %}
 
-{% block sidebar %}{% include "templates/includes/sidebar.html" %}{% endblock %}

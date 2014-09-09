@@ -1,221 +1,29 @@
- by Role ,per rol
- is not set,is niet ingesteld
-""" does not exists",""" Bestaat niet"
-2 days ago,2 dagen geleden
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> toevoegen / bewerken < / a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> toevoegen / bewerken < / a>"
-About,Over
-Actions,acties
-Add,Toevoegen
-Add Attachments,Bijlagen toevoegen
-Add Bookmark,Voeg bladwijzer toe
-Add Column,Kolom toevoegen
-Add Message,Bericht toevoegen
-Add Reply,Voeg antwoord
-Add Serial No,Voeg Serienummer
-Add This To User's Restrictions,Voeg dit toe aan Beperkingen gebruikershandleiding
-Add attachment,Bijlage toevoegen
-Add new row,Voeg een nieuwe rij
-Add to To Do,Toevoegen aan To Do
-Add to To Do List of,Toevoegen aan To Do List van Do
-"Allowing DocType, DocType. Be careful!","Het toestaan ​​DocType , DocType . Wees voorzichtig !"
-Alternative download link,Alternatieve download link
-Amend,Amenderen
-Are you sure you want to delete the attachment?,Weet u zeker dat u de bijlage wilt verwijderen?
-Ascending,Oplopend
-Assign To,Toewijzen aan
-Assigned To,toegewezen aan
-Assignments,opdrachten
-Attach Document Print,Bevestig Document Print
-Attach as web link,Bevestig als weblink
-Attachments,Toebehoren
 Billed,Gefactureerd
-Bookmarks,Bladwijzers
-Built on,gebouwd op
-Calendar,Kalender
-Cancel,Annuleren
-Cancelled,Geannuleerd
-Cannot edit standard fields,Kan standaard velden niet bewerken
-Cannot open instance when its {0} is open,Kan niet openen bijvoorbeeld wanneer de {0} is geopend
-Cannot open {0} when its instance is open,Kan niet openen {0} wanneer de instantie is geopend
-Cannot print cancelled documents,Kan geannuleerd documenten niet afdrukken
-Clear Cache,Cache wissen
-Click on row to view / edit.,Klik op de rij / bewerken weer te geven.
-Click to Expand / Collapse,Klik om Uitklappen / Inklappen
-Close,Sluiten
-Close: {0},Sluiten : {0}
-Collapse,ineenstorting
-Comment,Commentaar
-Comments,Reacties
-Communication Medium,Communicatie Medium
 Company,Vennootschap
-Complete By,Compleet Door
-Copy,Kopiëren
-Creation / Modified By,Creatie / Gewijzigd door
 Currency is required for Price List {0},Valuta is vereist voor prijslijst {0}
-Current status,Actuele status
-Custom Reports,Aangepaste rapporten
-Customize,Pas
-Date must be in format: {0},Datum moet volgend formaat : {0}
-Dear,Lieve
 Default Customer Group,Standaard Klant Groep
 Default Territory,Standaard Territory
-Delete,Verwijder
-Delete Row,Rij verwijderen
 Delivered,Geleverd
-Descending,Aflopend
-Document Status transition from ,Document Status overgang van
-Document Status transition from {0} to {1} is not allowed,Document Status overgang van {0} tot {1} is niet toegestaan
-Document is only editable by users of role,Document is alleen bewerkbaar door gebruikers van de rol van
-Documentation,Documentatie
-Download,Download
-Drafts,Concepten
-Drag to sort columns,Sleep om te sorteren kolommen
-Edit,Redigeren
-Editable,Bewerkbare
-Email,E-mail
-"Email addresses, separted by commas","E-mailadressen, separted door komma&#39;s"
-Email sent to {0},E-mail verzonden naar {0}
-Email...,Email ...
 Enable Shopping Cart,Enable Winkelwagen
-Enter Value,Waarde invoeren
-Equals,equals
-Expand,uitbreiden
-Export,Exporteren
-Export not allowed. You need {0} role to export.,Export niet toegestaan ​​. Je nodig hebt {0} rol om te exporteren .
-Field {0} is not selectable.,Veld {0} kan niet worden geselecteerd .
-File,Bestand
-Filter,Filteren
-"For comparative filters, start with","Voor vergelijkingsdoeleinden filters, te beginnen met"
-For ranges,Voor bereiken
-Form,Vorm
-Forums,Forums
-From Date must be before To Date,Van datum moet voor-to-date
-Gantt Chart,Gantt-diagram
-Get,Krijgen
-Get From ,Get Van
-Greater or equals,Groter of gelijk
-Greater than,groter dan
-"Grid ""","Grid """
-"Group Added, refreshing...","Group Toegevoegd , verfrissend ..."
-Help,Help
-History,Geschiedenis
-"Ignoring Item {0}, because a group exists with the same name!","Post negeren {0} , omdat een groep bestaat met dezelfde naam !"
-Import,Importeren
-In,in
-In response to,In reactie op
-Insert Below,Hieronder invoegen
-Insert Row,Rij invoegen
+Go ahead and add something to your cart.,Ga je gang en iets toe te voegen aan uw winkelwagen.
+Hey! Go ahead and add an address,Hé! Ga je gang en voeg een adres
 Invalid Billing Address,Ongeldig Factuuradres
-Invalid Email: {0},Ongeldig E-mail : {0}
-Invalid Filter: {0},Ongeldige Filter : {0}
 Invalid Shipping Address,Ongeldig verzendadres
-Last updated by,Laatst gewijzigd door
-Less or equals,Minder of gelijk
-Less than,minder dan
-Like,zoals
-Linked With,Linked Met
-List,Lijst
-Loading,Het laden
-Loading Report,Laden Rapport
-Logout,Afmelden
-Make a new,Maak een nieuw
-Mandatory fields required in {0},Verplichte velden zijn verplicht in {0}
-Mandatory filters required:\n,Verplichte filters nodig : \ n
-Message,Bericht
 Missing Currency Exchange Rates for {0},Ontbrekende wisselkoersen gedurende {0}
-Missing Values Required,Ontbrekende Vereiste waarden
-Modified by,Aangepast door
-More,Meer
-Move Down: {0},Omlaag : {0}
-Move Up: {0},Move Up : {0}
-My Settings,Mijn instellingen
 Name is required,Naam is vereist
-Name not permitted,Naam niet toegestaan
-New,nieuw
-New Record,Nieuwe record
-Next Record,Volgende record
-Next actions,Volgende acties
-No,Geen
-No Communication tagged with this ,Geen Communicatie getagd met deze
-No Report Loaded. Please use query-report/[Report Name] to run a report.,Geen rapport Loaded. Gelieve gebruik AND-rapport / [Report naam] om een ​​rapport uit te voeren.
-No Results,geen resultaten
-No document selected,Geen document geselecteerd
-No one,Niemand
-No permission to edit,Geen toestemming te bewerken
-No records tagged.,Geen records gelabeld.
-None,Niemand
-None: End of Workflow,Geen: Einde van de Workflow
 Not Allowed,niet toegestaan
-Not Found,Niet gevonden
-Not Linked to any record.,Niet gekoppeld aan een record.
-Not Permitted,Niet Toegestane
-Not Submitted,niet ingediend
-Not allowed,niet toegestaan
-Not enough permission to see links.,Niet genoeg rechten om links te zien.
-Not equals,niet gelijken
-Not found,niet gevonden
-Not permitted,niet toegestaan
-Note: Other permission rules may also apply,Opmerking: Andere toestemming regels kunnen ook van toepassing zijn
-Nothing to show,Niets aan te geven
-Nothing to show for this selection,Niets te tonen voor deze selectie
-Notify By Email,Informeer via e-mail
-Open source ERP built for the web,Open source ERP gebouwd voor het web
-Or Created By,Of Gemaakt door
-Original Message,Oorspronkelijk bericht
-Page not found,Pagina niet gevonden
 Paid,betaald
 Partially Billed,gedeeltelijk gefactureerde
 Partially Delivered,gedeeltelijk Geleverd
-Permanently Cancel {0}?,Permanent Annuleren {0} ?
-Permanently Submit {0}?,Permanent Submit {0} ?
-Permanently delete {0}?,Permanent verwijderen {0} ?
-Pick Columns,Kies Kolommen
-Please attach a file first.,Gelieve een bestand eerst.
-Please attach a file or set a URL,Gelieve een bestand of stel een URL
-Please enable pop-ups,Schakel pop - ups
-Please enter Event's Date and Time!,Vul Event Datum en tijd !
-Please enter some text!,U dient een tekst !
-Please enter title!,Vul de titel!
-Please login to Upvote!,Log in om Upvote !
-Please specify,Gelieve te specificeren
-Please specify a,Geef een
 Please specify a Price List which is valid for Territory,Geef een prijslijst die geldig is voor het grondgebied
 Please specify currency in Company,Specificeer munt in Bedrijf
 Please write something,Iets schrijven aub
 Please write something in subject and message!,Schrijf iets in het onderwerp en een bericht !
-Post already exists. Cannot add again!,Bericht bestaat reeds. Kan niet opnieuw toe te voegen !
-Post does not exist. Please add post!,Bericht bestaat niet . Voeg bericht !
-Previous Record,Vorige Record
 Price List,Prijslijst
-Print,afdrukken
-Print...,Print ...
-Priority,Prioriteit
-Query Report,Query Report
+Price List not configured.,Prijslijst niet geconfigureerd.
 Quotation Series,Offerte Series
-Refresh,Verversen
-Reload Page,Reload Pagina
-Remove Bookmark,Bladwijzer verwijderen
-Rename...,Hernoemen ...
-Report,Verslag
-Report was not saved (there were errors),Rapport werd niet opgeslagen (er waren fouten)
-Save,besparen
-Search,Zoek
-Select All,Alles selecteren
-Select Attachments,Selecteer Bijlagen
-Select Print Format,Selecteer Print Format
-Select Report Name,Selecteer Rapportnaam
-Select To Download:,Selecteer Naar Download:
-Select Type,Selecteer Type
-Select dates to create a new ,Kies een datum om een ​​nieuwe te maken
-Select or drag across time slots to create a new event.,Selecteer of sleep over tijdsloten om een ​​nieuwe gebeurtenis te maken.
-Send,Sturen
-Send As Email,Verstuur als e-mail
-Send Me A Copy,Stuur mij een kopie
-Sent or Received,Verzonden of ontvangen
-Serial No,Serienummer
-Session Expired. Logging you out,Sessie verlopen. U wordt afgemeld
-Set Link,Stel Link
 Shipping Rule,Verzending Rule
 Shopping Cart,Winkelwagen
 Shopping Cart Price List,Winkelwagen Prijslijst
@@ -225,64 +33,14 @@ Shopping Cart Shipping Rule,Winkelwagen Scheepvaart Rule
 Shopping Cart Shipping Rules,Winkelwagen Scheepvaart Regels
 Shopping Cart Taxes and Charges Master,Winkelwagen en-heffingen Master
 Shopping Cart Taxes and Charges Masters,Winkelwagen en-heffingen Masters
-Shortcut,Kortere weg
-Show Details,Show Details
-Show Tags,Toon Tags
-Show rows with zero values,Toon rijen met nulwaarden
-Showing only for (if not empty),Slechts het tonen van (indien niet leeg )
-Sorry we were unable to find what you were looking for.,Sorry we waren niet in staat om te vinden wat u zocht.
-Sorry you are not permitted to view this page.,Sorry dat je niet toegestaan ​​om deze pagina te bekijken.
-Sort By,Sorteer op
-Start Report For,Start Rapport Voor
-Subject,Onderwerp
-Submit,Voorleggen
-Submitted,Ingezonden
-Switch to Website,Schakel over naar Website
-Tags,Tags
+Something went wrong!,Er ging iets mis!
+Something went wrong.,Er is iets fout gegaan
 Tax Master,Fiscale Master
-Test Runner,Test Runner
-Then By (optional),Vervolgens op (optioneel)
-There were errors,Er zijn fouten
-There were errors while sending email. Please try again.,Er zijn fouten opgetreden tijdens het versturen van e-mail. Probeer het opnieuw .
-This is PERMANENT action and you cannot undo. Continue?,Dit is PERMANENTE actie en u ongedaan kunt maken niet. Doorgaan?
-This is permanent action and you cannot undo. Continue?,Dit is een permanente actie en u ongedaan kunt maken niet. Doorgaan?
-To,Naar
 To Pay,te betalen
-"To report an issue, go to ",
-"To run a test add the module name in the route after '{0}'. For example, {1}","Om een test voeg de module naam in de route na ' {0} ' . Bijvoorbeeld , {1}"
-Unable to load: {0},Niet in staat om belasting: {0}
-Unknown Column: {0},Onbekend Column : {0}
-Unknown Print Format: {0},Onbekend Print Formaat : {0}
-Unread Messages,Ongelezen berichten
-Update,Bijwerken
 Updated,Bijgewerkt
-Upload,uploaden
-Upload Attachment,Upload Attachment
-Upload a file,Een bestand uploaden
-Uploading...,Uploaden ...
-User Permission Restrictions,Gebruiker Toestemming Beperkingen
-User Restrictions,gebruikersbeperkingen
-With Groups,met Groepen
-With Ledgers,met Ledgers
-Workflow will start after saving.,Workflow begint na het opslaan.
-Yes,Ja
-Yesterday,Gisteren
-You are not allowed to create / edit reports,U bent niet toegestaan ​​om / bewerken van rapporten
-You are not allowed to create {0},U bent niet toegestaan ​​om {0}
-You are not allowed to export this report,U bent niet bevoegd om dit rapport te exporteren
-You are not allowed to print this document,U bent niet gemachtigd om dit document af te drukken
 You are not allowed to reply to this ticket.,Het is niet toegestaan ​​om te reageren op dit kaartje .
-You are not allowed to send emails related to this document,Het is niet toegestaan ​​om e-mails met betrekking tot dit document te versturen
+You need to be logged in to view your cart.,Je moet ingelogd zijn om uw winkelwagentje te bekijken.
 You need to enable Shopping Cart,U moet Winkelwagen stellen
-"Your download is being built, this may take a few moments...","Uw download wordt gebouwd, kan dit enige tijd duren ..."
-and,en
-comment,commentaar
-comments,reacties
-found,gevonden
-is not allowed.,is niet toegestaan.
-or,of
-to,naar
-values and dates,waarden en data
 {0} cannot be purchased using Shopping Cart,{0} kan niet worden aangeschaft met Winkelwagen
 {0} is required,{0} is verplicht
 {0} {1} has a common territory {2},{0} {1} heeft een gemeenschappelijk grondgebied {2}

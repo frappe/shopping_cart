@@ -9,9 +9,9 @@ no_cache = 1
 no_sitemap = 1
 
 def get_context(context):
-	shipment_context = {
+	shipment_context = frappe._dict({
 		"parent_link": "shipments",
 		"parent_title": "Shipments"
-	}
+	})
 	shipment_context.update(get_transaction_context("Delivery Note", frappe.form_dict.name))
-	return context
+	return shipment_context

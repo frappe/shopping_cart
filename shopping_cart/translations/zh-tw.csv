@@ -1,221 +1,29 @@
- by Role ,按角色
- is not set,沒有設置
-""" does not exists",“不存在
-2 days ago,3天前
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group"">添加/編輯</a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory"">添加/編輯</a>"
-About,關於
-Actions,操作
-Add,加
-Add Attachments,添加附件
-Add Bookmark,添加書籤
-Add Column,添加列
-Add Message,發表留言
-Add Reply,添加回复
-Add Serial No,添加序列號
-Add This To User's Restrictions,將它添加到用戶的限制
-Add attachment,添加附件
-Add new row,添加新行
-Add to To Do,添加到待辦事項
-Add to To Do List of,添加到待辦事項列表
-"Allowing DocType, DocType. Be careful!",允許的DOCTYPE，的DocType 。要小心！
-Alternative download link,另類下載鏈接
-Amend,修改
-Are you sure you want to delete the attachment?,您確定要刪除的附件？
-Ascending,升序
-Assign To,分配給
-Assigned To,分配給
-Assignments,作業
-Attach Document Print,附加文檔打印
-Attach as web link,附加為網站鏈接
-Attachments,附件
 Billed,計費
-Bookmarks,書籤
-Built on,建
-Calendar,日曆
-Cancel,取消
-Cancelled,註銷
-Cannot edit standard fields,不能編輯標準字段
-Cannot open instance when its {0} is open,無法打開實例時，它的{0}是開放的
-Cannot open {0} when its instance is open,無法打開{0} ，當它的實例是開放的
-Cannot print cancelled documents,無法打印的文檔取消
-Clear Cache,清除緩存
-Click on row to view / edit.,點擊一行，查看/編輯。
-Click to Expand / Collapse,點擊展開/折疊
-Close,關閉
-Close: {0},關閉： {0}
-Collapse,崩潰
-Comment,評論
-Comments,評論
-Communication Medium,通信介質
 Company,公司
-Complete By,完成
-Copy,複製
-Creation / Modified By,創建/修改者
 Currency is required for Price List {0},貨幣需要價格表{0}
-Current status,現狀
-Custom Reports,自定義報告
-Customize,定制
-Date must be in format: {0},日期格式必須是： {0}
-Dear,親愛
 Default Customer Group,默認用戶組
 Default Territory,默認領地
-Delete,刪除
-Delete Row,刪除行
 Delivered,交付
-Descending,降
-Document Status transition from ,從文檔狀態過渡
-Document Status transition from {0} to {1} is not allowed,從{0}到{1}文件狀態轉換是不允許的
-Document is only editable by users of role,文件只有通過編輯角色的用戶
-Documentation,文檔
-Download,下載
-Drafts,草稿箱
-Drag to sort columns,拖動進行排序的列
-Edit,編輯
-Editable,編輯
-Email,電子郵件
-"Email addresses, separted by commas",電子郵件地址，以逗號separted
-Email sent to {0},電子郵件發送到{0}
-Email...,電子郵件...
 Enable Shopping Cart,啟用的購物車
-Enter Value,輸入值
-Equals,等號
-Expand,擴大
-Export,出口
-Export not allowed. You need {0} role to export.,導出不允許的。您需要{0}的角色出口。
-Field {0} is not selectable.,域{0}是不可選擇的。
-File,文件
-Filter,過濾器
-"For comparative filters, start with",對於比較器，開始
-For ranges,對於範圍
-Form,表格
-Forums,論壇
-From Date must be before To Date,從日期必須是之前日期
-Gantt Chart,甘特圖
-Get,得到
-Get From ,得到
-Greater or equals,大於或等於
-Greater than,大於
-"Grid """,電網“
-"Group Added, refreshing...",集團已添加，清爽...
-Help,幫助
-History,歷史
-"Ignoring Item {0}, because a group exists with the same name!",忽略項目{0} ，因為一組存在具有相同名字！
-Import,進口
-In,在
-In response to,響應於
-Insert Below,下面插入
-Insert Row,插入行
+Go ahead and add something to your cart.,來吧，講一下你的車。
+Hey! Go ahead and add an address,嘿！來吧，添加一個地址
 Invalid Billing Address,無效的帳單地址
-Invalid Email: {0},無效的電子郵件： {0}
-Invalid Filter: {0},無效的過濾器： {0}
 Invalid Shipping Address,無效的送貨地址
-Last updated by,最後更新由
-Less or equals,小於或等於
-Less than,小於
-Like,喜歡
-Linked With,掛具
-List,表
-Loading,載入中
-Loading Report,加載報表
-Logout,註銷
-Make a new,創建一個新的
-Mandatory fields required in {0},在需要的必填字段{0}
-Mandatory filters required:\n,需要強制性的過濾器： \ ñ
-Message,信息
 Missing Currency Exchange Rates for {0},缺少貨幣匯率的{0}
-Missing Values Required,所需遺漏值
-Modified by,改性
-More,更多
-Move Down: {0},下移： {0}
-Move Up: {0},上移： {0}
-My Settings,我的設置
 Name is required,名稱是必需的
-Name not permitted,名稱不允許
-New,新
-New Record,新記錄
-Next Record,下一紀錄
-Next actions,下一步行動
-No,無
-No Communication tagged with this ,無標籤的通信與此
-No Report Loaded. Please use query-report/[Report Name] to run a report.,無報告加載。請使用查詢報告/ [報告名稱]運行報告。
-No Results,沒有結果
-No document selected,沒有選擇文件
-No one,沒有人
-No permission to edit,無權限進行編輯
-No records tagged.,沒有記錄標記。
-None,無
-None: End of Workflow,無：結束的工作流程
 Not Allowed,不允許
-Not Found,未找到
-Not Linked to any record.,不鏈接到任何記錄。
-Not Permitted,不允許
-Not Submitted,未提交
-Not allowed,不允許
-Not enough permission to see links.,沒有足夠的權限查看鏈接。
-Not equals,不等於
-Not found,未找到
-Not permitted,不允許
-Note: Other permission rules may also apply,注：其它權限規則也可申請
-Nothing to show,沒有顯示
-Nothing to show for this selection,沒什麼可顯示該選擇
-Notify By Email,通知通過電子郵件
-Open source ERP built for the web,內置的網絡開源ERP
-Or Created By,或者創建人
-Original Message,原始消息
-Page not found,找不到網頁
 Paid,支付
 Partially Billed,部分帳單
 Partially Delivered,部分交付
-Permanently Cancel {0}?,永久取消{0} ？
-Permanently Submit {0}?,永久提交{0} ？
-Permanently delete {0}?,永久刪除{0} ？
-Pick Columns,摘列
-Please attach a file first.,請附上文件第一。
-Please attach a file or set a URL,請附上一個文件或設置一個URL
-Please enable pop-ups,請啟用彈出窗口
-Please enter Event's Date and Time!,請輸入事件的日期和時間！
-Please enter some text!,請輸入一些文字！
-Please enter title!,請輸入標題！
-Please login to Upvote!,請登錄到的upvote ！
-Please specify,請註明
-Please specify a,請指定一個
 Please specify a Price List which is valid for Territory,請指定一個價格表，有效期為領地
 Please specify currency in Company,請公司指定的貨幣
 Please write something,請寫東西
 Please write something in subject and message!,請寫東西的主題和消息！
-Post already exists. Cannot add again!,帖子已經存在。不能再添加！
-Post does not exist. Please add post!,帖子不存在。請新增職位！
-Previous Record,上一記錄
 Price List,價格表
-Print,打印
-Print...,打印...
-Priority,優先
-Query Report,查詢報表
+Price List not configured.,未配置價格表。
 Quotation Series,系列報價
-Refresh,刷新
-Reload Page,刷新頁面
-Remove Bookmark,刪除書籤
-Rename...,重命名...
-Report,報告
-Report was not saved (there were errors),報告沒有被保存（有錯誤）
-Save,節省
-Search,搜索
-Select All,全選
-Select Attachments,選擇附件
-Select Print Format,選擇打印格式
-Select Report Name,選擇報告名稱
-Select To Download:,選擇要下載：
-Select Type,選擇類型
-Select dates to create a new ,選擇日期以創建一個新的
-Select or drag across time slots to create a new event.,選擇或拖動整個時隙，以創建一個新的事件。
-Send,發送
-Send As Email,發送電子郵件
-Send Me A Copy,給我發一份
-Sent or Received,發送或接收
-Serial No,序列號
-Session Expired. Logging you out,會話過期。您的退出
-Set Link,設置鏈接
 Shipping Rule,送貨規則
 Shopping Cart,購物車
 Shopping Cart Price List,購物車價格表
@@ -225,64 +33,14 @@ Shopping Cart Shipping Rule,購物車運費規則
 Shopping Cart Shipping Rules,購物車運費規則
 Shopping Cart Taxes and Charges Master,購物車稅收和收費碩士
 Shopping Cart Taxes and Charges Masters,購物車稅收和收費碩士
-Shortcut,捷徑
-Show Details,顯示詳細信息
-Show Tags,顯示標籤
-Show rows with zero values,秀行與零值
-Showing only for (if not empty),僅顯示為（如果不為空）
-Sorry we were unable to find what you were looking for.,對不起，我們無法找到您所期待的。
-Sorry you are not permitted to view this page.,對不起，您沒有權限瀏覽這個頁面。
-Sort By,排序
-Start Report For,啟動年報
-Subject,主題
-Submit,提交
-Submitted,提交
-Switch to Website,切換到網站
-Tags,標籤
+Something went wrong!,出事了！
+Something went wrong.,出事了。
 Tax Master,稅務碩士
-Test Runner,測試運行
-Then By (optional),再由（可選）
-There were errors,有錯誤
-There were errors while sending email. Please try again.,還有在發送電子郵件是錯誤的。請再試一次。
-This is PERMANENT action and you cannot undo. Continue?,這是永久性的行動，你不能撤消。要繼續嗎？
-This is permanent action and you cannot undo. Continue?,這是永久的行動，你不能撤消。要繼續嗎？
-To,至
 To Pay,支付方式
-"To report an issue, go to ",要報告問題，請至
-"To run a test add the module name in the route after '{0}'. For example, {1}",運行測試後， “{0}”添加模塊名稱的路線。例如， {1}
-Unable to load: {0},無法加載： {0}
-Unknown Column: {0},未知專欄： {0}
-Unknown Print Format: {0},未知的打印格式： {0}
-Unread Messages,未讀消息
-Update,更新
 Updated,更新
-Upload,上載
-Upload Attachment,上傳附件
-Upload a file,上傳文件
-Uploading...,上載...
-User Permission Restrictions,用戶權限限制
-User Restrictions,用戶限制
-With Groups,與團體
-With Ledgers,與總帳
-Workflow will start after saving.,保存後的工作流程將啟動。
-Yes,是的
-Yesterday,昨天
-You are not allowed to create / edit reports,你不允許創建/編輯報導
-You are not allowed to create {0},你不允許創建{0}
-You are not allowed to export this report,你不准出口本報告
-You are not allowed to print this document,你不允許打印此文檔
 You are not allowed to reply to this ticket.,你不允許回复此票。
-You are not allowed to send emails related to this document,你是不是允許發送與此相關的文檔的電子郵件
+You need to be logged in to view your cart.,您需要登錄才能查看您的購物車。
 You need to enable Shopping Cart,您需要啟用的購物車
-"Your download is being built, this may take a few moments...",您的下載正在修建，這可能需要一些時間......
-and,和
-comment,評論
-comments,評論
-found,發現
-is not allowed.,是不允許的。
-or,或
-to,至
-values and dates,值和日期
 {0} cannot be purchased using Shopping Cart,{0}不能使用購物車購買
 {0} is required,{0}是必需的
 {0} {1} has a common territory {2},{0} {1}有一個共同的領土{2}

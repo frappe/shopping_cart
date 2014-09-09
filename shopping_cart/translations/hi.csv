@@ -1,288 +1,46 @@
- by Role ,रोल से
- is not set,सेट नहीं है
-""" does not exists",""" मौजूद नहीं है"
-2 days ago,2 दिन पहले
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> जोड़ें / संपादित करें </ a >"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> जोड़ें / संपादित करें </ a >"
-About,के बारे में
-Actions,क्रियाएँ
-Add,जोड़ना
-Add Attachments,अनुलग्नकों को जोड़
-Add Bookmark,बुकमार्क जोड़ें
-Add Column,कॉलम जोड़ें
-Add Message,संदेश जोड़ें
-Add Reply,प्रत्युत्तर जोड़ें
-Add Serial No,धारावाहिक नहीं जोड़ें
-Add This To User's Restrictions,उपयोगकर्ता के प्रतिबंध के लिए इस जोड़ें
-Add attachment,लगाव जोड़ें
-Add new row,नई पंक्ति जोड़ें
-Add to To Do,जोड़ें करने के लिए क्या
-Add to To Do List of,को जोड़ने के लिए की सूची
-"Allowing DocType, DocType. Be careful!","अनुमति दे टैग , टैग . सावधान!"
-Alternative download link,वैकल्पिक डाउनलोड लिंक
-Amend,संशोधन करना
-Are you sure you want to delete the attachment?,क्या आप सुनिश्चित करें कि आप अनुलग्नक हटाना चाहते हैं?
-Ascending,आरोही
-Assign To,करने के लिए निरुपित
-Assigned To,को सौंपा
-Assignments,कार्य
-Attach Document Print,दस्तावेज़ प्रिंट संलग्न
-Attach as web link,वेब लिंक के रूप में संलग्न करें
-Attachments,किए गए अनुलग्नकों के
 Billed,का बिल
-Bookmarks,बुकमार्क
-Built on,पर बनाया गया
-Calendar,कैलेंडर
-Cancel,रद्द करें
-Cancelled,रद्द
-Cannot edit standard fields,मानक फ़ील्ड्स संपादित नहीं कर सकते
-Cannot open instance when its {0} is open,इसके {0} खुला है जब उदाहरण नहीं खोल सकता
-Cannot open {0} when its instance is open,इसके उदाहरण खुला है जब {0} नहीं खोल सकता
-Cannot print cancelled documents,रद्द दस्तावेज़ मुद्रित नहीं कर सकते
-Clear Cache,साफ़ कैश
-Click on row to view / edit.,/ संपादन देखने के लिए पंक्ति पर क्लिक करें .
-Click to Expand / Collapse,/ विस्तार करें संकुचित करने के लिए क्लिक करें
-Close,बंद करें
-Close: {0},बंद : {0}
-Collapse,संक्षिप्त करें
-Comment,टिप्पणी
-Comments,टिप्पणियां
-Communication Medium,संचार माध्यम
 Company,कंपनी
-Complete By,द्वारा पूरा करें
-Copy,कॉपी करें
-Creation / Modified By,निर्माण / द्वारा संशोधित
-Currency is required for Price List {0},
-Current status,वर्तमान स्थिति
-Custom Reports,कस्टम रिपोर्ट
-Customize,को मनपसंद
-Date must be in format: {0},तिथि प्रारूप में होना चाहिए : {0}
-Dear,प्रिय
+Currency is required for Price List {0},मुद्रा मूल्य सूची के लिए आवश्यक है {0}
 Default Customer Group,डिफ़ॉल्ट ग्राहक समूह
 Default Territory,Default टेरिटरी
-Delete,हटाना
-Delete Row,पंक्ति हटाएँ
 Delivered,दिया गया
-Descending,अवरोही
-Document Status transition from ,से दस्तावेज स्थिति संक्रमण
-Document Status transition from {0} to {1} is not allowed,{1} के लिए {0} से दस्तावेज स्थिति संक्रमण की अनुमति नहीं है
-Document is only editable by users of role,दस्तावेज़ भूमिका के उपयोगकर्ताओं द्वारा केवल संपादन है
-Documentation,प्रलेखन
-Download,डाउनलोड
-Drafts,ड्राफ्ट्स
-Drag to sort columns,तरह स्तंभों को खींचें
-Edit,संपादित करें
-Editable,संपादन
-Email,ईमेल
-"Email addresses, separted by commas","ईमेल पते, अल्पविराम के द्वारा separted"
-Email sent to {0},ईमेल भेजा {0}
-Email...,ईमेल ...
-Enable Shopping Cart,
-Enter Value,मान दर्ज
-Equals,बराबरी
-Expand,विस्तृत करें
-Export,निर्यात
-Export not allowed. You need {0} role to export.,निर्यात की अनुमति नहीं . आप निर्यात करने के लिए {0} भूमिका की जरूरत है.
-Field {0} is not selectable.,फ़ील्ड {0} चयन नहीं है .
-File,फ़ाइल
-Filter,फ़िल्टर
-"For comparative filters, start with","तुलनात्मक फिल्टर करने के लिए, के साथ शुरू"
-For ranges,श्रेणियों के लिए
-Form,प्रपत्र
-Forums,मंचों
-From Date must be before To Date,दिनांक से पहले तिथि करने के लिए होना चाहिए
-Gantt Chart,Gantt चार्ट
-Get,जाना
-Get From ,से प्राप्त करें
-Greater or equals,ग्रेटर या बराबर होती है
-Greater than,इससे बड़ा
-"Grid ""","ग्रिड """
-"Group Added, refreshing...","समूह जोड़ा गया , ताजगी ..."
-Help,मदद
-History,इतिहास
-"Ignoring Item {0}, because a group exists with the same name!","उपेक्षा कर मद {0} , एक समूह में एक ही नाम के साथ मौजूद है क्योंकि !"
-Import,आयात
-In,में
-In response to,के जवाब में
-Insert Below,नीचे डालें
-Insert Row,पंक्ति डालें
-Invalid Billing Address,
-Invalid Email: {0},अवैध ईमेल: {0}
-Invalid Filter: {0},अवैध फिल्टर: {0}
-Invalid Shipping Address,
-Last updated by,अंतिम अद्यतन
-Less or equals,कम या बराबर होती है
-Less than,से भी कम
-Like,जैसा
-Linked With,के साथ जुड़ा हुआ
-List,सूची
-Loading,लदान
-Loading Report,रिपोर्ट लोड हो रहा है
-Logout,लॉगआउट
-Make a new,एक नया
-Mandatory fields required in {0},में आवश्यक अनिवार्य क्षेत्रों {0}
-Mandatory filters required:\n,अनिवार्य फिल्टर की आवश्यकता है: \ n
-Message,संदेश
-Missing Currency Exchange Rates for {0},
-Missing Values Required,आवश्यक लापता मूल्यों
-Modified by,के द्वारा जाँचा गया
-More,अधिक
-Move Down: {0},नीचे ले जाएँ : {0}
-Move Up: {0},ऊपर ले जाएँ : {0}
-My Settings,मेरी सेटिंग्स
+Enable Shopping Cart,शॉपिंग कार्ट सक्षम करें
+Go ahead and add something to your cart.,आगे बढ़ो और अपनी गाड़ी को कुछ जोड़ सकते.
+Hey! Go ahead and add an address,अरे! आगे बढ़ो और एक पते जोड़
+Invalid Billing Address,अवैध बिलिंग पता
+Invalid Shipping Address,अवैध शिपिंग पता
+Missing Currency Exchange Rates for {0},के लिए मुद्रा विनिमय दरें गुम {0}
 Name is required,नाम आवश्यक है
-Name not permitted,अनुमति नहीं नाम
-New,नई
-New Record,नया रिकॉर्ड
-Next Record,अगला अभिलेख
-Next actions,अगली कार्रवाई
-No,नहीं
-No Communication tagged with this ,इस के साथ टैग कोई संचार
-No Report Loaded. Please use query-report/[Report Name] to run a report.,कोई रिपोर्ट भरा हुआ है. उपयोग क्वेरी रिपोर्ट / [रिपोर्ट नाम] की एक रिपोर्ट चलाने के लिए कृपया.
-No Results,कोई परिणाम नहीं
-No document selected,चयनित कोई दस्तावेज़
-No one,कोई नहीं
-No permission to edit,संपादित करने के लिए कोई अनुमति नहीं
-No records tagged.,कोई रिकॉर्ड टैग.
-None,कोई नहीं
-None: End of Workflow,कोई नहीं: कार्यप्रवाह समाप्ति
-Not Allowed,
-Not Found,नहीं मिला
-Not Linked to any record.,लिंक्ड कोई रिकॉर्ड नहीं है.
-Not Permitted,अनुमति नहीं
-Not Submitted,सबमिट नहीं
-Not allowed,अनुमति नहीं
-Not enough permission to see links.,पर्याप्त के लिए लिंक को देखने की अनुमति नहीं है.
-Not equals,नहीं के बराबर होती है
-Not found,नहीं मिला
-Not permitted,अनुमति नहीं
-Note: Other permission rules may also apply,नोट: अन्य अनुमति के नियम भी लागू हो सकता है
-Nothing to show,दिखाने के लिए कुछ भी नहीं
-Nothing to show for this selection,इस चयन के लिए दिखाने के लिए कुछ भी नहीं
-Notify By Email,ईमेल से सूचित
-Open source ERP built for the web,वेब के लिए बनाया खुला स्रोत ईआरपी
-Or Created By,या द्वारा बनाया गया
-Original Message,मूल संदेश
-Page not found,पृष्ठ नहीं मिला
-Paid,
-Partially Billed,
-Partially Delivered,
-Permanently Cancel {0}?,स्थायी रूप से {0} रद्द करें?
-Permanently Submit {0}?,स्थायी रूप से {0} सबमिट करें ?
-Permanently delete {0}?,स्थायी रूप से {0} को हटाने ?
-Pick Columns,स्तंभ उठाओ
-Please attach a file first.,पहले एक फ़ाइल संलग्न करें.
-Please attach a file or set a URL,एक फ़ाइल संलग्न या एक यूआरएल निर्धारित करें
-Please enable pop-ups,पॉप अप सक्षम करें
-Please enter Event's Date and Time!,घटना की तिथि और समय दर्ज करें !
-Please enter some text!,कुछ पाठ दर्ज करें!
-Please enter title!,शीर्षक दर्ज करें !
-Please login to Upvote!,Upvote लॉगिन करें !
-Please specify,कृपया बताएं
-Please specify a,कृपया बताएं एक
-Please specify a Price List which is valid for Territory,
-Please specify currency in Company,
-Please write something,
-Please write something in subject and message!,
-Post already exists. Cannot add again!,पोस्ट पहले से ही मौजूद है. फिर से नहीं जोड़ सकते हैं!
-Post does not exist. Please add post!,डाक मौजूद नहीं है . पोस्ट जोड़ने के लिए धन्यवाद !
-Previous Record,पिछला रिकॉर्ड
+Not Allowed,अनुमति नहीं
+Paid,प्रदत्त
+Partially Billed,आंशिक रूप से बिल
+Partially Delivered,आंशिक रूप से वितरित
+Please specify a Price List which is valid for Territory,राज्य क्षेत्र के लिए मान्य है जो एक मूल्य सूची निर्दिष्ट करें
+Please specify currency in Company,कंपनी में मुद्रा निर्दिष्ट करें
+Please write something,कुछ लिखें
+Please write something in subject and message!,विषय और संदेश में कुछ लिखने के लिए धन्यवाद !
 Price List,कीमत सूची
-Print,प्रिंट
-Print...,प्रिंट ...
-Priority,प्राथमिकता
-Query Report,क्वेरी रिपोर्ट
-Quotation Series,
-Refresh,ताज़ा करना
-Reload Page,पृष्ठ पुनः लोड
-Remove Bookmark,बुकमार्क निकालें
-Rename...,नाम बदलें ...
-Report,रिपोर्ट
-Report was not saved (there were errors),रिपोर्ट नहीं बचाया (वहाँ त्रुटियों थे)
-Save,बचाना
-Search,खोजें
-Select All,सभी का चयन
-Select Attachments,किए गए अनुलग्नकों के चयन करें
-Select Print Format,प्रिंट प्रारूप का चयन करें
-Select Report Name,रिपोर्ट नाम का चयन करें
-Select To Download:,डाउनलोड करने के लिए चयन करें:
-Select Type,प्रकार का चयन करें
-Select dates to create a new ,एक नया बनाने की दिनांक चुने
-Select or drag across time slots to create a new event.,का चयन करें या एक नई घटना बनाने के लिए टाइम स्लॉट भर में खींचें.
-Send,भेजें
-Send As Email,ईमेल के रूप में भेजें
-Send Me A Copy,मुझे एक कॉपी भेज
-Sent or Received,भेजा या प्राप्त
-Serial No,नहीं सीरियल
-Session Expired. Logging you out,सत्र समाप्त हो गया. आप लॉग आउट
-Set Link,सेट लिंक
+Price List not configured.,मूल्य सूची कॉन्फ़िगर नहीं.
+Quotation Series,कोटेशन सीरीज
 Shipping Rule,नौवहन नियम
 Shopping Cart,खरीदारी की टोकरी
-Shopping Cart Price List,
-Shopping Cart Price Lists,
-Shopping Cart Settings,
-Shopping Cart Shipping Rule,
-Shopping Cart Shipping Rules,
-Shopping Cart Taxes and Charges Master,
-Shopping Cart Taxes and Charges Masters,
-Shortcut,शॉर्टकट
-Show Details,विवरण दिखाएं
-Show Tags,दिखाएँ टैग
-Show rows with zero values,शून्य मान के साथ पंक्तियों दिखाएं
-Showing only for (if not empty),के लिए ही दिखा रहा है ( नहीं तो खाली )
-Sorry we were unable to find what you were looking for.,खेद है कि हम खोजने के लिए आप क्या देख रहे थे करने में असमर्थ थे.
-Sorry you are not permitted to view this page.,खेद है कि आपको इस पृष्ठ को देखने की अनुमति नहीं है.
-Sort By,द्वारा क्रमबद्ध करें
-Start Report For,प्रारंभ लिए रिपोर्ट
-Subject,विषय
-Submit,प्रस्तुत करना
-Submitted,पेश
-Switch to Website,वेबसाइट के लिए स्विच
-Tags,टैग
-Tax Master,
-Test Runner,परीक्षण धावक
-Then By (optional),तब तक (वैकल्पिक)
-There were errors,त्रुटियां थीं
-There were errors while sending email. Please try again.,ईमेल भेजने के दौरान त्रुटि . पुन: प्रयास करें .
-This is PERMANENT action and you cannot undo. Continue?,यह स्थायी कार्रवाई की है और आप पूर्ववत नहीं कर सकते. जारी रखें?
-This is permanent action and you cannot undo. Continue?,यह स्थायी कार्रवाई है और आप पूर्ववत नहीं कर सकते. जारी रखें?
-To,से
-To Pay,
-"To report an issue, go to ",
-"To run a test add the module name in the route after '{0}'. For example, {1}","एक परीक्षण '{0}' के बाद मार्ग में मॉड्यूल नाम जोड़ने को चलाने के लिए . उदाहरण के लिए , {1}"
-Unable to load: {0},लोड करने में असमर्थ : {0}
-Unknown Column: {0},अज्ञात स्तंभ : {0}
-Unknown Print Format: {0},अज्ञात छापा स्वरूप: {0}
-Unread Messages,अपठित संदेशों
-Update,अद्यतन
+Shopping Cart Price List,शॉपिंग कार्ट में मूल्य सूची
+Shopping Cart Price Lists,शॉपिंग कार्ट में मूल्य सूची
+Shopping Cart Settings,शॉपिंग कार्ट सेटिंग्स
+Shopping Cart Shipping Rule,शॉपिंग कार्ट शिपिंग नियम
+Shopping Cart Shipping Rules,शॉपिंग कार्ट शिपिंग नियम
+Shopping Cart Taxes and Charges Master,शॉपिंग कार्ट में करों और शुल्कों मास्टर
+Shopping Cart Taxes and Charges Masters,शॉपिंग कार्ट में करों और शुल्कों मास्टर्स
+Something went wrong!,कुछ गलत हो गया!
+Something went wrong.,कुछ गलत हो गया.
+Tax Master,टैक्स मास्टर
+To Pay,भुगतान करने के लिए
 Updated,अद्यतित
-Upload,अपलोड
-Upload Attachment,अनुलग्नक अपलोड करें
-Upload a file,एक फ़ाइल अपलोड करें
-Uploading...,अपलोड हो रहा है ...
-User Permission Restrictions,उपयोगकर्ता की अनुमति प्रतिबंध
-User Restrictions,उपयोगकर्ता का प्रतिबंध
-With Groups,समूह के साथ
-With Ledgers,बहीखाते के साथ
-Workflow will start after saving.,कार्यप्रवाह सहेजने के बाद शुरू कर देंगे.
-Yes,हां
-Yesterday,कल
-You are not allowed to create / edit reports,आप / संपादित रिपोर्ट बनाने के लिए अनुमति नहीं है
-You are not allowed to create {0},तुम बनाने के लिए अनुमति नहीं है {0}
-You are not allowed to export this report,आप इस रिपोर्ट को निर्यात करने की अनुमति नहीं है
-You are not allowed to print this document,आप इस दस्तावेज़ मुद्रित करने की अनुमति नहीं है
-You are not allowed to reply to this ticket.,
-You are not allowed to send emails related to this document,आप इस दस्तावेज़ से संबंधित ईमेल भेजने की अनुमति नहीं है
-You need to enable Shopping Cart,
-"Your download is being built, this may take a few moments...","आपका डाउनलोड का निर्माण किया जा रहा है, इसमें कुछ समय लग सकता है ..."
-and,और
-comment,टिप्पणी
-comments,टिप्पणियां
-found,पाया
-is not allowed.,अनुमति नहीं है.
-or,या
-to,से
-values and dates,मूल्यों और तारीखें
-{0} cannot be purchased using Shopping Cart,
+You are not allowed to reply to this ticket.,आप इस टिकट का उत्तर देने की अनुमति नहीं है .
+You need to be logged in to view your cart.,आप अपनी गाड़ी को देखने के लिए लॉग इन करना होगा.
+You need to enable Shopping Cart,आप शॉपिंग कार्ट में सक्रिय करने की जरूरत
+{0} cannot be purchased using Shopping Cart,{0} शॉपिंग कार्ट का उपयोग कर खरीदा नहीं जा सकता
 {0} is required,{0} के लिए आवश्यक है
-{0} {1} has a common territory {2},
+{0} {1} has a common territory {2},{0} {1} एक सामान्य क्षेत्र है {2}

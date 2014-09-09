@@ -132,21 +132,22 @@ def guess_territory():
 		frappe.db.get_value("Shopping Cart Settings", None, "territory") or \
 			get_root_of("Territory")
 
-def decorate_quotation_doc(doc):
-	for d in doc.get_all_children():
-		if d.item_code:
-			d.update(frappe.db.get_value("Item", d.item_code,
-				["website_image", "description", "page_name"], as_dict=True))
-			d.formatted_rate = fmt_money(d.rate, currency=doc.currency)
-			d.formatted_amount = fmt_money(d.amount, currency=doc.currency)
-		elif d.charge_type:
-			d.formatted_tax_amount = fmt_money(flt(d.tax_amount) / doc.conversion_rate,
-				currency=doc.currency)
+def decorate_quotation_doc(quotation_doc):
+	doc = frappe._dict(quotation_doc.as_dict())
+	for d in doc.get("quotation_details", []):
+		d.update(frappe.db.get_value("Item", d["item_code"],
+			["website_image", "description", "page_name"], as_dict=True))
+		d["formatted_rate"] = fmt_money(d.get("rate"), currency=doc.currency)
+		d["formatted_amount"] = fmt_money(d.get("amount"), currency=doc.currency)
+
+	for d in doc.get("other_charges", []):
+		d["formatted_tax_amount"] = fmt_money(flt(d.get("tax_amount")) / doc.conversion_rate,
+			currency=doc.currency)
 
 	doc.formatted_grand_total_export = fmt_money(doc.grand_total_export,
 		currency=doc.currency)
 
-	return doc.as_dict()
+	return doc
 
 def _get_cart_quotation(party=None):
 	if not party:
@@ -174,6 +175,7 @@ def _get_cart_quotation(party=None):
 			qdoc.contact_person = frappe.db.get_value("Contact", {"email_id": frappe.session.user,
 				"customer": party.name})
 
+		qdoc.ignore_permissions = True
 		qdoc.run_method("set_missing_values")
 		apply_cart_settings(party, qdoc)
 

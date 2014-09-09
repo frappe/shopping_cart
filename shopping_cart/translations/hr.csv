@@ -1,221 +1,29 @@
- by Role ,prema ulozi
- is not set,nije postavljen
-""" does not exists",""" Ne postoji"
-2 days ago,Prije 2 dana
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> Dodaj / Uredi < />"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Dodaj / Uredi < />"
-About,Oko
-Actions,akcije
-Add,Dodati
-Add Attachments,Dodaj privitke
-Add Bookmark,Dodaj Bookmark
-Add Column,Dodaj stupac
-Add Message,Dodaj poruku
-Add Reply,Dodaj Odgovor
-Add Serial No,Dodaj rednim brojem
-Add This To User's Restrictions,Dodaj Ovaj na korisnikov Ograničenja
-Add attachment,Dodaj privitak
-Add new row,Dodaj novi redak
-Add to To Do,Dodaj u Raditi
-Add to To Do List of,Dodaj u napraviti popis od
-"Allowing DocType, DocType. Be careful!","Dopuštanje DOCTYPE , vrstu dokumenata . Budite oprezni !"
-Alternative download link,Alternativni link za download
-Amend,Ispraviti
-Are you sure you want to delete the attachment?,Jeste li sigurni da želite izbrisati privitak?
-Ascending,Uzlazni
-Assign To,Dodijeliti
-Assigned To,Dodijeljeno
-Assignments,zadaci
-Attach Document Print,Priloži dokument Ispis
-Attach as web link,Pričvrstite kao web veze
-Attachments,Privitci
 Billed,Naplaćeno
-Bookmarks,Favoriti
-Built on,izgrađen na
-Calendar,Kalendar
-Cancel,Otkazati
-Cancelled,Otkazan
-Cannot edit standard fields,Ne možete uređivati ​​standardnih polja
-Cannot open instance when its {0} is open,Ne možete otvoriti primjer kada je {0} je otvoren
-Cannot open {0} when its instance is open,Ne možete otvoriti {0} kada je instanca je otvoren
-Cannot print cancelled documents,Ne možete ispisivati ​​dokumente otkazan
-Clear Cache,Clear Cache
-Click on row to view / edit.,Kliknite na red za pregled / uređivanje .
-Click to Expand / Collapse,Kliknite na Proširi / Sažmi
-Close,Zatvoriti
-Close: {0},Zatvori : {0}
-Collapse,kolaps
-Comment,Komentirati
-Comments,Komentari
-Communication Medium,Komunikacija srednje
 Company,Društvo
-Complete By,Kompletan Do
-Copy,Kopirajte
-Creation / Modified By,Stvaranje / Izmijenio
 Currency is required for Price List {0},Valuta je potrebno za Cjenika {0}
-Current status,Trenutni status
-Custom Reports,Prilagođena izvješća
-Customize,Prilagodite
-Date must be in format: {0},Datum mora biti u obliku : {0}
-Dear,Drag
 Default Customer Group,Zadani Korisnik Grupa
 Default Territory,Zadani Regija
-Delete,Izbrisati
-Delete Row,Izbriši redak
 Delivered,Isporučena
-Descending,Spuštanje
-Document Status transition from ,Dokument Status prijelaz iz
-Document Status transition from {0} to {1} is not allowed,Status dokumenta tranzicija iz {0} u {1} nije dopušteno
-Document is only editable by users of role,Dokument je samo uređivati ​​korisnika ulozi
-Documentation,Dokumentacija
-Download,Preuzimanje
-Drafts,Nacrti
-Drag to sort columns,Povuci za sortiranje stupaca
-Edit,Uredi
-Editable,Uređivati
-Email,E-mail
-"Email addresses, separted by commas","E-mail adrese, separted zarezom"
-Email sent to {0},E-mail poslan na {0}
-Email...,E-mail ...
 Enable Shopping Cart,Omogućite Košarica
-Enter Value,Unesite vrijednost
-Equals,jednakima
-Expand,proširiti
-Export,Izvoz
-Export not allowed. You need {0} role to export.,Izvoz nisu dopušteni . Trebate {0} ulogu za izvoz .
-Field {0} is not selectable.,Polje {0} se ne može odabrati .
-File,File
-Filter,Filter
-"For comparative filters, start with","Za komparativne filtera, početi s"
-For ranges,Za raspone
-Form,Oblik
-Forums,Forum
-From Date must be before To Date,Od datuma mora biti prije do danas
-Gantt Chart,Gantogram
-Get,Dobiti
-Get From ,Nabavite Od
-Greater or equals,Veće ili jednaki
-Greater than,veći od
-"Grid ""","Grid """
-"Group Added, refreshing...","Grupa Dodano , osvježavajuće ..."
-Help,Pomoći
-History,Povijest
-"Ignoring Item {0}, because a group exists with the same name!","Ignoriranje Stavka {0} , jer jegrupa postoji s istim imenom !"
-Import,Uvoz
-In,u
-In response to,U odgovoru na
-Insert Below,Umetnite Ispod
-Insert Row,Umetnite Row
+Go ahead and add something to your cart.,Ići naprijed i dodati nešto u košaricu.
+Hey! Go ahead and add an address,Hej! Ići naprijed i dodati adresu
 Invalid Billing Address,Pogrešna adresa naplate
-Invalid Email: {0},Invalid Email : {0}
-Invalid Filter: {0},Invalid Filter : {0}
 Invalid Shipping Address,Invalid Dostava Adresa
-Last updated by,Posljednji put ažurirao
-Less or equals,Manje ili jednaki
-Less than,manje od
-Like,kao
-Linked With,Povezan s
-List,Popis
-Loading,Utovar
-Loading Report,Učitavanje izvješće
-Logout,Odjava
-Make a new,Napravite novi
-Mandatory fields required in {0},Obavezna polja potrebni u {0}
-Mandatory filters required:\n,Obvezni filteri potrebni : \ n
-Message,Poruka
 Missing Currency Exchange Rates for {0},Nedostaje Tečajne stope za {0}
-Missing Values Required,Nedostaje vrijednosti potrebne
-Modified by,Izmijenio
-More,Više
-Move Down: {0},Pomicanje dolje : {0}
-Move Up: {0},Move Up : {0}
-My Settings,Moje postavke
 Name is required,Ime je potrebno
-Name not permitted,Ime nije dopušteno
-New,novi
-New Record,Novi rekord
-Next Record,Sljedeći slog
-Next actions,Sljedeći akcije
-No,Ne
-No Communication tagged with this ,Ne Komunikacija označio s ovim
-No Report Loaded. Please use query-report/[Report Name] to run a report.,Ne Izvješće Loaded. Molimo koristite upita izvješće / [Prijavi Ime] pokrenuti izvješće.
-No Results,nema Rezultati
-No document selected,Nema odabranih dokumenata
-No one,Niko
-No permission to edit,Nema dozvole za uređivanje
-No records tagged.,Nema zapisa tagged.
-None,Nijedan
-None: End of Workflow,Ništa: Kraj Workflow
 Not Allowed,Not Allowed
-Not Found,Not Found
-Not Linked to any record.,Nije povezan s bilo rekord.
-Not Permitted,Nije dopušteno
-Not Submitted,ne Postavio
-Not allowed,nije dopušteno
-Not enough permission to see links.,Nije dovoljno dozvolu za vidjeti linkove.
-Not equals,nisu jednaki
-Not found,nije pronađen
-Not permitted,nije dopušteno
-Note: Other permission rules may also apply,Napomena: Ostala pravila dozvole također može primijeniti
-Nothing to show,Ništa pokazati
-Nothing to show for this selection,Ništa za pokazati ovom izboru
-Notify By Email,Obavijesti e-poštom
-Open source ERP built for the web,Open source ERP izgrađena za web
-Or Created By,Ili stvorili
-Original Message,Izvorni Poruka
-Page not found,Stranica nije pronađena
 Paid,plaćen
 Partially Billed,djelomično Naplaćeno
 Partially Delivered,djelomično Isporučeno
-Permanently Cancel {0}?,Trajno Odustani {0} ?
-Permanently Submit {0}?,Trajno Podnijeti {0} ?
-Permanently delete {0}?,Trajno brisanje {0} ?
-Pick Columns,Pick stupce
-Please attach a file first.,Molimo priložite datoteku prva.
-Please attach a file or set a URL,Molimo priložite datoteku ili postaviti URL
-Please enable pop-ups,Molimo omogućite pop-up prozora
-Please enter Event's Date and Time!,Unesite događaja Datum i vrijeme!
-Please enter some text!,Unesite tekst !
-Please enter title!,Unesite naslov !
-Please login to Upvote!,"Molimo , prijavite se upvote !"
-Please specify,Navedite
-Please specify a,Navedite
 Please specify a Price List which is valid for Territory,Navedite cjenik koji vrijedi za teritoriju
 Please specify currency in Company,Navedite valutu u Društvu
 Please write something,Molimo napisati nešto
 Please write something in subject and message!,Molimo napisati nešto u temi i poruke !
-Post already exists. Cannot add again!,Post već postoji . Ne možete dodavati opet !
-Post does not exist. Please add post!,Post ne postoji . Molimo dodajte post!
-Previous Record,Prethodni rekord
 Price List,Cjenik
-Print,otisak
-Print...,Ispis ...
-Priority,Prioritet
-Query Report,Izvješće upita
+Price List not configured.,Popis Cijena nije konfiguriran.
 Quotation Series,Ponuda Serija
-Refresh,Osvježiti
-Reload Page,Osvježi stranicu
-Remove Bookmark,Uklonite Bookmark
-Rename...,Promjena naziva ...
-Report,Prijavi
-Report was not saved (there were errors),Izvješće nije spašen (bilo pogrešaka)
-Save,spasiti
-Search,Traži
-Select All,Odaberite sve
-Select Attachments,Odaberite privitke
-Select Print Format,Odaberite Print Format
-Select Report Name,Odaberite Naziv izvješća
-Select To Download:,Odaberete preuzimanje :
-Select Type,Odaberite Vid
-Select dates to create a new ,Odaberite datume za stvaranje nove
-Select or drag across time slots to create a new event.,Odaberite ili povucite preko minutaže stvoriti novi događaj.
-Send,Poslati
-Send As Email,Pošalji kao e-mail
-Send Me A Copy,Pošaljite mi kopiju
-Sent or Received,Poslana ili primljena
-Serial No,Serijski br
-Session Expired. Logging you out,Sjednica je istekao. Odjavljivanje
-Set Link,Postavite link
 Shipping Rule,Dostava Pravilo
 Shopping Cart,Košarica
 Shopping Cart Price List,Košarica Cjenik
@@ -225,64 +33,14 @@ Shopping Cart Shipping Rule,Košarica Dostava Pravilo
 Shopping Cart Shipping Rules,Košarica Dostava Pravila
 Shopping Cart Taxes and Charges Master,Košarica poreze i troškove Master
 Shopping Cart Taxes and Charges Masters,Košarica Porezi i naknade Masters
-Shortcut,Prečac
-Show Details,Prikaži pojedinosti
-Show Tags,Pokaži Oznake
-Show rows with zero values,Prikaži retke s nula vrijednosti
-Showing only for (if not empty),Prikaz samo za ( ako ne i prazna )
-Sorry we were unable to find what you were looking for.,Nažalost nismo uspjeli pronaći ono što su tražili.
-Sorry you are not permitted to view this page.,Žao nam je što nije dozvoljeno da vidite ovu stranicu.
-Sort By,Sortiraj po
-Start Report For,Početak izvješće za
-Subject,Predmet
-Submit,Podnijeti
-Submitted,Prijavljen
-Switch to Website,Prebacite se na web stranici
-Tags,Oznake
+Something went wrong!,Nešto je pošlo po krivu!
+Something went wrong.,Nešto je pošlo po zlu.
 Tax Master,Porezna Master
-Test Runner,Test Runner
-Then By (optional),Zatim Do (opcionalno)
-There were errors,Bilo je grešaka
-There were errors while sending email. Please try again.,Bilo je grešaka tijekom slanja e-pošte. Molimo pokušajte ponovno .
-This is PERMANENT action and you cannot undo. Continue?,"To je stalna akcija, a ne možete poništiti. Nastaviti?"
-This is permanent action and you cannot undo. Continue?,"To je stalna akcija, a ne možete poništiti. Nastaviti?"
-To,Na
 To Pay,platiti
-"To report an issue, go to ",
-"To run a test add the module name in the route after '{0}'. For example, {1}","Za pokretanjetesta dodati ime modula u pravac nakon ' {0} ' . Na primjer , {1}"
-Unable to load: {0},Nije moguće opterećenje : {0}
-Unknown Column: {0},Nepoznato Stupac : {0}
-Unknown Print Format: {0},Nepoznato Print Format : {0}
-Unread Messages,Nepročitane poruke
-Update,Ažurirati
 Updated,Obnovljeno
-Upload,Pošalji
-Upload Attachment,Prenesi Prilog
-Upload a file,Prenesi datoteku
-Uploading...,Prijenos ...
-User Permission Restrictions,Dozvole korisnika Ograničenja
-User Restrictions,Korisničke Ograničenja
-With Groups,s Groups
-With Ledgers,s knjigama
-Workflow will start after saving.,Workflow će početi nakon štednje.
-Yes,Da
-Yesterday,Jučer
-You are not allowed to create / edit reports,Ne smiju stvoriti / uređivati ​​izvješća
-You are not allowed to create {0},Ne smiju se stvarati {0}
-You are not allowed to export this report,Ne smiju se izvoziti ovom izvješću
-You are not allowed to print this document,Ne smiju se ispisati taj dokument
 You are not allowed to reply to this ticket.,Vi ne smijete odgovoriti na ovu kartu.
-You are not allowed to send emails related to this document,Ne smiju slati e-mailove u vezi s ovim dokumentom
+You need to be logged in to view your cart.,Morate biti prijavljeni da biste vidjeli svoju košaricu.
 You need to enable Shopping Cart,Morate omogućiti Košarica
-"Your download is being built, this may take a few moments...","Vaš preuzimanje se gradi, to može potrajati nekoliko trenutaka ..."
-and,i
-comment,komentirati
-comments,komentari
-found,nađen
-is not allowed.,nije dopušteno.
-or,ili
-to,na
-values and dates,Vrijednosti i datumi
 {0} cannot be purchased using Shopping Cart,{0} ne može se kupiti pomoću Košarica
 {0} is required,{0} je potrebno
 {0} {1} has a common territory {2},{0} {1} ima zajednički teritorij {2}

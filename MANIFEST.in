@@ -15,4 +15,5 @@ recursive-include shopping_cart *.md
 recursive-include shopping_cart *.png
 recursive-include shopping_cart *.py
 recursive-include shopping_cart *.svg
+recursive-include shopping_cart/public *
 recursive-exclude shopping_cart *.pyc

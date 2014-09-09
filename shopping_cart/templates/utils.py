@@ -7,6 +7,7 @@ import json
 import frappe
 from frappe import _
 from frappe.utils import cint, formatdate
+from frappe import _
 
 def get_transaction_list(doctype, start, additional_fields=None):
 	# find customer id
@@ -48,6 +49,6 @@ def get_transaction_context(doctype, name):
 
 	doc = frappe.get_doc(doctype, name)
 	if doc.customer != customer:
-		raise frappe.PermissionError
+		return { "doc": frappe._dict({"name": _("Not Allowed")}) }
 	else:
-		return { "doc": doc.as_dict() }
+		return { "doc": doc }

@@ -1,271 +1,46 @@
- by Role ,
- is not set,
-""" does not exists",""" ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ"
-2 days ago,2 ದಿನಗಳ ಹಿಂದೆ
-About,ಕುರಿತು
-Actions,ಕ್ರಿಯೆಗಳು
-Add,ಸೇರಿಸು
-Add Attachments,ಲಗತ್ತುಗಳನ್ನು ಸೇರಿಸಿ
-Add Bookmark,ಸೇರಿಸಿ ಬುಕ್ಮಾರ್ಕ್
-Add Column,ಅಂಕಣ ಸೇರಿಸಿ
-Add Message,ಸಂದೇಶ ಸೇರಿಸಿ
-Add Reply,ಉತ್ತರಿಸಿ ಸೇರಿಸಿ
-Add Serial No,ಸೀರಿಯಲ್ ನಂ ಸೇರಿಸಿ
-Add This To User's Restrictions,ಬಳಕೆದಾರರ ನಿರ್ಬಂಧಗಳು ಈ ಸೇರಿಸಿ
-Add attachment,ಲಗತ್ತು ಸೇರಿಸಿ
-Add new row,ಹೊಸ ಸಾಲನ್ನು ಸೇರಿಸಿ
-Add to To Do,ಮಾಡಲು ಸೇರಿಸಿ
-Add to To Do List of,ಪಟ್ಟಿ ಮಾಡಲು ಸೇರಿಸಿ
-"Allowing DocType, DocType. Be careful!",ಅವಕಾಶ doctype doctype . ಎಚ್ಚರಿಕೆ!
-Alternative download link,ಪರ್ಯಾಯ ಡೌನ್ಲೋಡ್ ಲಿಂಕ್
-Amend,ತಪ್ಪುಸರಿಪಡಿಸು
-Are you sure you want to delete the attachment?,ನೀವು ಬಾಂಧವ್ಯ ಅಳಿಸಲು ಬಯಸುತ್ತೀರೆ?
-Ascending,ಆರೋಹಣ
-Assign To,ನಿಗದಿ
-Assigned To,ನಿಯೋಜಿಸಲಾಗಿದೆ
-Assignments,ನಿಯೋಜನೆಗಳು
-Attach Document Print,ದಸ್ತಾವೇಜನ್ನು ಮುದ್ರಿಸು ಲಗತ್ತಿಸಿ
-Attach as web link,ವೆಬ್ ಲಿಂಕ್ ಲಗತ್ತಿಸಿ
-Attachments,ಲಗತ್ತುಗಳು
+"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","ಕವಿದ href=""#Sales Browser/Customer Group""> ಸೇರಿಸಿ / ಸಂಪಾದಿಸಿ </ ಒಂದು >"
+"<a href=""#Sales Browser/Territory"">Add / Edit</a>","ಕವಿದ href=""#Sales Browser/Territory""> ಸೇರಿಸಿ / ಸಂಪಾದಿಸಿ </ ಒಂದು >"
 Billed,ಖ್ಯಾತವಾದ
-Bookmarks,ಬುಕ್ಮಾರ್ಕ್ಗಳನ್ನು
-Built on,ಕಟ್ಟಲಾಗಿದೆ
-Calendar,ಕ್ಯಾಲೆಂಡರ್
-Cancel,ರದ್ದು
-Cancelled,ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ
-Cannot edit standard fields,ಡೀಫಾಲ್ಟ್ ಜಾಗ ಸಂಪಾದಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ
-Cannot open instance when its {0} is open,ಅದರ {0} ತೆರೆದಿರುತ್ತದೆ ಉದಾಹರಣೆಗೆ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ
-Cannot open {0} when its instance is open,ಅದರ ಉದಾಹರಣೆಗೆ ತೆರೆದುಕೊಂಡಿದ್ದಾಗ {0} ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ
-Cannot print cancelled documents,ರದ್ದು ದಾಖಲೆಗಳನ್ನು ಮುದ್ರಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ
-Clear Cache,ತೆರವುಗೊಳಿಸಿ ಸಂಗ್ರಹ
-Click on row to view / edit.,/ ಬದಲಾಯಿಸಿ ವೀಕ್ಷಿಸಲು ಸಾಲು ಕ್ಲಿಕ್ ಮಾಡಿ.
-Click to Expand / Collapse,/ ಕುಗ್ಗಿಸು ವಿಸ್ತರಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ
-Close,ಮುಚ್ಚಿ
-Close: {0},ಮುಚ್ಚಿ : {0}
-Collapse,ಕುಸಿತ
-Comment,ಟಿಪ್ಪಣಿ
-Comments,ಪ್ರತಿಕ್ರಿಯೆಗಳು
-Communication Medium,ಸಂವಹನ ಮಧ್ಯಮ
-Complete By,ದಿ ಕಂಪ್ಲೀಟ್
-Copy,ನಕಲು
-Creation / Modified By,ಸೃಷ್ಟಿ / ಬದಲಾಯಿಸಲಾಗಿತ್ತು
+Company,ಕಂಪನಿ
 Currency is required for Price List {0},ಕರೆನ್ಸಿ ಬೆಲೆ ಪಟ್ಟಿ ಅಗತ್ಯವಿದೆ {0}
-Current status,ಪ್ರಸ್ತುತ ಸ್ಥಿತಿಯನ್ನು
-Custom Reports,ಕಸ್ಟಮ್ ವರದಿಗಳು
-Customize,ಕಸ್ಟಮೈಸ್
-Date must be in format: {0},ದಿನಾಂಕ ಸ್ವರೂಪದಲ್ಲಿರಬೇಕು : {0}
-Dear,ಪ್ರಿಯ
-Delete,ಅಳಿಸಿ
-Delete Row,ಸಾಲು ಅಳಿಸಿ
+Default Customer Group,ಡೀಫಾಲ್ಟ್ ಗ್ರಾಹಕ ಗುಂಪಿನ
+Default Territory,ಡೀಫಾಲ್ಟ್ ಪ್ರದೇಶ
 Delivered,ತಲುಪಿಸಲಾಗಿದೆ
-Descending,ಅವರೋಹಣ
-Document Status transition from ,
-Document Status transition from {0} to {1} is not allowed,{1} ಗೆ {0} ನಿಂದ ಡಾಕ್ಯುಮೆಂಟ್ ಸ್ಥಿತಿಯನ್ನು ಪರಿವರ್ತನೆ ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ
-Document is only editable by users of role,ಡಾಕ್ಯುಮೆಂಟ್ ಪಾತ್ರವನ್ನು ಬಳಕೆದಾರರು ಮಾತ್ರ ಸಂಪಾದಿಸಬಹುದು
-Documentation,ದಾಖಲೆ
-Download,ಡೌನ್ಲೋಡ್
-Drafts,ಡ್ರಾಫ್ಟ್ಗಳು
-Drag to sort columns,ಕಾಲಮ್ಗಳನ್ನು ವಿಂಗಡಿಸಲು ಎಳೆಯಿರಿ
-Edit,ಸಂಪಾದಿಸು
-Editable,ಸಂಪಾದಿಸಬಹುದಾದ
-Email,ಗಾಜುಲೇಪ
-"Email addresses, separted by commas","ಅಲ್ಪವಿರಾಮದಿಂದ separted ಇಮೇಲ್ ವಿಳಾಸಗಳು ,"
-Email sent to {0},ಕಳುಹಿಸಲಾಗಿದೆ {0}
-Email...,ಇಮೇಲ್ ...
-Enter Value,ಮೌಲ್ಯ ಯನ್ನು
-Equals,ಸಮ
-Expand,ವಿಸ್ತರಿಸಿ
-Export,ರಫ್ತು
-Export not allowed. You need {0} role to export.,ರಫ್ತು ಅವಕಾಶ . ನೀವು ರಫ್ತು {0} ಪಾತ್ರದಲ್ಲಿ ಅಗತ್ಯವಿದೆ .
-Field {0} is not selectable.,ಫೀಲ್ಡ್ {0} ಆಯ್ಕೆಮಾಡಬಹುದಾದ ಅಲ್ಲ.
-File,ಫೈಲ್
-Filter,ಶೋಧಕ
-"For comparative filters, start with","ತುಲನಾತ್ಮಕ ಶೋಧಕಗಳ , ಆರಂಭವಾಗಬೇಕು"
-For ranges,ಶ್ರೇಣಿಗಳಿಗೆ
-Form,ಫಾರ್ಮ್
-Forums,ಮಾರುಕಟ್ಟೆ
-From Date must be before To Date,ದಿನಾಂಕ ಇಲ್ಲಿಯವರೆಗೆ ಮೊದಲು ಇರಬೇಕು
-Gantt Chart,ಗಂಟ್ ಚಾರ್ಟ್
-Get,ಪಡೆಯಿರಿ
-Get From ,
-Greater or equals,ಗ್ರೇಟರ್ ಅಥವಾ ಸಮ
-Greater than,ಹೆಚ್ಚು
-"Grid ""","ಗ್ರಿಡ್ """
-"Group Added, refreshing...","ಗುಂಪು ರಿಫ್ರೆಶ್ , ಸೇರಿಸಲಾಗಿದೆ ..."
-Help,ಸಹಾಯ
-History,ಇತಿಹಾಸ
-"Ignoring Item {0}, because a group exists with the same name!","ನಿರ್ಲಕ್ಷಿಸಲಾಗುತ್ತಿದೆ ಐಟಂ {0} , ಗುಂಪು ಅದೇ ಹೆಸರಿನಲ್ಲಿ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ ಕಾರಣ!"
-Import,ಆಮದು
-In,ರಲ್ಲಿ
-In response to,ಪ್ರತಿಕ್ರಿಯೆಯಾಗಿ
-Insert Below,ಕೆಳಗೆ ಸೇರಿಸಿ
-Insert Row,ಸಾಲನ್ನು ಸೇರಿಸಿ
+Enable Shopping Cart,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಸಕ್ರಿಯಗೊಳಿಸಿ
+Go ahead and add something to your cart.,ಮುಂದೆ ಹೋಗಿ ಮತ್ತು ನಿಮ್ಮ ಕಾರ್ಟ್ ಏನಾದರೂ ಸೇರಿಸಿ.
+Hey! Go ahead and add an address,ಹೇ! ಮುಂದೆ ಹೋಗಿ ಒಂದು ಸೇರಿಸಿ
 Invalid Billing Address,ಅಮಾನ್ಯವಾದ ಬಿಲ್ಲಿಂಗ್ ವಿಳಾಸ
-Invalid Email: {0},ಅಮಾನ್ಯವಾದ ಇಮೇಲ್ : {0}
-Invalid Filter: {0},ಅಮಾನ್ಯವಾದ ಫಿಲ್ಟರ್ : {0}
 Invalid Shipping Address,ಅಮಾನ್ಯವಾದ ಶಿಪ್ಪಿಂಗ್ ವಿಳಾಸ
-Last updated by,ಕೊನೆಯ ಮೂಲಕ ಅಪ್ಡೇಟ್ಗೊಳಿಸಲಾಗಿದೆ
-Less or equals,ಕಡಿಮೆ ಸಮ ಅಥವಾ
-Less than,ಕಡಿಮೆ
-Like,ಲೈಕ್
-Linked With,ಸಂಬಂಧ
-List,ಕುತಂತ್ರ
-Loading,ಲೋಡ್
-Loading Report,ಲೋಡ್ ವರದಿ
-Logout,ಲಾಗ್ ಔಟ್
-Make a new,ಹೊಸ ಮಾಡಿ
-Mandatory fields required in {0},ಅಗತ್ಯವಿದೆ ಕಡ್ಡಾಯ ಜಾಗ {0}
-Mandatory filters required:\n,ಕಡ್ಡಾಯ ಶೋಧಕಗಳು ಅಗತ್ಯವಿದೆ : \ N
-Message,ಸಂದೇಶ
 Missing Currency Exchange Rates for {0},ಕರೆನ್ಸಿ ವಿನಿಮಯ ದರಗಳು ಮಿಸ್ಸಿಂಗ್ {0}
-Missing Values Required,ಅಗತ್ಯ ELEMENTARY ಸ್ಥಳ
-Modified by,ಮಾರ್ಪಾಡಿಸಲ್ಪಟ್ಟಿದ್ದು
-More,ಇನ್ನಷ್ಟು
-Move Down: {0},ಕೆಳಗೆಚಲಿಸು : {0}
-Move Up: {0},ಮೇಲೆಚಲಿಸು : {0}
-My Settings,ನನ್ನ ಸೆಟ್ಟಿಂಗ್ಗಳನ್ನು
 Name is required,ಹೆಸರು ಅಗತ್ಯವಿದೆ
-Name not permitted,ಅನುಮತಿ ಹೆಸರು
-New,ಹೊಸ
-New Record,ಹೊಸ ದಾಖಲೆ
-Next Record,ಮುಂದೆ ರೆಕಾರ್ಡ್
-Next actions,ಮುಂದೆ ಕ್ರಮಗಳು
-No,ಇಲ್ಲ
-No Communication tagged with this ,
-No Report Loaded. Please use query-report/[Report Name] to run a report.,ಯಾವುದೇ ವರದಿ ಲೋಡೆಡ್ . ಒಂದು ವರದಿ ರನ್ ಪ್ರಶ್ನಾವಳಿ ವರದಿ / [ವರದಿ ಹೆಸರು ] ಬಳಸಿ.
-No Results,ಯಾವುದೇ ಫಲಿತಾಂಶಗಳು
-No document selected,ಆಯ್ಕೆ ಯಾವುದೇ ದಾಖಲೆ
-No one,ಯಾರೂ
-No permission to '{0}' {1},ಯಾವುದೇ ಅನುಮತಿಯಿಲ್ಲ ' {0} ' {1}
-No permission to edit,ಸಂಪಾದಿಸಲು ಯಾವುದೇ ಅನುಮತಿಯಿಲ್ಲ
-No records tagged.,ಯಾವುದೇ ದಾಖಲೆಗಳು ಟ್ಯಾಗ್ .
-None,ಯಾವುದೂ ಇಲ್ಲ
-None: End of Workflow,ಯಾವುದೂ : ವರ್ಕ್ಫ್ಲೋ ಅಂತ್ಯ
 Not Allowed,ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ
-Not Found,ಕಂಡುಬಂದಿಲ್ಲ
-Not Linked to any record.,ಯಾವುದೇ ದಾಖಲೆ ಲಿಂಕ್ .
-Not Permitted,ಅನುಮತಿಯಿಲ್ಲ
-Not Submitted,ಗ್ರಾಮೀಣರ
-Not allowed,ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ
-Not enough permission to see links.,ಮಾಡಿರುವುದಿಲ್ಲ ಕೊಂಡಿಗಳು ನೋಡಲು ಸಾಕಷ್ಟು ಅನುಮತಿ .
-Not equals,ಸಮ
-Not found,ಕಂಡುಬಂದಿಲ್ಲ
-Not permitted,ಅನುಮತಿ
-Note: Other permission rules may also apply,ಗಮನಿಸಿ : ಇತರೆ ನಿಯಮಗಳು ಅನುಮತಿ ಜೂನ್ ಆದ್ದರಿಂದ ಅರ್ಜಿ
-Nothing to show,ತೋರಿಸಲು ಏನೂ
-Nothing to show for this selection,ಈ ಆಯ್ಕೆಗೆ ತೋರಿಸಲು ಏನೂ
-Notify By Email,ಇಮೇಲ್ ಮೂಲಕ ಸೂಚಿಸಿ
-Open source ERP built for the web,ವೆಬ್ ನಿರ್ಮಿತವಾದ ತೆರೆದ ಮೂಲ ಏರ್ಪ
-Or Created By,ಅಥವಾ ರಚಿಸಲಾಗಿದೆ
-Original Message,ಮೂಲ ಸಂದೇಶ
-Page not found,ಪುಟ ಸಿಗಲಿಲ್ಲ
 Paid,ಪಾವತಿಸಿದ
 Partially Billed,ಭಾಗಶಃ ಖ್ಯಾತವಾದ
 Partially Delivered,ಭಾಗಶಃ ತಲುಪಿಸಲಾಗಿದೆ
-Permanently Cancel {0}?,ಶಾಶ್ವತವಾಗಿ {0} ರದ್ದು ?
-Permanently Submit {0}?,ಶಾಶ್ವತವಾಗಿ {0} ಸಲ್ಲಿಸಿ ?
-Permanently delete {0}?,ಶಾಶ್ವತವಾಗಿ {0} ಅಳಿಸಿ ?
-Pick Columns,ಕಾಲಮ್ಗಳು ಆರಿಸಿ
-Please attach a file first.,ಮೊದಲ ಒಂದು ಕಡತ ಲಗತ್ತಿಸಬಹುದು ದಯವಿಟ್ಟು .
-Please attach a file or set a URL,ಒಂದು ಕಡತ ಲಗತ್ತಿಸಬಹುದು ಅಥವಾ URL ಅನ್ನು ದಯವಿಟ್ಟು
-Please enable pop-ups,ಪಾಪ್ ಅಪ್ಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ದಯವಿಟ್ಟು
-Please enter Event's Date and Time!,ಈವೆಂಟ್ ನ ದಿನಾಂಕ ಮತ್ತು ಸಮಯ ನಮೂದಿಸಿ !
-Please enter some text!,ದಯವಿಟ್ಟು ಕೆಲವು ಪಠ್ಯವನ್ನು ನಮೂದಿಸಿ !
-Please enter title!,ಶೀರ್ಷಿಕೆ ನಮೂದಿಸಿ !
-Please login to Upvote!,Upvote ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ !
-Please specify,ಸೂಚಿಸಲು ದಯವಿಟ್ಟು
-Please specify a,ಒಂದು ಸೂಚಿಸಲು ದಯವಿಟ್ಟು
 Please specify a Price List which is valid for Territory,ಪ್ರದೇಶ ಮಾನ್ಯ ಬೆಲೆ ಪಟ್ಟಿ ಸೂಚಿಸಲು ದಯವಿಟ್ಟು
 Please specify currency in Company,ಕಂಪನಿ ಕರೆನ್ಸಿ ಸೂಚಿಸಲು ದಯವಿಟ್ಟು
 Please write something,ಏನೋ ಬರೆಯಲು ಮಾಡಿ
 Please write something in subject and message!,ವಿಷಯ ಮತ್ತು ಸಂದೇಶದ ಏನೋ ಬರೆಯಲು ಮಾಡಿ !
-Post already exists. Cannot add again!,ಪೋಸ್ಟ್ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ. ಮತ್ತೆ ಸೇರಿಸಲಾಗುವುದಿಲ್ಲ!
-Post does not exist. Please add post!,ಪೋಸ್ಟ್ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ . ಪೋಸ್ಟ್ ಸೇರಿಸಿ ದಯವಿಟ್ಟು !
-Previous Record,ಹಿಂದಿನ ದಾಖಲೆ
-Print,ಮುದ್ರಣ
-Print...,ಮುದ್ರಿಸು ...
-Priority,ಆದ್ಯತೆ
-Query Report,ಪ್ರಶ್ನೆಯ ವರದಿ
-Refresh,ರಿಫ್ರೆಶ್
-Reload Page,ಪುಟ ರೀಲೋಡ್
-Remove Bookmark,ಬುಕ್ಮಾರ್ಕ್ ತೆಗೆದುಹಾಕಿ
-Rename...,ಮರುಹೆಸರಿಸು ...
-Report,ವರದಿ
-Report an Issue,ಸಮಸ್ಯೆಯನ್ನು ವರದಿಮಾಡಿ
-Report was not saved (there were errors),ಉಳಿಸಲಾಗಿಲ್ಲ ಎಂಬುದನ್ನು ವರದಿ ( ದೋಷಗಳನ್ನು ಇದ್ದವು )
-Save,ಉಳಿಸಿ
-Search,ಹುಡುಕು
-Select All,ಎಲ್ಲಾ ಆಯ್ಕೆಮಾಡಿ
-Select Attachments,ಲಗತ್ತುಗಳನ್ನು ಆಯ್ಕೆ
-Select Print Format,ಆಯ್ಕೆ ಪ್ರಿಂಟ್ ಫಾರ್ಮ್ಯಾಟ್
-Select Report Name,ಆಯ್ಕೆ ರಿಪೋರ್ಟ್ ಹೆಸರು
-Select To Download:,ಡೌನ್ಲೋಡ್ ಮಾಡಿ
-Select Type,ಕೌಟುಂಬಿಕತೆ ಆಯ್ಕೆ
-Select dates to create a new ,
-Select or drag across time slots to create a new event.,ಆಯ್ಕೆ ಅಥವಾ ಹೊಸ ಈವೆಂಟ್ ರಚಿಸಲು ಸಮಯಾವಧಿಗಳ ಅಡ್ಡಲಾಗಿ ಎಳೆಯಿರಿ .
-Send,ಕಳುಹಿಸು
-Send As Email,ಇಮೇಲ್ ಕಳುಹಿಸಿ
-Send Me A Copy,ಮಿ ಪ್ರತಿಯನ್ನು ಕಳುಹಿಸಿ
-Sent or Received,ಕಳುಹಿಸಿದ ಅಥವಾ ಸ್ವೀಕರಿಸಿದ
-Serial No,ಅನುಕ್ರಮ ಸಂಖ್ಯೆ
-Session Expired. Logging you out,ಅಧಿವೇಶನ ಮುಗಿದಿದೆ. ನೀವು ನಿರ್ಗಮಿಸುವ
-Set Link,ಹೊಂದಿಸಿ ಲಿಂಕ್
-Shortcut,ಶಾರ್ಟ್ಕಟ್
-Show Details,ವಿವರಗಳನ್ನು ತೋರಿಸಿ
-Show Tags,ಶೋ ಟ್ಯಾಗ್ಗಳು
-Show rows with zero values,ಶೂನ್ಯ ಮೌಲ್ಯಗಳು ತೋರಿಸಿ ಸಾಲುಗಳನ್ನು
-Showing only for (if not empty),ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತಿದೆ (ಇಲ್ಲದಿದ್ದರೆ ಖಾಲಿ )
-Sorry we were unable to find what you were looking for.,ಕ್ಷಮಿಸಿ ನಾವು ನೀವು ಹುಡುಕುತ್ತಿರುವ ಏನು ಕಂಡುಹಿಡಿಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ .
-Sorry you are not permitted to view this page.,ಕ್ಷಮಿಸಿ ಈ ಪುಟವನ್ನು ವೀಕ್ಷಿಸಲು ಅನುಮತಿ ಇಲ್ಲ .
-Sort By,ವಿಂಗಡಿಸಿ
-Start Report For,ವರದಿಯ ಪ್ರಾರಂಭಿಸಿ
-Subject,ವಿಷಯ
-Submit,ಸಲ್ಲಿಸಿ
-Submitted,ಒಪ್ಪಿಸಿದ
-Switch to Website,ವೆಬ್ಸೈಟ್ ಬದಲಿಸಿ
-Tags,ದಿನ
-Test Runner,ಟೆಸ್ಟ್ ರನ್ನರ್
-Then By (optional),ನಂತರ ( ಐಚ್ಛಿಕ )
-There were errors,ದೋಷಗಳು ಇದ್ದವು
-There were errors while sending email. Please try again.,ಇಮೇಲ್ ಕಳುಹಿಸುವಾಗ ದೋಷಗಳು ಇದ್ದವು. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ .
-This is PERMANENT action and you cannot undo. Continue?,ಈ ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಿ ಹೋಗುತ್ತದೆ ಮತ್ತು ನೀವು ರದ್ದುಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮುಂದುವರಿಸಿ ?
-This is permanent action and you cannot undo. Continue?,ಇದು ಶಾಶ್ವತ ಆಕ್ಷನ್ ಮತ್ತು ನೀವು ರದ್ದುಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮುಂದುವರಿಸಿ ?
-To,ಗೆ
+Price List,ಬೆಲೆ ಪಟ್ಟಿ
+Price List not configured.,ಬೆಲೆ ಪಟ್ಟಿ ಕಾನ್ಫಿಗರ್.
+Quotation Series,ನುಡಿಮುತ್ತುಗಳು ಸರಣಿ
+Shipping Rule,ಶಿಪ್ಪಿಂಗ್ ರೂಲ್
+Shopping Cart,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್
+Shopping Cart Price List,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಬೆಲೆ ಪಟ್ಟಿ
+Shopping Cart Price Lists,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಬೆಲೆ ಪಟ್ಟಿ
+Shopping Cart Settings,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಸೆಟ್ಟಿಂಗ್ಗಳು
+Shopping Cart Shipping Rule,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಶಿಪ್ಪಿಂಗ್ ರೂಲ್
+Shopping Cart Shipping Rules,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಶಿಪ್ಪಿಂಗ್ ನಿಯಮಗಳು
+Shopping Cart Taxes and Charges Master,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ತೆರಿಗೆಗಳು ಮತ್ತು ಶುಲ್ಕಗಳು ಮಾಸ್ಟರ್
+Shopping Cart Taxes and Charges Masters,ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ತೆರಿಗೆಗಳು ಮತ್ತು ಶುಲ್ಕಗಳು ಮಾಸ್ಟರ್ಸ್
+Something went wrong!,ಏನೋ ತಪ್ಪಾಗಿದೆ!
+Something went wrong.,ಯಾವುದೋ ತಪ್ಪು ಸಂಭವಿಸಿದೆ.
+Tax Master,ತೆರಿಗೆ ಮಾಸ್ಟರ್
 To Pay,ಪಾವತಿಸಲು
-"To report an issue, go to ",
-"To run a test add the module name in the route after '{0}'. For example, {1}","ಪರೀಕ್ಷಾ ' {0} ' ನಂತರ ಮಾರ್ಗದಲ್ಲಿನ ಘಟಕ ಹೆಸರು ಸೇರಿಸಲು ರನ್ . ಉದಾಹರಣೆಗೆ, {1}"
-Unable to load: {0},ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ: {0}
-Unknown Column: {0},ಅಪರಿಚಿತ ಅಂಕಣ : {0}
-Unknown Print Format: {0},ಅಪರಿಚಿತ ಪ್ರಿಂಟ್ ಗಾತ್ರ : {0}
-Unread Messages,ಓದದ ಸಂದೇಶಗಳು
-Update,ಅಪ್ಡೇಟ್
 Updated,ನವೀಕರಿಸಲಾಗಿದೆ
-Upload,ಅಪ್ಲೋಡ್
-Upload Attachment,ಬಾಂಧವ್ಯ ಅಪ್ಲೋಡ್
-Upload a file,ಕಡತ ಸೇರಿಸಿ
-Uploading...,ಅಪ್ಲೋಡ್ ...
-User Permission Restrictions,UserPermission ನಿರ್ಬಂಧಗಳು
-User Restrictions,ಬಳಕೆದಾರ ನಿರ್ಬಂಧಗಳು
-With Groups,ಗುಂಪುಗಳು
-With Ledgers,ಲೆಡ್ಜರ್ನೊಂದಿಗೆ
-Workflow will start after saving.,ವರ್ಕ್ಫ್ಲೋ ಉಳಿಸುವ ನಂತರ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ .
-Yes,ಹೌದು
-Yesterday,ನಿನ್ನೆ
-You are not allowed to create / edit reports,ನೀವು / ಬದಲಾಯಿಸಿ ವರದಿಗಳು ರಚಿಸಲು ಅನುಮತಿ ಇಲ್ಲ
-You are not allowed to export this report,ನೀವು ಈ ವರದಿಯನ್ನು ರಫ್ತು ಮಾಡಲು ಅನುಮತಿ ಇಲ್ಲ
-You are not allowed to print this document,ನೀವು ಈ ದಸ್ತಾವೇಜನ್ನು ಮುದ್ರಿಸು ಅನುಮತಿ ಇಲ್ಲ
 You are not allowed to reply to this ticket.,ಈ ಟಿಕೆಟ್ ಪ್ರತ್ಯುತ್ತರ ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ.
-You are not allowed to send emails related to this document,ಈ ಡಾಕ್ಯುಮೆಂಟ್ಗೆ ಸಂಬಂಧಿಸಿದ ಇಮೇಲ್ಗಳನ್ನು ಕಳುಹಿಸಲು ಅನುಮತಿ ಇಲ್ಲ
+You need to be logged in to view your cart.,ನಿಮ್ಮ ಕಾರ್ಟ್ ಲಾಗಿನ್ ಅಗತ್ಯವಿದೆ.
 You need to enable Shopping Cart,ನೀವು ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಸಕ್ರಿಯಗೊಳಿಸಬೇಕು
-"Your download is being built, this may take a few moments...","ನಿಮ್ಮ ಡೌನ್ಲೋಡ್ ಕಟ್ಟಲಾಗುತ್ತಿದೆ , ಈ ಜೂನ್ ಕೆಲವು ಕ್ಷಣಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು ..."
-and,ಮತ್ತು
-comment,ಟಿಪ್ಪಣಿ
-comments,ಪ್ರತಿಕ್ರಿಯೆಗಳು
-found,ಕಂಡು
-is not allowed.,ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ.
-or,ಅಥವಾ
-to,ಗೆ
-values and dates,ಮೌಲ್ಯಗಳು ಮತ್ತು ದಿನಾಂಕ
 {0} cannot be purchased using Shopping Cart,{0} ಶಾಪಿಂಗ್ ಕಾರ್ಟ್ ಬಳಸಿ ಕೊಳ್ಳಬಹುದು ಸಾಧ್ಯವಿಲ್ಲ
 {0} is required,{0} ಅಗತ್ಯವಿದೆ
 {0} {1} has a common territory {2},{0} {1} ಸಾಮಾನ್ಯ ಪ್ರದೇಶವನ್ನು ಹೊಂದಿದೆ {2}

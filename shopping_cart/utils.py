@@ -16,7 +16,7 @@ def show_cart_count():
 
 def set_cart_count(login_manager):
 	if show_cart_count():
-		from shopping_cart.shopping_cart.cart import set_cart_count
+		from .shopping_cart.cart import set_cart_count
 		set_cart_count()
 
 def clear_cart_count(login_manager):
