@@ -4,9 +4,9 @@
 from __future__ import unicode_literals
 
 import frappe
-import urllib
-from frappe.utils import cint, fmt_money
+from frappe.utils import cint, fmt_money, cstr
 from shopping_cart.shopping_cart.cart import _get_cart_quotation
+from urllib import unquote
 
 @frappe.whitelist(allow_guest=True)
 def get_product_info(item_code):
@@ -16,8 +16,7 @@ def get_product_info(item_code):
 
 	cart_quotation = _get_cart_quotation()
 
-	price_list = frappe.local.request.cookies.get("selling_price_list")
-	price_list = urllib.unquote(price_list) if price_list else None
+	price_list = cstr(unquote(frappe.local.request.cookies.get("selling_price_list")))
 
 	warehouse = frappe.db.get_value("Item", item_code, "website_warehouse")
 	if warehouse:
