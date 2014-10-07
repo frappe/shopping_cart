@@ -8,5 +8,5 @@ import frappe
 
 from frappe.model.document import Document
 
-class ShoppingCartTaxesAndChargesMaster(Document):
+class ShoppingCartTaxesandChargesMaster(Document):
 	pass
