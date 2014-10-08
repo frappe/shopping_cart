@@ -66,13 +66,13 @@ def update_cart(item_code, qty, with_doc):
 
 	qty = flt(qty)
 	if qty == 0:
-		quotation.set("quotation_details", quotation.get({"item_code": ["!=", item_code]}))
+		quotation.set("quotation_details", quotation.get("quotation_details", {"item_code": ["!=", item_code]}))
 		if not quotation.get("quotation_details") and \
 			not quotation.get("__islocal"):
 				quotation.__delete = True
 
 	else:
-		quotation_items = quotation.get({"item_code": item_code})
+		quotation_items = quotation.get("quotation_details", {"item_code": item_code})
 		if not quotation_items:
 			quotation.append("quotation_details", {
 				"doctype": "Quotation Item",
@@ -398,7 +398,7 @@ class TestCart(unittest.TestCase):
 		update_cart("_Test Item", 1)
 
 		quotation = _get_cart_quotation()
-		quotation_items = quotation.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
+		quotation_items = quotation.get("quotation_details", {"item_code": "_Test Item"})
 		self.assertTrue(quotation_items)
 		self.assertEquals(quotation_items[0].qty, 1)
 
@@ -410,7 +410,7 @@ class TestCart(unittest.TestCase):
 		update_cart("_Test Item", 5)
 
 		quotation = _get_cart_quotation()
-		quotation_items = quotation.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
+		quotation_items = quotation.get("quotation_details", {"item_code": "_Test Item"})
 		self.assertTrue(quotation_items)
 		self.assertEquals(quotation_items[0].qty, 5)
 
@@ -424,7 +424,7 @@ class TestCart(unittest.TestCase):
 		quotation = _get_cart_quotation()
 		self.assertEquals(quotation0.name, quotation.name)
 
-		quotation_items = quotation.get({"parentfield": "quotation_details", "item_code": "_Test Item"})
+		quotation_items = quotation.get("quotation_details", {"item_code": "_Test Item"})
 		self.assertEquals(quotation_items, [])
 
 	def test_place_order(self):
