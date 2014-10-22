@@ -1,6 +1,9 @@
-# Online Shopping Cart integrated with ERPNext
 
-## License
+## Deprecated! Merged back into ERPnext in verion 5
+
+#### Online Shopping Cart integrated with ERPNext
+
+#### License
 
 GNU/General Public License (see LICENSE.txt)
 

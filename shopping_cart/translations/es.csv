@@ -1,7 +1,7 @@
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer grupo""> Añadir / Editar < / a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Añadir / Editar < / a>"
 Billed,Anunciado
-Company,empresa
+Company,Empresa
 Currency is required for Price List {0},Se requiere de divisas para el precio de lista {0}
 Default Customer Group,Grupo predeterminado Cliente
 Default Territory,Territorio predeterminado
@@ -21,7 +21,7 @@ Please specify a Price List which is valid for Territory,"Por favor, especifique
 Please specify currency in Company,"Por favor, especifique la moneda en la empresa"
 Please write something,"Por favor, escribir algo"
 Please write something in subject and message!,"Por favor, escriba algo en asunto y el mensaje !"
-Price List,Lista de precios
+Price List,Lista de Precios
 Price List not configured.,Lista de precios no está configurado.
 Quotation Series,Serie Cotización
 Shipping Rule,Regla de envío
