@@ -129,7 +129,7 @@ def guess_territory():
 		territory = frappe.db.get_value("Territory", geoip_country)
 
 	return territory or \
-		frappe.db.get_value("Shopping Cart Settings", None, "territory") or \
+		frappe.db.get_value("Shopping Cart Settings", None, "default_territory") or \
 			get_root_of("Territory")
 
 def decorate_quotation_doc(quotation_doc):
@@ -224,7 +224,7 @@ def apply_cart_settings(party=None, quotation=None):
 	cart_settings = frappe.get_doc("Shopping Cart Settings")
 
 	billing_territory = get_address_territory(quotation.customer_address) or \
-		party.territory or get_root_of("Territory")
+		party.territory or cart_settings.default_territory or get_root_of("Territory")
 
 	set_price_list_and_rate(quotation, cart_settings, billing_territory)
 
