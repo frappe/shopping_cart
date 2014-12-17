@@ -16,7 +16,7 @@ def get_product_info(item_code):
 
 	cart_quotation = _get_cart_quotation()
 
-	price_list = cstr(unquote(frappe.local.request.cookies.get("selling_price_list")))
+	price_list = cstr(unquote(frappe.local.request.cookies.get("selling_price_list") or "") or cart_quotation.selling_price_list)
 
 	warehouse = frappe.db.get_value("Item", item_code, "website_warehouse")
 	if warehouse:
