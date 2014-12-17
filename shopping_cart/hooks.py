@@ -6,7 +6,7 @@ app_icon = "icon-shopping-cart"
 app_color = "#B7E090"
 app_email = "info@erpnext.com"
 app_url = "https://erpnext.com"
-app_version = "0.5.0"
+app_version = "0.6.0"
 
 web_include_js = "assets/js/shopping-cart-web.min.js"
 web_include_css = "assets/css/shopping-cart-web.css"
