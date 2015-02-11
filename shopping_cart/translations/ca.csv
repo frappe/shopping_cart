@@ -1,0 +1,29 @@
+Billed,Facturat
+Currency is required for Price List {0},Informa de la divisa pera la Llista de preus {0}
+Delivered,
+Go ahead and add something to your cart.,Seguir endavant i afegir alguna cosa al seu carret.
+Hey! Go ahead and add an address,Hey! Seguir endavant i afegir una adreça
+Invalid Billing Address,Adreça de facturació no vàlida
+Invalid Shipping Address,Direcció d'enviament no vàlida
+Missing Currency Exchange Rates for {0},
+Name is required,El nom és necessari
+Not Allowed,No es permet
+Paid,Pagat
+Partially Billed,
+Partially Delivered,
+Please specify a Price List which is valid for Territory,"Si us plau, especifiqui una llista de preus que és vàlid per al territori"
+Please specify currency in Company,
+Please write something,"Si us plau, escriu alguna cosa"
+Please write something in subject and message!,"Si us plau, escrigui alguna cosa a l'assumpte i al missatge!"
+Price List not configured.,Llista de preus sense configurar.
+Shopping Cart,
+Something went wrong!,Quelcom ha fallat!
+Something went wrong.,Quelcom ha fallat.
+To Pay,Per Pagar
+Updated,
+You are not allowed to reply to this ticket.,
+You need to be logged in to view your cart.,
+You need to enable Shopping Cart,Has d'habilitar el carro de la compra
+{0} cannot be purchased using Shopping Cart,{0} no es pot comprar amb la cistella
+{0} is required,{0} és necessari
+{0} {1} has a common territory {2},{0} {1} té un territori comú {2}
