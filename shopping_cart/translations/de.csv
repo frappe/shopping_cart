@@ -1,7 +1,7 @@
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> Hinzufügen / Bearbeiten </ a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Hinzufügen / Bearbeiten </ a>"
 Billed,Abgerechnet
-Company,Unternehmen
+Company,Firma
 Currency is required for Price List {0},Die Währung ist für Preisliste erforderlich {0}
 Default Customer Group,Standardkundengruppe
 Default Territory,Standardregion
@@ -26,7 +26,7 @@ Price List,Preisliste
 Price List not configured.,Preisliste nicht konfiguriert.
 Quotation Series,Angebotsserie
 Shipping Rule,Versandregel
-Shopping Cart,Einkaufswagen
+Shopping Cart,Warenkorb
 Shopping Cart Price List,Einkaufswagen Preisliste
 Shopping Cart Price Lists,Einkaufswagen Preislisten
 Shopping Cart Settings,Einkaufswageneinstellungen
@@ -39,7 +39,7 @@ Something went wrong.,Es gab ein Problem.
 Tax Master,Steuerstamm
 To Pay,To Pay
 Updated,Aktualisiert
-Website Manager,
+Website Manager,Website-Administrator
 You are not allowed to reply to this ticket.,"Sie sind nicht berechtigt, auf diesem Ticket antworten ."
 You need to be logged in to view your cart.,"Sie müssen angemeldet sein, um Ihren Warenkorb zu sehen."
 You need to enable Shopping Cart,Sie benötigen den Einkaufswagen zu ermöglichen
