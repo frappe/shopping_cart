@@ -1,10 +1,10 @@
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer grupo""> Añadir / Editar < / a>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Añadir / Editar < / a>"
-Billed,Anunciado
-Company,Empresa
+Billed,Facturado
+Company,Compañia
 Currency is required for Price List {0},Se requiere de divisas para el precio de lista {0}
 Default Customer Group,Grupo predeterminado Cliente
-Default Territory,Territorio predeterminado
+Default Territory,Territorio Predeterminado
 Delivered,liberado
 Enable Shopping Cart,Habilitar Compras
 Go ahead and add something to your cart.,Seguir adelante y añadir algo a su carrito.

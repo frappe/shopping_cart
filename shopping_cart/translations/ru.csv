@@ -1,6 +1,6 @@
 "<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> Добавить / Изменить </>"
 "<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Добавить / Изменить </>"
-Billed,Объявленный
+Billed,Выдавать счета
 Company,Организация
 Currency is required for Price List {0},Валюта необходима для Прейскурантом {0}
 Default Customer Group,По умолчанию Группа клиентов
