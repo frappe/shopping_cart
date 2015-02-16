@@ -1,5 +1,5 @@
-"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Sales Browser/Customer Group""> Ekle / Düzenle </ a>"
-"<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Sales Browser/Territory""> Ekle / Düzenle </ a>"
+"<a href=""#Sales Browser/Customer Group"">Add / Edit</a>","<a href=""#Satış Arama/Müşteri Grubu""> Ekle / Düzenle </a>"
+"<a href=""#Sales Browser/Territory"">Add / Edit</a>","<a href=""#Satış Arama/Bölge> Ekle / Düzenle </a>"""
 Billed,Faturalanmış
 Company,Şirket
 Currency is required for Price List {0},Döviz Fiyat Listesi için gereklidir {0}
@@ -24,7 +24,7 @@ Please write something in subject and message!,Konu ve mesaj bir şeyler yazın�
 Price List,Fiyat listesi
 Price List not configured.,Fiyat Listesi yapılandırılmamış.
 Quotation Series,Teklif Serisi
-Shipping Rule,Kargo Kural
+Shipping Rule,Kargo Kuralı
 Shopping Cart,Alışveriş Sepeti
 Shopping Cart Price List,Alışveriş Sepeti Fiyat Listesi
 Shopping Cart Price Lists,Alışveriş Sepeti Fiyat Listeleri
