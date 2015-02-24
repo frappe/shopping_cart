@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 app_name = "shopping_cart"
 app_title = "Shopping Cart"
 app_publisher = "Web Notes Technologies"
